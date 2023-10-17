@@ -30,6 +30,10 @@ services:
     type: mailhog
     hogfrom:
       - appserver
+  migration:
+    type: mysql
+    ports:
+      - 33007:3306
 tooling:
   phpunit:
     service: appserver
