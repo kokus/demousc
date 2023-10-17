@@ -23,6 +23,12 @@ DRUPAL_DB_NAME=drupal10
 DRUPAL_DB_PASS=drupal10
 DRUPAL_DB_HOST=database
 DRUPAL_DB_PORT=3306
+
+MIGRATION_DB_USER=mysql
+MIGRATION_DB_NAME=database
+MIGRATION_DB_PASS=mysql
+MIGRATION_DB_HOST=migration
+MIGRATION_DB_PORT=3306
 ```
 
 ## Lando Local Development
@@ -63,3 +69,8 @@ until technical debt can be addressed, run the `lando robo analyse:baseline` com
 a `phpstan-baseline.neon` file. Then add this file to the includes section of `phpstan.neon.dist`.
 
 Documentation for `phpstan` can be found at https://phpstan.org/.
+
+### Setup secondary database on local environment
+
+The environment comes with a `migration` service which is a secondary database and it is used as a migration source.
+Run `lando db-import -h migration <path to a database backup file>` to import data from the legacy USCourts.gov backup.
