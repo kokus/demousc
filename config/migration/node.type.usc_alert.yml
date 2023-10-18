@@ -1,0 +1,16 @@
+uuid: 7f634f83-aea6-41d6-a536-06db2213e406
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: Alert
+type: usc_alert
+description: 'An Alert is a short Twitter like message displayed at the top of the site, alerting users to critical information like breaking news. After viewing it, they can click and close the message.'
+help: 'Please limit your Alert message text to 330 characters or less.'
+new_revision: false
+preview_mode: 1
+display_submitted: false

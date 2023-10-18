@@ -1,0 +1,16 @@
+uuid: 530bf67a-7097-413f-8cd4-a81881189952
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: 'News Issue'
+type: news_issue
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

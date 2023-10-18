@@ -1,0 +1,30 @@
+uuid: 45c4d998-7c56-490b-a845-5c277273ff84
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.federal_rules.body
+    - node.type.federal_rules
+  module:
+    - text
+    - user
+id: node.federal_rules.teaser
+targetEntityType: node
+bundle: federal_rules
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

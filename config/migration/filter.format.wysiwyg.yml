@@ -1,0 +1,14 @@
+uuid: 87393128-93b5-4ed9-952a-f8e2833a5efc
+langcode: en
+status: true
+dependencies: {  }
+name: 'WYSIWYG (default)'
+format: wysiwyg
+weight: -10
+filters:
+  filter_null:
+    id: filter_null
+    provider: filter
+    status: true
+    weight: -47
+    settings: {  }

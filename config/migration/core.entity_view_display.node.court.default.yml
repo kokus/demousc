@@ -1,0 +1,28 @@
+uuid: 8997f381-02ce-446d-ba00-8d49df615a4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.court.body
+    - node.type.court
+  module:
+    - text
+    - user
+id: node.court.default
+targetEntityType: node
+bundle: court
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

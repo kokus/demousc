@@ -1,0 +1,28 @@
+uuid: 2486be0e-51d6-4922-baf5-52235304f957
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.camera.body
+    - node.type.camera
+  module:
+    - text
+    - user
+id: node.camera.default
+targetEntityType: node
+bundle: camera
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
