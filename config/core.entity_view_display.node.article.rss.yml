@@ -21,6 +21,11 @@ content:
   links:
     weight: 100
     region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
 hidden:
   body: true
   comment: true

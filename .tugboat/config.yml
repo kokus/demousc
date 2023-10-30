@@ -2,10 +2,6 @@ services:
   php:
     image: tugboatqa/php:8.1-apache
 
-    # Set this as the default service. This does a few things
-    #   1. Clones the git repository into the service container
-    #   2. Exposes port 80 to the Tugboat HTTP proxy
-    #   3. Routes requests to the preview URL to this service
     default: true
 
     # Wait until the mysql service is done building
@@ -46,7 +42,7 @@ services:
 
       build:
         - vendor/bin/drush deploy
-        - vendor/bin/drush user:create tugboat_admin --mail='tugboat_ad@example.com' --password='tugboat'
+        - vendor/bin/drush user:create tugboat_admin --mail='tugboat_ad@example.com' --password=${ADMIN_PASS}
         - vendor/bin/drush user:role:add 'administrator' tugboat_admin
 
   # This 'mysql' key acts as the hostname to access the service by from the php service.
