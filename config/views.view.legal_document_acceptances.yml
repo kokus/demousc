@@ -16,60 +16,12 @@ base_table: entity_legal_document_acceptance
 base_field: aid
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: none
-        options: {  }
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: full
-        options:
-          items_per_page: 10
-          offset: 0
-          id: 0
-          total_pages: null
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
-          quantity: 9
-      style:
-        type: table
-      row:
-        type: fields
+      title: 'Legal document acceptances'
       fields:
         vid:
           id: vid
@@ -78,6 +30,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: entity_legal_document_acceptance
+          entity_field: vid
+          plugin_id: field
           label: 'Document version_name'
           exclude: false
           alter:
@@ -133,9 +88,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: entity_legal_document_acceptance
-          entity_field: vid
-          plugin_id: field
         name:
           id: name
           table: users_field_data
@@ -143,6 +95,9 @@ display:
           relationship: uid
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: name
+          plugin_id: field
           label: Name
           exclude: false
           alter:
@@ -198,9 +153,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: user
-          entity_field: name
-          plugin_id: field
         acceptance_date:
           id: acceptance_date
           table: entity_legal_document_acceptance
@@ -208,6 +160,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: entity_legal_document_acceptance
+          entity_field: acceptance_date
+          plugin_id: field
           label: Accepted
           exclude: false
           alter:
@@ -274,9 +229,87 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: entity_legal_document_acceptance
-          entity_field: acceptance_date
-          plugin_id: field
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 10
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts: {  }
+      arguments:
+        document_name:
+          id: document_name
+          table: entity_legal_document_version_data
+          field: document_name
+          relationship: vid
+          group_type: group
+          admin_label: ''
+          entity_type: entity_legal_document_version
+          entity_field: document_name
+          plugin_id: string
+          default_action: 'access denied'
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: fixed
+          default_argument_options:
+            argument: ''
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          glossary: false
+          limit: 0
+          case: none
+          path_case: none
+          transform_dash: false
+          break_phrase: false
       filters:
         uid:
           id: uid
@@ -285,6 +318,9 @@ display:
           relationship: uid
           group_type: group
           admin_label: ''
+          entity_type: user
+          entity_field: uid
+          plugin_id: user_name
           operator: in
           value: {  }
           group: 1
@@ -316,14 +352,18 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: user
-          entity_field: uid
-          plugin_id: user_name
-      sorts: {  }
-      title: 'Legal document acceptances'
-      header: {  }
-      footer: {  }
-      empty: {  }
+      style:
+        type: table
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
       relationships:
         vid:
           id: vid
@@ -332,10 +372,10 @@ display:
           relationship: none
           group_type: group
           admin_label: 'Version name'
-          required: false
           entity_type: entity_legal_document_acceptance
           entity_field: vid
           plugin_id: standard
+          required: false
         uid:
           id: uid
           table: entity_legal_document_acceptance
@@ -343,48 +383,8 @@ display:
           entity_type: entity_legal_document_acceptance
           entity_field: uid
           plugin_id: standard
-      arguments:
-        document_name:
-          id: document_name
-          table: entity_legal_document_version_data
-          field: document_name
-          relationship: vid
-          group_type: group
-          admin_label: ''
-          default_action: 'access denied'
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: fixed
-          default_argument_options:
-            argument: ''
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            items_per_page: 25
-            override: false
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          glossary: false
-          limit: 0
-          case: none
-          path_case: none
-          transform_dash: false
-          break_phrase: false
-          entity_type: entity_legal_document_version
-          entity_field: document_name
-          plugin_id: string
+      header: {  }
+      footer: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: 0
@@ -395,9 +395,9 @@ display:
         - url.query_args
       tags: {  }
   page_1:
-    display_plugin: page
     id: page_1
     display_title: Page
+    display_plugin: page
     position: 1
     display_options:
       display_extenders: {  }
@@ -406,11 +406,11 @@ display:
         type: tab
         title: Acceptances
         description: ''
-        expanded: false
-        parent: ''
         weight: 5
-        context: '0'
+        expanded: false
         menu_name: main
+        parent: ''
+        context: '0'
     cache_metadata:
       max-age: 0
       contexts:

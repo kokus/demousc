@@ -40,6 +40,7 @@
         "drupal/fpa": "^4.0",
         "drupal/gin": "^3.0@RC",
         "drupal/google_tag": "^2.0",
+        "drupal/gutenberg_uswds": "^1.0@beta",
         "drupal/honeypot": "^2.1",
         "drupal/htmlpurifier": "^1.0",
         "drupal/image_effects": "^3.4",

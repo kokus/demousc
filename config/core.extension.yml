@@ -39,6 +39,13 @@ module:
   filter: 0
   fpa: 0
   google_tag: 0
+  gutenberg: 0
+  gutenberg_uswds: 0
+  gutenberg_uswds_accordion: 0
+  gutenberg_uswds_card: 0
+  gutenberg_uswds_modal: 0
+  gutenberg_uswds_process_list: 0
+  gutenberg_uswds_summary_box: 0
   help: 0
   history: 0
   honeypot: 0
