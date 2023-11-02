@@ -16,6 +16,8 @@ class CourtFinderCommands extends DrushCommands {
 
   /**
    * Imports Autocompletes from a CSV file.
+   *
+   * @throws \Exception
    */
   #[CLI\Command(name: 'usc:import:autocompletes', aliases: ['uiau'])]
   #[CLI\Argument(name: 'importUri', description: 'The path or URI for the CSV file to be imported.')]
@@ -26,6 +28,8 @@ class CourtFinderCommands extends DrushCommands {
 
     /**
    * Imports Locations from a CSV file.
+   *
+   * @throws \Exception
    */
   #[CLI\Command(name: 'usc:import:locations', aliases: ['uilo'])]
   #[CLI\Argument(name: 'importUri', description: 'The path or URI for the CSV file to be imported.')]
@@ -36,6 +40,8 @@ class CourtFinderCommands extends DrushCommands {
 
   /**
    * Imports Circuits from a CSV file.
+   *
+   * @throws \Exception
    */
   #[CLI\Command(name: 'usc:import:circuits', aliases: ['uici'])]
   #[CLI\Argument(name: 'importUri', description: 'The path or URI for the CSV file to be imported.')]
@@ -46,6 +52,8 @@ class CourtFinderCommands extends DrushCommands {
 
   /**
    * Imports Counties from a CSV file.
+   *
+   * @throws \Exception
    */
   #[CLI\Command(name: 'usc:import:counties', aliases: ['uico'])]
   #[CLI\Argument(name: 'importUri', description: 'The path or URI for the CSV file to be imported.')]
@@ -56,6 +64,8 @@ class CourtFinderCommands extends DrushCommands {
 
   /**
    * Imports Districts from a CSV file.
+   *
+   * @throws \Exception
    */
   #[CLI\Command(name: 'usc:import:districts', aliases: ['uidi'])]
   #[CLI\Argument(name: 'importUri', description: 'The path or URI for the CSV file to be imported.')]
@@ -66,6 +76,8 @@ class CourtFinderCommands extends DrushCommands {
 
   /**
    * Imports States from a CSV file.
+   *
+   * @throws \Exception
    */
   #[CLI\Command(name: 'usc:import:states', aliases: ['uist'])]
   #[CLI\Argument(name: 'importUri', description: 'The path or URI for the CSV file to be imported.')]
@@ -76,6 +88,8 @@ class CourtFinderCommands extends DrushCommands {
 
   /**
    * A helper function to import entities from a CSV file.
+   *
+   * @throws \Exception
    */
   private function basicImport(string $importUri, string $entityType): void {
     // Parse the file to get data.
@@ -126,6 +140,8 @@ class CourtFinderCommands extends DrushCommands {
 
   /**
    * Checks if headers are fully present in Primary Keys.
+   *
+   * @throws \Exception
    */
   private function validateHeaders(array $headers, string $entityType): bool {
       return !empty($headers) && (count($this->getPrimaryKeys($entityType)) === count(array_intersect($headers, $this->getPrimaryKeys($entityType)))) ;
@@ -133,6 +149,8 @@ class CourtFinderCommands extends DrushCommands {
 
   /**
    * A helper function to get primary keys for an entity type.
+   *
+   * @throws \Exception
    */
   private function getPrimaryKeys(string $entityType): array {
     switch ($entityType) {
@@ -161,6 +179,8 @@ class CourtFinderCommands extends DrushCommands {
 
   /**
    * A helper function to get mapping between D7 column names and D10 column names.
+   *
+   * @throws \Exception
    */
   private function getHeadersMapping(string $entityType): array {
     switch ($entityType) {

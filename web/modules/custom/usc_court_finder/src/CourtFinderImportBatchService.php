@@ -20,6 +20,11 @@ class CourtFinderImportBatchService {
    *  An array with entity values.
    * @param object $context
    *   Context for operations.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+   * @throws \Drupal\Core\Entity\EntityStorageException
+   * @throws \RuntimeException
    */
   public static function processImportItem(string $entityType, array $idKeys, array $headersMapping, array $fields, &$context) {
 
