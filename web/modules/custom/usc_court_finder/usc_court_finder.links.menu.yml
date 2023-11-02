@@ -1,0 +1,7 @@
+# Content
+usc_court_finder.content:
+  title: 'Court Finder'
+  route_name: entity.usc_location.collection
+  description: 'Find and manage Court Finder entities.'
+  parent: system.admin_content
+  weight: 100

@@ -1,0 +1,105 @@
+# Content routes
+entity.usc_location.collection:
+  path: '/admin/content/usc_court_finder/location'
+  defaults:
+    _entity_list: 'usc_location'
+    _title: 'Locations'
+  requirements:
+    _permission: 'view court_finder_content'
+
+entity.usc_autocomplete.collection:
+  path: '/admin/content/usc_court_finder/autocomplete'
+  defaults:
+    _entity_list: 'usc_autocomplete'
+    _title: 'Autocompletes'
+  requirements:
+    _permission: 'view court_finder_content'
+
+entity.usc_circuit.collection:
+  path: '/admin/content/usc_court_finder/circuit'
+  defaults:
+    _entity_list: 'usc_circuit'
+    _title: 'Circuits'
+  requirements:
+    _permission: 'view court_finder_content'
+
+entity.usc_county.collection:
+  path: '/admin/content/usc_court_finder/county'
+  defaults:
+    _entity_list: 'usc_county'
+    _title: 'Counties'
+  requirements:
+    _permission: 'view court_finder_content'
+
+entity.usc_district.collection:
+  path: '/admin/content/usc_court_finder/district'
+  defaults:
+    _entity_list: 'usc_district'
+    _title: 'Districts'
+  requirements:
+    _permission: 'view court_finder_content'
+
+entity.usc_state.collection:
+  path: '/admin/content/usc_court_finder/state'
+  defaults:
+    _entity_list: 'usc_state'
+    _title: 'States'
+  requirements:
+    _permission: 'view court_finder_content'
+
+#Setting routes
+usc_court_finder.settings:
+  path: '/admin/structure/usc_court_finder'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Court Finder'
+  requirements:
+    _permission: 'administer usc_court_finder'
+
+usc_court_finder.location.settings:
+  path: '/admin/structure/usc_court_finder/location/settings'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Locations'
+  requirements:
+    _permission: 'administer usc_court_finder'
+
+usc_court_finder.autocomplete.settings:
+  path: '/admin/structure/usc_court_finder/autocomplete/settings'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Autocompletes'
+  requirements:
+    _permission: 'administer usc_court_finder'
+
+usc_court_finder.circuit.settings:
+  path: '/admin/structure/usc_court_finder/circuit/settings'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Circuits'
+  requirements:
+    _permission: 'administer usc_court_finder'
+
+usc_court_finder.county.settings:
+  path: '/admin/structure/usc_court_finder/county/settings'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Counties'
+  requirements:
+    _permission: 'administer usc_court_finder'
+
+usc_court_finder.district.settings:
+  path: '/admin/structure/usc_court_finder/district/settings'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Districts'
+  requirements:
+    _permission: 'administer usc_court_finder'
+
+usc_court_finder.state.settings:
+  path: '/admin/structure/usc_court_finder/state/settings'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'States'
+  requirements:
+    _permission: 'administer usc_court_finder'
