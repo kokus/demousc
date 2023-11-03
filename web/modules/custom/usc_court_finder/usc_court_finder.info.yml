@@ -1,0 +1,7 @@
+name: 'Federal court finder'
+description: 'Federal court finder.'
+type: module
+core_version_requirement: ">=10"
+package: 'US Courts'
+dependencies:
+  - token:token

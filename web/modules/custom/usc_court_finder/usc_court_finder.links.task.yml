@@ -1,0 +1,36 @@
+# Content routing definition
+entity.usc_court_finder.admin:
+  title: Court Finder
+  route_name: entity.usc_location.collection
+  base_route: system.admin_content
+  weight: 50
+
+entity.usc_location.collection:
+  route_name: entity.usc_location.collection
+  parent_id: entity.usc_court_finder.admin
+  title: Locations
+
+entity.usc_autocomplete.collection:
+  route_name: entity.usc_autocomplete.collection
+  parent_id: entity.usc_court_finder.admin
+  title: Autocompletes
+
+entity.usc_circuit.collection:
+  route_name: entity.usc_circuit.collection
+  parent_id: entity.usc_court_finder.admin
+  title: Circuits
+
+entity.usc_county.collection:
+  route_name: entity.usc_county.collection
+  parent_id: entity.usc_court_finder.admin
+  title: Counties
+
+entity.usc_district.collection:
+  route_name: entity.usc_district.collection
+  parent_id: entity.usc_court_finder.admin
+  title: Districts
+
+entity.usc_state.collection:
+  route_name: entity.usc_state.collection
+  parent_id: entity.usc_court_finder.admin
+  title: States
