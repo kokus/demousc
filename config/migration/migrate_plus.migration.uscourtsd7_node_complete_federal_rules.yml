@@ -1,0 +1,160 @@
+uuid: 0ee52440-da4a-42c4-b614-692c6fc0b972
+langcode: en
+status: true
+dependencies: {  }
+id: uscourtsd7_node_complete_federal_rules
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - 'Scheduler Data'
+migration_group: migrate_drupal_7
+label: 'Node complete (Federal Rules)'
+source:
+  plugin: d7_node_complete
+  node_type: federal_rules
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_federal_rules/0/status:
+    -
+      plugin: get
+      source: comment
+  field_date_updated:
+    -
+      plugin: sub_process
+      source: field_date_updated
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_document_pdf:
+    -
+      plugin: sub_process
+      source: field_document_pdf
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_term_entity_reference:
+    -
+      plugin: get
+      source: field_term_entity_reference
+  field_term_entity_reference2:
+    -
+      plugin: get
+      source: field_term_entity_reference2
+  field_tags:
+    -
+      plugin: sub_process
+      source: field_tags
+      process:
+        target_id: tid
+  field_sidebar:
+    -
+      plugin: get
+      source: field_sidebar
+  body:
+    -
+      plugin: get
+      source: body
+  field_rules_rule_or_form:
+    -
+      plugin: get
+      source: field_rules_rule_or_form
+  field_rules_status:
+    -
+      plugin: get
+      source: field_rules_status
+  field_usc_import_timestamp:
+    -
+      plugin: get
+      source: field_usc_import_timestamp
+  field_term_entity_reference3:
+    -
+      plugin: get
+      source: field_term_entity_reference3
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+  publish_on:
+    -
+      plugin: get
+      source: scheduler_publish_on
+  unpublish_on:
+    -
+      plugin: get
+      source: scheduler_unpublish_on
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: federal_rules
+migration_dependencies:
+  required:
+    - uscourtsd7_user
+    - uscourtsd7_node_type
+  optional:
+    - uscourtsd7_field_instance
+    - uscourtsd7_metatag_field_node
+    - uscourtsd7_metatag_field_instance_node_federal_rules
+    - uscourtsd7_metatag_field_instance_widget_settings_node_federal_rules
