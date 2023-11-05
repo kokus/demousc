@@ -1,0 +1,57 @@
+version: "3"
+
+services:
+  db:
+    image: mariadb:10.5.8
+    container_name: "${PROJECT}-db"
+    volumes:
+      - db-data:/var/lib/mysql
+    restart: unless-stopped
+    env_file: .env
+    networks:
+      - internal
+    labels:
+      - traefik.enable=false
+
+  php:
+    build:
+      context: .
+      dockerfile: ./.deploy/php/Dockerfile
+    container_name: "${PROJECT}-php"
+    volumes:
+      - ./:/var/www/html
+    restart: unless-stopped
+    env_file: .env
+    depends_on:
+      - db
+    networks:
+      - internal
+    labels:
+      - traefik.enable=false
+
+  web:
+    image: nginx:alpine
+    container_name: ${PROJECT}-web
+    volumes:
+      - ./:/var/www/html:ro
+      - ./.deploy/nginx/conf:/etc/nginx/conf.d
+    restart: unless-stopped
+    depends_on:
+      - php
+    networks:
+      - internal
+      - web
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.${PROJECT}.rule=HostRegexp(`${PROJECT_DOMAIN}`, `www.${PROJECT_DOMAIN}` , `{subdomain:[a-zA-Z0-9-]+}${PROJECT_DOMAIN}`)
+      - traefik.http.routers.${PROJECT}.tls=true
+      - traefik.http.routers.${PROJECT}.tls.certresolver=le-cloudflare
+
+networks:
+  internal:
+    driver: bridge
+  web:
+    external: true
+
+volumes:
+  db-data:
