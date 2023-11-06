@@ -18,7 +18,7 @@ in the form $setting: value,
   $theme-font-path: '/themes/custom/uscgov/fonts',
   $theme-respect-user-font-size: true,
   $theme-font-type-sans: 'source-sans-pro',
-  $theme-font-type-serif: "source-sans-pro",
+  $theme-font-type-serif: "source-serif-pro",
   $theme-font-serif-custom-src: (
    dir: 'source-serif-pro',
    roman: (
@@ -45,10 +45,29 @@ in the form $setting: value,
    ),
  ),
  $theme-typeface-tokens: (
-   'source-sans-pro': (
+   'source-serif-pro': (
      'display-name': 'source-sans-pro',
      'cap-height': 364px, // the default, leave it for now per https://designsystem.digital.gov/design-tokens/typesetting/font-family/
      'stack': 'Georgia, serif',
    ),
  ),
+  $theme-type-scale-3xs: 1, // 12px
+  $theme-type-scale-2xs: 3, // 14px
+  $theme-type-scale-xs: 5, // 16px
+  $theme-type-scale-sm: 6, // 17px
+  $theme-type-scale-md: 9, // 22px
+  $theme-type-scale-lg: 10, // 24px
+  $theme-type-scale-xl: 12, // 32px
+  $theme-type-scale-2xl: 14, // 40px
+  $theme-type-scale-3xl: 16, // 56px
+  $theme-h1-font-size: '3xl',
+  $theme-h2-font-size: '2xl',
+  $theme-h3-font-size: 'xl',
+  $theme-h4-font-size: 'lg',
+  $theme-h5-font-size: 'md',
+  $theme-h6-font-size: 'sm',
+  $theme-body-font-size: 'xs',
+  $theme-heading-line-height: 2,
+  $theme-small-font-size: '3xs',
+  $theme-display-font-size: '3xl',
 );
