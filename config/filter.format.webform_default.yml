@@ -10,4 +10,11 @@ _core:
 name: 'Webform (Default) - DO NOT EDIT'
 format: webform_default
 weight: 100
-filters: {  }
+filters:
+  gutenberg:
+    id: gutenberg
+    provider: gutenberg
+    status: false
+    weight: 0
+    settings:
+      processor_settings: {  }
