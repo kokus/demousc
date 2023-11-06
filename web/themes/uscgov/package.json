@@ -1,0 +1,19 @@
+{
+  "name": "uscgov",
+  "version": "1.0.0",
+  "description": "uscgov Drupal theme",
+  "main": "index.js",
+  "scripts": {
+    "init": "npx gulp init",
+    "watch": "npx gulp watch",
+    "build": "npx gulp compile"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@uswds/uswds": "^3.5.0"
+  },
+  "devDependencies": {
+    "@uswds/compile": "^1.0.0"
+  }
+}

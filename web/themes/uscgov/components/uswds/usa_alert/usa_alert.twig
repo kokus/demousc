@@ -1,0 +1,17 @@
+{% set alert_classes = {
+  'status': 'info',
+  'warning': 'warning',
+  'error': 'error'
+} %}
+<div class="usa-alert usa-alert--{{ alert_classes[type] }}">
+  <div class="usa-alert__body">
+    {% if status_headings[type] %}
+      <h4 class="usa-alert__heading">{{ status_headings[type] }}</h4>
+    {% endif %}
+    {% for message in messages %}
+      <p class="usa-alert__text">
+        {{ message }}
+      </p>
+    {% endfor %}
+  </div>
+</div>

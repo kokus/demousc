@@ -1,0 +1,13 @@
+// Full-width
+// Uses box-shadow to extend the passed in color across the entire viewport.
+//
+// Example:
+// .my-component {
+//   @include full-width(var(--myColor));
+//   background-color: var(--myColor);
+//  }
+@mixin full-width($bg-color) {
+  box-shadow:
+    -50vw 0 0 $bg-color,
+    50vw 0 0 $bg-color;
+}

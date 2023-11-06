@@ -1,0 +1,124 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 100%;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  color: var(--text-body);
+  font-size: var(--body-1);
+  line-height: 1.5;
+
+  &.is-fixed {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+a {
+  color: var(--color-text-primary-medium);
+
+  &:hover {
+    color: var(--color--primary-50);
+  }
+
+  &:focus-visible {
+    outline: solid 2px currentColor;
+    outline-offset: 2px;
+  }
+}
+
+button {
+  font-family: inherit;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+audio {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  margin-block: var(--spacing-sm);
+
+  +  p {
+    margin-top: var(--spacing-xl);
+  }
+}
+
+h1 {
+  margin-block: var(--spacing-xl);
+  font-size: var(--h1);
+}
+
+h2 {
+  margin-block: var(--spacing-xl);
+  font-size: var(--h2);
+}
+
+h3 {
+  margin-block: var(--spacing-xl) var(--spacing-sm);
+  font-size: var(--h3);
+}
+
+h4 {
+  margin-block: var(--spacing-lg) 20px;
+  font-size: var(--h4);
+}
+
+h5 {
+  margin-block: var(--spacing-lg) 20px;
+  font-size: var(--h5);
+}
+
+h6 {
+  margin-block: var(--spacing-lg) 20px;
+  font-size: var(--h6);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block: var(--spacing-lg);
+  color: var(--text-headings);
+  font-family: var(--font-serif);
+  font-weight: bold;
+  line-height: 1.5;
+
+  @media (--md) {
+    margin-block: var(--spacing-xl);
+  }
+}
+
+ul {
+  margin-block: var(--spacing-xl);
+  margin-inline-start: 1.5em;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+  list-style-type: disc;
+  list-style-image: none;
+}
+
+ol {
+  margin-block: var(--spacing-xl);
+}

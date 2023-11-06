@@ -1,0 +1,98 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+/**
+ * Implements hook_preprocess_image_widget().
+ */
+function uscgov_preprocess_image_widget(array &$variables) {
+  $data = &$variables['data'];
+
+  // This prevents image widget templates from rendering preview container HTML
+  // to users that do not have permission to access these previews.
+  // @todo revisit in https://drupal.org/node/953034
+  // @todo revisit in https://drupal.org/node/3114318
+  if (isset($data['preview']['#access']) && $data['preview']['#access'] === FALSE) {
+    unset($data['preview']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_pager().
+ */
+function uscgov_preprocess_pager(array &$variables) {
+  if (!isset($variables['items'])) {
+    return;
+  }
+  $element = $variables['pager']['#element'];
+  /** @var \Drupal\Core\Pager\PagerManagerInterface $pager_manager */
+  $pager_manager = \Drupal::service('pager.manager');
+  $pager = $pager_manager->getPager($element);
+  $variables['last_page'] = $pager->getTotalPages();
+  $variables['items']['first']['visible'] = _is_page_link_visible($variables['current'], $variables['pager']['#quantity'], 1);
+  $variables['items']['last']['visible'] = _is_page_link_visible($variables['current'], $variables['pager']['#quantity'], $variables['last_page']);
+}
+
+/**
+ * Calculates if an page link is visible in the pagination items.
+ *
+ * That is needed in USWDS to know when to show the first and last item.
+ * @see https://designsystem.digital.gov/components/pagination/#using-the-pagination-component-2.
+ *
+ * @param int $current_page
+ *   The current page.
+ * @param int $total_visible_links
+ *   The total visible items.
+ * @param int $page_to_check
+ *   The page to verify if it is visible.
+ *
+ * @return bool
+ *   TRUE is page is visible, FALSE otherwise.
+ */
+function _is_page_link_visible($current_page, $total_visible_links, $page_to_check) {
+  // Calculate the half of totalVisibleLinks (assuming it's an odd number).
+  $half_visible_links = ($total_visible_links - 1) / 2;
+
+  // Calculate the minimum and maximum visible page numbers around the current page.
+  $min_visible_page = $current_page - $half_visible_links;
+  $max_visible_page = $current_page + $half_visible_links;
+
+  // Adjust the range if the totalVisibleLinks is even.
+  if ($total_visible_links % 2 == 0) {
+    $max_visible_page += 1;
+  }
+
+  // Check if the page_to_check falls within the visible range.
+  return $min_visible_page <= $page_to_check && $page_to_check <= $max_visible_page;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function uscgov_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  if ($variables['element']['#form_id'] == 'search_block_form') {
+    $suggestions[] = 'form__search_form';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for menu-local-task templates.
+ */
+function uscgov_preprocess_menu_local_task(&$variables) {
+  $variables['link']['#options']['attributes']['class'][] = 'tabs__link';
+  $variables['link']['#options']['attributes']['class'][] = 'js-tabs-link';
+
+  // Ensure is-active class is set when the tab is active. The generic active
+  // link handler applies stricter comparison rules than what is necessary for
+  // tabs.
+  if (isset($variables['is_active']) && $variables['is_active'] === TRUE) {
+    $variables['link']['#options']['attributes']['class'][] = 'is-active';
+  }
+
+  if (isset($variables['element']['#level'])) {
+    $variables['level'] = $variables['element']['#level'];
+  }
+}

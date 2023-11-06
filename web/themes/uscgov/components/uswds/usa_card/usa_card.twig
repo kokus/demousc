@@ -1,0 +1,47 @@
+{% set wrapper_element = settings.wrapper_element ?: 'article' %}
+
+{% set classes = [
+  classes,
+  'usa-card',
+  settings.flag ? 'usa-card--flag',
+  settings.media_right ? 'usa-card--media-right',
+  settings.header_first ? 'usa-card--header-first',
+] %}
+
+<{{ wrapper_element }}{{ attributes.addClass(classes) }}>
+  {{ title_suffix }}
+  <div class="usa-card__container">
+    <div class="usa-card__header">
+      <h2 class="usa-card__heading">{{ title }}</h2>
+    </div>
+
+    {% if image.type != 'none' %}
+      <div class="usa-card__media {{ settings.media_inset ? 'usa-card__media--inset' }} {{ settings.media_exdent ? 'usa-card__media--exdent' }}">
+        <div class="usa-card__img">
+          {% if image.type == 'entity' %}
+            {{ image.entity }}
+          {% endif %}
+          {% if image.type == 'url' %}
+            <img
+              src={{ image.url }}
+              alt="{{ image.alt }}"
+              title="{{ image.title }}"
+            />
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if block('body')|trim %}
+      <div class="usa-card__body {{ settings.body_exdent ? 'usa-card__body--exdent' }}">
+        {% block body %}{% endblock %}
+      </div>
+    {% endif %}
+
+    {% if cta.url and cta.title %}
+      <div class="usa-card__footer {{ settings.footer_exdent ? 'usa-card__footer--exdent' }}">
+        <a href="{{ cta.url }}" target="{{ cta.target }}" class="usa-button">{{ cta.title }}</a>
+      </div>
+    {% endif %}
+  </div>
+</{{ wrapper_element }}>

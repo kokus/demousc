@@ -1,0 +1,22 @@
+.usa-collection {
+  margin: 0;
+}
+
+.usa-collection__item {
+  border-top-style: none;
+  padding-block: 1rem;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--theme-neutral-light);
+  }
+
+  .usa-collection__heading {
+    a.usa-link {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
