@@ -1,0 +1,8 @@
+uuid: 4475bc77-a88b-4471-9622-6c663112e565
+langcode: en
+status: true
+dependencies: {  }
+name: 'Data Table Category Prefix'
+vid: data_table_category_prefix
+description: ''
+weight: 0

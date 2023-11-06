@@ -1,0 +1,20 @@
+uuid: 5e4a1ab2-85c4-488d-8a78-af7971a38b8e
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_usc_import_timestamp
+field_name: field_usc_import_timestamp
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

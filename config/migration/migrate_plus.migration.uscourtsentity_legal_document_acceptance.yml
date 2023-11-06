@@ -1,0 +1,45 @@
+uuid: 3a5dc6fc-c2ef-406a-955e-8f0895bddca9
+langcode: en
+status: true
+dependencies: {  }
+id: uscourtsentity_legal_document_acceptance
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Legal document acceptances'
+source:
+  plugin: entity_legal_document_acceptance
+process:
+  aid:
+    -
+      plugin: get
+      source: aid
+  vid:
+    -
+      plugin: callback
+      callable: _entity_legal_convert_name_to_serial
+      source: name
+  uid:
+    -
+      plugin: get
+      source: uid
+  acceptance_date:
+    -
+      plugin: get
+      source: acceptance_date
+  data:
+    -
+      plugin: get
+      source: data
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity:entity_legal_document_acceptance'
+migration_dependencies:
+  required: {  }
+  optional: {  }

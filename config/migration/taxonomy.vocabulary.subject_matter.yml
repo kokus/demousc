@@ -1,0 +1,8 @@
+uuid: 56f0bba6-8a54-4654-91c0-1b484435a87b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Subject Matter'
+vid: subject_matter
+description: 'Used in Cameras in Court content type.'
+weight: 0

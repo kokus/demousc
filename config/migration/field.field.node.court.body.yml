@@ -1,0 +1,24 @@
+uuid: cefb692f-e709-4e50-b1bd-9438a883d0e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.court
+  module:
+    - text
+id: node.court.body
+field_name: body
+entity_type: node
+bundle: court
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

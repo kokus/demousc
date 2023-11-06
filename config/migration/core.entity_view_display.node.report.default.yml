@@ -1,0 +1,28 @@
+uuid: 53eb3c59-2aae-4595-880f-65b32aa27314
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.report.body
+    - node.type.report
+  module:
+    - text
+    - user
+id: node.report.default
+targetEntityType: node
+bundle: report
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

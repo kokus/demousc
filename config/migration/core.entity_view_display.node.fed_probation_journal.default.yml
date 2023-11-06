@@ -1,0 +1,28 @@
+uuid: 8377cefb-1ddf-41b5-a352-fb5b17577f40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.fed_probation_journal.body
+    - node.type.fed_probation_journal
+  module:
+    - text
+    - user
+id: node.fed_probation_journal.default
+targetEntityType: node
+bundle: fed_probation_journal
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,28 @@
+uuid: e3337e8f-d160-4450-bdbf-3f0f7cd7fd99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.front_promo_box.body
+    - node.type.front_promo_box
+  module:
+    - text
+    - user
+id: node.front_promo_box.default
+targetEntityType: node
+bundle: front_promo_box
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

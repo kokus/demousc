@@ -1,0 +1,20 @@
+uuid: 2ef879e0-8954-4d4c-b5a0-fead09c1b9fb
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - adminimal
+id: adminimal_system_main
+theme: adminimal
+region: ''
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  label_display: '0'
+  provider: system
+visibility: {  }

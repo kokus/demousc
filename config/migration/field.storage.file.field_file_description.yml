@@ -1,0 +1,19 @@
+uuid: d57f3ad4-bda4-43a4-8805-2c790b8c0d96
+langcode: und
+status: true
+dependencies:
+  module:
+    - file
+    - text
+id: file.field_file_description
+field_name: field_file_description
+entity_type: file
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

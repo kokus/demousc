@@ -1,0 +1,36 @@
+uuid: d0432c1e-73e3-4d01-b2ce-72b2fd231e92
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.basic_simple.body
+    - field.field.node.basic_simple.field_lead_gallery
+    - field.field.node.basic_simple.field_lead_paragraph
+    - field.field.node.basic_simple.field_tags
+    - node.type.basic_simple
+  module:
+    - text
+    - user
+id: node.basic_simple.teaser
+targetEntityType: node
+bundle: basic_simple
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_lead_gallery: true
+  field_lead_paragraph: true
+  field_tags: true

@@ -1,0 +1,32 @@
+uuid: 49dc320f-5e68-4114-a09d-59a9da3bddb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing_view.body
+    - field.field.node.landing_view.field_tags
+    - node.type.landing_view
+  module:
+    - text
+    - user
+id: node.landing_view.teaser
+targetEntityType: node
+bundle: landing_view
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_tags: true

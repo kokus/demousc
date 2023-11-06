@@ -1,0 +1,15 @@
+uuid: e7161135-4a56-4cdd-97c4-0347a467a8cf
+langcode: en
+status: true
+dependencies: {  }
+name: promo
+label: 'Promo (875x555)'
+effects:
+  255e6f88-affb-4e28-bc56-a1ecc9fb44ea:
+    uuid: 255e6f88-affb-4e28-bc56-a1ecc9fb44ea
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 360
+      height: 228
+      anchor: center-center

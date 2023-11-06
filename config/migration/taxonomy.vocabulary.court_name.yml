@@ -1,0 +1,8 @@
+uuid: f40f81dd-3cd2-457d-acdb-5508d0ae9ca7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Court Name'
+vid: court_name
+description: 'Used in Cameras in Court content type.'
+weight: 0

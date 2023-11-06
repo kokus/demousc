@@ -1,0 +1,18 @@
+uuid: 18595e2f-0232-4708-ab15-1d0a2cada384
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_data_table_all_tables
+field_name: field_data_table_all_tables
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

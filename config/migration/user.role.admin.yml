@@ -1,0 +1,47 @@
+uuid: 52a2d47a-d40d-403a-93e4-b459d32222a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - block
+    - contextual
+    - filter
+    - image
+    - node
+    - path
+    - search
+    - system
+    - taxonomy
+    - views_ui
+id: admin
+label: admin
+weight: 2
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access user profiles'
+  - 'administer blocks'
+  - 'administer content types'
+  - 'administer filters'
+  - 'administer image styles'
+  - 'administer menu'
+  - 'administer modules'
+  - 'administer nodes'
+  - 'administer permissions'
+  - 'administer search'
+  - 'administer site configuration'
+  - 'administer taxonomy'
+  - 'administer themes'
+  - 'administer url aliases'
+  - 'administer users'
+  - 'administer views'
+  - 'bypass node access'
+  - 'create url aliases'
+  - 'use text format full_html'
+  - 'view the administration theme'

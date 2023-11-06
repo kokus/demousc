@@ -1,0 +1,28 @@
+uuid: 2fd742cd-40b0-49ea-bde4-4815f08e6426
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.judge.body
+    - node.type.judge
+  module:
+    - text
+    - user
+id: node.judge.default
+targetEntityType: node
+bundle: judge
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,28 @@
+uuid: 5f6f10f1-534f-4dab-9a25-d85c782ef026
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.federal_rules.body
+    - node.type.federal_rules
+  module:
+    - text
+    - user
+id: node.federal_rules.default
+targetEntityType: node
+bundle: federal_rules
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

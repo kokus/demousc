@@ -1,0 +1,22 @@
+uuid: a0abd2ff-69bc-441f-b36d-1d7de8295691
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_paragraph
+    - node.type.fee
+  module:
+    - text
+id: node.fee.field_lead_paragraph
+field_name: field_lead_paragraph
+entity_type: node
+bundle: fee
+label: 'Lead Paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long
