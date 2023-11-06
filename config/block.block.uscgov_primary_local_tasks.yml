@@ -1,0 +1,22 @@
+uuid: c42122e3-d88f-4244-9af5-e87c2a1018ae
+langcode: en
+status: true
+dependencies:
+  theme:
+    - uscgov
+_core:
+  default_config_hash: nlVyrcjzHXeTsioN0NY8_mu-DJG9_-LtVb0SU89JC5o
+id: uscgov_primary_local_tasks
+theme: uscgov
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

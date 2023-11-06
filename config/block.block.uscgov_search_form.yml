@@ -1,0 +1,23 @@
+uuid: 9af58f50-1112-4cc9-a8f5-659b2902324f
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - uscgov
+_core:
+  default_config_hash: wEnTpiAEIFyEH5O1eNJlTTIkv14MnL2ayVkdnXngJ0Y
+id: uscgov_search_form
+theme: uscgov
+region: header
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

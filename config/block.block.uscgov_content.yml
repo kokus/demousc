@@ -1,0 +1,22 @@
+uuid: 31059377-b1b0-42ad-a50f-719f7029ad36
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - uscgov
+_core:
+  default_config_hash: MBEVkwAiOZiqM4yp5BIxtUYRhTEOMiCpyjCQcXdbBBg
+id: uscgov_content
+theme: uscgov
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

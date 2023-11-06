@@ -1,0 +1,20 @@
+uuid: ec7e5a96-6e74-4e99-86a5-0046da19b94a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - uscgov
+_core:
+  default_config_hash: d4b74sMeZMLEmRX-R7mCYquFjpCGUcUPOkdUVPaq2N8
+id: uscgov_page_title
+theme: uscgov
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

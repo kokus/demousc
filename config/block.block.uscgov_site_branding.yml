@@ -1,0 +1,25 @@
+uuid: 1126a627-d66c-4835-a7f7-6f0d2ea6372e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - uscgov
+_core:
+  default_config_hash: s-lZlZAxsDqGZZrbNNO_HeVb5Djiy4VhcJDTjN8EImA
+id: uscgov_site_branding
+theme: uscgov
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }
