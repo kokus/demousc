@@ -2,10 +2,10 @@
 
 namespace Drupal\usc_court_finder\Entity;
 
-use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
 
 /**
  * Defines the Autocomplete entity.
@@ -108,4 +108,5 @@ final class Autocomplete extends ContentEntityBase implements CourtFinderEntityI
 
     return $fields;
   }
+
 }

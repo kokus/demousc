@@ -7,17 +7,17 @@ namespace Drupal\usc_court_finder;
  */
 class CourtFinderImportBatchService {
 
- /**
+  /**
    * Batch process callback.
    *
    * @param string $entityType
-   *  Import entity type.
+   *   Import entity type.
    * @param array $idKeys
-   *  Import entity primary keys.
+   *   Import entity primary keys.
    * @param array $headersMapping
-   *  A mapping array between D7 and D10 column names.
+   *   A mapping array between D7 and D10 column names.
    * @param array $fields
-   *  An array with entity values.
+   *   An array with entity values.
    * @param object $context
    *   Context for operations.
    *
@@ -41,17 +41,20 @@ class CourtFinderImportBatchService {
       $entity = $storage->create($ids);
     }
     elseif (count($entity) > 1) {
-        // Throw an exception if we have a collision but it should not happen.
-        throw new \RuntimeException('There is more than one entity with primary keys.');
+      // Throw an exception if we have a collision but it should not happen.
+      throw new \RuntimeException('There is more than one entity with primary keys.');
     }
     else {
-        $entity = reset($entity);
+      $entity = reset($entity);
     }
     foreach ($fields as $fieldName => $value) {
       $entity->{$headersMapping[$fieldName]} = $value;
     }
     $entity->save();
-    $message = t('Imported @entity_type: @id', ['@entity_type' => $entityType, '@id' => $entity->id()]);
+    $message = t(
+      'Imported @entity_type: @id',
+      ['@entity_type' => $entityType, '@id' => $entity->id()]
+    );
     $context['results'][] = $entity->id();
     $context['message'] = $message;
   }
@@ -71,7 +74,8 @@ class CourtFinderImportBatchService {
     $messenger = \Drupal::messenger();
     if ($success) {
       $message = t('@count results processed.', ['@count' => count($results)]);
-    } else {
+    }
+    else {
       $message = t('Finished with an error.');
     }
     $messenger->addMessage($message);
