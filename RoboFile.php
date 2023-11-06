@@ -291,10 +291,9 @@ class RoboFile extends Tasks {
     $force = TRUE;
     $tasks = [];
     $tasks[] = $this->taskFilesystemStack()
-      ->remove('web/sites/default/settings.php')
+      ->remove('web/sites/default/settings.db.php')
       ->remove('web/sites/default/files')
-      ->copy('.bitbucket/config/settings.php', 'web/sites/default/settings.php', $force)
-      ->copy('.bitbucket/config/.env', '.env', $force);
+      ->copy('.bitbucket/config/settings.local.php', 'web/sites/default/settings.db.php');
     return $tasks;
   }
 
