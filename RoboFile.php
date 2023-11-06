@@ -80,6 +80,16 @@ class RoboFile extends Tasks {
   }
 
   /**
+   * Fix Codesniffer errors.
+   */
+  public function phpcbf() {
+    return $this->taskExec('vendor/bin/phpcbf')
+      ->arg('-ns')
+      ->printOutput(TRUE)
+      ->run();
+  }
+
+    /**
    * Runs Codesniffer.
    */
   public function phpcs() {
