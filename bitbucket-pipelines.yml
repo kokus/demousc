@@ -44,7 +44,7 @@ pipelines:
                 - mariadb
               script:
                 - robo ci:build
-                - robo ci:import-database
+                - robo ci:install-drupal
                 - robo ci:serve-drupal
                 - robo ci:chrome-headless -q &
                 - robo ci:prepare-behat

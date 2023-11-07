@@ -163,6 +163,18 @@ class RoboFile extends Tasks {
   }
 
   /**
+   * Install Drupal.
+   *
+   * @return \Robo\Result
+   *   The result tof the collection of tasks.
+   */
+  public function ciInstallDrupal() {
+    $collection = $this->collectionBuilder();
+    $collection->addTask($this->runInstallDrupal());
+    return $collection->run();
+  }
+
+  /**
    * Command to run Chrome headless.
    *
    * @return \Robo\Result
