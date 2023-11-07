@@ -90,20 +90,22 @@
   </main>
 
   {% embed 'uscgov:footer' with {
+    footer_above_region: page.footer_above,
+    footer_main_region: page.footer_main,
     logo: {
       path: '/' ~ directory ~ '/images/AO-seal-art-thicker-lines.webp',
-      alt: 'logo',
+      alt: 'logo'|t,
       width: 80,
       height: 80,
     },
-    brand_text: 'This site is maintained by the Administrative Office of the U.S. Courts on behalf of the Federal Judiciary. The purpose of this site is to provide information from and about the Judicial Branch of the U.S. Government.'|t,
+    brand_text: 'This site is maintained by the Administrative Office of the U.S. Courts on behalf of the Federal Judiciary.'|t,
   } only %}
-    {# {% block footer_primary %}
-      {{ footer_primary }}
+    {% block footer_above %}
+      {{ footer_above_region }}
     {% endblock %}
-    {% block footer_secondary %}
-      {{ footer_secondary }}
-    {% endblock %} #}
+    {% block footer_below %}
+      {{ footer_main_region }}
+    {% endblock %}
   {% endembed %}
 
-</div>{# /.layout-container #}
+</div>

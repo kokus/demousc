@@ -9,8 +9,8 @@ regions:
   breadcrumb: Breadcrumb
   content: Content
   sidebar: Sidebar
-  footer_primary: 'Footer Primary'
-  footer_secondary: 'Footer Secondary'
+  footer_above: 'Footer Above'
+  footer_main: 'Footer Main'
 libraries:
   - uscgov/global
   - uscgov/uswds

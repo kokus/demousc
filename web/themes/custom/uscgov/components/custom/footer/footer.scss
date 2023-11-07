@@ -1,13 +1,16 @@
 @forward "../../sass/uswds/settings";
 @use "uswds-core" as *;
 
-.footer {
+$footer_break_large: 'min-width: 1400px';
 
+.footer {
+    margin-top: 24px;
 }
 
 .footer__top {
   border-top: solid 1px #8C91A0;
   padding: 13.5px 40px;
+  background-color: #F4F6FB;
 }
 
 .footer__bottom {
@@ -17,36 +20,45 @@
 
 .footer__bottom-container {
   display: flex;
-  gap: 140px;
+  flex-direction: column;
+  gap: 56px;
   padding-block: 40px;
+  padding-inline: 26px;
+
+  @media ($footer_break_large) {
+    flex-direction: row;
+    gap: 140px;
+    padding-inline: unset;
+  }
 }
 
 .footer__bottom-first {
-
+  flex-shrink: 0;
 }
 
-.footer__bottom-second {
-
-}
-
+.footer__bottom-first,
+.footer__bottom-second,
 .footer__bottom-third {
-
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__branding {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 23px;
+  margin-block: 0 40px;
+
+  @media ($footer_break_large) {
+    margin-block: 32px auto;
+  }
 }
 
 .footer__branding-text {
+  max-width: 380px; // Magic number per design.
   line-height: 1.35;
   font-size: 14px;
   font-style: italic;
-}
-
-.footer__subscribe {
-
 }
 
 .footer__subscribe-title {
@@ -62,13 +74,15 @@
 
 .footer__subscribe-form-wrapper {
   display: flex;
-  width: fit-content;
+  width: 325px; // Magic number to match designs.
   height: 38px;
   background: #ffffff;
   border-radius: 30px;
 }
 
 .footer__subscribe-input {
+  width: 100%;
+  padding-left: 10px;
   background: #ffffff;
   border-radius: 30px 0 0 30px;
   appearance: none;
@@ -93,12 +107,35 @@
   border: 2px solid #0057A3;
   background: #E6F1FA;
   color: #002045;
+
+  @media ($footer_break_large) {
+    width: 206px; // Magic number to match designs.
+  }
 }
 
 .footer__feedback-title {
   font-size: 22px;
   font-weight: 600;
   margin-block: 0 8px;
+}
+
+.footer__feedback-title-icon {
+  &:after {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    content: "";
+    background-color: currentColor;
+    mask-image: url('/themes/custom/uscgov/icons/font-awesome/solid/bullhorn.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+    @media (forced-colors: active) {
+      background-color: canvasText;
+    }
+  }
 }
 
 .footer__feedback-description {

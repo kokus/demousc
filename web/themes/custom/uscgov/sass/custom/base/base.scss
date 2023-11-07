@@ -1,12 +1,17 @@
 @forward "../../uswds/settings";
 @use "uswds-core" as *;
 
-// *,
-// *::before,
-// *::after {
-//   box-sizing: border-box;
-// }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
 
 h1, h2, h3 {
   @include u-font-family('serif');
+  font-weight: normal;
 }

@@ -1,6 +1,8 @@
 <footer class="footer">
   <div class="footer__top">
-    <div class="container"></div>
+    <div class="container">
+      {% block footer_above %}{% endblock %}
+    </div>
   </div>
   <div class="footer__bottom">
     <div class="footer__bottom-container container">
@@ -9,6 +11,7 @@
           <img loading="lazy" src="{{ logo.path }}" alt="{{ logo.alt }}" width="{{ logo.width }}" height="logo.height">
           <div class="footer__branding-text">{{ brand_text }}</div>
         </div>
+        {% block footer_below %}{% endblock %}
       </div>
       <div class="footer__bottom-second">
         <form class="footer__subscribe" action="">
@@ -50,7 +53,10 @@
       </div>
       <div class="footer__bottom-third">
         <div class="footer__feedback">
-          <h2 class="footer__feedback-title">{{ 'Feedback'|t }}</h2>
+          <h2 class="footer__feedback-title">
+            <span class="footer__feedback-title-icon"></span>
+            {{ 'Feedback'|t }}
+          </h2>
           <div class="footer__feedback-description">{{ 'We are always improving our website. Open our feedback form by clicking the button below.'|t }}</div>
           <a href="#" class="footer__feedback-link">{{ 'Provide feedback'|t }}</a>
         </div>
