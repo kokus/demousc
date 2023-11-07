@@ -25,6 +25,14 @@ services:
 
         # Increase the php memory limit to 512MB.
         - echo "memory_limit = 512M" >> /usr/local/etc/php/conf.d/tugboat.ini
+        # Install node.
+        - apt-get update
+        - apt-get install -yq ca-certificates curl gnupg
+        - mkdir -p /etc/apt/keyrings
+        - curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+        - echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_18.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
+        - apt-get update
+        - apt-get install -yq nodejs
 
       # Commands that import files, databases,  or other assets. When an
       # existing preview is refreshed, the build workflow starts here,
@@ -47,6 +55,8 @@ services:
         - vendor/bin/drush deploy
         - vendor/bin/drush user:create tugboat_admin --mail='tugboat_ad@example.com' --password=${ADMIN_PASS}
         - vendor/bin/drush user:role:add 'administrator' tugboat_admin
+        # Compile theme.
+        - cd web/themes/custom/uscgov/ && npm install && npx gulp init
 
   # This 'mysql' key acts as the hostname to access the service by from the php service.
   mysql:
