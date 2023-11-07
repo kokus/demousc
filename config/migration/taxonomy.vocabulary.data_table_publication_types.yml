@@ -1,8 +1,0 @@
-uuid: 2a0bf701-29fa-40cd-800a-3ce333aaebcd
-langcode: en
-status: true
-dependencies: {  }
-name: 'Data Table Publication Types'
-vid: data_table_publication_types
-description: ''
-weight: 0
