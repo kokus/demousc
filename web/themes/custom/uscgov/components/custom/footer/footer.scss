@@ -1,0 +1,118 @@
+@forward "../../sass/uswds/settings";
+@use "uswds-core" as *;
+
+.footer {
+
+}
+
+.footer__top {
+  border-top: solid 1px #8C91A0;
+  padding: 13.5px 40px;
+}
+
+.footer__bottom {
+  background: #002D5A;
+  color: #ffffff;
+}
+
+.footer__bottom-container {
+  display: flex;
+  gap: 140px;
+  padding-block: 40px;
+}
+
+.footer__bottom-first {
+
+}
+
+.footer__bottom-second {
+
+}
+
+.footer__bottom-third {
+
+}
+
+.footer__branding {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.footer__branding-text {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.footer__subscribe {
+
+}
+
+.footer__subscribe-title {
+  margin-block: 0 16px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.footer__subscribe-description {
+  margin-block: 16px;
+  font-size: 14px;
+}
+
+.footer__subscribe-form-wrapper {
+  display: flex;
+  width: fit-content;
+  height: 38px;
+  background: #ffffff;
+  border-radius: 30px;
+}
+
+.footer__subscribe-input {
+  background: #ffffff;
+  border-radius: 30px;
+  appearance: none;
+  border-color: transparent;
+}
+
+.footer__subscribe-button {
+  display: flex;
+  padding: 8px 16px;
+  border-radius: 30px;
+  align-items: center;
+  appearance: none;
+  border-color: #888; // @todo can't extract the correct color from Figma.
+  background: #0057A3;
+  color: #ffffff;
+}
+
+.footer__feedback {
+  padding: 24px;
+  border-radius: 30px;
+  border: 2px solid #0057A3;
+  background: #E6F1FA;
+  color: #002045;
+}
+
+.footer__feedback-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-block: 0 8px;
+}
+
+.footer__feedback-description {
+  margin-block: 8px 16px;
+  font-size: 14px;
+}
+
+.footer__feedback-link {
+  display: flex;
+  width: fit-content;
+  margin-top: 16px;
+  padding: 8px 16px;
+  align-items: center;
+  border-radius: 30px;
+  background: #0057A3;
+  color: #FEFEFE;
+  font-size: 16px;
+  text-decoration: none;
+}

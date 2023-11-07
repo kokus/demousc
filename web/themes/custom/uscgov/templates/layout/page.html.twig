@@ -43,7 +43,7 @@
  */
 #}
 <div class="layout-container">
-
+{#
   {% embed 'uscgov:usa_header' with {
     extended: true,
     attributes,
@@ -64,7 +64,7 @@
     {% block search_box %}
       {{ search_box }}
     {% endblock %}
-  {% endembed %}
+  {% endembed %} #}
 
   <div class="container">
     {{ page.highlighted }}
@@ -89,26 +89,21 @@
     </div>
   </main>
 
-  {% embed 'uscgov:usa_footer' with {
-    attributes,
-    footer_primary: page.footer_primary,
-    footer_secondary: page.footer_secondary,
+  {% embed 'uscgov:footer' with {
     logo: {
       path: '/' ~ directory ~ '/dist/uswds/img/logo-img.png',
       alt: 'logo',
-      width: 48,
-      height: 48,
+      width: 80,
+      height: 80,
     },
-    org_name: 'Agency name',
-    phone: '(800) 354-2337',
-    email: 'info@agency.gov',
+    brand_text: 'This site is maintained by the Administrative Office of the U.S. Courts on behalf of the Federal Judiciary. The purpose of this site is to provide information from and about the Judicial Branch of the U.S. Government.'|t,
   } only %}
-    {% block footer_primary %}
+    {# {% block footer_primary %}
       {{ footer_primary }}
     {% endblock %}
     {% block footer_secondary %}
       {{ footer_secondary }}
-    {% endblock %}
+    {% endblock %} #}
   {% endembed %}
 
 </div>{# /.layout-container #}

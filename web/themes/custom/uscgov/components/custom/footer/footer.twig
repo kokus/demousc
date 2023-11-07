@@ -1,0 +1,36 @@
+<footer class="footer">
+  <div class="footer__top">
+    <div class="container"></div>
+  </div>
+  <div class="footer__bottom">
+    <div class="footer__bottom-container container">
+      <div class="footer__bottom-first">
+        <div class="footer__branding">
+          <img loading="lazy" src="{{ logo.path }}" alt="{{ logo.alt }}" width="{{ logo.width }}" height="logo.height">
+          <div class="footer__branding-text">{{ brand_text }}</div>
+        </div>
+      </div>
+      <div class="footer__bottom-second">
+        <form class="footer__subscribe" action="">
+          <h2 class="footer__subscribe-title">{{ 'Subscribe to Updates'|t }}</h2>
+          <div class="footer__subscribe-description">{{ 'To receive updates, enter your email address and select the topics that interest you.'|t }}</div>
+          {% set id = 'footer-email-subscribe'|clean_unique_id %}
+          <label for="{{ id }}" class="visually-hidden">
+            {{ 'Email address' |t }}
+          </label>
+          <div class="footer__subscribe-form-wrapper">
+            <input class="footer__subscribe-input" id="{{ id }}" type="email" width="60">
+            <button class="footer__subscribe-button" type="submit">{{ 'Submit'|t }}</button>
+          </div>
+        </form>
+      </div>
+      <div class="footer__bottom-third">
+        <div class="footer__feedback">
+          <h2 class="footer__feedback-title">{{ 'Feedback'|t }}</h2>
+          <div class="footer__feedback-description">{{ 'We are always improving our website. Open our feedback form by clicking the button below.'|t }}</div>
+          <a href="#" class="footer__feedback-link">{{ 'Provide feedback'|t }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

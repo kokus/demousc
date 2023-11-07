@@ -1,82 +1,82 @@
 @use "../global/media-queries" as *;
 
 :root {
-  //
-  // Typography
-  //
-  --font-sans: 'Public Sans Web', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  --font-serif: 'Merriweather Web', 'Georgia', 'Cambria', 'Times New Roman', 'Times', serif;
-  --letter-spacing--md: 2.24px; // Branding text in header and footer
+  // //
+  // // Typography
+  // //
+  // --font-sans: 'Public Sans Web', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  // --font-serif: 'Merriweather Web', 'Georgia', 'Cambria', 'Times New Roman', 'Times', serif;
+  // --letter-spacing--md: 2.24px; // Branding text in header and footer
 
-  --body-1: 17px;
-  --body-2: 14px;
-  --body-3: 12px;
+  // --body-1: 17px;
+  // --body-2: 14px;
+  // --body-3: 12px;
 
-  --h1: 32px;
-  --h2: 28px;
-  --h3: 20px;
-  --h4: 16px;
-  --h5: 15px;
-  --h6: 13px;
+  // --h1: 32px;
+  // --h2: 28px;
+  // --h3: 20px;
+  // --h4: 16px;
+  // --h5: 15px;
+  // --h6: 13px;
 
-  @media ($font-break) {
-    --h1: 40px;
-    --h2: 32px;
-    --h3: 22px;
-  }
+  // @media ($font-break) {
+  //   --h1: 40px;
+  //   --h2: 32px;
+  //   --h3: 22px;
+  // }
 
-  --intro: 22px;
-  --sub-heading: 16px;
-  --menu-link: 20px;
+  // --intro: 22px;
+  // --sub-heading: 16px;
+  // --menu-link: 20px;
 
-  //
-  // Colors
-  // @see https://contrastgrid.com/?xAxisData=%255B%257B%2522color%2522%253A%2522white%2522%257D%252C%257B%2522name%2522%253A%2522--gray-lighter%2522%252C%2522color%2522%253A%2522%2523F5F6F8%2522%257D%252C%257B%2522name%2522%253A%2522--blue-default%2522%252C%2522color%2522%253A%2522%252300284D%2522%257D%252C%257B%2522name%2522%253A%2522--gold-default%2522%252C%2522color%2522%253A%2522%2523DDAC64%2522%257D%255D&yAxisData=%255B%257B%2522name%2522%253A%2522--blue-lighter%2522%252C%2522color%2522%253A%2522%2523005DB2%2522%257D%252C%257B%2522name%2522%253A%2522--blue-light%2522%252C%2522color%2522%253A%2522%2523004280%2522%257D%252C%257B%2522name%2522%253A%2522--blue-default%2522%252C%2522color%2522%253A%2522%252300284D%2522%257D%252C%257B%2522name%2522%253A%2522--blue-dark%2522%252C%2522color%2522%253A%2522%2523001F37%2522%257D%252C%257B%2522name%2522%253A%2522--blue-darker%2522%252C%2522color%2522%253A%2522%2523000E15%2522%257D%252C%257B%2522name%2522%253A%2522--gray-darker%2522%252C%2522color%2522%253A%2522%25233D4152%2522%257D%252C%257B%2522name%2522%253A%2522--gray-dark%2522%252C%2522color%2522%253A%2522%2523838BA4%2522%257D%252C%257B%2522name%2522%253A%2522--gray-default%2522%252C%2522color%2522%253A%2522%2523BDC1CE%2522%257D%252C%257B%2522name%2522%253A%2522--gray-light%2522%252C%2522color%2522%253A%2522%2523D8DCE4%2522%257D%252C%257B%2522name%2522%253A%2522--gray-lighter%2522%252C%2522color%2522%253A%2522%2523F5F6F8%2522%257D%252C%257B%2522name%2522%253A%2522--gold-lighter%2522%252C%2522color%2522%253A%2522%2523F4DEC6%2522%257D%252C%257B%2522name%2522%253A%2522--gold-light%2522%252C%2522color%2522%253A%2522%2523ECC9A1%2522%257D%252C%257B%2522name%2522%253A%2522--gold-default%2522%252C%2522color%2522%253A%2522%2523DDAC64%2522%257D%252C%257B%2522name%2522%253A%2522--gold-dark%2522%252C%2522color%2522%253A%2522%2523DCA05E%2522%257D%252C%257B%2522name%2522%253A%2522--gold-darker%2522%252C%2522color%2522%253A%2522%2523D38B41%2522%257D%255D
-  //
-  --blue-lighter: #005DB2;
-  --blue-light: #004280;
-  --blue-default: #00284D;
-  --blue-dark: #001F37;
-  --blue-darker: #000E15;
+  // //
+  // // Colors
+  // // @see https://contrastgrid.com/?xAxisData=%255B%257B%2522color%2522%253A%2522white%2522%257D%252C%257B%2522name%2522%253A%2522--gray-lighter%2522%252C%2522color%2522%253A%2522%2523F5F6F8%2522%257D%252C%257B%2522name%2522%253A%2522--blue-default%2522%252C%2522color%2522%253A%2522%252300284D%2522%257D%252C%257B%2522name%2522%253A%2522--gold-default%2522%252C%2522color%2522%253A%2522%2523DDAC64%2522%257D%255D&yAxisData=%255B%257B%2522name%2522%253A%2522--blue-lighter%2522%252C%2522color%2522%253A%2522%2523005DB2%2522%257D%252C%257B%2522name%2522%253A%2522--blue-light%2522%252C%2522color%2522%253A%2522%2523004280%2522%257D%252C%257B%2522name%2522%253A%2522--blue-default%2522%252C%2522color%2522%253A%2522%252300284D%2522%257D%252C%257B%2522name%2522%253A%2522--blue-dark%2522%252C%2522color%2522%253A%2522%2523001F37%2522%257D%252C%257B%2522name%2522%253A%2522--blue-darker%2522%252C%2522color%2522%253A%2522%2523000E15%2522%257D%252C%257B%2522name%2522%253A%2522--gray-darker%2522%252C%2522color%2522%253A%2522%25233D4152%2522%257D%252C%257B%2522name%2522%253A%2522--gray-dark%2522%252C%2522color%2522%253A%2522%2523838BA4%2522%257D%252C%257B%2522name%2522%253A%2522--gray-default%2522%252C%2522color%2522%253A%2522%2523BDC1CE%2522%257D%252C%257B%2522name%2522%253A%2522--gray-light%2522%252C%2522color%2522%253A%2522%2523D8DCE4%2522%257D%252C%257B%2522name%2522%253A%2522--gray-lighter%2522%252C%2522color%2522%253A%2522%2523F5F6F8%2522%257D%252C%257B%2522name%2522%253A%2522--gold-lighter%2522%252C%2522color%2522%253A%2522%2523F4DEC6%2522%257D%252C%257B%2522name%2522%253A%2522--gold-light%2522%252C%2522color%2522%253A%2522%2523ECC9A1%2522%257D%252C%257B%2522name%2522%253A%2522--gold-default%2522%252C%2522color%2522%253A%2522%2523DDAC64%2522%257D%252C%257B%2522name%2522%253A%2522--gold-dark%2522%252C%2522color%2522%253A%2522%2523DCA05E%2522%257D%252C%257B%2522name%2522%253A%2522--gold-darker%2522%252C%2522color%2522%253A%2522%2523D38B41%2522%257D%255D
+  // //
+  // --blue-lighter: #005DB2;
+  // --blue-light: #004280;
+  // --blue-default: #00284D;
+  // --blue-dark: #001F37;
+  // --blue-darker: #000E15;
 
-  --gray-darker: #3D4152;
-  --gray-dark: #838BA4;
-  --gray-default: #BDC1CE;
-  --gray-light: #D8DCE4;
-  --gray-lighter: #F7F7F9;
+  // --gray-darker: #3D4152;
+  // --gray-dark: #838BA4;
+  // --gray-default: #BDC1CE;
+  // --gray-light: #D8DCE4;
+  // --gray-lighter: #F7F7F9;
 
-  --gold-lighter: #F4DEC6;
-  --gold-light: #ECC9A1;
-  --gold-default: #DDAC64;
-  --gold-dark: #DCA05E;
-  --gold-darker: #D38B41;
+  // --gold-lighter: #F4DEC6;
+  // --gold-light: #ECC9A1;
+  // --gold-default: #DDAC64;
+  // --gold-dark: #DCA05E;
+  // --gold-darker: #D38B41;
 
-  --theme-primary: var(--blue-default);
-  --theme-primary-light: var(--blue-light);
-  --theme-white: white;
-  --theme-black: black;
-  --theme-neutral-lighter: var(--gray-lighter);
-  --theme-neutral-light: var(--gray-light);
-  --theme-neutral: var(--gray-default);
-  --theme-neutral-dark: var(--gray-dark);
-  --theme-neutral-darker: var(--gray-darker);
-  --theme-secondary: var(--gold-default);
+  // --theme-primary: var(--blue-default);
+  // --theme-primary-light: var(--blue-light);
+  // --theme-white: white;
+  // --theme-black: black;
+  // --theme-neutral-lighter: var(--gray-lighter);
+  // --theme-neutral-light: var(--gray-light);
+  // --theme-neutral: var(--gray-default);
+  // --theme-neutral-dark: var(--gray-dark);
+  // --theme-neutral-darker: var(--gray-darker);
+  // --theme-secondary: var(--gold-default);
 
-  //
-  // Layout
-  //
+  // //
+  // // Layout
+  // //
   --site-max-width: 87.5rem;
   --container-padding: 2rem;
 
-  // Spacing
-  --spacing-xxxs: 2px;
-  --spacing-xxs: 4px;
-  --spacing-xs: 8px;
-  --spacing-sm: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
-  --spacing-xxl: 48px;
-  --spacing-xxxl: 64px;
-  --spacing-xxxxl: 72px;
-  --spacing-component: 80px;
+  // // Spacing
+  // --spacing-xxxs: 2px;
+  // --spacing-xxs: 4px;
+  // --spacing-xs: 8px;
+  // --spacing-sm: 16px;
+  // --spacing-lg: 24px;
+  // --spacing-xl: 32px;
+  // --spacing-xxl: 48px;
+  // --spacing-xxxl: 64px;
+  // --spacing-xxxxl: 72px;
+  // --spacing-component: 80px;
 }

@@ -17,6 +17,7 @@ in the form $setting: value,
   $theme-footer-max-width: "widescreen",
   $theme-font-path: '/themes/custom/uscgov/fonts',
   $theme-respect-user-font-size: true,
+  // $theme-font-role-heading:  'serif', // @todo this isn't working.
   $theme-font-type-sans: 'source-sans-pro',
   $theme-font-type-serif: "source-serif-pro",
   $theme-font-serif-custom-src: (
