@@ -1,8 +1,0 @@
-uuid: 94b739f2-3349-4322-9c21-cb15259f4886
-langcode: en
-status: true
-dependencies: {  }
-name: 'Educational Activity Categories'
-vid: educational_activity_categorie
-description: ''
-weight: 0

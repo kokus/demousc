@@ -23,6 +23,9 @@ services:
         # already present.
         - mkdir -p "${TUGBOAT_ROOT}/files-private"
 
+        # Increase the php memory limit to 512MB.
+        - echo "memory_limit = 512M" >> /usr/local/etc/php/conf.d/tugboat.ini
+
       # Commands that import files, databases,  or other assets. When an
       # existing preview is refreshed, the build workflow starts here,
       # skipping the init step, because the results of that step will

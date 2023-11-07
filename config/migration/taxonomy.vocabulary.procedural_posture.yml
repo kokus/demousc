@@ -1,8 +1,0 @@
-uuid: 1bc853c0-0d38-445d-b521-7fdbc8c85110
-langcode: en
-status: true
-dependencies: {  }
-name: 'Procedural Posture'
-vid: procedural_posture
-description: 'Used in Cameras in Court content type.'
-weight: 0

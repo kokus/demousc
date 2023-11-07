@@ -1,8 +1,0 @@
-uuid: 85615574-384b-4763-9729-563893f6444a
-langcode: en
-status: true
-dependencies: {  }
-name: 'Committees (Judge Comments)'
-vid: committees_judge_comments
-description: 'Used in Judge Comments content type.'
-weight: 0
