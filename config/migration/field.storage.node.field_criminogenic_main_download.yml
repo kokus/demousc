@@ -1,0 +1,23 @@
+uuid: 83c4ae74-a715-40eb-8dd1-6ad5b49a0ffd
+langcode: und
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_criminogenic_main_download
+field_name: field_criminogenic_main_download
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

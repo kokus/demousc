@@ -1,0 +1,8 @@
+uuid: 8481c84d-b0a9-4d26-8af6-7f5f3946a75d
+langcode: en
+status: true
+dependencies: {  }
+name: 'File Types'
+vid: file_types
+description: 'Used as category in Federal Rules content type.'
+weight: 0

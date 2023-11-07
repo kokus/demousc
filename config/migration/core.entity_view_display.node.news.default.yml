@@ -1,0 +1,36 @@
+uuid: f262da0e-31ed-4bff-b280-3a222b729290
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news.body
+    - field.field.node.news.field_date_updated
+    - field.field.node.news.field_lead_gallery
+    - field.field.node.news.field_news_issue
+    - field.field.node.news.field_tags
+    - node.type.news
+  module:
+    - text
+    - user
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_date_updated: true
+  field_lead_gallery: true
+  field_news_issue: true
+  field_tags: true

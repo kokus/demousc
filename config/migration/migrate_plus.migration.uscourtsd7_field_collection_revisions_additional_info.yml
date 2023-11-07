@@ -1,0 +1,78 @@
+uuid: f197b5cb-ead7-425d-b0d2-d7bd4f2c72f6
+langcode: en
+status: true
+dependencies: {  }
+id: uscourtsd7_field_collection_revisions_additional_info
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - 'Field Collection Revisions Content'
+migration_group: migrate_drupal_7
+label: 'Field Collection Revisions (Additional info)'
+source:
+  plugin: d7_field_collection_item_revision
+  field_name: field_additional_info
+process:
+  id:
+    -
+      plugin: paragraphs_lookup
+      tags:
+        - 'Field Collection Content'
+      source: item_id
+    -
+      plugin: extract
+      index:
+        - id
+  type:
+    -
+      plugin: get
+      source: bundle
+  parent_id:
+    -
+      plugin: get
+      source: parent_id
+  parent_type:
+    -
+      plugin: get
+      source: parent_type
+  parent_field_name:
+    -
+      plugin: get
+      source: field_name
+  field_additional_info_type:
+    -
+      plugin: get
+      source: field_additional_info_type
+  field_document_pdf:
+    -
+      plugin: sub_process
+      source: field_document_pdf
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_file_description:
+    -
+      plugin: get
+      source: field_file_description
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  new_revisions: true
+  default_bundle: additional_info
+migration_dependencies:
+  required:
+    - uscourtsd7_field_collection_body_enhanced
+    - uscourtsd7_field_collection_referenced_nodes
+    - uscourtsd7_field_collection_milestone_activities
+    - uscourtsd7_field_collection_additional_info
+    - uscourtsd7_field_collection_piksel_programs
+    - uscourtsd7_field_collection_criminogenic_extra_downlds
+    - uscourtsd7_field_collection_criminogenic_worksheets
+  optional: {  }

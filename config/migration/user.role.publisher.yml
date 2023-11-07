@@ -1,0 +1,27 @@
+uuid: 11ccdefc-7881-4d3e-9f50-252632160f96
+langcode: en
+status: true
+dependencies:
+  module:
+    - contextual
+    - node
+    - path
+    - system
+    - taxonomy
+id: publisher
+label: publisher
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access site reports'
+  - 'access user profiles'
+  - 'administer menu'
+  - 'administer nodes'
+  - 'administer taxonomy'
+  - 'administer users'
+  - 'bypass node access'
+  - 'create url aliases'
+  - 'view the administration theme'

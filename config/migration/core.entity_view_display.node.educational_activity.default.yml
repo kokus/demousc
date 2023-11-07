@@ -1,0 +1,28 @@
+uuid: b798a361-96f9-4fdc-9776-73cc2541ddcb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.educational_activity.body
+    - node.type.educational_activity
+  module:
+    - text
+    - user
+id: node.educational_activity.default
+targetEntityType: node
+bundle: educational_activity
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

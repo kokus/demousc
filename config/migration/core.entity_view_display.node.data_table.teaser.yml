@@ -1,0 +1,30 @@
+uuid: 08cb993a-2d66-4917-a232-ac1f3f7c710a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.data_table.body
+    - node.type.data_table
+  module:
+    - text
+    - user
+id: node.data_table.teaser
+targetEntityType: node
+bundle: data_table
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

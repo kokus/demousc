@@ -1,0 +1,8 @@
+uuid: 1c5da8ac-53b5-455d-ad3d-b7a0b1793ca0
+langcode: en
+status: true
+dependencies: {  }
+name: 'Form Categories'
+vid: form_categories
+description: 'Used in Forms content type.'
+weight: 0

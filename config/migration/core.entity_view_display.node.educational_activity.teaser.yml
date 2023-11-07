@@ -1,0 +1,30 @@
+uuid: 42e03206-30a3-44a4-81ae-556fbc49a9c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.educational_activity.body
+    - node.type.educational_activity
+  module:
+    - text
+    - user
+id: node.educational_activity.teaser
+targetEntityType: node
+bundle: educational_activity
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

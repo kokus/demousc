@@ -1,0 +1,101 @@
+uuid: 66d6d969-7d8b-48df-ba11-dc3992a22061
+langcode: en
+status: true
+dependencies: {  }
+id: uscourtsd7_taxonomy_term_glossary
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Taxonomy terms (Glossary of Legal Terms)'
+source:
+  plugin: d7_taxonomy_term
+  bundle: glossary
+process:
+  tid:
+    -
+      plugin: get
+      source: tid
+  vid:
+    -
+      plugin: migration_lookup
+      migration: uscourtsd7_taxonomy_vocabulary
+      source: vid
+  name:
+    -
+      plugin: get
+      source: name
+  description/value:
+    -
+      plugin: get
+      source: description
+  description/format:
+    -
+      plugin: get
+      source: format
+  weight:
+    -
+      plugin: get
+      source: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration:
+        - uscourtsd7_taxonomy_term_tags
+        - uscourtsd7_taxonomy_term_form_categories
+        - uscourtsd7_taxonomy_term_milestone_categories
+        - uscourtsd7_taxonomy_term_milestone_positions
+        - uscourtsd7_taxonomy_term_report_names
+        - uscourtsd7_taxonomy_term_data_table_topics
+        - uscourtsd7_taxonomy_term_committees_
+        - uscourtsd7_taxonomy_term_file_types
+        - uscourtsd7_taxonomy_term_site_sections
+        - uscourtsd7_taxonomy_term_court_name
+        - uscourtsd7_taxonomy_term_procedural_posture
+        - uscourtsd7_taxonomy_term_subject_matter
+        - uscourtsd7_taxonomy_term_glossary
+        - uscourtsd7_taxonomy_term_educational_activity_categories
+        - uscourtsd7_taxonomy_term_topics
+        - uscourtsd7_taxonomy_term_table_number
+        - uscourtsd7_taxonomy_term_data_table_publication_types
+        - uscourtsd7_taxonomy_term_data_table_category_prefix
+        - uscourtsd7_taxonomy_term_probation_journal_topic
+        - uscourtsd7_taxonomy_term_committees_judge_comments
+        - uscourtsd7_taxonomy_term_submitted_to
+  parent:
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+  forum_container:
+    -
+      plugin: get
+      source: is_container
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  langcode:
+    -
+      plugin: get
+      source: language
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: glossary
+migration_dependencies:
+  required:
+    - uscourtsd7_taxonomy_vocabulary
+  optional:
+    - uscourtsd7_field_instance
+    - uscourtsd7_taxonomy_vocabulary

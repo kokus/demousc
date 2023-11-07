@@ -1,0 +1,30 @@
+uuid: 8510d44a-3e1e-4e69-af36-653837e29dac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_view.body
+    - field.field.node.landing_view.field_tags
+    - node.type.landing_view
+  module:
+    - text
+    - user
+id: node.landing_view.default
+targetEntityType: node
+bundle: landing_view
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_tags: true

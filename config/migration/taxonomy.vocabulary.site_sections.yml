@@ -1,0 +1,8 @@
+uuid: 0d41a2bd-c4ee-40b3-8af6-5aeda14534bc
+langcode: en
+status: true
+dependencies: {  }
+name: 'Site Sections'
+vid: site_sections
+description: 'Used for workflow and moderation.'
+weight: 0

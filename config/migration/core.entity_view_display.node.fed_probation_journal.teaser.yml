@@ -1,0 +1,30 @@
+uuid: c89a4004-1b1c-4501-b6bf-9b059154e8f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.fed_probation_journal.body
+    - node.type.fed_probation_journal
+  module:
+    - text
+    - user
+id: node.fed_probation_journal.teaser
+targetEntityType: node
+bundle: fed_probation_journal
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

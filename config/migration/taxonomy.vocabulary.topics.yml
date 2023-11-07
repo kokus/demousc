@@ -1,0 +1,8 @@
+uuid: 22ef585f-213e-4877-81dc-9a590567ccf6
+langcode: en
+status: true
+dependencies: {  }
+name: Topics
+vid: topics
+description: 'Related topics on news pages.'
+weight: 0

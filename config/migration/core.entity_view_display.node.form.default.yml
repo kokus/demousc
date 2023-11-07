@@ -1,0 +1,40 @@
+uuid: 1cf3f548-3a51-492f-8437-e4b0b29c47f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.form.body
+    - field.field.node.form.field_date_effective
+    - field.field.node.form.field_date_updated
+    - field.field.node.form.field_document_pdf
+    - field.field.node.form.field_form_category
+    - field.field.node.form.field_form_number
+    - field.field.node.form.field_tags
+    - node.type.form
+  module:
+    - text
+    - user
+id: node.form.default
+targetEntityType: node
+bundle: form
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_date_effective: true
+  field_date_updated: true
+  field_document_pdf: true
+  field_form_category: true
+  field_form_number: true
+  field_tags: true

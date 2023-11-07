@@ -1,0 +1,24 @@
+uuid: 8c288c52-5333-468d-b4de-e15dd230639d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.front_promo_box
+  module:
+    - text
+id: node.front_promo_box.body
+field_name: body
+entity_type: node
+bundle: front_promo_box
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

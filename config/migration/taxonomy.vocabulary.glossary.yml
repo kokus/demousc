@@ -1,0 +1,8 @@
+uuid: 942a0434-9e7c-4d00-9945-d5ef268c372e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Glossary of Legal Terms'
+vid: glossary
+description: ''
+weight: 0
