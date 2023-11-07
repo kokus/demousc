@@ -239,7 +239,32 @@ class RoboFile extends Tasks {
     $tasks[] = $this->taskFilesystemStack()
       ->copy('.bitbucket/config/behat.yml', 'tests/behat.yml', $force);
     $tasks[] = $this->taskExec('sleep 30s');
-    $tasks[] = $this->taskExec('vendor/bin/behat --verbose --colors -c tests/behat.yml');
+
+    $base_url = 'http://localhost';
+    $features_path = 'tests/features';
+
+    $params = [
+      'extensions' => [
+        'Behat\MinkExtension' => [
+          'base_url' => $base_url
+        ],
+      ],
+      'suites' => [
+        'default' => [
+          'paths' => [$features_path]
+        ]
+      ]
+    ];
+    $params = json_encode($params);
+    // Export json params and run behat test.
+    $export_params = "export BEHAT_PARAMS='" . $params . "'";
+    // Build command.
+    $command = [
+      $export_params,
+      '&& vendor/bin/behat --verbose --colors -c tests/behat.yml'
+    ];
+
+    $tasks[] = $this->taskExec(implode(' ', $command));
     return $tasks;
   }
 
