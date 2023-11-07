@@ -28,9 +28,28 @@ let getSrcFrom = (key) => {
   return uswds.paths.src.defaults[`v${uswds.settings.version}`][key];
 };
 
+const buildSettings = {
+  plugins: [
+    autoprefixer({
+      cascade: false,
+      grid: true,
+      overrideBrowserslist: uswds.settings.compile.browserslist,
+    }),
+  ],
+  includes: [
+    'components/**/*.scss',
+    getSrcFrom("uswds"),
+    getSrcFrom("sass"),
+  ],
+};
+
 function customSass() {
   return src('./sass/custom/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass(
+      {
+        includePaths: buildSettings.includes
+      }
+    ).on('error', sass.logError))
     .pipe(postcss([
       autoprefixer(),
     ]))
@@ -38,21 +57,6 @@ function customSass() {
 };
 
 function buildComponents() {
-  const buildSettings = {
-    plugins: [
-      autoprefixer({
-        cascade: false,
-        grid: true,
-        overrideBrowserslist: uswds.settings.compile.browserslist,
-      }),
-    ],
-    includes: [
-      'components/**/*.scss',
-      getSrcFrom("uswds"),
-      getSrcFrom("sass"),
-    ],
-  };
-
   return src('components/**/*.scss')
     .pipe(sourcemaps.init({ largeFile: true }))
     .pipe(
