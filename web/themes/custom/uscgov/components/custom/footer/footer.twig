@@ -23,6 +23,30 @@
             <button class="footer__subscribe-button" type="submit">{{ 'Submit'|t }}</button>
           </div>
         </form>
+        {{ include('uscgov:social-media-menu', {
+          'social_media': [
+            {
+              title: 'LinkedIn',
+              url: 'https://www.linkedin.com/company/us-courts',
+              path_to_logo: '/themes/custom/uscgov/icons/font-awesome/brands/linkedin.svg',
+            },
+            {
+              title: 'Youtube',
+              url: 'https://www.youtube.com/user/uscourts',
+              path_to_logo: '/themes/custom/uscgov/icons/font-awesome/brands/youtube.svg',
+            },
+            {
+              title: 'Twitter / X',
+              url: 'https://twitter.com/uscourts',
+              path_to_logo: '/themes/custom/uscgov/icons/font-awesome/brands/x-twitter.svg',
+            },
+            {
+              title: 'RSS Feed'|t,
+              url: '#',
+              path_to_logo: '/themes/custom/uscgov/icons/font-awesome/solid/rss.svg',
+            },
+          ],
+        }, with_context = false) }}
       </div>
       <div class="footer__bottom-third">
         <div class="footer__feedback">

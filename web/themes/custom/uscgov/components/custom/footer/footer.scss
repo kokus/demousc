@@ -40,6 +40,7 @@
 }
 
 .footer__branding-text {
+  line-height: 1.35;
   font-size: 14px;
   font-style: italic;
 }
@@ -69,7 +70,7 @@
 
 .footer__subscribe-input {
   background: #ffffff;
-  border-radius: 30px;
+  border-radius: 30px 0 0 30px;
   appearance: none;
   border-color: transparent;
 }
@@ -78,6 +79,7 @@
   display: flex;
   padding: 8px 16px;
   border-radius: 30px;
+  border-style: solid;
   align-items: center;
   appearance: none;
   border-color: #888; // @todo can't extract the correct color from Figma.
