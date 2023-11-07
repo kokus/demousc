@@ -198,6 +198,22 @@ class RoboFile extends Tasks {
   }
 
   /**
+   * Runs Behat tests.
+   *
+   * @return \Robo\Task\Base\Exec[]
+   *   An array of tasks.
+   */
+  public function ciPrepareBehat() {
+    $force = TRUE;
+    $collection = $this->collectionBuilder();
+    $collection->taskFilesystemStack()
+      ->mkdir('screenshots');
+    $collection->taskFilesystemStack()
+      ->copy('.bitbucket/config/behat.yml', 'tests/behat.yml', $force);
+    return $collection->run();
+  }
+
+  /**
    * Command to run behat tests.
    *
    * @return \Robo\Result
