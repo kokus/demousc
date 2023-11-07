@@ -1,8 +1,0 @@
-uuid: ff8e3213-c7ef-4b6a-a85b-a111568e4353
-langcode: en
-status: true
-dependencies: {  }
-name: 'Data Table Report Names'
-vid: report_names
-description: 'Used in Data Table content type.'
-weight: 0

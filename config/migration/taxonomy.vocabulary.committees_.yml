@@ -1,8 +1,0 @@
-uuid: 0daef5fb-a2c5-4673-8c0a-a4fa17ab3893
-langcode: en
-status: true
-dependencies: {  }
-name: Committees
-vid: committees_
-description: 'Used in Federal Rules content type.'
-weight: 0
