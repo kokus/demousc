@@ -46,6 +46,7 @@ $footer_break_large: 'min-width: 1400px';
 .footer__branding {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 23px;
   margin-block: 0 40px;
 
@@ -74,14 +75,16 @@ $footer_break_large: 'min-width: 1400px';
 
 .footer__subscribe-form-wrapper {
   display: flex;
-  width: 325px; // Magic number to match designs.
+  max-width: 325px; // Magic number to match designs.
   height: 38px;
   background: #ffffff;
   border-radius: 30px;
 }
 
 .footer__subscribe-input {
-  width: 100%;
+  flex-grow: 1;
+  max-width: 100%;
+  min-width: 100px;
   padding-left: 10px;
   background: #ffffff;
   border-radius: 30px 0 0 30px;
