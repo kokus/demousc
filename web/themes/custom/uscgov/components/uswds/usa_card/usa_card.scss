@@ -1,0 +1,7 @@
+@forward "../../sass/uswds/settings";
+@forward "usa-card/src/styles";
+@forward "override";
+
+.usa-card__container {
+  margin: 0;
+}

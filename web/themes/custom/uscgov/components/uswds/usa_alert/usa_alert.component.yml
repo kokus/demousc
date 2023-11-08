@@ -1,0 +1,20 @@
+$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
+name: USWDS Alert
+status: experimental
+group: USWDS
+props:
+  type: object
+  required:
+    - messages
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    type:
+      title: Type
+      type: string
+    messages:
+      title: Messages
+      type: array
+    status_headings:
+      title: Status Headings
+      type: array

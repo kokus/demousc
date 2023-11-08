@@ -1,0 +1,41 @@
+global:
+  css:
+    base:
+      dist/uswds/css/fonts.css: {  }
+      dist/custom/css/base/base.css: {  }
+      dist/custom/css/base/utilities.css: {  }
+    layout:
+      dist/custom/css/layout/layout.css: {  }
+  dependencies:
+    - uscgov/uswds-variables
+uswds:
+  css:
+    base:
+      dist/uswds/css/helpers.css: {  }
+      dist/uswds/css/styles.css: {  }
+      dist/uswds/css/typography.css: {  }
+  js:
+    dist/uswds/js/uswds-init.min.js:
+      minified: true
+    dist/uswds/js/uswds.min.js:
+      minified: true
+uswds-variables:
+  css:
+    base:
+      dist/custom/css/base/css-variables.css: {  }
+uswds-utilities:
+  css:
+    base:
+      dist/uswds/css/utilities.css: {  }
+uswds-button:
+  css:
+    component:
+      dist/uswds/css/uswds-button.css: {  }
+uswds-icon:
+  css:
+    component:
+      dist/uswds/css/uswds-icon.css: {  }
+uswds-form:
+  css:
+    component:
+      dist/uswds/css/uswds-form.css: {  }

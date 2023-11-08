@@ -82,8 +82,10 @@ module:
   redirect: 0
   remote_stream_wrapper: 0
   scheduler: 0
+  sdc: 0
   search: 0
   seckit: 0
+  serialization: 0
   sharethis: 0
   shortcut: 0
   syslog: 0
@@ -112,4 +114,5 @@ theme:
   olivero: 0
   claro: 0
   gin: 0
+  uscgov: 0
 profile: minimal

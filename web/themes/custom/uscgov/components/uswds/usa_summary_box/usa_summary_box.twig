@@ -1,0 +1,27 @@
+{%
+  set classes = [
+    'usa-summary-box',
+  ]
+%}
+
+{%
+  set style = [
+    background_color ? "background-color:#{ background_color };",
+    border_color ? "border-color:#{ border_color };",
+  ]
+%}
+<div {{ attributes
+  .addClass(classes)
+  .setAttribute('role', 'region')
+  .setAttribute('aria-labelledby', 'summary-box-key-information')
+  .setAttribute('style', style|join()|default(false))
+}}>
+  <div class="usa-summary-box__body">
+    <h3 class="no-toc">
+      {{ title }}
+    </h3>
+    <div class="usa-summary-box__text">
+      {{ content }}
+    </div>
+  </div>
+</div>

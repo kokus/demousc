@@ -1,0 +1,5 @@
+@use "uswds-core" as *;
+
+.usa-card__container {
+  border-color: var(--card-border-color, #{color($theme-card-border-color)});
+}

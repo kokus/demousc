@@ -1,0 +1,23 @@
+@forward "../../sass/uswds/settings";
+@forward "usa-table/src/styles";
+@forward "override";
+
+// Sort link.
+.usa-table__header__link {
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  height: 24px;
+  width: 24px;
+  transform: translate(0,-50%);
+
+  .usa-icon {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.usa-table th.field-sortable {
+  padding-right: 2.5rem;
+  position: relative;
+}

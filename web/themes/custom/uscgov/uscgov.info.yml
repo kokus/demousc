@@ -1,0 +1,19 @@
+name: uscgov
+type: theme
+core_version_requirement: ^10
+version: 1.0.0
+'base theme': false
+regions:
+  header: Header
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar: Sidebar
+  footer_above: 'Footer Above'
+  footer_main: 'Footer Main'
+libraries:
+  - uscgov/global
+  - uscgov/uswds
+dependencies:
+  - 'drupal:sdc'
+generator: 'uscgov:1.0.0'
