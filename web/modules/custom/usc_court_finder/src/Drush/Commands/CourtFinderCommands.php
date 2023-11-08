@@ -2,11 +2,12 @@
 
 namespace Drupal\usc_court_finder\Drush\Commands;
 
-use Drush\Attributes as CLI;
 use Drupal\Core\Batch\BatchBuilder;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\usc_court_finder\CourtFinderImportBatchService;
+use Drush\Attributes as CLI;
 use Drush\Commands\DrushCommands;
+
 /**
  * Court Finder commands for Drush.
  */
@@ -26,11 +27,11 @@ class CourtFinderCommands extends DrushCommands {
     $this->basicImport($importUri, 'usc_autocomplete');
   }
 
-    /**
-   * Imports Locations from a CSV file.
-   *
-   * @throws \Exception
-   */
+  /**
+ * Imports Locations from a CSV file.
+ *
+ * @throws \Exception
+ */
   #[CLI\Command(name: 'usc:import:locations', aliases: ['uilo'])]
   #[CLI\Argument(name: 'importUri', description: 'The path or URI for the CSV file to be imported.')]
   #[CLI\Usage(name: 'usc:import:locations "path_to_file/file.csv"', description: 'Usage example with import_uri.')]
@@ -102,31 +103,40 @@ class CourtFinderCommands extends DrushCommands {
       if (count($parsed) > 0) {
         $headers = array_shift($parsed);
         if (!$this->validateHeaders($headers, $entityType)) {
-            $this->logger()->error('Some primary keys are missing in the file headers.');
+          $this->logger()->error('Some primary keys are missing in the file headers.');
         }
         else {
-            $batchBuilder = new BatchBuilder();
-            $this->logger()->notice("Batch operations start.");
-            foreach ($parsed as $row) {
-                $idKeys = $this->getPrimaryKeys($entityType);
-                $headersMapping = $this->getHeadersMapping($entityType);
-                $fields = array_combine($headers, $row);
-                $options = [
-                    $entityType,
-                    $idKeys,
-                    $headersMapping,
-                    $fields,
-                ];
-                $batchBuilder->addOperation([CourtFinderImportBatchService::class, 'processImportItem'], $options);
-            }
+          $batchBuilder = new BatchBuilder();
+          $this->logger()->notice("Batch operations start.");
+          foreach ($parsed as $row) {
+            $idKeys = $this->getPrimaryKeys($entityType);
+            $headersMapping = $this->getHeadersMapping($entityType);
+            $fields = array_combine($headers, $row);
+            $options = [
+              $entityType,
+              $idKeys,
+              $headersMapping,
+              $fields,
+            ];
+            $batchBuilder->addOperation(
+              [
+                CourtFinderImportBatchService::class,
+                'processImportItem'
+              ], $options);
+          }
 
-            $batchBuilder
-              ->setTitle($this->t('Importing entity @type', ['@type' => $entityType]))
-              ->setFinishCallback([CourtFinderImportBatchService::class, 'processFinished'])
-              ->setErrorMessage($this->t('Batch has encountered an error'));
-            batch_set($batchBuilder->toArray());
-            drush_backend_batch_process();
-            $this->logger()->notice("Batch operations end.");
+          $batchBuilder
+            ->setTitle($this->t('Importing entity @type', ['@type' => $entityType]))
+            ->setFinishCallback(
+              [
+                CourtFinderImportBatchService::class,
+                'processFinished'
+              ]
+            )
+            ->setErrorMessage($this->t('Batch has encountered an error'));
+          batch_set($batchBuilder->toArray());
+          drush_backend_batch_process();
+          $this->logger()->notice("Batch operations end.");
         }
       }
       else {
@@ -134,7 +144,7 @@ class CourtFinderCommands extends DrushCommands {
       }
     }
     else {
-        $this->logger()->error('Can not open the file from the provided url.');
+      $this->logger()->error('Can not open the file from the provided url.');
     }
   }
 
@@ -144,7 +154,7 @@ class CourtFinderCommands extends DrushCommands {
    * @throws \Exception
    */
   private function validateHeaders(array $headers, string $entityType): bool {
-      return !empty($headers) && (count($this->getPrimaryKeys($entityType)) === count(array_intersect($headers, $this->getPrimaryKeys($entityType)))) ;
+    return !empty($headers) && (count($this->getPrimaryKeys($entityType)) === count(array_intersect($headers, $this->getPrimaryKeys($entityType))));
   }
 
   /**
@@ -220,44 +230,44 @@ class CourtFinderCommands extends DrushCommands {
           'MailZip' => 'mail_zip',
         ];
 
-    case 'usc_autocomplete':
-      return [
-        'term' => 'term',
-        'type' => 'type',
-        'weight' => 'weight',
-      ];
+      case 'usc_autocomplete':
+        return [
+          'term' => 'term',
+          'type' => 'type',
+          'weight' => 'weight',
+        ];
 
-    case 'usc_circuit':
-      return [
-        'circuit_code' => 'code',
-        'circuit_name' => 'name',
-      ];
+      case 'usc_circuit':
+        return [
+          'circuit_code' => 'code',
+          'circuit_name' => 'name',
+        ];
 
-    case 'usc_county':
-      return [
-        'county_name' => 'name',
-        'state_code' => 'state_code',
-        'district_code' => 'district_code',
-      ];
+      case 'usc_county':
+        return [
+          'county_name' => 'name',
+          'state_code' => 'state_code',
+          'district_code' => 'district_code',
+        ];
 
-    case 'usc_district':
-      return [
-        'district_code' => 'code',
-        'district_name' => 'name',
-        'state_code' => 'state_code',
-        'latitude' => 'latitude',
-        'longitude' => 'longitude',
-      ];
+      case 'usc_district':
+        return [
+          'district_code' => 'code',
+          'district_name' => 'name',
+          'state_code' => 'state_code',
+          'latitude' => 'latitude',
+          'longitude' => 'longitude',
+        ];
 
-    case 'usc_state':
-      return [
-        'state_code' => 'code',
-        'state_name' => 'name',
-        'circuit_code' => 'circuit_code',
-      ];
+      case 'usc_state':
+        return [
+          'state_code' => 'code',
+          'state_name' => 'name',
+          'circuit_code' => 'circuit_code',
+        ];
 
       default:
-      throw new \Exception('Unknown entity type');
+        throw new \Exception('Unknown entity type');
     }
   }
 

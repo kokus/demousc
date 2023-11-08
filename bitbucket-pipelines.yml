@@ -1,0 +1,67 @@
+image: jidrone/drupal10ci:latest
+
+pipelines:
+  pull-requests:
+    '{feature/*,bugfix/*,hotfix/*}':
+      - parallel:
+          - step:
+              name: Coding Standards
+              caches:
+                - drupal-vendor
+                - drupal-core
+                - drupal-libraries
+                - drupal-modules
+                - drupal-profiles
+                - drupal-themes
+              script:
+                - robo ci:build
+                - robo phpcs
+                - robo analyse
+          - step:
+              name: Unit/Kernel tests
+              caches:
+                - drupal-vendor
+                - drupal-core
+                - drupal-libraries
+                - drupal-modules
+                - drupal-profiles
+                - drupal-themes
+              services:
+                - mariadb
+              script:
+                - robo ci:build
+                - robo ci:unit-tests
+          - step:
+              name: Behat
+              caches:
+                - drupal-vendor
+                - drupal-core
+                - drupal-libraries
+                - drupal-modules
+                - drupal-profiles
+                - drupal-themes
+              services:
+                - mariadb
+              script:
+                - robo ci:build
+                - robo ci:install-drupal
+                - robo ci:serve-drupal
+                - robo ci:chrome-headless -q &
+                - robo ci:prepare-behat
+                - robo ci:behat-tests
+              artifacts:
+                - screenshots/**
+definitions:
+  services:
+    mariadb:
+      image: mariadb:latest
+      variables:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: drupal
+  caches:
+    drupal-vendor: vendor
+    drupal-core: web/core
+    drupal-libraries: web/libraries
+    drupal-modules: web/modules/contrib
+    drupal-profiles: web/profiles/contrib
+    drupal-themes: web/themes/contrib

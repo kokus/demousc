@@ -40,7 +40,6 @@ function uscgov_preprocess_pager(array &$variables) {
  * Calculates if an page link is visible in the pagination items.
  *
  * That is needed in USWDS to know when to show the first and last item.
- * @see https://designsystem.digital.gov/components/pagination/#using-the-pagination-component-2.
  *
  * @param int $current_page
  *   The current page.
@@ -51,6 +50,8 @@ function uscgov_preprocess_pager(array &$variables) {
  *
  * @return bool
  *   TRUE is page is visible, FALSE otherwise.
+ *
+ * @see https://designsystem.digital.gov/components/pagination/#using-the-pagination-component-2
  */
 function _is_page_link_visible($current_page, $total_visible_links, $page_to_check) {
   // Calculate the half of totalVisibleLinks (assuming it's an odd number).

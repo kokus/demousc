@@ -80,6 +80,16 @@ class RoboFile extends Tasks {
   }
 
   /**
+   * Fix Codesniffer errors.
+   */
+  public function phpcbf() {
+    return $this->taskExec('vendor/bin/phpcbf')
+      ->arg('-ns')
+      ->printOutput(TRUE)
+      ->run();
+  }
+
+    /**
    * Runs Codesniffer.
    */
   public function phpcs() {
@@ -153,6 +163,18 @@ class RoboFile extends Tasks {
   }
 
   /**
+   * Install Drupal.
+   *
+   * @return \Robo\Result
+   *   The result tof the collection of tasks.
+   */
+  public function ciInstallDrupal() {
+    $collection = $this->collectionBuilder();
+    $collection->addTask($this->runInstallDrupal());
+    return $collection->run();
+  }
+
+  /**
    * Command to run Chrome headless.
    *
    * @return \Robo\Result
@@ -172,6 +194,22 @@ class RoboFile extends Tasks {
     $collection = $this->collectionBuilder();
     $collection->taskExec('vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer');
     $collection->taskExec('vendor/bin/phpcs -i');
+    return $collection->run();
+  }
+
+  /**
+   * Runs Behat tests.
+   *
+   * @return \Robo\Task\Base\Exec[]
+   *   An array of tasks.
+   */
+  public function ciPrepareBehat() {
+    $force = TRUE;
+    $collection = $this->collectionBuilder();
+    $collection->taskFilesystemStack()
+      ->mkdir('screenshots');
+    $collection->taskFilesystemStack()
+      ->copy('.bitbucket/config/behat.yml', 'tests/behat.yml', $force);
     return $collection->run();
   }
 
@@ -201,7 +239,32 @@ class RoboFile extends Tasks {
     $tasks[] = $this->taskFilesystemStack()
       ->copy('.bitbucket/config/behat.yml', 'tests/behat.yml', $force);
     $tasks[] = $this->taskExec('sleep 30s');
-    $tasks[] = $this->taskExec('vendor/bin/behat --verbose --colors -c tests/behat.yml');
+
+    $base_url = 'http://localhost';
+    $features_path = 'tests/features';
+
+    $params = [
+      'extensions' => [
+        'Behat\MinkExtension' => [
+          'base_url' => $base_url
+        ],
+      ],
+      'suites' => [
+        'default' => [
+          'paths' => [$features_path]
+        ]
+      ]
+    ];
+    $params = json_encode($params);
+    // Export json params and run behat test.
+    $export_params = "export BEHAT_PARAMS='" . $params . "'";
+    // Build command.
+    $command = [
+      $export_params,
+      '&& vendor/bin/behat --verbose --colors -c tests/behat.yml'
+    ];
+
+    $tasks[] = $this->taskExec(implode(' ', $command));
     return $tasks;
   }
 
@@ -291,10 +354,9 @@ class RoboFile extends Tasks {
     $force = TRUE;
     $tasks = [];
     $tasks[] = $this->taskFilesystemStack()
-      ->remove('web/sites/default/settings.php')
+      ->remove('web/sites/default/settings.db.php')
       ->remove('web/sites/default/files')
-      ->copy('.bitbucket/config/settings.php', 'web/sites/default/settings.php', $force)
-      ->copy('.bitbucket/config/.env', '.env', $force);
+      ->copy('.bitbucket/config/settings.local.php', 'web/sites/default/settings.db.php');
     return $tasks;
   }
 

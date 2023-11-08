@@ -61,6 +61,19 @@ More information about Behat Drupal Extension can be found at https://behat-drup
 
 ### Making use of phpstan for static analysis
 
+## PHPCs
+
+To run `phpcs` use the robo command: `lando robo phpcs` which will run `phpcs` on the codebase, excluding common
+locations for third party code, and return a list of errors.
+
+To run `phpcbf` use the robo command: `lando robo phpcbf` which will run `phpcbf` on the codebase and fix coding
+standard errors.
+
+Documentation for `phpcs` can be found at https://github.com/squizlabs/PHP_CodeSniffer
+The settings are in the phpcs.xml file.
+
+## PHPStan
+
 To run `phpstan` use the robo command: `lando robo analyse` which will run `phpstan` on the codebase, excluding common
 locations for third party code, and return a list of errors and suggestions for code improvement.
 
