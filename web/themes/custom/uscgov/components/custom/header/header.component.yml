@@ -1,0 +1,4 @@
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once

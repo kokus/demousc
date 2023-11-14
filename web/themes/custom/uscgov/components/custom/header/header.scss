@@ -4,13 +4,10 @@
 $tablet_break: 'min-width: 700px';
 $desktop_break: 'min-width: 1400px';
 
-.header {
-
-}
-
 .header-secondary-menu {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   margin: 0 0 0 auto;
   padding: 8px 0;
   list-style: none;
@@ -18,6 +15,7 @@ $desktop_break: 'min-width: 1400px';
   flex-basis: 100%;
   border-top: solid 1px #ccc;
   border-bottom: solid 1px #ccc;
+  text-align: center;
 
   @media ($tablet_break) {
     display: unset;
@@ -43,27 +41,95 @@ $desktop_break: 'min-width: 1400px';
   }
 }
 
-.header__secondary-item {
-
-}
-
 .header__main {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 20px;
+  column-gap: 20px;
   justify-content: space-between;
   align-items: center;
-  padding-block: 0 16px;
+  padding-block: 8px;
+
+  @media ($tablet_break) {
+    padding-block: 16px;
+  }
 }
 
-.header__logo {
+.header__menu-wrapper {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 600px;
+  height: 100dvh;
+  background: pink;
+  translate: 100% 0;
+  z-index: 5;
+  transition: translate 0.2s;
 
+  &.is-active {
+    translate: 0 0;
+  }
+
+  @media ($desktop_break) {
+    position: unset;
+    right: unset;
+    top: unset;
+    width: unset;
+    height: unset;
+    z-index: unset;
+    translate: unset;
+  }
+}
+
+.header__menu-wrapper-close-button {
+  position: absolute;
+  top: calc(var(--drupal-displace-offset-top, 0px) + 16px);
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    rotate: 45deg;
+    width: 15px;
+    height: 0;
+    content: "";
+    border-top: solid 2px currentColor;
+  }
+
+  &:after {
+    rotate: -45deg;
+  }
+}
+
+.header__menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background-color: #1e1e1e;
+  opacity: 0.5;
+
+  .header__menu-wrapper.is-active ~ & {
+    display: block;
+  }
 }
 
 .header__search-button {
   display: none;
   align-items: center;
   gap: 8px;
+  margin-right: -16px;
   padding: 9px 16px;
   appearance: none;
   border: 0;
@@ -101,6 +167,10 @@ $desktop_break: 'min-width: 1400px';
   background: none;
   color: color('primary');
   cursor: pointer;
+
+  @media ($tablet_break) {
+    margin-left: 40px;
+  }
 
   @media ($desktop_break) {
     display: none;
