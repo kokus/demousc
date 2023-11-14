@@ -9,19 +9,27 @@ $desktop_break: 'min-width: 1400px';
 }
 
 .header-secondary-menu {
+  display: flex;
+  justify-content: space-around;
   margin: 0 0 0 auto;
   padding: 8px 0;
   list-style: none;
-  text-align: right;
+  order: 1;
+  flex-basis: 100%;
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
 
   @media ($tablet_break) {
-    order: 1;
-    flex-basis: 100%;
+    display: unset;
+    flex-basis: unset;
+    order: unset;
+    border: unset;
   }
 
-
   @media ($desktop_break) {
+    flex-basis: 100%;
     order: -1;
+    text-align: right;
   }
 }
 
@@ -30,9 +38,8 @@ $desktop_break: 'min-width: 1400px';
   margin: 0;
   padding: 0;
 
-  &:not(:last-child):after {
-    content: '\0020\0020|\0020\0020';
-    white-space: pre;
+  a {
+    text-decoration: none;
   }
 }
 
