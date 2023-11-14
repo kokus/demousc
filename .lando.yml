@@ -39,14 +39,6 @@ services:
       - 33007:3306
   redis:
     type: redis:6
-  varnish:
-    type: varnish
-    backends:
-      - appserver
-    backend_port: 80
-    ssl: false
-    config:
-      vcl: lando/custom.vcl
 tooling:
   phpunit:
     service: appserver
