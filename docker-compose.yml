@@ -50,6 +50,8 @@ services:
     image: redis:6
     networks:
       - internal
+    labels:
+      - traefik.enable=false
 networks:
   internal:
     driver: bridge
