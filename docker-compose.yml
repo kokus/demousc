@@ -5,7 +5,7 @@ services:
     image: mysql:8.0.34
     container_name: "${PROJECT}-db"
     volumes:
-      - db-data:/var/lib/mysql
+      - db-data-mysql:/var/lib/mysql
     restart: unless-stopped
     env_file: .env
     networks:
@@ -52,6 +52,7 @@ services:
       - internal
     labels:
       - traefik.enable=false
+    restart: unless-stopped
 networks:
   internal:
     driver: bridge
@@ -59,4 +60,4 @@ networks:
     external: true
 
 volumes:
-  db-data:
+  db-data-mysql:
