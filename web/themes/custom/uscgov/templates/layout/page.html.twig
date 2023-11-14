@@ -43,28 +43,9 @@
  */
 #}
 <div class="layout-container">
-{#
-  {% embed 'uscgov:usa_header' with {
-    extended: true,
-    attributes,
-    branding: page.header.uscgov_site_branding,
-    main_menu: page.header.uscgov_main_menu,
-    secondary_menu: page.header.my_new_theme_account_menu,
-    search_box: page.header.my_new_theme_search_form,
-  } only %}
-    {% block branding %}
-      {{ branding }}
-    {% endblock %}
-    {% block main_menu %}
-      {{ main_menu }}
-    {% endblock %}
-    {% block secondary_menu %}
-      {{ secondary_menu }}
-    {% endblock %}
-    {% block search_box %}
-      {{ search_box }}
-    {% endblock %}
-  {% endembed %} #}
+
+  {% embed 'uscgov:header' %}
+  {% endembed %}
 
   <div class="container">
     {{ page.highlighted }}

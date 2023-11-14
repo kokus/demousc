@@ -1,0 +1,61 @@
+.header {
+
+}
+
+.header__secondary {
+  text-align: right;
+}
+
+.header-secondary-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__secondary-item {
+  display: inline;
+  margin: 0;
+  padding: 0;
+
+  &:not(:last-child):after {
+    content: '\0020\0020|\0020\0020';
+    white-space: pre;
+  }
+}
+
+.header__secondary-item {
+
+}
+
+.header__main {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+
+}
+
+.header__search-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  appearance: none;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  color: #0057A3;
+
+  &:after {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    mask-image: url('images/magnify.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: currentColor;
+  }
+}
