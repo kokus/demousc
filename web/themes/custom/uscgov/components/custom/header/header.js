@@ -3,21 +3,46 @@
  * Dynamic header interaction.
  */
 ((Drupal, once) => {
+  let mobileNavButton;
+  let closeButton;
+  let menuWrapper;
+  let isNavOpen;
+  let overlay;
+
   function init(header) {
-    const mobileNavButton = header.querySelector('.header__menu-button');
-    const closeButton = header.querySelector('.header__menu-wrapper-close-button');
-    const menuWrapper = header.querySelector('.header__menu-wrapper');
-    const isNavOpen = () => mobileNavButton.getAttribute('aria-expanded') === 'true';
+    mobileNavButton = header.querySelector('.header__menu-button');
+    closeButton = header.querySelector('.header__menu-wrapper-close-button');
+    menuWrapper = header.querySelector('.header__menu-wrapper');
+    isNavOpen = () => mobileNavButton.getAttribute('aria-expanded') === 'true';
+    overlay = header.querySelector('.header__menu-overlay');
 
     mobileNavButton.addEventListener('click', () => {
-      menuWrapper.classList.toggle('is-active', !isNavOpen());
-      mobileNavButton.setAttribute('aria-expanded', !isNavOpen());
+      changeMenuVisibility(!isNavOpen());
     });
 
     closeButton.addEventListener('click', () => {
-      menuWrapper.classList.remove('is-active');
-      mobileNavButton.setAttribute('aria-expanded', false);
+      changeMenuVisibility(false);
     });
+
+    overlay.addEventListener('click', () => {
+      changeMenuVisibility(false);
+    });
+
+    document.addEventListener('keyup', (e) => {
+      if (e.key === 'Escape') {
+        changeMenuVisibility(false);
+      }
+    });
+  }
+
+  /**
+   * Show/hide menu.
+   *
+   * @param {boolean} toState
+   */
+  function changeMenuVisibility(toState) {
+    menuWrapper.classList.toggle('is-active', toState);
+    mobileNavButton.setAttribute('aria-expanded', toState);
   }
 
   Drupal.behaviors.header = {

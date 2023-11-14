@@ -58,7 +58,8 @@ $desktop_break: 'min-width: 1400px';
   position: fixed;
   right: 0;
   top: 0;
-  width: 600px;
+  width: 400px;
+  max-width: 100%;
   height: 100dvh;
   background: pink;
   translate: 100% 0;
@@ -122,6 +123,10 @@ $desktop_break: 'min-width: 1400px';
 
   .header__menu-wrapper.is-active ~ & {
     display: block;
+
+    @media ($desktop_break) {
+      display: none;
+    }
   }
 }
 
