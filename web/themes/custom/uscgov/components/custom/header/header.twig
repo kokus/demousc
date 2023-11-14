@@ -1,18 +1,20 @@
-<header class="header">
-  <div class="header__secondary">
-    <ul class="header-secondary-menu">
-      <li class="header__secondary-item"><a href="/">Listen to this page</a></li>
-      <li class="header__secondary-item"><a href="/">Find a Federal Court</a></li>
-    </ul>
-  </div>
+{{ include('uscgov:usa_banner') }}
+<header class="header container">
   <div class="header__main">
     <a href="{{ path('<front>') }}" class="header__logo">
       <span class="visually-hidden">{{ 'Home'|t }}</span>
       <img src="{{ componentMetadata.path }}/images/logo.webp" width="168" height="83" fetchpriority="high" alt="">
     </a>
     <div class="menu">Menu here</div>
+    <ul class="header-secondary-menu">
+      <li class="header__secondary-item"><a href="/">Listen to this page</a></li>
+      <li class="header__secondary-item"><a href="/">Find a Federal Court</a></li>
+    </ul>
     <button class="header__search-button">
       {{ 'Search'|t }}
+    </button>
+    <button class="header__menu-button">
+      {{ 'Menu'|t }}
     </button>
   </div>
 </header>
