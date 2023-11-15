@@ -97,9 +97,3 @@ function uscgov_preprocess_menu_local_task(&$variables) {
     $variables['level'] = $variables['element']['#level'];
   }
 }
-
-
-function uscgov_preprocess_menu_link_content(&$variables) {
-  dump($variables['menu_link_content']->title->value);
-   dump($variables['menu_link_content']->link->uri);
-}

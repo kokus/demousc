@@ -13,17 +13,9 @@
           item.is_collapsed ? 'menu-item--collapsed',
           item.in_active_trail ? 'menu-item--active-trail',
         ] %}
-
         <li{{item.attributes.addClass(menu_item_classes)}}>
-          {# {{ link(item.title, item.url) }} #}
           <button>{{ item.title }}</button>
-          {% set rendered_content = item.content|without('')|render %}
-          {% if rendered_content %}
-            {# <div style="outline: solid red 2px">
-              {{ link(item.title, item.url) }} #}
-              {{ rendered_content }}
-            {# </div> #}
-          {% endif %}
+          {{ item.content }}
         </li>
       {% endif %}
   {% endfor %}

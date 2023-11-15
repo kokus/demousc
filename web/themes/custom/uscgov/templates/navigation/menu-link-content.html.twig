@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Default theme implementation to present a menu link entity entity.
+ * Implementation to present a menu link entity entity.
  *
  * Available variables:
  * - menu_link_content: Menu link entity.
@@ -12,25 +12,32 @@
  * @ingroup themeable
  */
 #}
+
 {% import _self as menu %}
-{# {{ dump() }} #}
 {{ menu.build_menu_link_content(attributes, menu_link_content, show_item_link, content, elements) }}
 
 {% macro build_menu_link_content(attributes, menu_link_content, show_item_link, content, elements) %}
+  {# {% set megamenu_enabled = menu_link_content.field_enable_megamenu.value %} #}
+
+  {% set menu_level = elements['#menu_level'] %}
+
   {% set menu_dropdown_classes = [
     'menu-dropdown',
     elements['#menu_level'] is defined ? 'menu-dropdown-' ~ elements['#menu_level'],
     elements['#view_mode'] ? 'menu-type-' ~ elements['#view_mode'],
   ] %}
 
-  <div{{ attributes.addClass(menu_dropdown_classes) }}>
-    <div class="left">
-      {{ parent_menu_link }}
-    </div>
-    <div class="right">
-      {% if content %}
-        {{ content }}
-      {% endif %}
-    </div>
+  <div{{ attributes.addClass(menu_dropdown_classes) }} >
+    {% if menu_level == 0 %}
+      <div class="left" style="outline: solid 2px green">
+        <a href="{{ menu_link_content.link.uri }}">{{ menu_link_content.title.value }}</a>
+        {{ content|without('children', 'field_enable_megamenu') }}
+      </div>
+      <div class="right" style="outline: solid 2px orange">
+        {{ content.children }}
+      </div>
+    {% else %}
+      {{ content.children }}
+    {% endif %}
   </div>
 {% endmacro %}
