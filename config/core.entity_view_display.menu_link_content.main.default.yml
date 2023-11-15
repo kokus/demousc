@@ -6,7 +6,6 @@ dependencies:
     - field.field.menu_link_content.main.field_description_text
     - field.field.menu_link_content.main.field_enable_megamenu
     - field.field.menu_link_content.main.field_popular_links
-    - field.field.menu_link_content.main.field_primary_link
     - system.menu.main
   module:
     - link
@@ -48,17 +47,5 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 5
-    region: content
-  field_primary_link:
-    type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 3
     region: content
 hidden: {  }
