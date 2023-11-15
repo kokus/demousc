@@ -20,24 +20,17 @@
   {# {% set megamenu_enabled = menu_link_content.field_enable_megamenu.value %} #}
 
   {% set menu_level = elements['#menu_level'] %}
-
-  {% set menu_dropdown_classes = [
-    'menu-dropdown',
-    elements['#menu_level'] is defined ? 'menu-dropdown-' ~ elements['#menu_level'],
-    elements['#view_mode'] ? 'menu-type-' ~ elements['#view_mode'],
-  ] %}
-
-  <div{{ attributes.addClass(menu_dropdown_classes) }} >
-    {% if menu_level == 0 %}
-      <div class="left" style="outline: solid 2px green">
-        <a href="{{ menu_link_content.link.uri }}">{{ menu_link_content.title.value }}</a>
-        {{ content|without('children', 'field_enable_megamenu') }}
-      </div>
-      <div class="right" style="outline: solid 2px orange">
-        {{ content.children }}
-      </div>
-    {% else %}
+  {% if menu_level == 0 and content.children %}
+    <div class="primary-menu__dropdown-first" style="outline: solid 1px green">
+      {{ link(menu_link_content.title.value, menu_link_content.link.uri, { 'class': ['primary-menu__dropdown-title-link'] }) }}
+      {{ content.field_description_text }}
+      {{ content.field_popular_links }}
+    </div>
+    <div class="primary-menu__dropdown-second">
       {{ content.children }}
-    {% endif %}
-  </div>
+    </div>
+  {% else %}
+    {{ menu_level == 1 ? content.field_description_text }}
+    {{ content.children }}
+  {% endif %}
 {% endmacro %}

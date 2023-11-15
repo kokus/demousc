@@ -3,19 +3,36 @@
 {{ menu.menu_links(items, attributes, 0) }}
 
 {% macro menu_links(items, attributes, menu_level) %}
-  <ul{{attributes.addClass(['menu', 'menu-level-'~items|first.menu_level])}}>
-    {% for key, item in items %}
+  {% set menu_level = items|first.menu_level %}
 
+  <ul{{attributes.addClass(['primary-menu', 'primary-menu--level-' ~ menu_level])}}>
+    {% for key, item in items %}
       {% if key|first != '#' %}
+        {% set dropdown_id = ('id-' ~ item.title ~ '-dropdown')|clean_unique_id %}
         {% set menu_item_classes = [
-          'menu-item',
-          item.is_expanded ? 'menu-item--expanded',
-          item.is_collapsed ? 'menu-item--collapsed',
-          item.in_active_trail ? 'menu-item--active-trail',
+          'primary-menu__menu-item',
+          'primary-menu__menu-item--level-' ~ menu_level,
+          item.in_active_trail ? 'primary-menu__menu-item--active-trail',
         ] %}
+
         <li{{item.attributes.addClass(menu_item_classes)}}>
-          <button>{{ item.title }}</button>
-          {{ item.content }}
+          {% if menu_level == 0 and item.below %}
+            <button
+              type="button"
+              class="primary-menu__button"
+              aria-expanded="false"
+              aria-controls="{{ dropdown_id }}"
+            >
+              {{ item.title }}
+            </button>
+
+            <div id="{{ dropdown_id }}" class="primary-menu__dropdown">
+              {{ item.content }}
+            </div>
+          {% else %}
+            {{ link(item.title, item.url, { 'class': ['primary-menu__link']}) }}
+            {{ item.content }}
+          {% endif %}
         </li>
       {% endif %}
   {% endfor %}
