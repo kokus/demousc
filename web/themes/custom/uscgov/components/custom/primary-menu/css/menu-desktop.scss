@@ -1,0 +1,7 @@
+.menu:not(.menu-level-0) {
+  display: none;
+}
+
+.menu-level-0 {
+  display: flex;
+}
