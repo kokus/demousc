@@ -1,4 +1,7 @@
 libraryOverrides:
+  js:
+    menu-wrapper.js: {}
+    search-wrapper.js: {}
   dependencies:
     - core/drupal
     - core/once

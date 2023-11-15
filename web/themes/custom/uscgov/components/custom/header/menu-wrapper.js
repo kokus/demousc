@@ -45,11 +45,9 @@
     mobileNavButton.setAttribute('aria-expanded', toState);
   }
 
-  Drupal.behaviors.header = {
+  Drupal.behaviors.menuWrapper = {
     attach(context) {
-      once('header', '.header', context).forEach(
-        init,
-      );
+      once('menu-wrapper', '.header', context).forEach(init);
     },
   };
 })(Drupal, once);

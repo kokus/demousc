@@ -1,5 +1,7 @@
 {{ include('uscgov:usa_banner') }}
 {% set menu_wrapper_id = 'menu-wrapper'|clean_unique_id %}
+{% set search_wrapper_id = 'search-wrapper'|clean_unique_id %}
+
 <header class="header container">
   <div class="header__main">
     <a href="{{ path('<front>') }}" class="header__logo">
@@ -13,16 +15,22 @@
       Menu here
     </div>
     <div class="header__menu-overlay"></div>
-    <ul class="header-secondary-menu">
+    <ul class="header__secondary-menu">
       <li class="header__secondary-item"><a href="/">Listen to this page</a></li>
       <li class="header__secondary-item header__secondary-item--spacer" aria-hidden="true">&nbsp;&nbsp;|&nbsp;&nbsp;</li>
       <li class="header__secondary-item"><a href="/">Find a Federal Court</a></li>
     </ul>
-    <button class="header__search-button">
+    <button class="header__search-button" aria-expanded="false" aria-controls="{{ search_wrapper_id }}">
       {{ 'Search'|t }}
     </button>
     <button class="header__menu-button" aria-expanded="false" aria-controls="{{ menu_wrapper_id }}">
       {{ 'Menu'|t }}
     </button>
+  </div>
+  <div id="{{ search_wrapper_id }}" class="header__search-wrapper">
+    <button class="header__search-wrapper-close-button" aria-controls="{{ menu_wrapper_id }}">
+      <span class="visually-hidden">{{ 'Close searcg'|t }}</span>
+    </button>
+    Desktop search here
   </div>
 </header>
