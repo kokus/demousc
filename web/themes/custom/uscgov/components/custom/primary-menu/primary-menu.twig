@@ -19,10 +19,10 @@
           <button>{{ item.title }}</button>
           {% set rendered_content = item.content|without('')|render %}
           {% if rendered_content %}
-            <div style="outline: solid red 2px">
-              {{ link(item.title, item.url) }}
+            {# <div style="outline: solid red 2px">
+              {{ link(item.title, item.url) }} #}
               {{ rendered_content }}
-            </div>
+            {# </div> #}
           {% endif %}
         </li>
       {% endif %}

@@ -24,17 +24,13 @@
   ] %}
 
   <div{{ attributes.addClass(menu_dropdown_classes) }}>
-    {# {% if show_item_link %}
-      {{ link(menu_link_content.getTitle(), menu_link_content.getUrlObject()) }}
-    {% endif %} #}
-
-    {% if content %}
-    {# {{ dump(content)}} #}
-      {{ content|without('children') }}
-    {% endif %}
-
-    <div style="outline: solid 2px blue">
-      {{ content.children }}
+    <div class="left">
+      {{ parent_menu_link }}
+    </div>
+    <div class="right">
+      {% if content %}
+        {{ content }}
+      {% endif %}
     </div>
   </div>
 {% endmacro %}
