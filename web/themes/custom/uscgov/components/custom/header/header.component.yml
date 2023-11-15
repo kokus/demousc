@@ -1,5 +1,6 @@
 libraryOverrides:
   js:
+    header-utils.js: {}
     menu-wrapper.js: {}
     search-wrapper.js: {}
   dependencies:

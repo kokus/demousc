@@ -41,8 +41,14 @@
    * @param {boolean} toState
    */
   function changeMenuVisibility(toState) {
+    const menuWrapperContainsFocus = menuWrapper.contains(document.activeElement);
+
     menuWrapper.classList.toggle('is-active', toState);
     mobileNavButton.setAttribute('aria-expanded', toState);
+
+    if (toState === false && Drupal.uscgov.isMobileMenuSystem() && menuWrapperContainsFocus) {
+      mobileNavButton.focus();
+    }
   }
 
   Drupal.behaviors.menuWrapper = {

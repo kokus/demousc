@@ -35,8 +35,14 @@
    * @param {boolean} toState
    */
   function changeSearchVisibility(toState) {
+    const searchWrapperContainsFocus = searchWrapper.contains(document.activeElement);
+
     searchWrapper.classList.toggle('is-active', toState);
     desktopSearchButton.setAttribute('aria-expanded', toState);
+
+    if (toState === false && !Drupal.uscgov.isMobileMenuSystem() && searchWrapperContainsFocus) {
+      desktopSearchButton.focus();
+    }
   }
 
   Drupal.behaviors.searchWrapper = {
