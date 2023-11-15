@@ -1,11 +1,9 @@
 @forward "../../sass/uswds/settings";
+@use "../../../sass/custom/global/media-queries" as *;
 @use "uswds-core" as *;
 
-$tablet_break: 'min-width: 700px';
-$desktop_break: 'min-width: 1400px';
-
 .header {
-  position: relative; // Anchor search wrapper.
+  position: relative; // Anchor search wrapper / menu dropdown.
 }
 
 .header__secondary-menu {
@@ -66,10 +64,10 @@ $desktop_break: 'min-width: 1400px';
   width: 400px;
   max-width: 100%;
   height: 100dvh;
-  background: pink;
   translate: 100% 0;
   z-index: 5;
   transition: translate 0.2s, visibility 0.2s;
+  background: white;
 
   &.is-active {
     visibility: visible;
@@ -78,6 +76,7 @@ $desktop_break: 'min-width: 1400px';
 
   @media ($desktop_break) {
     flex-basis: 1060px; // @todo Magic number here.
+    background: unset;
     position: unset;
     right: unset;
     top: unset;

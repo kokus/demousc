@@ -36,6 +36,9 @@ libraryOverrides:
   css:
     component:
       css/menu-desktop.css: {}
+      css/dropdown-menu-desktop.css: {}
+  js:
+    js/show-hide-desktop-dropdown.js: {}
   dependencies:
     - core/drupal
     - core/once

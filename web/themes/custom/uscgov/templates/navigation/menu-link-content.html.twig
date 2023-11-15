@@ -21,7 +21,7 @@
 
   {% set menu_level = elements['#menu_level'] %}
   {% if menu_level == 0 and content.children %}
-    <div class="primary-menu__dropdown-first" style="outline: solid 1px green">
+    <div class="primary-menu__dropdown-first">
       {{ link(menu_link_content.title.value, menu_link_content.link.uri, { 'class': ['primary-menu__dropdown-title-link'] }) }}
       {{ content.field_description_text }}
       {{ content.field_popular_links }}

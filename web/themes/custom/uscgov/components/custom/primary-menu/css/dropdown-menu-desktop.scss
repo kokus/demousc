@@ -1,0 +1,54 @@
+@forward "../../sass/uswds/settings";
+@use "../../../../sass/custom/global/media-queries" as *;
+@use "uswds-core" as *;
+
+@media ($desktop_break) {
+  .primary-menu__dropdown {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+    background: #F4F6FB;
+
+    .primary-menu__button[aria-expanded="true"] ~ & {
+      display: flex;
+    }
+  }
+
+  .primary-menu__dropdown-first {
+    flex-basis: 320px;
+    flex-shrink: 0;
+    padding: 40px;
+    background: #E6F1FA;
+  }
+
+  .primary-menu__dropdown-second {
+    padding: 40px;
+  }
+
+  .primary-menu--level-1 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    columns: 4;
+    column-gap: 20px;
+  }
+
+  .primary_menu__level-2-inner {
+    padding-bottom: 20px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .primary-menu--level-2 {
+    display: none;
+  }
+
+  .primary-menu__dropdown-title-link {
+    @include u-font-family('serif');
+    font-size: 22px;
+    font-weight: 600;
+  }
+}

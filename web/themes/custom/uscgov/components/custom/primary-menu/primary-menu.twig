@@ -30,8 +30,12 @@
               {{ item.content }}
             </div>
           {% else %}
-            {{ link(item.title, item.url, { 'class': ['primary-menu__link']}) }}
-            {{ item.content }}
+            <div class="primary_menu__level-2-wrapper">
+              <div class="primary_menu__level-2-inner">
+                {{ link(item.title, item.url, { 'class': ['primary-menu__link', 'primary-menu__link--level-' ~ menu_level]}) }}
+                {{ item.content }}
+              </div>
+            </div>
           {% endif %}
         </li>
       {% endif %}
