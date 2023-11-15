@@ -77,6 +77,7 @@ $desktop_break: 'min-width: 1400px';
   }
 
   @media ($desktop_break) {
+    flex-basis: 1060px; // @todo Magic number here.
     position: unset;
     right: unset;
     top: unset;

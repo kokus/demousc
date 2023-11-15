@@ -44,7 +44,12 @@
 #}
 <div class="layout-container">
 
-  {% embed 'uscgov:header' %}
+  {% embed 'uscgov:header' with {
+      main_menu: page.header.uscgov_main_menu
+    } %}
+    {% block main_menu %}
+      {{ main_menu }}
+    {% endblock %}
   {% endembed %}
 
   <div class="container">

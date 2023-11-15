@@ -1,3 +1,14 @@
 @forward "../../sass/uswds/settings";
 @forward "usa-banner";
 @forward "override";
+
+
+.usa-banner__content {
+  @media (scripting: enabled) {
+    display: none;
+
+    .usa-banner__header--expanded + & {
+      display: unset;
+    }
+  }
+}
