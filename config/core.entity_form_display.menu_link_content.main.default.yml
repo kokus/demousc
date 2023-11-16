@@ -10,6 +10,7 @@ dependencies:
   module:
     - field_group
     - link
+    - maxlength
 third_party_settings:
   field_group:
     group_megamenu_settings:
@@ -40,7 +41,11 @@ content:
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      maxlength:
+        maxlength_js: 100
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: true
   field_enable_megamenu:
     type: boolean_checkbox
     weight: 2
