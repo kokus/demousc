@@ -36,8 +36,7 @@
     columns: 4;
   }
 
-  .primary_menu__level-2-inner {
-    padding: 16px;
+  .primary_menu__level-1-inner {
     page-break-inside: avoid;
     break-inside: avoid;
   }
@@ -97,6 +96,10 @@
 
   .primary-menu__mega-quick-link-item a {
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .primary-menu__mega-quick-link-item-inner {
@@ -107,12 +110,21 @@
 
   .primary-menu__link--level-1 {
     position: relative; // Anchor pseudo-elements that make chevron.
+    display: block;
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid transparent;
     text-decoration: none;
+
+    &:hover {
+      border: 1px solid #0057A3;
+      background: #E6F1FA;
+    }
 
     &::after {
       position: absolute;
-      top: 7px;
-      right: 0;
+      top: 23px;
+      right: 16px;
       display: block;
       width: 6px;
       height: 6px;

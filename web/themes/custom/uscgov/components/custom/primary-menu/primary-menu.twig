@@ -34,8 +34,8 @@
           {% else %}
             {# This nest of <div>'s is to prevent Safari from breaking layout
             when using CSS column. 🤮 #}
-            <div class="primary_menu__level-2-wrapper">
-              <div class="primary_menu__level-2-inner">
+            <div class="primary_menu__level-1-wrapper">
+              <div class="primary_menu__level-1-inner">
                 <a href="{{ item.url }}" class="primary-menu__link--level-{{ menu_level }}" aria-label="{{ item.title }}">
                   <span class="primary-menu__dropdown-link-main-text">{{ item.title }}</span>
                   {{ item.content }}
