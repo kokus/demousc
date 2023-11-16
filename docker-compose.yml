@@ -20,6 +20,8 @@ services:
     container_name: "${PROJECT}-php"
     volumes:
       - ./:/var/www/html
+    ports:
+      - '9000:80'
     restart: unless-stopped
     env_file: .env
     depends_on:
@@ -30,22 +32,27 @@ services:
       - traefik.enable=false
 
   web:
-    image: nginx:alpine
+    image: webdevops/apache:latest
     container_name: ${PROJECT}-web
     volumes:
       - ./:/var/www/html:ro
-      - ./.deploy/nginx/conf:/etc/nginx/conf.d
+      - ./.deploy/apache/main.conf:/opt/docker/etc/httpd/main.conf
+    environment:
+      WEB_DOCUMENT_ROOT: /var/www/html/web
     restart: unless-stopped
     depends_on:
       - php
     networks:
       - internal
       - web
+    links:
+      - php
     labels:
       - traefik.enable=true
       - traefik.http.routers.${PROJECT}.rule=HostRegexp(`${PROJECT_DOMAIN}`, `www.${PROJECT_DOMAIN}` , `{subdomain:[a-zA-Z0-9-]+}${PROJECT_DOMAIN}`)
       - traefik.http.routers.${PROJECT}.tls=true
       - traefik.http.routers.${PROJECT}.tls.certresolver=le-cloudflare
+
   redis:
     image: redis:6
     networks:
@@ -53,6 +60,7 @@ services:
     labels:
       - traefik.enable=false
     restart: unless-stopped
+    
 networks:
   internal:
     driver: bridge
