@@ -29,11 +29,17 @@
             <div id="{{ dropdown_id }}" class="primary-menu__dropdown">
               {{ item.content }}
             </div>
+          {% elseif menu_level == 0 %}
+              {{ link(item.title, item.url, { 'class': ['primary-menu__link', 'primary-menu__link--level-' ~ menu_level] }) }}
           {% else %}
+            {# This nest of <div>'s is to prevent Safari from breaking layout
+            when using CSS column. 🤮 #}
             <div class="primary_menu__level-2-wrapper">
               <div class="primary_menu__level-2-inner">
-                {{ link(item.title, item.url, { 'class': ['primary-menu__link', 'primary-menu__link--level-' ~ menu_level]}) }}
-                {{ item.content }}
+                <a href="{{ item.url }}" class="primary-menu__link--level-{{ menu_level }}" aria-label="{{ item.title }}">
+                  <span class="primary-menu__dropdown-link-main-text">{{ item.title }}</span>
+                  {{ item.content }}
+                </a>
               </div>
             </div>
           {% endif %}

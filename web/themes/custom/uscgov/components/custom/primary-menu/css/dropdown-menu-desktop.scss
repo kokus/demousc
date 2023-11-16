@@ -11,6 +11,7 @@
     width: 100%;
     display: none;
     background: #F4F6FB;
+    border: solid 1px #8C91A0;
 
     .primary-menu__button[aria-expanded="true"] ~ & {
       display: flex;
@@ -33,11 +34,10 @@
     padding: 0;
     list-style: none;
     columns: 4;
-    column-gap: 20px;
   }
 
   .primary_menu__level-2-inner {
-    padding-bottom: 20px;
+    padding: 16px;
     page-break-inside: avoid;
     break-inside: avoid;
   }
@@ -46,9 +46,94 @@
     display: none;
   }
 
-  .primary-menu__dropdown-title-link {
-    @include u-font-family('serif');
+  .primary-menu__dropdown-title {
+    margin-block: 0 8px;
     font-size: 22px;
     font-weight: 600;
+  }
+
+  .primary-menu__dropdown-title-link {
+    text-wrap: pretty;
+
+    .last-word {
+      white-space: nowrap;
+
+      &::after {
+        display: inline-block;
+        height: 16px;
+        width: 20px;
+        margin-left: 8px;
+        content: "";
+        mask-image: url('../images/arrow-right.svg');
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        background: currentColor;
+      }
+    }
+  }
+
+  .primary-menu__mega-description-text {
+    font-size: 14px;
+  }
+
+  .primary-menu__mega-quick-links {
+    margin-top: 24px;
+  }
+
+  .primary-menu__mega-popular-links-title {
+    margin-block: 0 8px;
+    color: #525661;
+    text-wrap: pretty;
+  }
+
+  .primary-menu__mega-quick-link-menu {
+    margin: 0;
+    padding: 0;
+    columns: 2;
+    column-gap: 20px;
+    list-style: none;
+  }
+
+  .primary-menu__mega-quick-link-item a {
+    text-decoration: none;
+  }
+
+  .primary-menu__mega-quick-link-item-inner {
+    padding-bottom: 16px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .primary-menu__link--level-1 {
+    position: relative; // Anchor pseudo-elements that make chevron.
+    text-decoration: none;
+
+    &::after {
+      position: absolute;
+      top: 7px;
+      right: 0;
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-left: solid 2px currentColor;
+      border-bottom: solid 2px currentColor;
+      rotate: -135deg;
+      content: "";
+    }
+  }
+
+  .primary-menu__dropdown-link-main-text {
+    display: block;
+    margin-bottom: 8px;
+    padding-right: 10px; // Make visual room for chevron.
+    font-weight: bold;
+    color: #080A0D;
+    text-wrap: pretty;
+  }
+
+  .primary-menu__dropdown-link-description-text {
+    font-size: 14px;
+    color: #525661;
   }
 }
