@@ -22,6 +22,7 @@
   {% set menu_level = elements['#menu_level'] %}
   {% if menu_level == 0 and content.children %}
     <div class="primary-menu__dropdown-first">
+      <button class="primary-menu__mobile-back-button">{{ 'Main Menu'|t }}</button>
       <h3 class="primary-menu__dropdown-title">
         {#
          We need to wrap the last word of the title in a <span> and set that not

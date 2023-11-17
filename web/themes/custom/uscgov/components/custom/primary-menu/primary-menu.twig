@@ -38,14 +38,32 @@
             </div>
           {% elseif menu_level == 0 %}
               {{ link(item.title, item.url, { 'class': ['primary-menu__link', 'primary-menu__link--level-' ~ menu_level] }) }}
+          {% elseif menu_level == 1 and item.below %}
+            {# This nest of <div>'s is to prevent Safari from breaking layout
+            when using CSS column. 🤮 #}
+            <div class="primary_menu__level-{{ menu_level }}-wrapper">
+              <div class="primary_menu__level-{{ menu_level }}-inner">
+                <button class="primary-menu__button primary-menu__button--level-{{ menu_level }}" aria-label="{{ item.title }}">
+                  <span class="primary-menu__button-text">{{ item.title }}</span>
+                  {{ item.content }}
+                </button>
+                <a href="{{ item.url }}" class="primary-menu__link--level-{{ menu_level }} primary-menu__link--has-children" aria-label="{{ item.title }}">
+                  <span class="primary-menu__dropdown-link-main-text">{{ item.title }}</span>
+                  {{ item.content }}
+                </a>
+              </div>
+            </div>
+
           {% else %}
             {# This nest of <div>'s is to prevent Safari from breaking layout
             when using CSS column. 🤮 #}
-            <div class="primary_menu__level-1-wrapper">
-              <div class="primary_menu__level-1-inner">
+            <div class="primary_menu__level-{{ menu_level }}-wrapper">
+              <div class="primary_menu__level-{{ menu_level }}-inner">
                 <a href="{{ item.url }}" class="primary-menu__link--level-{{ menu_level }}" aria-label="{{ item.title }}">
                   <span class="primary-menu__dropdown-link-main-text">{{ item.title }}</span>
-                  {{ item.content }}
+                   {% if item.content %}
+                    <span class="primary-menu__button-description">{{ item.content }}</span>
+                  {% endif %}
                 </a>
               </div>
             </div>

@@ -103,12 +103,6 @@
   }
 }
 
-.header__navigation {
-  @media ($mobile_break) {
-    padding: 24px;
-  }
-}
-
 .header__mobile-search-wrapper {
   @media ($desktop_break) {
     display: none;
