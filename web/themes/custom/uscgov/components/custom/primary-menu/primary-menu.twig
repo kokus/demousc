@@ -24,6 +24,10 @@
               aria-controls="{{ dropdown_id }}"
             >
               {{ item.title }}
+
+              {% if item.entity.field_description_text.value %}
+                <span class="primary-menu__button-description">{{ item.entity.field_description_text.value }}</span>
+              {% endif %}
             </button>
 
             <div id="{{ dropdown_id }}" class="primary-menu__dropdown">

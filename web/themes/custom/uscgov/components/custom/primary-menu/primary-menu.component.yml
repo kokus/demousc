@@ -37,6 +37,7 @@ libraryOverrides:
     component:
       css/menu-desktop.css: {}
       css/dropdown-menu-desktop.css: {}
+      css/mobile-menu.css: {}
   js:
     js/show-hide-desktop-dropdown.js: {}
   dependencies:

@@ -1,0 +1,41 @@
+@forward "../../sass/uswds/settings";
+@use "../../../../sass/custom/global/media-queries" as *;
+@use "uswds-core" as *;
+
+@media ($mobile_break) {
+  .primary-menu__mega-quick-links {
+    display: none;
+  }
+
+  .primary-menu__dropdown {
+    display: none;
+  }
+
+  .primary-menu--level-0 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .primary-menu__link--level-0,
+  .primary-menu__button {
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    border-bottom: solid 2px #ccc;
+    line-height: 1;
+    font: inherit;
+    font-size: 16px;
+    color: color('primary-darker');
+    text-align: left;
+  }
+
+  .primary-menu__button-description {
+    display: block;
+    margin-top: 8px;
+  }
+}

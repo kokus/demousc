@@ -9,16 +9,16 @@
       <img src="{{ componentMetadata.path }}/images/logo.webp" width="168" height="83" fetchpriority="high" alt="">
     </a>
     <div id="{{ menu_wrapper_id }}" class="header__menu-wrapper">
+      {% set nav_id = 'primary-navigation-heading'|clean_unique_id %}
+      <div class="header__menu-wrapper-header">
+        <h2 id="{{ nav_id }}" class="header__menu-wrapper-heading">{{ 'Main Menu'|t }}</h2>
+      </div>
+      <nav aria-labelledby="{{ nav_id }}" class="header__navigation">
+        {{ main_menu }}
+      </nav>
       <button class="header__menu-wrapper-close-button" aria-controls="{{ menu_wrapper_id }}">
         <span class="visually-hidden">{{ 'Close menu'|t }}</span>
       </button>
-
-      {% set nav_id = 'primary-navigation-heading'|clean_unique_id %}
-      <nav aria-labelledby="{{ nav_id }}">
-        <h2 id="{{ nav_id }}" class="visually-hidden">{{ 'Primary navigation'|t }}</h2>
-        {{ main_menu }}
-      </nav>
-
     </div>
     <div class="header__menu-overlay"></div>
     <ul class="header__secondary-menu">
