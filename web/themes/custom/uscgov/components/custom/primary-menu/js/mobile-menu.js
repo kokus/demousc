@@ -12,6 +12,9 @@
         menuButton.setAttribute('aria-expanded', !menuButtonExpanded);
       })
     });
+
+    // @todo Debug code.
+    document.querySelector('[aria-controls="id-about-federal-courts-dropdown"]').click();
   }
 
 

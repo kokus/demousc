@@ -3,6 +3,40 @@
 @use "uswds-core" as *;
 
 @media ($mobile_break) {
+  .primary-menu__dropdown-first {
+    padding: 16px 24px;
+    background-color: #FEFEFE;
+    box-shadow: 0px 4px 8px 0px rgba(64, 72, 97, 0.12);
+  }
+
+  .primary-menu__dropdown-title {
+      margin-block: 0 0;
+      font-size: 20px;
+      font-weight: 600;
+  }
+
+  .primary-menu__dropdown-title-link {
+    text-wrap: pretty;
+
+    .last-word {
+      white-space: nowrap;
+
+      &::after {
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin-left: 8px;
+        margin-bottom: -3px;
+        content: "";
+        mask-image: url('../images/arrow-right.svg');
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        background: currentColor;
+      }
+    }
+  }
+
   .primary-menu__mega-quick-links {
     display: none;
   }
@@ -12,14 +46,17 @@
     top: 0;
     left: 0;
     z-index: 1;
-    width: 100%;
+    width: 0; // Width set to zero when not shown to remove horizontal scroll.
     height: 100%;
+    overflow: hidden;
     visibility: hidden;
     translate: 100% 0;
     transition: visibility 0.2s, translate 0.2s;
     background: #f2f4fa; // @todo I used a color picker to get this.
 
     .primary-menu__button[aria-expanded="true"] + & {
+      width: 100%;
+      overflow: unset;
       visibility: visible;
       translate: 0;
     }

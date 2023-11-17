@@ -33,6 +33,9 @@
         changeMenuVisibility(false);
       }
     });
+
+    // @todo Debug code.
+    mobileNavButton.click();
   }
 
   /**
