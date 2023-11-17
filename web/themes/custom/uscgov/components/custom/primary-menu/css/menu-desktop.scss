@@ -24,13 +24,22 @@
     appearance: none;
     border: 0;
     background: transparent;
+    border-bottom: solid 2px transparent;
     line-height: 1;
     font: inherit;
     font-size: 16px;
     color: color('primary-darker');
+
+    &:hover,
+    &.is-active {
+      border-bottom-color: #002D5A;
+    }
   }
 
   .primary-menu__button {
+    border: solid 1px transparent;
+    border-bottom: solid 2px transparent;
+
     &::after {
       display: block;
       width: 6px;
@@ -59,8 +68,8 @@
         top: 100%;
         left: -1px;
         z-index: 2; // Appear above dropdown.
-        width: calc(100% + 1.5px);
-        height: 41px;
+        width: calc(100% + 2px);
+        height: 42px; // @todo magic number.
         border-right: 1px solid #8C91A0;
         border-left: 1px solid #8C91A0;
         background: #F4F6FB;

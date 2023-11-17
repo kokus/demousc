@@ -27,6 +27,14 @@
         changeSearchVisibility(false);
       }
     });
+
+    searchWrapper.addEventListener('focusout', (e) => {
+      if (!Drupal.uscgov.isMobileMenuSystem()) {
+        if (!searchWrapper.contains(e.relatedTarget)) {
+          changeSearchVisibility(false);
+        }
+      }
+    }, true);
   }
 
   /**
@@ -42,6 +50,10 @@
 
     if (toState === false && !Drupal.uscgov.isMobileMenuSystem() && searchWrapperContainsFocus) {
       desktopSearchButton.focus();
+    }
+
+    if (toState === true && !Drupal.uscgov.isMobileMenuSystem()) {
+      searchWrapper.querySelector('button, input')?.focus();
     }
   }
 

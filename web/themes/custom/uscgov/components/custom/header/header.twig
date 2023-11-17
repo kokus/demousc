@@ -12,7 +12,13 @@
       <button class="header__menu-wrapper-close-button" aria-controls="{{ menu_wrapper_id }}">
         <span class="visually-hidden">{{ 'Close menu'|t }}</span>
       </button>
-      {{ main_menu }}
+
+      {% set nav_id = 'primary-navigation-heading'|clean_unique_id %}
+      <nav aria-labelledby="{{ nav_id }}">
+        <h2 id="{{ nav_id }}" class="visually-hidden">{{ 'Primary navigation'|t }}</h2>
+        {{ main_menu }}
+      </nav>
+
     </div>
     <div class="header__menu-overlay"></div>
     <ul class="header__secondary-menu">

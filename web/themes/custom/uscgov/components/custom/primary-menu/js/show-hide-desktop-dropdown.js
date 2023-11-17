@@ -10,7 +10,16 @@
     menuIsOpen = currentButton => currentButton.getAttribute('aria-expanded') === 'true';
 
     menuButtons.forEach(button => {
-      button.addEventListener('click', e => {
+      button.closest('.primary-menu__menu-item--level-0').addEventListener('focusout', (e) => {
+        if (!Drupal.uscgov.isMobileMenuSystem()) {
+          const parentItem = e.currentTarget.closest('.primary-menu__menu-item--level-0');
+          if (!parentItem.contains(e.relatedTarget)) {
+            toggleVisibility(button, false);
+          }
+        }
+      }, true);
+
+      button.addEventListener('click', () => {
         if (!Drupal.uscgov.isMobileMenuSystem()) {
           toggleVisibility(button, !menuIsOpen(button));
         }
