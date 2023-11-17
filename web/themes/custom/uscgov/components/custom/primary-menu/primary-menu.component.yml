@@ -39,6 +39,7 @@ libraryOverrides:
       css/dropdown-menu-desktop.css: {}
       css/mobile-menu.css: {}
   js:
+    js/mobile-menu.js: {}
     js/show-hide-desktop-dropdown.js: {}
   dependencies:
     - core/drupal

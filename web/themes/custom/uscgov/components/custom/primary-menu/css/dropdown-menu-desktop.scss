@@ -26,6 +26,7 @@
   }
 
   .primary-menu__dropdown-second {
+    flex-grow: 1;
     padding: 40px;
   }
 
@@ -34,6 +35,7 @@
     padding: 0;
     list-style: none;
     columns: 4;
+    column-gap: 0;
   }
 
   .primary_menu__level-1-inner {

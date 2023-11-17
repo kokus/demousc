@@ -22,8 +22,11 @@
               class="primary-menu__button"
               aria-expanded="false"
               aria-controls="{{ dropdown_id }}"
+              aria-label="{{ item.title }}"
             >
-              {{ item.title }}
+              <span class="primary-menu__button-text">
+                {{ item.title }}
+              </span>
 
               {% if item.entity.field_description_text.value %}
                 <span class="primary-menu__button-description">{{ item.entity.field_description_text.value }}</span>

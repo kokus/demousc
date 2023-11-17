@@ -8,17 +8,37 @@
   }
 
   .primary-menu__dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    translate: 100% 0;
+    transition: visibility 0.2s, translate 0.2s;
+    background: #f2f4fa; // @todo I used a color picker to get this.
+
+    .primary-menu__button[aria-expanded="true"] + & {
+      visibility: visible;
+      translate: 0;
+    }
+  }
+
+  .primary-menu--level-2 {
     display: none;
   }
 
-  .primary-menu--level-0 {
+  .primary-menu {
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
   .primary-menu__link--level-0,
+  .primary-menu__link--level-1,
   .primary-menu__button {
+    display: block;
     width: 100%;
     padding: 10px;
     text-decoration: none;
@@ -26,16 +46,45 @@
     appearance: none;
     border: 0;
     background: transparent;
-    border-bottom: solid 2px #ccc;
     line-height: 1;
     font: inherit;
     font-size: 16px;
     color: color('primary-darker');
     text-align: left;
+
+    &:not(.primary-menu__menu-item--level-0:last-child *) {
+      border-bottom: solid 2px #ccc;
+    }
+  }
+
+  .primary-menu__button {
+    position: relative;
+    padding-right: 30px;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      translate: 0 -50%;
+      rotate: -45deg;
+      width: 8px;
+      height: 8px;
+      border-right: solid 2px currentColor;
+      border-bottom: solid 2px currentColor;
+      content: "";
+    }
+  }
+
+  .primary-menu__button-text {
+    font-size: 15px;
+    font-weight: bold;
+    color: #080A0D;
   }
 
   .primary-menu__button-description {
     display: block;
     margin-top: 8px;
+    font-size: 14px;
+    color: #525661;
   }
 }

@@ -13,6 +13,7 @@
       <div class="header__menu-wrapper-header">
         <h2 id="{{ nav_id }}" class="header__menu-wrapper-heading">{{ 'Main Menu'|t }}</h2>
       </div>
+      {{ include('uscgov:mobile-search') }}
       <nav aria-labelledby="{{ nav_id }}" class="header__navigation">
         {{ main_menu }}
       </nav>

@@ -63,7 +63,7 @@
     right: 0;
     top: var(--drupal-displace-offset-top, 0);
     overflow: auto;
-    background: white;
+    background: #f2f4fa; // @todo I used a color picker to get this.
     visibility: hidden;
     width: 400px;
     max-width: 100%;
@@ -84,8 +84,34 @@
 }
 
 .header__menu-wrapper-header {
+  @media ($mobile_break) {
+    padding: 16px 24px;
+    background-color: #FEFEFE;
+    box-shadow: 0px 4px 8px 0px rgba(64, 72, 97, 0.12);
+  }
+
   @media ($desktop_break) {
     @include visually-hidden;
+  }
+}
+
+.header__menu-wrapper-heading {
+  @media ($mobile_break) {
+    margin-block: 42px 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.header__navigation {
+  @media ($mobile_break) {
+    padding: 24px;
+  }
+}
+
+.header__mobile-search-wrapper {
+  @media ($desktop_break) {
+    display: none;
   }
 }
 
