@@ -90,24 +90,24 @@
     }
   }
 
-  .primary-menu--level-2 {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // z-index: 1;
-    // width: 100%;
-    // height: 100%;
-    // translate: 100% 0;
-    // transition: visibility 0.2s, translate 0.2s, scale 0.2s;
-    // scale: 0 1;
-    // transform-origin: right;
-    // background: #f2f4fa; // @todo I used a color picker to get this.
+  .primary-menu__level-2-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    translate: 100% 0;
+    transition: visibility 0.2s, translate 0.2s, scale 0.2s;
+    scale: 0 1;
+    transform-origin: right;
+    background: #f2f4fa; // @todo I used a color picker to get this.
 
-    // .primary-menu__button[aria-expanded="true"] ~ & {
-    //   scale: 1;
-    //   visibility: visible;
-    //   translate: 0;
-    // }
+    .primary-menu__button[aria-expanded="true"] ~ & {
+      scale: 1;
+      visibility: visible;
+      translate: 0;
+    }
   }
 
   .primary-menu {

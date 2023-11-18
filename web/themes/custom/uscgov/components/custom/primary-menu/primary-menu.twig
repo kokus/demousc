@@ -41,7 +41,7 @@
           {% elseif menu_level == 1 and item.below %}
             {# This nest of <div>'s is to prevent Safari from breaking layout
             when using CSS column. 🤮 #}
-            <div class="primary_menu__level-{{ menu_level }}-wrapper">
+            <div>
               <div class="primary_menu__level-{{ menu_level }}-inner">
                 <button class="primary-menu__button primary-menu__button--level-{{ menu_level }}" aria-label="{{ item.title }}">
                   <span class="primary-menu__link-main-text">
@@ -63,13 +63,14 @@
                     </span>
                   {% endif %}
                 </a>
+
+                {{ item.content }}
               </div>
             </div>
-            {{ item.content }}
           {% else %}
             {# This nest of <div>'s is to prevent Safari from breaking layout
             when using CSS column. 🤮 #}
-            <div class="primary_menu__level-{{ menu_level }}-wrapper">
+            <div>
               <div class="primary_menu__level-{{ menu_level }}-inner">
                 <a href="{{ item.url }}" class="primary-menu__link--level-{{ menu_level }}" aria-label="{{ item.title }}">
                   <span class="primary-menu__link-main-text">

@@ -62,7 +62,12 @@
     <div class="primary-menu__dropdown-second">
       {{ content.children }}
     </div>
-  {% else %}
-    {{ content.children }}
+  {% elseif content.children %}
+    <div class="primary-menu__level-{{- menu_level + 1 -}}-wrapper">
+      {# @todo #}
+      <button class="primary-menu__mobile-back-button">Back</button>
+      {{ link(menu_link_content.title.value, menu_link_content.link.uri) }}
+      {{ content.children }}
+    </div>
   {% endif %}
 {% endmacro %}
