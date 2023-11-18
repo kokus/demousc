@@ -63,11 +63,6 @@
       {{ content.children }}
     </div>
   {% else %}
-    {% if menu_level == 1 and content.field_description_text.0 %}
-      <div class="primary-menu__dropdown-link-description-text">
-      {{ content.field_description_text|add_suggestion('bare') }}
-      </div>
-    {% endif %}
     {{ content.children }}
   {% endif %}
 {% endmacro %}
