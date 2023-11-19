@@ -16,16 +16,20 @@
     });
 
     backButtons.forEach(backButton => {
+      if (backButton.closest('.primary-menu__level-2-wrapper')) {
+        parentMenuText = backButton.closest('.primary-menu__dropdown').querySelector('.primary-menu__dropdown-title').textContent.trim();
+        backButton.innerHTML = `
+          <span class="visually-hidden">${ Drupal.t('Back to') }</span>
+          ${ parentMenuText }
+        `;
+      }
+
       backButton.addEventListener('click', () => {
         if (Drupal.uscgov.isMobileMenuSystem()) {
           navigateToParent(backButton);
         }
       });
     });
-
-
-    // @todo Debug code.
-    // document.querySelector('[aria-controls="id-about-federal-courts-dropdown"]').click();
   }
 
   function expandMenu(button) {
@@ -38,11 +42,6 @@
 
     parentMenuButton.setAttribute('aria-expanded', false);
   }
-
-  function getMenuParentTitle() {
-
-  }
-
 
   Drupal.behaviors.mobileMenu = {
     attach(context) {

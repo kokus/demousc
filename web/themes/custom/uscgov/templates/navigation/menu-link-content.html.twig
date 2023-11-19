@@ -22,7 +22,10 @@
   {% set menu_level = elements['#menu_level'] %}
   {% if menu_level == 0 and content.children %}
     <div class="primary-menu__dropdown-first">
-      <button class="primary-menu__mobile-back-button">{{ 'Main Menu'|t }}</button>
+      <button class="primary-menu__mobile-back-button">
+        <span class="visually-hidden">{{ 'Back to'|t }}</span>
+        {{ 'Main Menu'|t }}
+      </button>
       <h3 class="primary-menu__dropdown-title">
         {#
          We need to wrap the last word of the title in a <span> and set that not
@@ -64,9 +67,26 @@
     </div>
   {% elseif content.children %}
     <div class="primary-menu__level-{{- menu_level + 1 -}}-wrapper">
-      {# @todo #}
-      <button class="primary-menu__mobile-back-button">Back</button>
-      {{ link(menu_link_content.title.value, menu_link_content.link.uri) }}
+      <div class="primary-menu__dropdown-first">
+        {# Text of this button is replaced by JavaScript. #}
+        <button class="primary-menu__mobile-back-button">Back</button>
+
+        {% set title_words = menu_link_content.title.value|split(' ') %}
+        {% set title %}
+          {% for word in title_words %}
+            {% if loop.last %}
+              <span class="last-word">{{ word }}</span>
+            {% else %}
+              {{ word }}
+            {% endif %}
+          {% endfor %}
+        {% endset %}
+        <h4 class="primary-menu__dropdown-title">
+          <a href="{{ menu_link_content.link.uri }}" class="primary-menu__dropdown-title-link">
+            {{ title }}
+          </a>
+        <h4>
+      </div>
       {{ content.children }}
     </div>
   {% endif %}

@@ -37,9 +37,10 @@
   }
 
   .primary-menu__dropdown-title {
-      margin-block: 0 0;
-      font-size: 20px;
-      font-weight: 600;
+    @include u-font-family('serif');
+    margin-block: 0 0;
+    font-size: 20px;
+    font-weight: 600;
   }
 
   .primary-menu__dropdown-title-link {
@@ -172,5 +173,18 @@
     margin-top: 8px;
     font-size: 14px;
     color: #525661;
+  }
+
+  .primary-menu__menu-item--level-2 {
+    margin-bottom: 24px;
+  }
+
+  .primary-menu__link--level-2 {
+    text-decoration: none;
+
+    .primary-menu__link-main-text {
+      font-size: 16px;
+      font-weight: normal;
+    }
   }
 }
