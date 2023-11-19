@@ -43,7 +43,7 @@
     break-inside: avoid;
   }
 
-  .primary-menu--level-2 {
+  .primary-menu__level-2-wrapper {
     display: none;
   }
 
@@ -144,19 +144,19 @@
       rotate: -135deg;
       content: "";
     }
-  }
 
-  .primary-menu__dropdown-link-main-text {
-    display: block;
-    margin-bottom: 8px;
-    padding-right: 10px; // Make visual room for chevron.
-    font-weight: bold;
-    color: #080A0D;
-    text-wrap: pretty;
-  }
+    .primary-menu__link-main-text {
+      display: block;
+      margin-bottom: 8px;
+      padding-right: 10px; // Make visual room for chevron.
+      font-weight: bold;
+      color: #080A0D;
+      text-wrap: pretty;
+    }
 
-  .primary-menu__dropdown-link-description-text {
-    font-size: 14px;
-    color: #525661;
+    .primary-menu__link-description-text {
+      font-size: 14px;
+      color: #525661;
+    }
   }
 }

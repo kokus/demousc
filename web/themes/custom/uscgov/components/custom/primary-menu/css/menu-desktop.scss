@@ -78,7 +78,8 @@
     }
   }
 
-  .primary-menu__button-description {
+  // Top level description text is hidden at desktop.
+  .primary-menu__menu-item--level-0 > .primary-menu__button > .primary-menu__link-description-text {
     display: none;
   }
 }
