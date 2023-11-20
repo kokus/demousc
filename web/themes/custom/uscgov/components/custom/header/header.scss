@@ -230,6 +230,12 @@
   }
 }
 
+body:has(.header__menu-button[aria-expanded="true"]) {
+  @media ($mobile_break) {
+    position: fixed;
+  }
+}
+
 .header__search-wrapper {
   position: absolute;
   top: 100%;
