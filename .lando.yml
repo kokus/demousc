@@ -6,6 +6,9 @@ config:
   composer_version: 2-latest
   composer:
     consolidation/robo: ^4
+  php: 8.2
+  database: mysql:8.0.34
+  via: apache:2.4.53
 services:
   appserver:
     build:
@@ -34,6 +37,8 @@ services:
     type: mysql
     ports:
       - 33007:3306
+  redis:
+    type: redis:6
 tooling:
   phpunit:
     service: appserver
