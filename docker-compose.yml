@@ -2,10 +2,10 @@ version: "3"
 
 services:
   db:
-    image: mariadb:10.5.8
+    image: mysql:8.0.34
     container_name: "${PROJECT}-db"
     volumes:
-      - db-data:/var/lib/mysql
+      - db-data-mysql:/var/lib/mysql
     restart: unless-stopped
     env_file: .env
     networks:
@@ -20,6 +20,8 @@ services:
     container_name: "${PROJECT}-php"
     volumes:
       - ./:/var/www/html
+    ports:
+      - '9000:80'
     restart: unless-stopped
     env_file: .env
     depends_on:
@@ -30,23 +32,35 @@ services:
       - traefik.enable=false
 
   web:
-    image: nginx:alpine
+    image: webdevops/apache:latest
     container_name: ${PROJECT}-web
     volumes:
       - ./:/var/www/html:ro
-      - ./.deploy/nginx/conf:/etc/nginx/conf.d
+      - ./.deploy/apache/main.conf:/opt/docker/etc/httpd/main.conf
+    environment:
+      WEB_DOCUMENT_ROOT: /var/www/html/web
     restart: unless-stopped
     depends_on:
       - php
     networks:
       - internal
       - web
+    links:
+      - php
     labels:
       - traefik.enable=true
       - traefik.http.routers.${PROJECT}.rule=HostRegexp(`${PROJECT_DOMAIN}`, `www.${PROJECT_DOMAIN}` , `{subdomain:[a-zA-Z0-9-]+}${PROJECT_DOMAIN}`)
       - traefik.http.routers.${PROJECT}.tls=true
       - traefik.http.routers.${PROJECT}.tls.certresolver=le-cloudflare
 
+  redis:
+    image: redis:6
+    networks:
+      - internal
+    labels:
+      - traefik.enable=false
+    restart: unless-stopped
+    
 networks:
   internal:
     driver: bridge
@@ -54,4 +68,4 @@ networks:
     external: true
 
 volumes:
-  db-data:
+  db-data-mysql:

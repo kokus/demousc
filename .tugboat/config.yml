@@ -1,6 +1,6 @@
 services:
   php:
-    image: tugboatqa/php:8.1-apache
+    image: tugboatqa/php:8.2-apache
 
     default: true
 
@@ -11,6 +11,12 @@ services:
     commands:
       # Commands that set up the basic preview infrastructure
       init:
+        # Install and enable php-redis extension
+        - wget https://github.com/FriendsOfPHP/pickle/releases/latest/download/pickle.phar -P /usr/bin
+        - chmod +x /usr/bin/pickle.phar
+        - pickle.phar install redis
+        - docker-php-ext-enable redis
+
         # Install opcache and mod-rewrite.
         - docker-php-ext-install opcache
         - a2enmod headers rewrite
@@ -60,7 +66,7 @@ services:
 
   # This 'mysql' key acts as the hostname to access the service by from the php service.
   mysql:
-    image: tugboatqa/mariadb:10.5
+    image: tugboatqa/mysql:8.0
 
     # A set of commands to run while building this service
     commands:
@@ -79,3 +85,6 @@ services:
         - scp -P 8722 ubuntu@172.104.211.92:dbs_tugboat/usc-gov.sql.gz /tmp/database.sql.gz
         - zcat /tmp/database.sql.gz | mysql tugboat
         - rm /tmp/database.sql.gz
+
+  redis:
+    image: tugboatqa/redis:6.2

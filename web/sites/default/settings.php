@@ -760,6 +760,11 @@ if (file_exists($app_root . '/' . $site_path . '/settings.db.php')) {
   include $app_root . '/' . $site_path . '/settings.db.php';
 }
 
+// Redis settings.
+if (extension_loaded('redis') && getenv('DRUPAL_REDIS_HOST') && getenv('DRUPAL_REDIS_PORT') && file_exists($app_root . '/' . $site_path . '/settings.redis.php')) {
+  include $app_root . '/' . $site_path . '/settings.redis.php';
+}
+
 /**
  * Load local development override configuration, if available.
  *
