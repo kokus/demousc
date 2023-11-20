@@ -10,8 +10,8 @@
     left: 0;
     width: 100%;
     display: none;
-    background: #F4F6FB;
-    border: solid 1px #8C91A0;
+    background: var(--header-menu-wrapper-background);
+    border: solid 1px color('base');
 
     .primary-menu__button[aria-expanded="true"] ~ & {
       display: flex;
@@ -22,7 +22,7 @@
     flex-basis: 320px;
     flex-shrink: 0;
     padding: 40px;
-    background: #E6F1FA;
+    background: color('primary-lighter');
   }
 
   .primary-menu__dropdown-second {
@@ -80,7 +80,7 @@
 
   .primary-menu__mega-description-text {
     font-size: 14px;
-    color: #525661;
+    color: color('base-dark');
   }
 
   .primary-menu__mega-quick-links {
@@ -89,7 +89,7 @@
 
   .primary-menu__mega-popular-links-title {
     margin-block: 0 8px;
-    color: #525661;
+    color: color('base-dark');
     text-wrap: pretty;
   }
 
@@ -128,8 +128,8 @@
     text-decoration: none;
 
     &:hover {
-      border: 1px solid #0057A3;
-      background: #E6F1FA;
+      border: 1px solid color('primary');
+      background: color('primary-lighter');
     }
 
     &::after {
@@ -150,13 +150,13 @@
       margin-bottom: 8px;
       padding-right: 10px; // Make visual room for chevron.
       font-weight: bold;
-      color: #080A0D;
+      color: color('base-darker');
       text-wrap: pretty;
     }
 
     .primary-menu__link-description-text {
       font-size: 14px;
-      color: #525661;
+      color: color('base-dark');
     }
   }
 }

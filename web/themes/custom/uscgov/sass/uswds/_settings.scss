@@ -71,7 +71,13 @@ in the form $setting: value,
   $theme-small-font-size: '3xs',
   $theme-display-font-size: '3xl',
 
-  // Colors
+  // Colors.
+  // Use these with the USWDS color() function.
+  //
+  // @use "uswds-core" as *;
+  // .selector {
+  //   color: color('base-light'); // Maps to $theme-color-base-light.
+  // }
   $theme-color-base-lightest: #f0f0f0,
   $theme-color-base-lighter: #E4E4E4,
   $theme-color-base-light: #BEC2CC,
@@ -81,7 +87,7 @@ in the form $setting: value,
   $theme-color-base-darkest: #080A0D,
   $theme-color-base-ink: #080A0D,
 
-  $theme-color-primary-lighter: #E7F6F8,
+  $theme-color-primary-lighter: #E6F1FA,
   $theme-color-primary-light: #73A4CF,
   $theme-color-primary: #0057A3,
   $theme-color-primary-vivid: #01417F,
