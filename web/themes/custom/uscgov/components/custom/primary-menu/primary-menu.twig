@@ -48,11 +48,17 @@
                 {% endif %}
               </a>
           {% elseif menu_level == 1 and item.below %}
+
+            {% set tertiary_wrapper_id = ('id-' ~ item.title )|clean_unique_id %}
             {# This nest of <div>'s is to prevent Safari from breaking layout
             when using CSS column. 🤮 #}
             <div>
               <div class="primary_menu__level-{{ menu_level }}-inner">
-                <button class="primary-menu__button primary-menu__button--level-{{ menu_level }}" aria-label="{{ item.title }}">
+                <button
+                  class="primary-menu__button primary-menu__button--level-{{ menu_level }}"
+                  aria-label="{{ item.title }}"
+                  aria-controls="{{ tertiary_wrapper_id }}"
+                >
                   <span class="primary-menu__link-main-text">
                     {{ item.title }}
                   </span>
@@ -73,7 +79,7 @@
                   {% endif %}
                 </a>
 
-                {{ item.content }}
+                {{ item.content|set_attribute('id', tertiary_wrapper_id) }}
               </div>
             </div>
           {% else %}

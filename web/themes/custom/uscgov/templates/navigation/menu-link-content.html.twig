@@ -66,7 +66,8 @@
       {{ content.children }}
     </div>
   {% elseif content.children %}
-    <div class="primary-menu__level-{{- menu_level + 1 -}}-wrapper">
+    {% set wrapper_classes = ['primary-menu__level-' ~ (menu_level + 1) ~ '-wrapper'] %}
+    <div{{ attributes.addClass(wrapper_classes) }}>
       <div class="primary-menu__dropdown-first">
         {# Text of this button is replaced by JavaScript. #}
         <button class="primary-menu__mobile-back-button">Back</button>
