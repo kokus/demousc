@@ -37,7 +37,16 @@
               {{ item.content }}
             </div>
           {% elseif menu_level == 0 %}
-              {{ link(item.title, item.url, { 'class': ['primary-menu__link', 'primary-menu__link--level-' ~ menu_level] }) }}
+              <a href="{{ item.url }}" class="primary-menu__link primary-menu__link--level-{{ menu_level }}">
+                <span class="primary-menu__link-main-text">
+                  {{ item.title }}
+                </span>
+                {% if item.entity.field_description_text.value %}
+                  <span class="primary-menu__link-description-text">
+                    {{ item.entity.field_description_text.value }}
+                  </span>
+                {% endif %}
+              </a>
           {% elseif menu_level == 1 and item.below %}
             {# This nest of <div>'s is to prevent Safari from breaking layout
             when using CSS column. 🤮 #}
