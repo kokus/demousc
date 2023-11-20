@@ -33,6 +33,10 @@
       mask-position: center;
       mask-size: contain;
       content: "";
+
+      @media (forced-colors: active) {
+        background: buttonText;
+      }
     }
   }
 

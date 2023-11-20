@@ -154,6 +154,10 @@
   background-color: #1e1e1e;
   opacity: 0.5;
 
+  @media (forced-colors: active) {
+    background-color: canvasText;
+  }
+
   .header__menu-wrapper.is-active ~ & {
     display: block;
 
@@ -227,6 +231,10 @@
     mask-repeat: no-repeat;
     mask-size: contain;
     background-color: currentColor;
+
+    @media (forced-colors: active) {
+      background-color: buttonText;
+    }
   }
 }
 
