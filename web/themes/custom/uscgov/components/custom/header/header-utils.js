@@ -2,6 +2,11 @@
   Drupal.uscgov = Drupal.uscgov || {};
 
   /**
+   * A selector that will return all focusable elements.
+   */
+  Drupal.uscgov.focusableElementsSelector = ':is(audio, button, canvas, details, iframe, input, select, summary, textarea, video, [accesskey], [contenteditable], [href], [tabindex]:not([tabindex*="-"])):not(:is([disabled], [inert]))';
+
+  /**
    * Is the mobile navigation system active?
    *
    * @returns boolean
