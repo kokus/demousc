@@ -3,6 +3,11 @@
  * Show hide desktop submenus.
  */
 ((Drupal, once) => {
+  /**
+   * Initialize the desktop menu.
+   *
+   * @param {Element} menu - The top-level primary menu <ul>.
+   */
   function init(menu) {
     const menuButtons = menu.querySelectorAll('.primary-menu__button');
     const menuIsOpen = currentButton => currentButton.getAttribute('aria-expanded') === 'true';

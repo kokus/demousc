@@ -46,6 +46,12 @@
     menuWrapper.classList.toggle('is-active', toState);
     mobileNavButton.setAttribute('aria-expanded', toState);
 
+    // Close any open submenus when mobile menu is closed.
+    if (toState === false && Drupal.uscgov.isMobileMenuSystem()) {
+      Drupal.uscgov.closeAllMenuItems();
+    }
+
+    // Set focus back to mobile menu button if mobile menu had focus and then is closed.
     if (toState === false && Drupal.uscgov.isMobileMenuSystem() && menuWrapperContainsFocus) {
       mobileNavButton.focus();
     }
