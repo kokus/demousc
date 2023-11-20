@@ -17,7 +17,12 @@
 
     backButtons.forEach(backButton => {
       if (backButton.closest('.primary-menu__level-2-wrapper')) {
-        parentMenuText = backButton.closest('.primary-menu__dropdown').querySelector('.primary-menu__dropdown-title').textContent.trim();
+        parentMenuText =
+          backButton
+            .closest('.primary-menu__dropdown')
+            .querySelector('.primary-menu__dropdown-title')
+            .textContent
+            .trim();
         backButton.innerHTML = `
           <span class="visually-hidden">${ Drupal.t('Back to') }</span>
           ${ parentMenuText }

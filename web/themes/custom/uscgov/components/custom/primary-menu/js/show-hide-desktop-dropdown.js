@@ -3,11 +3,9 @@
  * Show hide desktop submenus.
  */
 ((Drupal, once) => {
-  let menuIsOpen;
-
   function init(menu) {
     const menuButtons = menu.querySelectorAll('.primary-menu__button');
-    menuIsOpen = currentButton => currentButton.getAttribute('aria-expanded') === 'true';
+    const menuIsOpen = currentButton => currentButton.getAttribute('aria-expanded') === 'true';
 
     menuButtons.forEach(button => {
       button.closest('.primary-menu__menu-item--level-0').addEventListener('focusout', (e) => {
@@ -41,8 +39,6 @@
       button.focus();
     }
   }
-
-
 
   Drupal.behaviors.showHideDesktopDropdown = {
     attach(context) {
