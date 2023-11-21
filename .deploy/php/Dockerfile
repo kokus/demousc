@@ -1,5 +1,5 @@
 # from https://www.drupal.org/docs/system-requirements/php-requirements
-FROM php:8.2-rc-fpm-alpine3.17
+FROM php:8.2.12-fpm-alpine3.18
 
 # install the PHP extensions we need
 RUN set -eux; \
@@ -35,6 +35,11 @@ RUN set -eux; \
 	)"; \
 	apk add --no-network --virtual .drupal-phpexts-rundeps $runDeps; \
 	apk del --no-network .build-deps
+
+# Install and enable the redis extension.
+RUN apk add --no-cache pcre-dev $PHPIZE_DEPS \
+&& pecl install redis \
+&& docker-php-ext-enable redis.so
 
 # set recommended PHP.ini settings
 # see https://secure.php.net/manual/en/opcache.installation.php

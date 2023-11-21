@@ -63,6 +63,7 @@
         "drupal/pathologic": "^2.0@alpha",
         "drupal/quick_node_clone": "^1.16",
         "drupal/redirect": "^1.9",
+        "drupal/redis": "^1.7",
         "drupal/remote_stream_wrapper": "^2.0",
         "drupal/scheduler": "^2.0",
         "drupal/seckit": "^2.0",
