@@ -1,0 +1,42 @@
+uuid: 7936bf13-fb51-41aa-8f49-2f556b41b5a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.sidebar
+    - field.field.node.news_issue.body
+    - field.field.node.news_issue.field_banner_image
+    - field.field.node.news_issue.field_landing_page_image
+    - field.field.node.news_issue.field_lead_paragraph
+    - field.field.node.news_issue.field_logo
+    - node.type.news_issue
+  module:
+    - text
+    - user
+id: node.news_issue.sidebar
+targetEntityType: node
+bundle: news_issue
+mode: sidebar
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  field_banner_image: true
+  field_landing_page_image: true
+  field_lead_paragraph: true
+  field_logo: true

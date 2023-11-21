@@ -11,6 +11,7 @@ dependencies:
   module:
     - datetime
     - image
+    - path
     - user
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
@@ -52,7 +53,7 @@ content:
     region: content
   user_picture:
     type: image_image
-    weight: -1
+    weight: 31
     region: content
     settings:
       progress_indicator: throbber

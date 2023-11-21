@@ -1,0 +1,59 @@
+uuid: 02386640-9aae-4c4b-9919-913a99b20531
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.judge_comments.body
+    - field.field.node.judge_comments.field_committee
+    - field.field.node.judge_comments.field_date_updated
+    - field.field.node.judge_comments.field_document_pdf
+    - field.field.node.judge_comments.field_rules_rule_or_form
+    - field.field.node.judge_comments.field_tags
+    - node.type.judge_comments
+  module:
+    - datetime
+    - text
+    - user
+id: node.judge_comments.default
+targetEntityType: node
+bundle: judge_comments
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_committee:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_date_updated:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: month_d_yyyy
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  field_document_pdf: true
+  field_rules_rule_or_form: true
+  field_tags: true

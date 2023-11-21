@@ -1,0 +1,23 @@
+uuid: 028ac433-93cc-4bf7-bb80-34ad485a6e73
+langcode: en
+status: true
+dependencies:
+  module:
+    - gutenberg
+name: 'Display Suite code'
+format: ds_code
+weight: 12
+filters:
+  filter_null:
+    id: filter_null
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  gutenberg:
+    id: gutenberg
+    provider: gutenberg
+    status: false
+    weight: 0
+    settings:
+      processor_settings: {  }

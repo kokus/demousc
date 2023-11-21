@@ -1,0 +1,28 @@
+uuid: 3e2994c4-2f2a-4e18-85f4-f8f668b31dbc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+name: 'User Alert'
+type: user_alert
+description: 'A User Alert is a short Twitter like message displayed at the top of the site, alerting users to critical information like an online sale, new blog post, or breaking news. After viewing it, they can click and close the message.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

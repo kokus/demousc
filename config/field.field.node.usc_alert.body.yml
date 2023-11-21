@@ -1,0 +1,24 @@
+uuid: 4727bb37-097d-4503-9ad5-aa1012484a12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.usc_alert
+  module:
+    - text
+id: node.usc_alert.body
+field_name: body
+entity_type: node
+bundle: usc_alert
+label: Body
+description: 'Please limit your Alert message text to 330 characters or less.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

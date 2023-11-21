@@ -1,0 +1,30 @@
+uuid: 5af544a5-131b-46c0-abb8-cca8a4ef9d25
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c90ae4dd-7217-41d5-b171-948a06e18aea'
+  module:
+    - block_content
+    - system
+  theme:
+    - uscgov
+id: usczen_block_30
+theme: uscgov
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:c90ae4dd-7217-41d5-b171-948a06e18aea'
+settings:
+  id: 'block_content:c90ae4dd-7217-41d5-b171-948a06e18aea'
+  label: ''
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /judges-judgeships/judicial-vacancies/current-judicial-vacancies

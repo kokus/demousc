@@ -1,0 +1,8 @@
+uuid: 309f15a3-df77-4193-a98f-84ba197b2b3e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Data Table Numbers'
+vid: table_number
+description: ''
+weight: 0

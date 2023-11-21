@@ -1,0 +1,34 @@
+uuid: cb51636b-1703-4fdc-8843-2261e2bd1d31
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.sidebar
+    - field.field.node.faqs.body
+    - node.type.faqs
+  module:
+    - text
+    - user
+id: node.faqs.sidebar
+targetEntityType: node
+bundle: faqs
+mode: sidebar
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden: {  }

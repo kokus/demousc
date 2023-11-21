@@ -1,0 +1,77 @@
+uuid: 2e209498-1b9f-48c7-ad24-03f128e7220c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.fee.body
+    - field.field.node.fee.field_date_effective
+    - field.field.node.fee.field_date_updated
+    - field.field.node.fee.field_lead_paragraph
+    - field.field.node.fee.field_logo
+    - field.field.node.fee.field_tags
+    - node.type.fee
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.fee.default
+targetEntityType: node
+bundle: fee
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_date_effective:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: month_d_yyyy
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_date_updated:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: month_d_yyyy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_lead_paragraph:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_logo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: logo
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  field_tags: true

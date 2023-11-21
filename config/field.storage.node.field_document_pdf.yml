@@ -1,0 +1,23 @@
+uuid: 4c77eb5e-3ef8-4a07-933c-b93b597b86d4
+langcode: und
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_document_pdf
+field_name: field_document_pdf
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

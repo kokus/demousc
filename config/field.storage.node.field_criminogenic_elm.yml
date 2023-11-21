@@ -1,0 +1,19 @@
+uuid: 5b4189ca-f1b8-427f-bb77-9a4d0bd3441a
+langcode: und
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_criminogenic_elm
+field_name: field_criminogenic_elm
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

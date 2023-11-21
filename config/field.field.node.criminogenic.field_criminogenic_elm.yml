@@ -1,0 +1,23 @@
+uuid: 08757929-6d64-4801-ad81-0a2d57692efe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_criminogenic_elm
+    - node.type.criminogenic
+  module:
+    - link
+id: node.criminogenic.field_criminogenic_elm
+field_name: field_criminogenic_elm
+entity_type: node
+bundle: criminogenic
+label: ELM
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

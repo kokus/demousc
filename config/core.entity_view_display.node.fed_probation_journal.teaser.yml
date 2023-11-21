@@ -1,0 +1,41 @@
+uuid: 6d95aa9d-3931-4d60-ab4f-c7d651446026
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.fed_probation_journal.body
+    - field.field.node.fed_probation_journal.field_auther
+    - field.field.node.fed_probation_journal.field_document_pdf
+    - field.field.node.fed_probation_journal.field_mydate
+    - field.field.node.fed_probation_journal.field_tags
+    - field.field.node.fed_probation_journal.field_test
+    - field.field.node.fed_probation_journal.field_usc_import_timestamp
+    - field.field.node.fed_probation_journal.field_volume_and_issue_number
+    - node.type.fed_probation_journal
+  module:
+    - user
+id: node.fed_probation_journal.teaser
+targetEntityType: node
+bundle: fed_probation_journal
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  body: true
+  field_auther: true
+  field_document_pdf: true
+  field_mydate: true
+  field_tags: true
+  field_test: true
+  field_usc_import_timestamp: true
+  field_volume_and_issue_number: true

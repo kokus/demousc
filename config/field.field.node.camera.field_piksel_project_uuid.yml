@@ -1,0 +1,19 @@
+uuid: 9fc5b051-7477-4e40-9850-ebadbe82374a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_piksel_project_uuid
+    - node.type.camera
+id: node.camera.field_piksel_project_uuid
+field_name: field_piksel_project_uuid
+entity_type: node
+bundle: camera
+label: 'Piksel project uuid'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

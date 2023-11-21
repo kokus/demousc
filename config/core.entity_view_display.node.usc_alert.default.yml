@@ -1,0 +1,33 @@
+uuid: c8b644d1-d778-4bac-807c-ce9f9b82e8b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.usc_alert.body
+    - node.type.usc_alert
+  module:
+    - text
+    - user
+id: node.usc_alert.default
+targetEntityType: node
+bundle: usc_alert
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden: {  }

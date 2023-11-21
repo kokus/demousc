@@ -1,0 +1,24 @@
+uuid: aeb6888c-ab90-4a4e-9c95-331e0073c39c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.criminogenic_extra_downlds.field_criminogenic_extra_downld
+    - field.field.paragraph.criminogenic_extra_downlds.field_criminogenic_language
+    - paragraphs.paragraphs_type.criminogenic_extra_downlds
+  module:
+    - options
+id: paragraph.criminogenic_extra_downlds.default
+targetEntityType: paragraph
+bundle: criminogenic_extra_downlds
+mode: default
+content:
+  field_criminogenic_language:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_criminogenic_extra_downld: true

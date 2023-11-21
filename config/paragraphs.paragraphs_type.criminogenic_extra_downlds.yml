@@ -1,0 +1,10 @@
+uuid: fd4ad669-9b98-4ece-b96f-3f88910905b3
+langcode: en
+status: true
+dependencies: {  }
+id: criminogenic_extra_downlds
+label: 'Criminogenic extra downlds'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_criminogenic_extra_downlds'
+behavior_plugins: {  }

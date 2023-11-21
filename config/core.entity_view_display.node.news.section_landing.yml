@@ -1,0 +1,57 @@
+uuid: f2e6e097-c902-4206-b599-abbac5a395b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.section_landing
+    - field.field.node.news.body
+    - field.field.node.news.field_body_enhanced
+    - field.field.node.news.field_date_updated
+    - field.field.node.news.field_fc_be_audio
+    - field.field.node.news.field_landing_page_image
+    - field.field.node.news.field_lead_gallery
+    - field.field.node.news.field_lead_paragraph
+    - field.field.node.news.field_news_issue
+    - field.field.node.news.field_related_topics
+    - field.field.node.news.field_tags
+    - image.style.medium
+    - node.type.news
+  module:
+    - image
+    - user
+id: node.news.section_landing
+targetEntityType: node
+bundle: news
+mode: section_landing
+content:
+  field_landing_page_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  body: true
+  field_body_enhanced: true
+  field_date_updated: true
+  field_fc_be_audio: true
+  field_lead_gallery: true
+  field_lead_paragraph: true
+  field_news_issue: true
+  field_related_topics: true
+  field_tags: true

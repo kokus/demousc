@@ -1,0 +1,74 @@
+uuid: c981860e-c0aa-4c4e-9e94-58c953642ee6
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_field_collection_revisions_criminogenic_extra_downlds
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - 'Field Collection Revisions Content'
+migration_group: migrate_drupal_7
+label: 'Field Collection Revisions (Criminogenic extra downlds)'
+source:
+  plugin: d7_field_collection_item_revision
+  field_name: field_criminogenic_extra_downlds
+process:
+  id:
+    -
+      plugin: paragraphs_lookup
+      tags:
+        - 'Field Collection Content'
+      source: item_id
+    -
+      plugin: extract
+      index:
+        - id
+  type:
+    -
+      plugin: get
+      source: bundle
+  parent_id:
+    -
+      plugin: get
+      source: parent_id
+  parent_type:
+    -
+      plugin: get
+      source: parent_type
+  parent_field_name:
+    -
+      plugin: get
+      source: field_name
+  field_criminogenic_extra_downld:
+    -
+      plugin: sub_process
+      source: field_criminogenic_extra_downld
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_criminogenic_language:
+    -
+      plugin: get
+      source: field_criminogenic_language
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  new_revisions: true
+  default_bundle: criminogenic_extra_downlds
+migration_dependencies:
+  required:
+    - upgrade_d7_field_collection_body_enhanced
+    - upgrade_d7_field_collection_referenced_nodes
+    - upgrade_d7_field_collection_milestone_activities
+    - upgrade_d7_field_collection_additional_info
+    - upgrade_d7_field_collection_piksel_programs
+    - upgrade_d7_field_collection_criminogenic_extra_downlds
+    - upgrade_d7_field_collection_criminogenic_worksheets
+  optional: {  }

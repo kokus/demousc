@@ -1,0 +1,27 @@
+uuid: 1dbceffe-b9a1-4921-b925-1ded1d16e57a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_pdf
+    - node.type.fed_probation_journal
+  module:
+    - file
+id: node.fed_probation_journal.field_document_pdf
+field_name: field_document_pdf
+entity_type: node
+bundle: fed_probation_journal
+label: 'Fed Probation Journal File'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'txt pdf doc docx xls xlsx csv wpd'
+  max_filesize: ''
+  description_field: false
+field_type: file

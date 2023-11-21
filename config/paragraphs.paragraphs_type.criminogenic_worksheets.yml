@@ -1,0 +1,10 @@
+uuid: d2b863a5-cdde-450d-8fb8-ae0132b3a4cf
+langcode: en
+status: true
+dependencies: {  }
+id: criminogenic_worksheets
+label: 'Criminogenic worksheets'
+icon_uuid: null
+icon_default: null
+description: 'Migrated from field_collection field_criminogenic_worksheets'
+behavior_plugins: {  }

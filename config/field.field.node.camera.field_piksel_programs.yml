@@ -1,0 +1,49 @@
+uuid: 1625109d-29cf-4e69-acdb-366d699a96d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_piksel_programs
+    - node.type.camera
+    - paragraphs.paragraphs_type.piksel_programs
+  module:
+    - entity_reference_revisions
+id: node.camera.field_piksel_programs
+field_name: field_piksel_programs
+entity_type: node
+bundle: camera
+label: 'Piksel programs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      piksel_programs: piksel_programs
+    negate: 0
+    target_bundles_drag_drop:
+      additional_info:
+        weight: 2
+        enabled: false
+      body_enhanced:
+        weight: 3
+        enabled: false
+      criminogenic_extra_downlds:
+        weight: 4
+        enabled: false
+      criminogenic_worksheets:
+        weight: 5
+        enabled: false
+      milestone_activities:
+        weight: 6
+        enabled: false
+      piksel_programs:
+        weight: 1
+        enabled: true
+      referenced_nodes:
+        weight: 7
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,21 @@
+uuid: ac56f3af-5fcb-4709-ab19-3671acbf307e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_criminogenic
+label: 'Content - Criminogenic'
+type: 'canonical_entities:node'
+pattern: 'criminogenic/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      criminogenic: criminogenic
+selection_logic: and
+weight: 0
+relationships: {  }

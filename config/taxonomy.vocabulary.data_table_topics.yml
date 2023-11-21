@@ -1,0 +1,8 @@
+uuid: 146e5c64-1f63-458c-8c2a-df299d46b3f9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Data Table Topics'
+vid: data_table_topics
+description: 'Used in Data Table content type as category.'
+weight: 0

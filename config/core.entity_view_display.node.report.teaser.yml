@@ -1,0 +1,59 @@
+uuid: d6a9e866-a993-431c-8618-89e18d8372eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.report.body
+    - field.field.node.report.field_banner_image
+    - field.field.node.report.field_body_enhanced
+    - field.field.node.report.field_date_updated
+    - field.field.node.report.field_fc_be_audio
+    - field.field.node.report.field_landing_page_image
+    - field.field.node.report.field_lead_gallery
+    - field.field.node.report.field_lead_paragraph
+    - field.field.node.report.field_logo
+    - field.field.node.report.field_report_children
+    - field.field.node.report.field_report_name
+    - field.field.node.report.field_sidebar_title
+    - field.field.node.report.field_tags
+    - node.type.report
+  module:
+    - text
+    - user
+id: node.report.teaser
+targetEntityType: node
+bundle: report
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  field_banner_image: true
+  field_body_enhanced: true
+  field_date_updated: true
+  field_fc_be_audio: true
+  field_landing_page_image: true
+  field_lead_gallery: true
+  field_lead_paragraph: true
+  field_logo: true
+  field_report_children: true
+  field_report_name: true
+  field_sidebar_title: true
+  field_tags: true

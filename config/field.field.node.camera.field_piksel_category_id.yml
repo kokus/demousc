@@ -1,0 +1,19 @@
+uuid: 1dd3ea88-5ba8-49e0-903e-8b32918d8e3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_piksel_category_id
+    - node.type.camera
+id: node.camera.field_piksel_category_id
+field_name: field_piksel_category_id
+entity_type: node
+bundle: camera
+label: 'Piksel category id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

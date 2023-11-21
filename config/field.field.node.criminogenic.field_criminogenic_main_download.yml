@@ -1,0 +1,27 @@
+uuid: df880d98-9975-468f-8d0d-1469b9602e37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_criminogenic_main_download
+    - node.type.criminogenic
+  module:
+    - file
+id: node.criminogenic.field_criminogenic_main_download
+field_name: field_criminogenic_main_download
+entity_type: node
+bundle: criminogenic
+label: 'Main download'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: criminogenic
+  file_extensions: 'txt doc pdf docx'
+  max_filesize: ''
+  description_field: false
+field_type: file

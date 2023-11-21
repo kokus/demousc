@@ -1,0 +1,33 @@
+uuid: bd340823-3771-4296-bd7f-6b48f1fbbeaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_page_image
+    - node.type.judge
+  module:
+    - image
+id: node.judge.field_landing_page_image
+field_name: field_landing_page_image
+entity_type: node
+bundle: judge
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 390x260
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image: 0
+field_type: image

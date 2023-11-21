@@ -1,0 +1,45 @@
+uuid: 51765c60-ec12-4697-b098-f1c3d3462408
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.judge_comments.body
+    - field.field.node.judge_comments.field_committee
+    - field.field.node.judge_comments.field_date_updated
+    - field.field.node.judge_comments.field_document_pdf
+    - field.field.node.judge_comments.field_rules_rule_or_form
+    - field.field.node.judge_comments.field_tags
+    - node.type.judge_comments
+  module:
+    - text
+    - user
+id: node.judge_comments.teaser
+targetEntityType: node
+bundle: judge_comments
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  field_committee: true
+  field_date_updated: true
+  field_document_pdf: true
+  field_rules_rule_or_form: true
+  field_tags: true

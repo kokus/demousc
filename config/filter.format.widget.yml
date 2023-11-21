@@ -1,0 +1,26 @@
+uuid: 49d3e9ff-4e8e-47a5-a6a2-cf4f4eabe84a
+langcode: en
+status: true
+dependencies:
+  module:
+    - gutenberg
+name: Widget
+format: widget
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<a href hreflang> <strong> <p> <img src alt height width> <param>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  gutenberg:
+    id: gutenberg
+    provider: gutenberg
+    status: false
+    weight: 0
+    settings:
+      processor_settings: {  }

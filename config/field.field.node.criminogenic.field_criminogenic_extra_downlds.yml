@@ -1,0 +1,49 @@
+uuid: 303459ed-a5d6-4125-8133-75b6154190e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_criminogenic_extra_downlds
+    - node.type.criminogenic
+    - paragraphs.paragraphs_type.criminogenic_extra_downlds
+  module:
+    - entity_reference_revisions
+id: node.criminogenic.field_criminogenic_extra_downlds
+field_name: field_criminogenic_extra_downlds
+entity_type: node
+bundle: criminogenic
+label: 'Other languages'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      criminogenic_extra_downlds: criminogenic_extra_downlds
+    negate: 0
+    target_bundles_drag_drop:
+      additional_info:
+        weight: 2
+        enabled: false
+      body_enhanced:
+        weight: 3
+        enabled: false
+      criminogenic_extra_downlds:
+        weight: 1
+        enabled: true
+      criminogenic_worksheets:
+        weight: 4
+        enabled: false
+      milestone_activities:
+        weight: 5
+        enabled: false
+      piksel_programs:
+        weight: 6
+        enabled: false
+      referenced_nodes:
+        weight: 7
+        enabled: false
+field_type: entity_reference_revisions
