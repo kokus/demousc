@@ -42,6 +42,7 @@
         "drupal/google_tag": "^2.0",
         "drupal/gutenberg_uswds": "^1.0@beta",
         "drupal/honeypot": "^2.1",
+        "drupal/html_processors": "1.0.x-dev@dev",
         "drupal/htmlpurifier": "^1.0",
         "drupal/image_effects": "^3.4",
         "drupal/image_link_formatter": "^2.1",
@@ -132,6 +133,9 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/core" : {
+                "Array filter issue" : "https://www.drupal.org/files/issues/2020-06-09/d7_field_instance-sort-3080034-6.patch"
+            }
         }
     },
     "require-dev": {

@@ -1,0 +1,33 @@
+uuid: a061f8c2-59be-4916-a07b-bf9758162ff1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_page_image
+    - node.type.news_issue
+  module:
+    - image
+id: node.news_issue.field_landing_page_image
+field_name: field_landing_page_image
+entity_type: node
+bundle: news_issue
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 355x240
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image: 0
+field_type: image

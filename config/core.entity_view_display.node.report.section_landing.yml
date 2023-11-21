@@ -1,0 +1,62 @@
+uuid: 6b530470-757f-4910-ad01-048fd9bedbfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.section_landing
+    - field.field.node.report.body
+    - field.field.node.report.field_banner_image
+    - field.field.node.report.field_body_enhanced
+    - field.field.node.report.field_date_updated
+    - field.field.node.report.field_fc_be_audio
+    - field.field.node.report.field_landing_page_image
+    - field.field.node.report.field_lead_gallery
+    - field.field.node.report.field_lead_paragraph
+    - field.field.node.report.field_logo
+    - field.field.node.report.field_report_children
+    - field.field.node.report.field_report_name
+    - field.field.node.report.field_sidebar_title
+    - field.field.node.report.field_tags
+    - node.type.report
+  module:
+    - image
+    - user
+id: node.report.section_landing
+targetEntityType: node
+bundle: report
+mode: section_landing
+content:
+  field_landing_page_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: landing
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  body: true
+  field_banner_image: true
+  field_body_enhanced: true
+  field_date_updated: true
+  field_fc_be_audio: true
+  field_lead_gallery: true
+  field_lead_paragraph: true
+  field_logo: true
+  field_report_children: true
+  field_report_name: true
+  field_sidebar_title: true
+  field_tags: true

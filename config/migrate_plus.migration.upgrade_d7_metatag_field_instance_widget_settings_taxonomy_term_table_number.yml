@@ -1,0 +1,53 @@
+uuid: 95c467bd-b289-40a4-a35a-1bdce0da2dae
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_metatag_field_instance_widget_settings_taxonomy_term_table_number
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Metatag field instance widget settings of Data Table Numbers taxonomy terms'
+source:
+  plugin: d7_metatag_field_instance
+  source_module: metatag
+  ignore_map: true
+  constants:
+    field_name: field_metatag
+    form_mode: default
+  entity_type_id: taxonomy_term
+  entity_type: taxonomy_term
+  bundle: table_number
+process:
+  bundle:
+    -
+      plugin: get
+      source: bundle
+  entity_type:
+    -
+      plugin: get
+      source: entity_type
+    -
+      plugin: static_map
+      map:
+        field_collection_item: paragraph
+        paragraphs_item: paragraph
+      bypass: true
+  field_name:
+    -
+      plugin: get
+      source: constants/field_name
+  form_mode:
+    -
+      plugin: get
+      source: constants/form_mode
+destination:
+  plugin: component_entity_form_display
+migration_dependencies:
+  required:
+    - upgrade_d7_metatag_field_instance_taxonomy_term_table_number
+  optional:
+    - upgrade_d7_field_collection_type

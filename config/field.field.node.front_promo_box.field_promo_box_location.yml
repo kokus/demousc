@@ -1,0 +1,21 @@
+uuid: 3aa99559-0745-4812-8feb-84c950c5e6f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promo_box_location
+    - node.type.front_promo_box
+  module:
+    - options
+id: node.front_promo_box.field_promo_box_location
+field_name: field_promo_box_location
+entity_type: node
+bundle: front_promo_box
+label: Location
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

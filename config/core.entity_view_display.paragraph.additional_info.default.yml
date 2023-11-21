@@ -1,0 +1,33 @@
+uuid: b0fd7e8d-7dfe-4da4-8637-dc3f8136cb65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.additional_info.field_additional_info_type
+    - field.field.paragraph.additional_info.field_document_pdf
+    - field.field.paragraph.additional_info.field_file_description
+    - paragraphs.paragraphs_type.additional_info
+  module:
+    - options
+    - text
+id: paragraph.additional_info.default
+targetEntityType: paragraph
+bundle: additional_info
+mode: default
+content:
+  field_additional_info_type:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_file_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_document_pdf: true

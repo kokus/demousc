@@ -1,0 +1,15 @@
+uuid: 0b3cace4-da23-47e4-9115-3161428b26b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - scheduler
+third_party_settings:
+  scheduler: {  }
+name: FAQ
+type: faq
+description: 'A frequently asked question and its answer.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

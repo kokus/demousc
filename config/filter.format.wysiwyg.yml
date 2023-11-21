@@ -1,0 +1,43 @@
+uuid: 3edf1898-8e40-4ef7-b61c-f73cba2a950a
+langcode: en
+status: true
+dependencies:
+  module:
+    - gutenberg
+    - pathologic
+name: 'WYSIWYG (default)'
+format: wysiwyg
+weight: -10
+filters:
+  filter_null:
+    id: filter_null
+    provider: filter
+    status: true
+    weight: -47
+    settings: {  }
+  filter_pathologic:
+    id: filter_pathologic
+    provider: pathologic
+    status: true
+    weight: -48
+    settings:
+      settings_source: global
+      local_settings:
+        protocol_style: full
+        local_paths: ''
+      local_paths: ''
+      protocol_style: path
+      local_paths_exploded:
+        -
+          path: /
+        -
+          path: /
+          host: default
+      base_url_host: default
+  gutenberg:
+    id: gutenberg
+    provider: gutenberg
+    status: false
+    weight: 0
+    settings:
+      processor_settings: {  }

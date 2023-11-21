@@ -1,0 +1,62 @@
+uuid: f2de2b3f-17a2-4790-8a68-78b4a1dfa87f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.federal_probation_journal_node
+    - field.field.node.fed_probation_journal.body
+    - field.field.node.fed_probation_journal.field_auther
+    - field.field.node.fed_probation_journal.field_document_pdf
+    - field.field.node.fed_probation_journal.field_mydate
+    - field.field.node.fed_probation_journal.field_tags
+    - field.field.node.fed_probation_journal.field_test
+    - field.field.node.fed_probation_journal.field_usc_import_timestamp
+    - field.field.node.fed_probation_journal.field_volume_and_issue_number
+    - node.type.fed_probation_journal
+  module:
+    - text
+    - user
+id: node.fed_probation_journal.federal_probation_journal_node
+targetEntityType: node
+bundle: fed_probation_journal
+mode: federal_probation_journal_node
+content:
+  body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_auther:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_volume_and_issue_number:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  field_document_pdf: true
+  field_mydate: true
+  field_tags: true
+  field_test: true
+  field_usc_import_timestamp: true

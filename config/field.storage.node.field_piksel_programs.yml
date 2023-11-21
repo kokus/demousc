@@ -1,0 +1,21 @@
+uuid: 37096da3-4c30-4ed5-aca4-de6cfb1b2e46
+langcode: und
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+id: node.field_piksel_programs
+field_name: field_piksel_programs
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

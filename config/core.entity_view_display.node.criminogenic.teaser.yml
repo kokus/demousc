@@ -1,0 +1,47 @@
+uuid: b86aaf0d-6745-4acb-ac1c-b5e5e540a31b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.criminogenic.body
+    - field.field.node.criminogenic.field_criminogenic_elm
+    - field.field.node.criminogenic.field_criminogenic_extra_downlds
+    - field.field.node.criminogenic.field_criminogenic_main_download
+    - field.field.node.criminogenic.field_criminogenic_subject_area
+    - field.field.node.criminogenic.field_criminogenic_target_aud
+    - field.field.node.criminogenic.field_criminogenic_worksheets
+    - node.type.criminogenic
+  module:
+    - text
+    - user
+id: node.criminogenic.teaser
+targetEntityType: node
+bundle: criminogenic
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  field_criminogenic_elm: true
+  field_criminogenic_extra_downlds: true
+  field_criminogenic_main_download: true
+  field_criminogenic_subject_area: true
+  field_criminogenic_target_aud: true
+  field_criminogenic_worksheets: true

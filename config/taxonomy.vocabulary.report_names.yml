@@ -1,0 +1,8 @@
+uuid: 157cba0a-aa88-464a-b67a-584804a24734
+langcode: en
+status: true
+dependencies: {  }
+name: 'Data Table Report Names'
+vid: report_names
+description: 'Used in Data Table content type.'
+weight: 0

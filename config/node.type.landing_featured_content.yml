@@ -1,0 +1,31 @@
+uuid: 6db8288d-1bda-4d69-b52b-8b793c56e50a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+      - menu-utility
+    parent: 'main-menu:0:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Landing (Overview)'
+type: landing_featured_content
+description: 'This content type is used for creating landing pages that shows sub-pages as boxes.  It can be used for either Section or Featured landing page.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

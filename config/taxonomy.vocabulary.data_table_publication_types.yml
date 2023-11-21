@@ -1,0 +1,8 @@
+uuid: 967ed27e-de96-437b-bd8d-9e674939d1d6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Data Table Publication Types'
+vid: data_table_publication_types
+description: ''
+weight: 0

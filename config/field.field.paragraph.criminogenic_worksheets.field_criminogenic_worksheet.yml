@@ -1,0 +1,27 @@
+uuid: 037bd129-597a-4ca8-b6f1-45e21198911d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_criminogenic_worksheet
+    - paragraphs.paragraphs_type.criminogenic_worksheets
+  module:
+    - file
+id: paragraph.criminogenic_worksheets.field_criminogenic_worksheet
+field_name: field_criminogenic_worksheet
+entity_type: paragraph
+bundle: criminogenic_worksheets
+label: Worksheet
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: criminogenic
+  file_extensions: 'txt doc pdf docx'
+  max_filesize: ''
+  description_field: false
+field_type: file
