@@ -36,6 +36,15 @@ class USCGutenbergMigrationSubscriber implements EventSubscriberInterface {
   ];
 
   /**
+   * Migration ids to adjust.
+   *
+   * @var array
+   */
+  protected $migrationIds = [
+    "upgrade_d7_node_complete_landing_view",
+  ];
+
+  /**
    * Gutenberg processors configuration.
    *
    * @var array
@@ -120,17 +129,19 @@ class USCGutenbergMigrationSubscriber implements EventSubscriberInterface {
    *   If the source cannot be changed.
    */
   private function migrateFormatterMigrations(MigratePrepareRowEvent $event) {
-    $row = $event->getRow();
-    foreach ($this->fieldNames as $key => $field) {
-      $text = current($row->getSourceProperty($field));
-      if (!empty($text["value"]) && !empty($text["format"])) {
-        // Process html with Gutenberg processors.
-        $parsedText = $this->htmlGutenbergParser->parse($text["value"], $this->processorConfiguration);
-        $row->setSourceProperty($field, [
-          "value" => $parsedText,
-          "format" => "gutenberg",
-          "summary" => $text["summary"],
-        ]);
+    if (in_array($event->getMigration()->id(), $this->migrationIds)) {
+      $row = $event->getRow();
+      foreach ($this->fieldNames as $key => $field) {
+        $text = current($row->getSourceProperty($field));
+        if (!empty($text["value"]) && !empty($text["format"])) {
+          // Process html with Gutenberg processors.
+          $parsedText = $this->htmlGutenbergParser->parse($text["value"], $this->processorConfiguration);
+          $row->setSourceProperty($field, [
+            "value" => $parsedText,
+            "format" => "gutenberg",
+            "summary" => $text["summary"],
+          ]);
+        }
       }
     }
   }

@@ -1,0 +1,94 @@
+uuid: efbf0529-9924-436a-871b-122cbf04221f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.body_enhanced.field_callout_attribution
+    - field.field.paragraph.body_enhanced.field_callout_body
+    - field.field.paragraph.body_enhanced.field_callout_pull_quote
+    - field.field.paragraph.body_enhanced.field_callout_title
+    - field.field.paragraph.body_enhanced.field_fc_be_heading
+    - field.field.paragraph.body_enhanced.field_fc_be_image
+    - field.field.paragraph.body_enhanced.field_fc_be_video
+    - field.field.paragraph.body_enhanced.field_fc_be_video_caption
+    - field.field.paragraph.body_enhanced.field_gallery
+    - paragraphs.paragraphs_type.body_enhanced
+  module:
+    - file
+    - text
+id: paragraph.body_enhanced.default
+targetEntityType: paragraph
+bundle: body_enhanced
+mode: default
+content:
+  field_callout_attribution:
+    type: string_textfield
+    weight: 23
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_callout_body:
+    type: text_textarea
+    weight: 22
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_callout_pull_quote:
+    type: boolean_checkbox
+    weight: 20
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_callout_title:
+    type: string_textfield
+    weight: 21
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_fc_be_heading:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_fc_be_image:
+    type: file_generic
+    weight: 5
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_fc_be_video:
+    type: file_generic
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_fc_be_video_caption:
+    type: string_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_gallery:
+    type: file_generic
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

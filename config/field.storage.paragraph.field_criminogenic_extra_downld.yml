@@ -1,0 +1,23 @@
+uuid: 9be50051-7c9d-4359-a6df-8ace0e971fad
+langcode: und
+status: true
+dependencies:
+  module:
+    - file
+    - paragraphs
+id: paragraph.field_criminogenic_extra_downld
+field_name: field_criminogenic_extra_downld
+entity_type: paragraph
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

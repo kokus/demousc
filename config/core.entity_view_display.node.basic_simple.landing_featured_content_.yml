@@ -1,0 +1,41 @@
+uuid: cc89811b-fdcc-44c1-88af-6d186770319b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.landing_featured_content_
+    - field.field.node.basic_simple.body
+    - field.field.node.basic_simple.field_fc_be_audio
+    - field.field.node.basic_simple.field_landing_page_image
+    - field.field.node.basic_simple.field_lead_gallery
+    - field.field.node.basic_simple.field_lead_paragraph
+    - field.field.node.basic_simple.field_link
+    - field.field.node.basic_simple.field_logo
+    - field.field.node.basic_simple.field_tags
+    - node.type.basic_simple
+  module:
+    - user
+id: node.basic_simple.landing_featured_content_
+targetEntityType: node
+bundle: basic_simple
+mode: landing_featured_content_
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  body: true
+  field_fc_be_audio: true
+  field_landing_page_image: true
+  field_lead_gallery: true
+  field_lead_paragraph: true
+  field_link: true
+  field_logo: true
+  field_tags: true

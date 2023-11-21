@@ -1,0 +1,23 @@
+uuid: 9c904d6f-363e-44ee-8cb9-56a53b58ce75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.referenced_nodes.field_fc_rn_node_row
+    - field.field.paragraph.referenced_nodes.field_fc_rn_row_style
+    - paragraphs.paragraphs_type.referenced_nodes
+id: paragraph.referenced_nodes.default
+targetEntityType: paragraph
+bundle: referenced_nodes
+mode: default
+content:
+  field_fc_rn_row_style:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_fc_rn_node_row: true
+  status: true

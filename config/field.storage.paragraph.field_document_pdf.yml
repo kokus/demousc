@@ -1,0 +1,23 @@
+uuid: 57bd9be6-6947-469a-99d6-1354e6624f3e
+langcode: und
+status: true
+dependencies:
+  module:
+    - file
+    - paragraphs
+id: paragraph.field_document_pdf
+field_name: field_document_pdf
+entity_type: paragraph
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

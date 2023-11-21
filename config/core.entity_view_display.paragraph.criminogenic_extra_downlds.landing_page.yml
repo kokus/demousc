@@ -1,0 +1,25 @@
+uuid: cdef5633-66b7-4465-8757-6dd043778f8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.landing_page
+    - field.field.paragraph.criminogenic_extra_downlds.field_criminogenic_extra_downld
+    - field.field.paragraph.criminogenic_extra_downlds.field_criminogenic_language
+    - paragraphs.paragraphs_type.criminogenic_extra_downlds
+  module:
+    - options
+id: paragraph.criminogenic_extra_downlds.landing_page
+targetEntityType: paragraph
+bundle: criminogenic_extra_downlds
+mode: landing_page
+content:
+  field_criminogenic_language:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_criminogenic_extra_downld: true

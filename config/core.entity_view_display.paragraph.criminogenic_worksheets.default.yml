@@ -1,0 +1,24 @@
+uuid: 04955a03-8ca2-4a5a-ae0d-ecb10cb8bd10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.criminogenic_worksheets.field_criminogenic_language
+    - field.field.paragraph.criminogenic_worksheets.field_criminogenic_worksheet
+    - paragraphs.paragraphs_type.criminogenic_worksheets
+  module:
+    - options
+id: paragraph.criminogenic_worksheets.default
+targetEntityType: paragraph
+bundle: criminogenic_worksheets
+mode: default
+content:
+  field_criminogenic_language:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_criminogenic_worksheet: true

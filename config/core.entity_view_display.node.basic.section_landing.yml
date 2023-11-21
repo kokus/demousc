@@ -1,0 +1,54 @@
+uuid: 4621d80f-ea4c-4352-8893-c6ef4e5134b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.section_landing
+    - field.field.node.basic.body
+    - field.field.node.basic.field_banner_image
+    - field.field.node.basic.field_body_enhanced
+    - field.field.node.basic.field_fc_be_audio
+    - field.field.node.basic.field_landing_page_image
+    - field.field.node.basic.field_lead_gallery
+    - field.field.node.basic.field_lead_paragraph
+    - field.field.node.basic.field_logo
+    - field.field.node.basic.field_tags
+    - node.type.basic
+  module:
+    - image
+    - user
+id: node.basic.section_landing
+targetEntityType: node
+bundle: basic
+mode: section_landing
+content:
+  field_landing_page_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: landing
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  body: true
+  field_banner_image: true
+  field_body_enhanced: true
+  field_fc_be_audio: true
+  field_lead_gallery: true
+  field_lead_paragraph: true
+  field_logo: true
+  field_tags: true

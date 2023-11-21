@@ -1,0 +1,54 @@
+uuid: 8de484dd-fcf6-4ce9-a8d5-039525eb1ee1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.section_landing
+    - field.field.node.educational_activity.body
+    - field.field.node.educational_activity.field_activity_category
+    - field.field.node.educational_activity.field_body_enhanced
+    - field.field.node.educational_activity.field_fc_be_audio
+    - field.field.node.educational_activity.field_landing_page_image
+    - field.field.node.educational_activity.field_lead_gallery
+    - field.field.node.educational_activity.field_lead_paragraph
+    - field.field.node.educational_activity.field_logo
+    - field.field.node.educational_activity.field_tags
+    - node.type.educational_activity
+  module:
+    - image
+    - user
+id: node.educational_activity.section_landing
+targetEntityType: node
+bundle: educational_activity
+mode: section_landing
+content:
+  field_landing_page_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: landing
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  body: true
+  field_activity_category: true
+  field_body_enhanced: true
+  field_fc_be_audio: true
+  field_lead_gallery: true
+  field_lead_paragraph: true
+  field_logo: true
+  field_tags: true

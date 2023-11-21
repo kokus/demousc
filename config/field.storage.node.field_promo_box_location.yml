@@ -1,0 +1,36 @@
+uuid: 6efe3e9c-baf2-4a51-9d3d-28b7bc9843f7
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_promo_box_location
+field_name: field_promo_box_location
+entity_type: node
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 1
+      label: 'Header Left'
+    -
+      value: 2
+      label: 'Content (Top Right)'
+    -
+      value: 3
+      label: 'Content (Bottom Left)'
+    -
+      value: 4
+      label: 'Content (Bottom Middle)'
+    -
+      value: 5
+      label: 'Content (Bottom Right)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

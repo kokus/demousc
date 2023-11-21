@@ -1,0 +1,190 @@
+uuid: 8edd742b-ed86-4113-a03e-c41f38fb6688
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_criminogenic
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+  - 'Scheduler Data'
+migration_group: migrate_drupal_7
+label: 'Node complete (Criminogenic)'
+source:
+  plugin: d7_node_complete
+  node_type: criminogenic
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_criminogenic/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+  field_criminogenic_elm:
+    -
+      plugin: field_link
+      source: field_criminogenic_elm
+  field_criminogenic_extra_downlds:
+    -
+      plugin: sub_process
+      source: field_criminogenic_extra_downlds
+      process:
+        target_id:
+          -
+            plugin: paragraphs_lookup
+            tags: 'Field Collection Content'
+            source: value
+          -
+            plugin: extract
+            index:
+              - id
+        target_revision_id:
+          -
+            plugin: paragraphs_lookup
+            tags:
+              - 'Field Collection Revisions Content'
+              - 'Field Collection Content'
+            tag_ids:
+              'Field Collection Revisions Content':
+                - revision_id
+              'Field Collection Content':
+                - value
+          -
+            plugin: extract
+            index:
+              - revision_id
+  field_criminogenic_main_download:
+    -
+      plugin: sub_process
+      source: field_criminogenic_main_download
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_criminogenic_subject_area:
+    -
+      plugin: get
+      source: field_criminogenic_subject_area
+  field_criminogenic_target_aud:
+    -
+      plugin: get
+      source: field_criminogenic_target_aud
+  field_criminogenic_worksheets:
+    -
+      plugin: sub_process
+      source: field_criminogenic_worksheets
+      process:
+        target_id:
+          -
+            plugin: paragraphs_lookup
+            tags: 'Field Collection Content'
+            source: value
+          -
+            plugin: extract
+            index:
+              - id
+        target_revision_id:
+          -
+            plugin: paragraphs_lookup
+            tags:
+              - 'Field Collection Revisions Content'
+              - 'Field Collection Content'
+            tag_ids:
+              'Field Collection Revisions Content':
+                - revision_id
+              'Field Collection Content':
+                - value
+          -
+            plugin: extract
+            index:
+              - revision_id
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+  publish_on:
+    -
+      plugin: get
+      source: scheduler_publish_on
+  unpublish_on:
+    -
+      plugin: get
+      source: scheduler_unpublish_on
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: criminogenic
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_d7_field_collection_criminogenic_extra_downlds
+    - upgrade_d7_field_collection_revisions_criminogenic_extra_downlds
+    - upgrade_d7_field_collection_criminogenic_worksheets
+    - upgrade_d7_field_collection_revisions_criminogenic_worksheets
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_metatag_field_node
+    - upgrade_d7_metatag_field_instance_node_criminogenic
+    - upgrade_d7_metatag_field_instance_widget_settings_node_criminogenic

@@ -1,6 +1,7 @@
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
+  action: 0
   admin_toolbar: 0
   akamai: 0
   ape: 0
@@ -20,9 +21,9 @@ module:
   customerror: 0
   datetime: 0
   dblog: 0
+  devel: 0
   dynamic_page_cache: 0
   editor: 0
-  entity_legal: 0
   entity_reference_revisions: 0
   environment_indicator: 0
   environment_indicator_ui: 0
@@ -31,6 +32,7 @@ module:
   feeds_log: 0
   field: 0
   field_group: 0
+  field_group_migrate: 0
   field_ui: 0
   file: 0
   file_mdm: 0
@@ -49,6 +51,7 @@ module:
   help: 0
   history: 0
   honeypot: 0
+  html_processors: 0
   htmlpurifier: 0
   image: 0
   image_effects: 0
@@ -71,6 +74,12 @@ module:
   metatag: 0
   metatag_open_graph: 0
   metatag_twitter_cards: 0
+  migrate: 0
+  migrate_drupal: 0
+  migrate_drupal_ui: 0
+  migrate_plus: 0
+  migrate_tools: 0
+  migrate_upgrade: 0
   module_filter: 0
   mysql: 0
   node: 0
@@ -79,6 +88,7 @@ module:
   path: 0
   path_alias: 0
   pathologic: 0
+  phpass: 0
   redirect: 0
   remote_stream_wrapper: 0
   scheduler: 0
@@ -97,6 +107,8 @@ module:
   toolbar: 0
   tour: 0
   transliterate_filenames: 0
+  usc_migrate_gutenberg: 0
+  usc_migrate_list: 0
   user: 0
   usfedgov_google_analytics: 0
   views_bulk_operations: 0

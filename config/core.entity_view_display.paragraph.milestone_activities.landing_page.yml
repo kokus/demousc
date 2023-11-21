@@ -1,0 +1,47 @@
+uuid: 37e705d3-4a6b-43aa-bd1c-9ab5af4d715e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.landing_page
+    - field.field.paragraph.milestone_activities.field_fc_jma_category
+    - field.field.paragraph.milestone_activities.field_fc_jma_court_name
+    - field.field.paragraph.milestone_activities.field_fc_jma_current_title
+    - field.field.paragraph.milestone_activities.field_fc_jma_date
+    - field.field.paragraph.milestone_activities.field_fc_jma_position
+    - paragraphs.paragraphs_type.milestone_activities
+  module:
+    - datetime
+id: paragraph.milestone_activities.landing_page
+targetEntityType: paragraph
+bundle: milestone_activities
+mode: landing_page
+content:
+  field_fc_jma_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_fc_jma_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: month_d_yyyy
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_fc_jma_position:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_fc_jma_court_name: true
+  field_fc_jma_current_title: true

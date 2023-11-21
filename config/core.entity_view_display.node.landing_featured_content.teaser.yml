@@ -1,0 +1,49 @@
+uuid: 3f99edde-5273-4217-96d9-ecccfa71dbb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing_featured_content.body
+    - field.field.node.landing_featured_content.field_banner_image
+    - field.field.node.landing_featured_content.field_hide_left_navigation
+    - field.field.node.landing_featured_content.field_landing_page_image
+    - field.field.node.landing_featured_content.field_landing_page_type
+    - field.field.node.landing_featured_content.field_lead_paragraph
+    - field.field.node.landing_featured_content.field_logo
+    - field.field.node.landing_featured_content.field_referenced_nodes
+    - node.type.landing_featured_content
+  module:
+    - text
+    - user
+id: node.landing_featured_content.teaser
+targetEntityType: node
+bundle: landing_featured_content
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  field_banner_image: true
+  field_hide_left_navigation: true
+  field_landing_page_image: true
+  field_landing_page_type: true
+  field_lead_paragraph: true
+  field_logo: true
+  field_referenced_nodes: true

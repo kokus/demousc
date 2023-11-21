@@ -1,0 +1,33 @@
+uuid: 5f98d0bf-aceb-4da5-80be-b7743cc27ad3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_gallery
+    - node.type.basic_simple
+  module:
+    - image
+id: node.basic_simple.field_lead_gallery
+field_name: field_lead_gallery
+entity_type: node
+bundle: basic_simple
+label: 'Lead Gallery'
+description: 'If you choose to upload/attach only one image, it will appear as a lead image. If you choose to upload/attach multiple images (up to 10), they will appear in slide show.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 712x480
+  alt_field: true
+  alt_field_required: true
+  title_field: true
+  title_field_required: false
+  default_image: 0
+field_type: image

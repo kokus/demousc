@@ -1,0 +1,60 @@
+uuid: f122e728-53a1-4713-885e-ea6390f6a955
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.promo_header
+    - field.field.node.front_promo_box.body
+    - field.field.node.front_promo_box.field_bean_image
+    - field.field.node.front_promo_box.field_bean_video
+    - field.field.node.front_promo_box.field_link
+    - field.field.node.front_promo_box.field_more_link
+    - field.field.node.front_promo_box.field_promo_box_location
+    - node.type.front_promo_box
+  module:
+    - image_link_formatter
+    - link
+    - user
+id: node.front_promo_box.promo_header
+targetEntityType: node
+bundle: front_promo_box
+mode: promo_header
+content:
+  field_bean_image:
+    type: image_link_formatter
+    label: hidden
+    settings:
+      image_link: field_link
+      image_style: lead
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  body: true
+  field_bean_video: true
+  field_more_link: true
+  field_promo_box_location: true

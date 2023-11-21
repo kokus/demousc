@@ -1,0 +1,21 @@
+uuid: b474f866-749b-49f0-870b-78d51c865273
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_criminogenic_language
+    - paragraphs.paragraphs_type.criminogenic_worksheets
+  module:
+    - options
+id: paragraph.criminogenic_worksheets.field_criminogenic_language
+field_name: field_criminogenic_language
+entity_type: paragraph
+bundle: criminogenic_worksheets
+label: Language
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

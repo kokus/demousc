@@ -1,0 +1,21 @@
+uuid: 512ecd89-17d7-4187-8b7f-945e180e18fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_criminogenic_target_aud
+    - node.type.criminogenic
+  module:
+    - options
+id: node.criminogenic.field_criminogenic_target_aud
+field_name: field_criminogenic_target_aud
+entity_type: node
+bundle: criminogenic
+label: 'Target audience'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

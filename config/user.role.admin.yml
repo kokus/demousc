@@ -1,0 +1,86 @@
+uuid: ccca44f5-c671-4117-8466-a959a6ddcfb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - action
+    - akamai
+    - ape
+    - autologout
+    - block
+    - contextual
+    - environment_indicator
+    - feeds
+    - filter
+    - honeypot
+    - image
+    - menu_position
+    - metatag
+    - node
+    - path
+    - pathauto
+    - redirect
+    - scheduler
+    - search
+    - seckit
+    - sharethis
+    - system
+    - taxonomy
+    - usfedgov_google_analytics
+    - views_ui
+    - xmlsitemap
+id: admin
+label: admin
+weight: 2
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access environment indicator'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access user profiles'
+  - 'administer actions'
+  - 'administer akamai'
+  - 'administer ape'
+  - 'administer autologout'
+  - 'administer blocks'
+  - 'administer content types'
+  - 'administer environment indicator settings'
+  - 'administer federal google analytics'
+  - 'administer feeds'
+  - 'administer filters'
+  - 'administer honeypot'
+  - 'administer image styles'
+  - 'administer menu'
+  - 'administer menu positions'
+  - 'administer meta tags'
+  - 'administer modules'
+  - 'administer nodes'
+  - 'administer pathauto'
+  - 'administer permissions'
+  - 'administer redirects'
+  - 'administer scheduler'
+  - 'administer search'
+  - 'administer seckit'
+  - 'administer sharethis'
+  - 'administer site configuration'
+  - 'administer taxonomy'
+  - 'administer themes'
+  - 'administer url aliases'
+  - 'administer users'
+  - 'administer views'
+  - 'administer xmlsitemap'
+  - 'bypass honeypot protection'
+  - 'bypass node access'
+  - 'change own logout threshold'
+  - 'create url aliases'
+  - 'notify of path changes'
+  - 'purge akamai cache'
+  - 'schedule publishing of nodes'
+  - 'use text format full_html'
+  - 'view scheduled content'
+  - 'view the administration theme'

@@ -1,0 +1,62 @@
+uuid: 0e8ca099-4d14-4a17-950a-902b350bcb6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.news_issue_view
+    - field.field.node.news.body
+    - field.field.node.news.field_body_enhanced
+    - field.field.node.news.field_date_updated
+    - field.field.node.news.field_fc_be_audio
+    - field.field.node.news.field_landing_page_image
+    - field.field.node.news.field_lead_gallery
+    - field.field.node.news.field_lead_paragraph
+    - field.field.node.news.field_news_issue
+    - field.field.node.news.field_related_topics
+    - field.field.node.news.field_tags
+    - node.type.news
+  module:
+    - datetime
+    - text
+    - user
+id: node.news.news_issue_view
+targetEntityType: node
+bundle: news
+mode: news_issue_view
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 300
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_date_updated:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: month_d_yyyy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  field_body_enhanced: true
+  field_fc_be_audio: true
+  field_landing_page_image: true
+  field_lead_gallery: true
+  field_lead_paragraph: true
+  field_news_issue: true
+  field_related_topics: true
+  field_tags: true

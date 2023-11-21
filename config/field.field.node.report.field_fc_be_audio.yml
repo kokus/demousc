@@ -1,0 +1,27 @@
+uuid: 31c61dcc-8b75-4695-8070-635b8e4a7e4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fc_be_audio
+    - node.type.report
+  module:
+    - file
+id: node.report.field_fc_be_audio
+field_name: field_fc_be_audio
+entity_type: node
+bundle: report
+label: Audio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: mp3
+  max_filesize: ''
+  description_field: false
+field_type: file

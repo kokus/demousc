@@ -1,0 +1,10 @@
+uuid: 4ace5cf6-b88f-43e0-9690-5bd3b4e88d27
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.section_landing
+label: section_landing
+targetEntityType: node
+cache: true
