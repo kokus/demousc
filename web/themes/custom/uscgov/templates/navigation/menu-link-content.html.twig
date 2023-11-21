@@ -44,9 +44,7 @@
           {% endfor %}
         {% endset %}
 
-        <a href="{{ menu_link_content.link.uri }}" class="primary-menu__dropdown-title-link">
-          {{ title }}
-        </a>
+        {{ link(title, menu_link_content.link.uri, { class: ['primary-menu__dropdown-title-link'] }) }}
       </h3>
       {% if content.field_description_text.0 %}
         <p class="primary-menu__mega-description-text">
@@ -69,8 +67,10 @@
     {% set wrapper_classes = ['primary-menu__level-' ~ (menu_level + 1) ~ '-wrapper'] %}
     <div{{ attributes.addClass(wrapper_classes) }}>
       <div class="primary-menu__dropdown-first">
-        {# Text of this button is replaced by JavaScript. #}
-        <button class="primary-menu__mobile-back-button">Back</button>
+        <button class="primary-menu__mobile-back-button">
+          {# Text of this button is replaced by JavaScript. #}
+          Back
+        </button>
 
         {% set title_words = menu_link_content.title.value|split(' ') %}
         {% set title %}
@@ -83,9 +83,7 @@
           {% endfor %}
         {% endset %}
         <h4 class="primary-menu__dropdown-title">
-          <a href="{{ menu_link_content.link.uri }}" class="primary-menu__dropdown-title-link">
-            {{ title }}
-          </a>
+          {{ link(title, menu_link_content.link.uri, { class: ['primary-menu__dropdown-title-link'] }) }}
         </h4>
       </div>
       {{ content.children }}
