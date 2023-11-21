@@ -11,7 +11,7 @@ global:
 uswds:
   css:
     base:
-      dist/uswds/css/helpers.css: {  }
+      # dist/uswds/css/helpers.css: {  }
       dist/uswds/css/styles.css: {  }
       dist/uswds/css/typography.css: {  }
   js:
