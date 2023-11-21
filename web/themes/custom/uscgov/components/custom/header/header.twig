@@ -6,7 +6,7 @@
   <div class="header__main">
     <a href="{{ path('<front>') }}" class="header__logo">
       <span class="visually-hidden">{{ 'Home'|t }}</span>
-      <img src="{{ componentMetadata.path }}/images/logo.webp" width="168" height="83" fetchpriority="high" alt="">
+      <img src="/{{ componentMetadata.path }}/images/logo.webp" width="168" height="83" fetchpriority="high" alt="">
     </a>
     <div id="{{ menu_wrapper_id }}" class="header__menu-wrapper">
       <button class="header__menu-wrapper-close-button" aria-controls="{{ menu_wrapper_id }}">
