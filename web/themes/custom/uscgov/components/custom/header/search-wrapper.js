@@ -28,13 +28,22 @@
       }
     });
 
-    searchWrapper.addEventListener('focusout', (e) => {
-      if (!Drupal.uscgov.isMobileMenuSystem()) {
-        if (!searchWrapper.contains(e.relatedTarget)) {
-          changeSearchVisibility(false);
-        }
+    desktopSearchButton.addEventListener('focusout', handleSearchFocusOut, true);
+    searchWrapper.addEventListener('focusout', handleSearchFocusOut, true);
+  }
+
+  /**
+   * Closes the search wrapper when focus shifts away from the search wrapper
+   * and search button.
+   *
+   * @param {Event} e - Focusout event object.
+   */
+  function handleSearchFocusOut(e) {
+    if (!Drupal.uscgov.isMobileMenuSystem()) {
+      if (!searchWrapper.contains(e.relatedTarget) && e.relatedTarget !== desktopSearchButton) {
+        changeSearchVisibility(false);
       }
-    }, true);
+    }
   }
 
   /**
