@@ -33,7 +33,7 @@ function usc_migrate_list_migration_plugins_alter(array &$migrations) {
               "source"      => $key2
             ]
           ];
-        }        
+        }
       }
     }
   }
