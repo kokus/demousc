@@ -124,9 +124,6 @@ class USCGutenbergMigrationSubscriber implements EventSubscriberInterface {
    *
    * @param \Drupal\migrate_plus\Event\MigratePrepareRowEvent $event
    *   The migrate row event.
-   *
-   * @throws \Exception
-   *   If the source cannot be changed.
    */
   private function migrateFormatterMigrations(MigratePrepareRowEvent $event) {
     if (in_array($event->getMigration()->id(), $this->migrationIds)) {
