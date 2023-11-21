@@ -15,7 +15,7 @@
   justify-content: space-around;
   align-items: center;
   margin: 0 0 0 auto;
-  padding: 8px 0;
+  padding: var(--spacing-sm-1) 0;
   list-style: none;
   order: 1;
   flex-basis: 100%;
@@ -82,10 +82,10 @@
   column-gap: 20px;
   justify-content: space-between;
   align-items: center;
-  padding-block: 8px;
+  padding-block: var(--spacing-sm-1);
 
   @media ($tablet_break) {
-    padding-block: 16px;
+    padding-block: var(--spacing-sm-2);
   }
 }
 
@@ -117,7 +117,7 @@
 
 .header__menu-wrapper-header {
   @media ($mobile_break) {
-    padding: 16px 24px;
+    padding: var(--spacing-sm-2) var(--spacing-sm-3);
     background-color: var(--header-menu-mobile-header-background);
     box-shadow: 0px 4px 8px 0px rgba(64, 72, 97, 0.12);
   }
@@ -143,8 +143,8 @@
 
 .header__menu-wrapper-close-button {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: var(--spacing-sm-2);
+  right: var(--spacing-sm-2);
   z-index: 2; // Appear above mobile submenus.
   width: 44px;
   height: 44px;
@@ -200,11 +200,13 @@
 }
 
 .header__search-button {
+  --padding-inline: var(--spacing-sm-2);
+
   display: none;
   align-items: center;
-  gap: 8px;
-  margin-right: -16px;
-  padding: 9px 16px;
+  gap: var(--spacing-sm-1);
+  margin-right: calc(-1 * var(--padding-inline));
+  padding: 9px var(--padding-inline);
   appearance: none;
   border: 0;
   background: none;
@@ -234,8 +236,8 @@
 .header__menu-button {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
+  gap: var(--spacing-sm-1);
+  padding: var(--spacing-sm-1) var(--spacing-sm-2);
   appearance: none;
   border: 0;
   background: none;
@@ -256,8 +258,8 @@
 
   &:after {
     display: inline-block;
-    width: 32px;
-    height: 24px;
+    width: var(--spacing-md-1);
+    height: var(--spacing-sm-3);
     content: "";
     mask-image: url('images/menu-magnify.svg');
     mask-repeat: no-repeat;
@@ -299,8 +301,8 @@ body:has(.header__menu-button[aria-expanded="true"]) {
 
 .header__search-wrapper-close-button {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: var(--spacing-sm-2);
+  right: var(--spacing-sm-2);
   width: 44px;
   height: 44px;
   appearance: none;

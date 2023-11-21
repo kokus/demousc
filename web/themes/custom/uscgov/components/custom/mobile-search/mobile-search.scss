@@ -4,7 +4,7 @@
 @use "uswds-core" as *;
 
 .mobile-search__wrapper {
-  padding: 24px 24px 0 24px;
+  padding: var(--spacing-sm-3) var(--spacing-sm-3) 0 var(--spacing-sm-3);
 
   @media ($desktop_break) {
     display: none;
@@ -13,7 +13,7 @@
 
 .mobile-seach__label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: var(--spacing-sm-1);
   color: color('base-dark');
   font-size: 17px;
   font-weight: 700;
@@ -23,7 +23,7 @@
   --form-background: white;
 
   display: flex;
-  height: 40px;
+  height: var(--spacing-md-2);
   background: var(--form-background);
   border: solid 1px color('base');
   border-radius: 30px;
@@ -44,7 +44,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
+  width: var(--spacing-md-2);
   aspect-ratio: 1;
   border-radius: 50%;
   border: solid 1px transparent;
