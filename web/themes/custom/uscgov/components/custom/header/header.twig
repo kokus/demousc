@@ -24,9 +24,21 @@
     </div>
     <div class="header__menu-overlay"></div>
     <ul class="header__secondary-menu">
-      <li class="header__secondary-item"><a href="/">Listen to this page</a></li>
-      <li class="header__secondary-item header__secondary-item--spacer" aria-hidden="true">&nbsp;&nbsp;|&nbsp;&nbsp;</li>
-      <li class="header__secondary-item"><a href="/">Find a Federal Court</a></li>
+      <li class="header__secondary-item">
+        <a href="/">
+          <span class="header__icon-listen"></span>
+          {{ 'Listen to this page'|t }}
+        </a>
+      </li>
+      <li class="header__secondary-item header__secondary-item--spacer" aria-hidden="true">
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+      </li>
+      <li class="header__secondary-item">
+        <a href="/">
+          <span class="header__icon-pin"></span>
+          {{ 'Find a Federal Court'|t }}
+        </a>
+      </li>
     </ul>
     <button class="header__search-button" aria-expanded="false" aria-controls="{{ search_wrapper_id }}">
       {{ 'Search'|t }}

@@ -51,6 +51,31 @@
   color: color('base');
 }
 
+.header__icon-listen,
+.header__icon-pin {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  aspect-ratio: 1;
+  margin-right: 4px;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+  background-color: currentColor;
+
+  @media (forced-colors: active) {
+    background-color: linkText;
+  }
+}
+
+.header__icon-listen {
+  mask-image: url('images/listen.svg');
+}
+
+.header__icon-pin {
+  mask-image: url('images/pin.svg');
+}
+
 .header__main {
   display: flex;
   flex-wrap: wrap;
@@ -248,6 +273,7 @@
 body:has(.header__menu-button[aria-expanded="true"]) {
   @media ($mobile_break) {
     position: fixed;
+    width: 100%;
   }
 }
 
