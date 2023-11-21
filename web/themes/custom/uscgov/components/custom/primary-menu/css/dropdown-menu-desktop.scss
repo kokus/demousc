@@ -21,13 +21,13 @@
   .primary-menu__dropdown-first {
     flex-basis: 320px;
     flex-shrink: 0;
-    padding: 40px;
+    padding: var(--spacing-md-2);
     background: color('primary-lighter');
   }
 
   .primary-menu__dropdown-second {
     flex-grow: 1;
-    padding: 40px;
+    padding: var(--spacing-md-2);
   }
 
   .primary-menu--level-1 {
@@ -52,7 +52,7 @@
   }
 
   .primary-menu__dropdown-title {
-    margin-block: 0 8px;
+    margin-block: 0 var(--spacing-sm-1);
     font-size: 22px;
     font-weight: 600;
   }
@@ -65,9 +65,9 @@
 
       &::after {
         display: inline-block;
-        height: 16px;
+        height: var(--spacing-sm-2);
         width: 20px;
-        margin-left: 8px;
+        margin-left: var(--spacing-sm-1);
         content: "";
         mask-image: url('../images/arrow-right.svg');
         mask-repeat: no-repeat;
@@ -84,11 +84,11 @@
   }
 
   .primary-menu__mega-quick-links {
-    margin-top: 24px;
+    margin-top: var(--spacing-sm-3);
   }
 
   .primary-menu__mega-popular-links-title {
-    margin-block: 0 8px;
+    margin-block: 0 var(--spacing-sm-1);
     color: color('base-dark');
     text-wrap: pretty;
   }
@@ -110,7 +110,7 @@
   }
 
   .primary-menu__mega-quick-link-item-inner {
-    padding-bottom: 16px;
+    padding-bottom: var(--spacing-sm-2);
     page-break-inside: avoid;
     break-inside: avoid;
   }
@@ -122,7 +122,7 @@
   .primary-menu__link--level-1 {
     position: relative; // Anchor pseudo-elements that make chevron.
     display: block;
-    padding: 16px;
+    padding: var(--spacing-sm-2);
     border-radius: 10px;
     border: 1px solid transparent;
     text-decoration: none;
@@ -135,7 +135,7 @@
     &::after {
       position: absolute;
       top: 23px;
-      right: 16px;
+      right: var(--spacing-sm-2);
       display: block;
       width: 6px;
       height: 6px;
@@ -147,7 +147,7 @@
 
     .primary-menu__link-main-text {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: var(--spacing-sm-1);
       padding-right: 10px; // Make visual room for chevron.
       font-weight: bold;
       color: color('base-darker');
