@@ -3,9 +3,9 @@
 namespace Drupal\usc_migrate_gutenberg\EventSubscriber;
 
 use Drupal\html_processors\Service\HtmlGutenbergParser;
+use Drupal\migrate\MigrateSkipRowException;
 use Drupal\migrate_plus\Event\MigrateEvents;
 use Drupal\migrate_plus\Event\MigratePrepareRowEvent;
-use Drupal\migrate\MigrateSkipRowException;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
@@ -115,7 +115,7 @@ class USCGutenbergMigrationSubscriber implements EventSubscriberInterface {
    *
    * @param \Drupal\migrate_plus\Event\MigratePrepareRowEvent $event
    *   The dispatched event.
-   * 
+   *
    * @throws \Drupal\migrate\MigrateSkipRowException
    *   If a row needs to be skipped.
    * @throws \Exception
@@ -130,7 +130,7 @@ class USCGutenbergMigrationSubscriber implements EventSubscriberInterface {
    *
    * @param \Drupal\migrate_plus\Event\MigratePrepareRowEvent $event
    *   The migrate row event.
-   * 
+   *
    * @throws \Drupal\migrate\MigrateSkipRowException
    *   If a row needs to be skipped.
    * @throws \Exception
