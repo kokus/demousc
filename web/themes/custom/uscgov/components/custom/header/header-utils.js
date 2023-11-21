@@ -17,10 +17,41 @@
   }
 
   /**
-   * Close any and all open menu items.
+   * Enables/disables a focus trap on the mobile menu wrapper.
+   *
+   * @param {boolean} focusTrapEnabled - True if the focus trap should be enabled,
+   * otherwise false.
+   */
+  Drupal.uscgov.toggleFocusTrap = focusTrapEnabled => {
+    const menuWrapper = document.querySelector('.header__menu-wrapper');
+
+    if (Drupal.uscgov.isMobileMenuSystem() && focusTrapEnabled === true) {
+      document.querySelectorAll(Drupal.uscgov.focusableElementsSelector).forEach(focusableElement => {
+        if (!menuWrapper.contains(focusableElement)) {
+          focusableElement.inert = true;
+          focusableElement.dataset.mobileMenuInert = true;
+        }
+      });
+    }
+    else {
+      document.querySelectorAll('[data-mobile-menu-inert], [data-mobile-menu-submenu-inert]').forEach(el => {
+        el.inert = false;
+        delete el.dataset.mobileMenuInert;
+        delete el.dataset.mobileMenuSubmenuInert;
+      });
+    }
+  }
+
+  /**
+   * Close any and all open menu items. This DOES NOT close the mobile navigation.
    */
   Drupal.uscgov.closeAllMenuItems = () => {
     const openMenuItems = document.querySelectorAll('.primary-menu--level-0 [aria-expanded="true"]');
     openMenuItems.forEach(item => item.setAttribute('aria-expanded', false));
+
+    document.querySelectorAll('[data-mobile-menu-submenu-inert]').forEach(el => {
+      el.inert = false;
+      delete el.dataset.mobileMenuSubmenuInert;
+    });
   }
 })(Drupal);

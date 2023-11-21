@@ -10,6 +10,7 @@
   let overlay;
 
   function init(header) {
+    const desktopNavigationBreakpoint = window.matchMedia('(min-width: 1400px)');
     mobileNavButton = header.querySelector('.header__menu-button');
     closeButton = header.querySelector('.header__menu-wrapper-close-button');
     menuWrapper = header.querySelector('.header__menu-wrapper');
@@ -33,6 +34,15 @@
         changeMenuVisibility(false);
       }
     });
+
+    // If browser is resized and there is a change in visibility of
+    // desktop/mobile menu, then close all menu items.
+    desktopNavigationBreakpoint.addEventListener('change', () => {
+      menuWrapper.classList.toggle('is-active', false);
+      mobileNavButton.setAttribute('aria-expanded', false);
+      Drupal.uscgov.toggleFocusTrap(false);
+      Drupal.uscgov.closeAllMenuItems();
+    });
   }
 
   /**
@@ -45,7 +55,7 @@
 
     menuWrapper.classList.toggle('is-active', toState);
     mobileNavButton.setAttribute('aria-expanded', toState);
-    toggleFocusTrap(toState);
+    Drupal.uscgov.toggleFocusTrap(toState);
 
     // Close any open submenus when mobile menu is closed.
     if (toState === false && Drupal.uscgov.isMobileMenuSystem()) {
@@ -63,30 +73,6 @@
       else if (menuWrapperContainsFocus) {
         mobileNavButton.focus();
       }
-    }
-  }
-
-  /**
-   * Enables/disables a focus trap on the mobile menu wrapper.
-   *
-   * @param {boolean} focusTrapEnabled - True if the focus trap should be enabled,
-   * otherwise false.
-   */
-  function toggleFocusTrap(focusTrapEnabled) {
-    if (Drupal.uscgov.isMobileMenuSystem() && focusTrapEnabled === true) {
-      document.querySelectorAll(Drupal.uscgov.focusableElementsSelector).forEach(focusableElement => {
-        if (!menuWrapper.contains(focusableElement)) {
-          focusableElement.inert = true;
-          focusableElement.dataset.mobileMenuInert = true;
-        }
-      });
-    }
-    else {
-      document.querySelectorAll('[data-mobile-menu-inert], [data-mobile-menu-submenu-inert]').forEach(el => {
-        el.inert = false;
-        delete el.dataset.mobileMenuInert;
-        delete el.dataset.mobileMenuSubmenuInert;
-      });
     }
   }
 
