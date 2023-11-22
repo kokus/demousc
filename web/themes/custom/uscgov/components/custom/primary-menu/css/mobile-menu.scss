@@ -87,12 +87,14 @@
     min-height: 100%;
     visibility: hidden;
     translate: 100% 0;
-    transition: visibility 0.2s, translate 0.2s, scale 0.2s;
+    transform: rotatey(90deg); // Necessary for Safari to prevent horizontal scrolling.
+    transition: visibility 0.2s, translate 0.2s, scale 0.2s, transform 0.2s;
     scale: 0 1;
     transform-origin: right;
     background: var(--header-menu-wrapper-background);
 
     .primary-menu__button[aria-expanded="true"] + & {
+      transform: none;
       scale: 1;
       visibility: visible;
       translate: 0;
@@ -108,12 +110,14 @@
     min-height: 100%;
     visibility: hidden;
     translate: 100% 0;
+    transform: rotatey(90deg); // Necessary for Safari to prevent horizontal scrolling.
     transition: visibility 0.2s, translate 0.2s, scale 0.2s;
     scale: 0 1;
     transform-origin: right;
     background: var(--header-menu-wrapper-background);
 
     .primary-menu__button[aria-expanded="true"] ~ & {
+      transform: none;
       scale: 1;
       visibility: visible;
       translate: 0;
