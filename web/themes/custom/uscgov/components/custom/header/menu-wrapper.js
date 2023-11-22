@@ -1,6 +1,6 @@
 /**
  * @file
- * Dynamic header interaction.
+ * Showing / hiding of the primary menu at mobile widths.
  */
 ((Drupal, once) => {
   let mobileNavButton;
@@ -9,6 +9,11 @@
   let isNavOpen;
   let overlay;
 
+  /**
+   * Initializes everything.
+   *
+   * @param {Element} header - the <header> element.
+   */
   function init(header) {
     const desktopNavigationBreakpoint = window.matchMedia('(min-width: 1400px)');
     mobileNavButton = header.querySelector('.header__menu-button');

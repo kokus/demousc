@@ -1,6 +1,6 @@
 /**
  * @file
- * Dynamic header interaction.
+ * Search box interaction (at desktop widths).
  */
 ((Drupal, once) => {
   let desktopSearchButton;
@@ -8,6 +8,11 @@
   let isSearchOpen;
   let closeButton;
 
+  /**
+   * Initializes everything.
+   *
+   * @param {Element} header - the <header> element.
+   */
   function init(header) {
     desktopSearchButton = header.querySelector('.header__search-button');
     closeButton = header.querySelector('.header__search-wrapper-close-button');
