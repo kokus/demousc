@@ -79,7 +79,11 @@
   }
 
   // Top level description text is hidden at desktop.
-  .primary-menu__menu-item--level-0 > .primary-menu__button > .primary-menu__link-description-text {
-    display: none;
+  .primary-menu__menu-item--level-0 {
+    > :is(.primary-menu__link, .primary-menu__button) {
+      > .primary-menu__link-description-text {
+        display: none;
+      }
+    }
   }
 }
