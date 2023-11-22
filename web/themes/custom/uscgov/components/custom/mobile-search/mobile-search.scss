@@ -4,6 +4,7 @@
 @use "uswds-core" as *;
 
 .mobile-search__wrapper {
+  display: block; // Necessary on iPad mobile Safari for padding.
   padding: var(--spacing-sm-3) var(--spacing-sm-3) 0 var(--spacing-sm-3);
 
   @media ($desktop_break) {
