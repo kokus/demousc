@@ -29,8 +29,7 @@ function usc_migrate_list_migration_plugins_alter(array &$migrations) {
               "bundle_key"  => "vid",
               "bundle"      => $field["bundle"],
               "entity_type" => "taxonomy_term",
-              "ignore_case" => 1,
-              "source"      => $key2
+              "source"      => $key2,
             ]
           ];
         }
