@@ -12,7 +12,7 @@
   }
 }
 
-.mobile-seach__label {
+.mobile-search__label {
   display: block;
   margin-bottom: var(--spacing-sm-1);
   color: color('base-dark');
@@ -53,8 +53,10 @@
   background: color('primary');
   color: var(--form-background);
 
-  @media (forced-colors: active) {
-    path {
+  path {
+    fill: currentColor;
+
+    @media (forced-colors: active) {
       fill: buttonText;
     }
   }
