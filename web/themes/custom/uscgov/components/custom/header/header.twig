@@ -1,6 +1,5 @@
 {{ include('uscgov:usa_banner') }}
 {% set menu_wrapper_id = 'menu-wrapper'|clean_unique_id %}
-{% set search_wrapper_id = 'search-wrapper'|clean_unique_id %}
 
 <header class="header container">
   <div class="header__main">
@@ -40,17 +39,11 @@
         </a>
       </li>
     </ul>
-    <button class="header__search-button" aria-expanded="false" aria-controls="{{ search_wrapper_id }}">
-      {{ 'Search'|t }}
-    </button>
+    {{ include('uscgov:desktop-search') }}
     <button class="header__menu-button" aria-expanded="false" aria-controls="{{ menu_wrapper_id }}">
       {{ 'Menu'|t }}
     </button>
   </div>
-  <div id="{{ search_wrapper_id }}" class="header__search-wrapper">
-    <button class="header__search-wrapper-close-button" aria-controls="{{ menu_wrapper_id }}">
-      <span class="visually-hidden">{{ 'Close search'|t }}</span>
-    </button>
-    Desktop search here
-  </div>
+
+
 </header>

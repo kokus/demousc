@@ -14,9 +14,9 @@
    * @param {Element} header - the <header> element.
    */
   function init(header) {
-    desktopSearchButton = header.querySelector('.header__search-button');
-    closeButton = header.querySelector('.header__search-wrapper-close-button');
-    searchWrapper = header.querySelector('.header__search-wrapper');
+    desktopSearchButton = header.querySelector('.desktop-search__button');
+    closeButton = header.querySelector('.desktop-search__wrapper-close-button');
+    searchWrapper = header.querySelector('.desktop-search__wrapper');
     isSearchOpen = () => desktopSearchButton.getAttribute('aria-expanded') === 'true';
 
     desktopSearchButton.addEventListener('click', () => {
@@ -67,13 +67,13 @@
     }
 
     if (toState === true && !Drupal.uscgov.isMobileMenuSystem()) {
-      searchWrapper.querySelector('button, input')?.focus();
+      searchWrapper.querySelector('input')?.focus();
     }
   }
 
-  Drupal.behaviors.searchWrapper = {
+  Drupal.behaviors.desktopSearch = {
     attach(context) {
-      once('search-wrapper', '.header', context).forEach(init);
+      once('desktop-search', '.header', context).forEach(init);
     },
   };
 })(Drupal, once);

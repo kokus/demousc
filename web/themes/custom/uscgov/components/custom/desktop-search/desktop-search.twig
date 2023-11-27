@@ -1,0 +1,23 @@
+{% set search_wrapper_id = 'search-wrapper'|clean_unique_id %}
+
+<button class="desktop-search__button" aria-expanded="false" aria-controls="{{ search_wrapper_id }}">
+  {{ 'Search'|t }}
+</button>
+<search id="{{ search_wrapper_id }}" role="search" class="desktop-search__wrapper">
+  {% set search_id = 'desktop-search__input'|clean_unique_id %}
+  <form action="" class="desktop-search__form">
+    <label for="{{ search_id }}" class="desktop-search__label">
+      {{ 'Search USCourts.gov'|t }}
+    </label>
+    <div class="desktop-search__form-wrapper">
+      <input id="{{ search_id }}" type="text" class="desktop-search__input">
+      <button class="desktop-search__submit-button">
+        <span class="visually-hidden">{{ 'Search'|t }}</span>
+        {{ include(componentMetadata.path ~ '/images/magnify.svg') }}
+      </button>
+    </div>
+  </form>
+  <button class="desktop-search__wrapper-close-button" aria-controls="{{ menu_wrapper_id }}">
+    <span class="visually-hidden">{{ 'Close search'|t }}</span>
+  </button>
+</search>
