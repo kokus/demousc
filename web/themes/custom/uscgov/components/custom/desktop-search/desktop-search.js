@@ -6,7 +6,6 @@
   let desktopSearchButton;
   let searchWrapper;
   let isSearchOpen;
-  let closeButton;
 
   /**
    * Initializes everything.
@@ -15,7 +14,6 @@
    */
   function init(header) {
     desktopSearchButton = header.querySelector('.desktop-search__button');
-    closeButton = header.querySelector('.desktop-search__wrapper-close-button');
     searchWrapper = header.querySelector('.desktop-search__wrapper');
     isSearchOpen = () => desktopSearchButton.getAttribute('aria-expanded') === 'true';
 
@@ -23,9 +21,6 @@
       changeSearchVisibility(!isSearchOpen());
     });
 
-    closeButton.addEventListener('click', () => {
-      changeSearchVisibility(false);
-    });
 
     document.addEventListener('keyup', (e) => {
       if (e.key === 'Escape') {

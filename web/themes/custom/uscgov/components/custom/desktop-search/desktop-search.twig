@@ -1,7 +1,13 @@
 {% set search_wrapper_id = 'search-wrapper'|clean_unique_id %}
 
 <button class="desktop-search__button" aria-expanded="false" aria-controls="{{ search_wrapper_id }}">
-  {{ 'Search'|t }}
+  <span class="desktop-search__button-search">
+    {{ 'Search'|t }}
+  </span>
+  <span class="desktop-search__button-close">
+    {{ 'Close'|t }}
+    <span class="desktop-search__button-close-icon"></span>
+  </span>
 </button>
 <search id="{{ search_wrapper_id }}" role="search" class="desktop-search__wrapper">
   {% set search_id = 'desktop-search__input'|clean_unique_id %}
@@ -17,7 +23,4 @@
       </button>
     </div>
   </form>
-  <button class="desktop-search__wrapper-close-button" aria-controls="{{ menu_wrapper_id }}">
-    <span class="visually-hidden">{{ 'Close search'|t }}</span>
-  </button>
 </search>
