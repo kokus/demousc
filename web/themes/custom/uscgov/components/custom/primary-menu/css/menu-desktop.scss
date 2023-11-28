@@ -30,7 +30,11 @@
     font-size: 16px;
     color: color('primary-darker');
 
-    &:hover,
+    &:hover {
+      border-bottom-color: color('primary');
+    }
+
+    .primary-menu__menu-item--active-trail &,
     &.is-active {
       border-bottom-color: color('primary-dark');
     }
