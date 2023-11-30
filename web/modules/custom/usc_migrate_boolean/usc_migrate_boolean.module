@@ -9,6 +9,8 @@ use Drupal\Core\Database\Database;
 
 /**
  * Implements migration_plugins_alter().
+ *
+ * @throws \Drupal\Core\Database\InvalidQueryException
  */
 function usc_migrate_boolean_migration_plugins_alter(array &$migrations) {
   foreach ($migrations as &$migration) {
@@ -43,6 +45,8 @@ function usc_migrate_boolean_migration_plugins_alter(array &$migrations) {
 
 /**
  * Provides a list of fields which will be migrated to boolean.
+ *
+ * @throws \Drupal\Core\Database\InvalidQueryException
  */
 function _usc_migrate_boolean_get_boolean_fields(): array {
 
