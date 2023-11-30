@@ -8,6 +8,7 @@
   <ul{{attributes.addClass(['primary-menu', 'primary-menu--level-' ~ menu_level])}}>
     {% for key, item in items %}
       {% if key|first != '#' %}
+        {% set megamenu_enabled = item.entity.field_enable_megamenu.value %}
         {% set dropdown_id = ('id-' ~ item.title ~ '-dropdown')|clean_unique_id %}
         {% set menu_item_classes = [
           'primary-menu__menu-item',
@@ -28,12 +29,12 @@
                 {{ item.title }}
               </span>
 
-              {% if item.entity.field_description_text.value %}
+              {% if megamenu_enabled and item.entity.field_description_text.value %}
                 <span class="primary-menu__link-description-text">{{ item.entity.field_description_text.value }}</span>
               {% endif %}
             </button>
 
-            <div id="{{ dropdown_id }}" class="primary-menu__dropdown">
+            <div id="{{ dropdown_id }}" class="primary-menu__dropdown {{ megamenu_enabled ? 'primary-menu__dropdown--mega' : 'primary-menu__dropdown--simple' }}">
               {{ item.content }}
             </div>
           {% elseif menu_level == 0 %}
@@ -41,7 +42,7 @@
                 <span class="primary-menu__link-main-text">
                   {{ item.title }}
                 </span>
-                {% if item.entity.field_description_text.value %}
+                {% if megamenu_enabled and item.entity.field_description_text.value %}
                   <span class="primary-menu__link-description-text">
                     {{ item.entity.field_description_text.value }}
                   </span>
