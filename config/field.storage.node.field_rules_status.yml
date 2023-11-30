@@ -4,21 +4,12 @@ status: true
 dependencies:
   module:
     - node
-    - options
 id: node.field_rules_status
 field_name: field_rules_status
 entity_type: node
-type: list_string
-settings:
-  allowed_values:
-    -
-      value: pending
-      label: 'Pending consideration'
-    -
-      value: considered
-      label: Considered
-  allowed_values_function: ''
-module: options
+type: boolean
+settings: {  }
+module: core
 locked: false
 cardinality: 1
 translatable: true

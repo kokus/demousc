@@ -123,8 +123,11 @@ process:
       source: field_rules_rule_or_form
   field_rules_status:
     -
-      plugin: get
+      plugin: static_map
       source: field_rules_status
+      map:
+        pending: 0
+        considered: 1
   field_usc_import_timestamp:
     -
       plugin: get
