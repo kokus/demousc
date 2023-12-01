@@ -476,4 +476,17 @@ class RoboFile extends Tasks {
     return $this->taskExec('vendor/bin/drush');
   }
 
+  /**
+   * Fixes the container permissions.
+   *
+   * @return \Robo\Task\Base\Exec[]
+   *   An array of tasks.
+   */
+  protected function fixContainerPerms() {
+    $tasks = [];
+    $tasks[] = $this->taskExec("chown -R www-data web/sites/default");
+    $tasks[] = $this->taskExec("chmod -R 775 web/sites/default");
+    return $tasks;
+  }
+
 }
