@@ -1,0 +1,15 @@
+{% set search_id = 'mobile-search__input'|clean_unique_id %}
+<search role="search" class="mobile-search__wrapper">
+  <form action="" class="mobile-search__form">
+    <label for="{{ search_id }}" class="mobile-search__label">
+      {{ 'Search USCourts.gov'|t }}
+    </label>
+    <div class="mobile-search__form-wrapper">
+      <input id="{{ search_id }}" type="text" class="mobile-search__input">
+      <button class="mobile-search__button">
+        <span class="visually-hidden">{{ 'Search'|t }}</span>
+        {{ include(componentMetadata.path ~ '/images/magnify.svg') }}
+      </button>
+    </div>
+  </form>
+</search>

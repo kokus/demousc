@@ -59,8 +59,6 @@ services:
 
       build:
         - vendor/bin/drush deploy
-        - vendor/bin/drush user:create tugboat_admin --mail='tugboat_ad@example.com' --password=${ADMIN_PASS}
-        - vendor/bin/drush user:role:add 'administrator' tugboat_admin
         # Compile theme.
         - cd web/themes/custom/uscgov/ && npm install && npx gulp init
 
@@ -82,7 +80,7 @@ services:
       # skipping the init step, because the results of that step will
       # already be present.
       update:
-        - scp -P 8722 ubuntu@172.104.211.92:dbs_tugboat/usc-gov.sql.gz /tmp/database.sql.gz
+        - scp agileana@170.187.136.164:dbs_tugboat/uscgov.sql.gz /tmp/database.sql.gz
         - zcat /tmp/database.sql.gz | mysql tugboat
         - rm /tmp/database.sql.gz
 

@@ -7,11 +7,29 @@
   box-sizing: border-box;
 }
 
-body {
+// Extra specificity to override USWDS.
+body[class] {
+  margin: 0;
   -webkit-font-smoothing: antialiased;
+  background-color: #F9FAFB; // @todo abstract to variable.
+  line-height: 1.15;
 }
 
 h1, h2, h3 {
   @include u-font-family('serif');
   font-weight: normal;
+}
+
+a {
+  color: color('primary');
+
+  &:hover {
+    color: color('primary-vivid');
+  }
+}
+
+a, button {
+  &:focus:not([disabled]):not(:focus-visible) {
+    outline: none;
+  }
 }

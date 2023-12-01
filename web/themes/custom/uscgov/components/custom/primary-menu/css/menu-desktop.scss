@@ -1,0 +1,93 @@
+@forward "../../sass/uswds/settings";
+@use "../../../../sass/custom/global/media-queries" as *;
+@use "uswds-core" as *;
+
+@media ($desktop_break) {
+  .primary-menu--level-0 {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .primary-menu__link--level-0,
+  .primary-menu__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 8px;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    border-bottom: solid 2px transparent;
+    line-height: 1;
+    font: inherit;
+    font-size: 16px;
+    color: color('primary-darker');
+
+    &:hover {
+      border-bottom-color: color('primary');
+    }
+
+    .primary-menu__menu-item--active-trail &,
+    &.is-active {
+      border-bottom-color: color('primary-dark');
+    }
+  }
+
+  .primary-menu__button {
+    border: solid 1px transparent;
+    border-bottom: solid 2px transparent;
+
+    &::after {
+      display: block;
+      width: 6px;
+      height: 6px;
+      rotate: -45deg;
+      border-left: solid 2px color('primary-darker');
+      border-bottom: solid 2px color('primary-darker');
+      content: "";
+    }
+
+    &[aria-expanded="true"] {
+      position: relative; // Anchor pseudo.
+      border-radius: 10px 10px 0 0;
+      border-top: 1px solid color('base');
+      border-right: 1px solid color('base');
+      border-left: 1px solid color('base');
+      background: var(--header-menu-wrapper-background);
+
+      &:after {
+        scale: -1;
+        translate: 0 2px;
+      }
+
+      &:before {
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        z-index: 2; // Appear above dropdown.
+        width: calc(100% + 2px);
+        height: 42px; // @todo magic number.
+        border-right: 1px solid color('base');
+        border-left: 1px solid color('base');
+        background: var(--header-menu-wrapper-background);
+        content: "";
+      }
+    }
+  }
+
+  // Top level description text is hidden at desktop.
+  .primary-menu__menu-item--level-0 {
+    > :is(.primary-menu__link, .primary-menu__button) {
+      > .primary-menu__link-description-text {
+        display: none;
+      }
+    }
+  }
+}

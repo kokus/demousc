@@ -1,0 +1,63 @@
+@forward "../../sass/uswds/settings";
+@use "../../../sass/custom/global/media-queries" as *;
+@use "../../../sass/custom/global/mixins" as *;
+@use "uswds-core" as *;
+
+.mobile-search__wrapper {
+  display: block; // Necessary on iPad mobile Safari for padding.
+  padding: var(--spacing-sm-3) var(--spacing-sm-3) 0 var(--spacing-sm-3);
+
+  @media ($desktop_break) {
+    display: none;
+  }
+}
+
+.mobile-search__label {
+  display: block;
+  margin-bottom: var(--spacing-sm-1);
+  color: color('base-dark');
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.mobile-search__form-wrapper {
+  --form-background: white;
+
+  display: flex;
+  height: var(--spacing-md-2);
+  background: var(--form-background);
+  border: solid 1px color('base');
+  border-radius: 30px;
+}
+
+.mobile-search__input {
+  flex-grow: 1;
+  max-width: 100%;
+  min-width: 100px;
+  padding-left: 10px;
+  background: var(--form-background);
+  border: 0;
+  border-radius: 30px 0 0 30px;
+  appearance: none;
+}
+
+.mobile-search__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--spacing-md-2);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: solid 1px transparent;
+  appearance: none;
+  background: color('primary');
+  color: var(--form-background);
+
+  path {
+    fill: currentColor;
+
+    @media (forced-colors: active) {
+      fill: buttonText;
+    }
+  }
+}
