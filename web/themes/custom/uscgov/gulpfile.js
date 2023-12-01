@@ -1,10 +1,11 @@
 /* gulpfile.js */
 const { src, dest, parallel, series, watch } = require("gulp");
 const autoprefixer = require("autoprefixer");
-const sass = require("gulp-sass")(require("sass-embedded"));
+const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
 const postcss = require("gulp-postcss");
 const uswds = require("@uswds/compile");
+sass.compiler = require('sass');
 
 /**
  * USWDS version
