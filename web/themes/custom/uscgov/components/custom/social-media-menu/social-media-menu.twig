@@ -1,10 +1,10 @@
 <nav aria-label="{{ 'Social media'|t }}" class="social-media-menu__social-menu">
   <ul class="social-media-menu__list">
-    {% for item in social_media %}
+    {% for item in items %}
       <li class="social-media-menu__item">
-        <a href="{{ item.url }}" style="--icon: url('{{ item.path_to_logo }}')" class="social-media-menu__link">
+        <a href="{{ item.content['#paragraph'].field_hyperlink.uri }}" style="--icon: url('{{ file_url(item.content['#paragraph'].field_svg_icon.entity.uri.value) }}')" class="social-media-menu__link">
           <span class="visually-hidden">
-            {{- item.title -}}
+            {{- item.content['#paragraph'].field_social_media_name.value -}}
           </span>
         </a>
       </li>

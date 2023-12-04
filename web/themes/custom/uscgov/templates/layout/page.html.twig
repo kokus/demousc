@@ -78,19 +78,22 @@
   {% embed 'uscgov:footer' with {
     footer_above_region: page.footer_above,
     footer_main_region: page.footer_main,
-    logo: {
-      path: '/' ~ directory ~ '/images/AO-seal-art-thicker-lines.webp',
-      alt: 'logo'|t,
-      width: 80,
-      height: 80,
-    },
-    brand_text: 'This site is maintained by the Administrative Office of the U.S. Courts on behalf of the Federal Judiciary.'|t,
+    brand_text: config_pages_field('global_site_settings', 'field_seal_te', 'full')|add_suggestion('bare'),
+    footer_cta_title: config_pages_field('global_site_settings', 'field_footer_cta_title', 'full')|add_suggestion('bare'),
+    footer_cta_body: config_pages_field('global_site_settings', 'field_footer_cta_body', 'full')|add_suggestion('bare'),
+    footer_cta_link: config_pages_field('global_site_settings', 'field_footer_cta_link', 'full')|add_suggestion('bare'),
   } only %}
+    {% block footer_seal %}
+      {{ config_pages_field('global_site_settings', 'field_footer_seal', 'full')|add_suggestion('bare') }}
+    {% endblock %}
     {% block footer_above %}
       {{ footer_above_region }}
     {% endblock %}
     {% block footer_below %}
       {{ footer_main_region }}
+    {% endblock %}
+    {% block footer_social_media %}
+      {{ config_pages_field('global_site_settings', 'field_social_media', 'full') }}
     {% endblock %}
   {% endembed %}
 

@@ -1,17 +1,1 @@
-$schema: https://git.drupalcode.org/project/sdc/-/raw/1.x/src/metadata.schema.json
 name: Social media menu
-props:
-  type: object
-  properties:
-    social_media:
-      type: array
-      properties:
-        title:
-          title: Title
-          type: string
-        url:
-          title: URL
-          type: string
-        path_to_logo:
-          title: Path to logo
-          type: string

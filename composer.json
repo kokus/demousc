@@ -27,6 +27,7 @@
         "drupal/auto_entitylabel": "^3.0",
         "drupal/autologout": "^1.4",
         "drupal/config_import_single": "^2.0",
+        "drupal/config_pages": "^2.15",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/ctools": "^4.0",
@@ -137,6 +138,9 @@
         "patches": {
             "drupal/core" : {
                 "Array filter issue" : "https://www.drupal.org/files/issues/2020-06-09/d7_field_instance-sort-3080034-6.patch"
+            },
+            "drupal/config_pages" : {
+              "Can't edit config page menu item due to missing provider in config_pages_menu_links_discovered_alter()": "https://www.drupal.org/files/issues/2023-08-04/cant-edit-config-page-menu-link-3379375.patch"
             }
         }
     },

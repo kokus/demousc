@@ -16,6 +16,14 @@ $footer_break_large: 'min-width: 1400px';
 .footer__bottom {
   background: #002D5A;
   color: #ffffff;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: inherit;
+    }
+  }
 }
 
 .footer__bottom-container {
@@ -52,6 +60,11 @@ $footer_break_large: 'min-width: 1400px';
 
   @media ($footer_break_large) {
     margin-block: 32px auto;
+  }
+
+  img {
+    width: 80px;
+    height: auto;
   }
 }
 
@@ -146,7 +159,7 @@ $footer_break_large: 'min-width: 1400px';
   font-size: 14px;
 }
 
-.footer__feedback-link {
+.footer__feedback-link-wrapper a {
   display: flex;
   width: fit-content;
   margin-top: 16px;
