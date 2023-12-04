@@ -9,6 +9,12 @@ web/core
 web/modules/contrib
 web/themes/contrib
 
+# Databases.
+*.sql
+*.sql.gz
+*.gz
+db_backups
+
 # Lando ENV.
 .lando.env
 
@@ -22,3 +28,7 @@ vendor
 # Test.
 simpletest
 screenshots
+
+# Dev.
+.env
+docker-compose.override.yml

@@ -51,6 +51,18 @@ pipelines:
                 - robo ci:behat-tests
               artifacts:
                 - screenshots/**
+  branches:
+    master:
+      - step:
+          name: Deploy to Dev
+          deployment: dev
+          script:
+            - pipe: atlassian/ssh-run:0.7.1
+              variables:
+                SSH_USER: $SERVER_USER
+                SERVER: $SERVER_ADDRESS
+                MODE: 'script'
+                COMMAND: '.deploy/deploy.sh'
 definitions:
   services:
     mariadb:

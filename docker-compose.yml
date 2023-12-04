@@ -12,6 +12,10 @@ services:
       - internal
     labels:
       - traefik.enable=false
+    deploy:
+      resources:
+        limits:
+          memory: 512M
 
   php:
     build:
@@ -31,6 +35,10 @@ services:
       - database
     labels:
       - traefik.enable=false
+    deploy:
+      resources:
+        limits:
+          memory: 512M
 
   web:
     image: webdevops/apache:latest
@@ -62,7 +70,7 @@ services:
     labels:
       - traefik.enable=false
     restart: unless-stopped
-    
+
 networks:
   internal:
     driver: bridge

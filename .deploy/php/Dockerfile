@@ -42,6 +42,9 @@ RUN apk add --no-cache pcre-dev $PHPIZE_DEPS \
 && docker-php-ext-enable redis.so
 
 # set recommended PHP.ini settings
+RUN { \
+		echo 'memory_limit = 512M'; \
+	} > /usr/local/etc/php/conf.d/docker-fpm.ini
 # see https://secure.php.net/manual/en/opcache.installation.php
 RUN { \
 		echo 'opcache.memory_consumption=128'; \

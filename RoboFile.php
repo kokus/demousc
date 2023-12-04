@@ -33,7 +33,7 @@ class RoboFile extends Tasks {
    *
    * @var string
    */
-  const THEME_NAME = 'usc';
+  const THEME_NAME = 'uscgov';
 
   /**
    * Local Project init.
@@ -76,6 +76,96 @@ class RoboFile extends Tasks {
     $collection = $this->collectionBuilder($io);
     $collection->taskComposerInstall()
       ->addTask($this->runDeploy());
+    return $collection;
+  }
+
+    /**
+   * Site update.
+   */
+  public function appUpdate(ConsoleIO $io) {
+    $io->title("Site update starting...");
+    $collection = $this->collectionBuilder($io);
+    $collection->taskComposerInstall()
+      ->addTask($this->runDeploy())
+      ->addTask($this->themeInit())
+      ->addTask($this->themeBuild())
+      ->addTaskList($this->fixContainerPerms());;
+    return $collection;
+  }
+
+  /**
+   * Init theme.
+   *
+   * @param string $dir
+   *   The directory to run the commands.
+   *
+   * @return \Robo\Collection\CollectionBuilder
+   */
+  public function themeInit($dir = '') {
+    if (empty($dir)) {
+      $dir = self::CUSTOM_THEMES . '/' . self::THEME_NAME;
+    }
+    $collection = $this->collectionBuilder();
+    $collection->progressMessage('Init the theme...')
+      ->taskNpmInstall()
+      ->arg('--force')
+      ->dir($dir);
+
+    return $collection;
+  }
+
+  /**
+   * Build theme.
+   *
+   * @param string $dir
+   *   The directory to run the commands.
+   *
+   * @return \Robo\Result
+   *   The result of the collection of tasks.
+   */
+  public function themeBuild($dir = '') {
+    if (empty($dir)) {
+      $dir = self::CUSTOM_THEMES . '/' . self::THEME_NAME;
+    }
+    $collection = $this->collectionBuilder();
+    $collection->progressMessage('Building the theme...')
+      ->taskExec('npm run build')->dir($dir);
+
+    return $collection;
+  }
+
+  /**
+   * Stores a db backup.
+   *
+   * @param string $dir
+   *   The directory where the backups will be stored.
+   * @param integer $max_files
+   *   The max number go backups to maintain.
+   */
+  public function backupDatabase($dir = 'db_backups/', $max_files = 5) {
+    $date = date('Y-m-d-H:i:s');
+    $collection = $this->collectionBuilder();
+    $collection->taskExec("vendor/bin/drush sql-dump | gzip -f > $dir/$date.sql.gz")
+      ->addCode(
+        // Maintain a max number of backups.
+        function () use ($dir, $max_files) {
+          $dir = new DirectoryIterator($dir);
+          $files = [];
+          foreach ($dir as $fileInfo) {
+            if (!$fileInfo->isDot() && $fileInfo->isFile()) {
+              $files[$fileInfo->getMTime()] = $fileInfo->getPathname();
+            }
+          }
+          krsort($files);
+          $i = 0;
+          foreach ($files as $file) {
+            if (++$i > $max_files) {
+              unlink($file);
+            }
+          }
+        }
+      );
+
     return $collection;
   }
 
@@ -384,6 +474,19 @@ class RoboFile extends Tasks {
    */
   protected function drush() {
     return $this->taskExec('vendor/bin/drush');
+  }
+
+  /**
+   * Fixes the container permissions.
+   *
+   * @return \Robo\Task\Base\Exec[]
+   *   An array of tasks.
+   */
+  protected function fixContainerPerms() {
+    $tasks = [];
+    $tasks[] = $this->taskExec("chown -R www-data web/sites/default");
+    $tasks[] = $this->taskExec("chmod -R 775 web/sites/default");
+    return $tasks;
   }
 
 }

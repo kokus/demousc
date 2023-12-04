@@ -58,7 +58,7 @@ services:
         - find "${DOCROOT}/sites" -type f -exec chmod 0664 {} \;
 
       build:
-        - vendor/bin/drush deploy
+        - vendor/bin/drush deploy -vvv
         # Compile theme.
         - cd web/themes/custom/uscgov/ && npm install && npx gulp init
 
