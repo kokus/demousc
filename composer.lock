@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b92668bb27ccf069a78bc6cdb3cbf1b",
+    "content-hash": "f1367defbe0e57137f5317e23b014fb0",
     "packages": [
         {
             "name": "akamai-open/edgegrid-auth",
@@ -17377,6 +17377,7 @@
         "drupal/gutenberg_uswds": 10,
         "drupal/html_processors": 20,
         "drupal/inline_entity_form": 5,
+        "drupal/media_migration": 15,
         "drupal/pathologic": 15,
         "drupal/webform": 5,
         "dmore/chrome-mink-driver": 20
