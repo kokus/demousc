@@ -14,7 +14,7 @@
         {% block footer_below %}{% endblock %}
       </div>
       <div class="footer__bottom-second">
-        <form class="footer__subscribe" action="">
+        <form class="footer__subscribe" action="https://public.govdelivery.com/accounts/USFEDCOURTS/subscribers/qualify?topic_id=USFEDCOURTS_C13" method="post">
           <h2 class="footer__subscribe-title">{{ 'Subscribe to Updates'|t }}</h2>
           <div class="footer__subscribe-description">{{ 'To receive updates, enter your email address and select the topics that interest you.'|t }}</div>
           {% set id = 'footer-email-subscribe'|clean_unique_id %}
@@ -22,8 +22,9 @@
             {{ 'Email address' |t }}
           </label>
           <div class="footer__subscribe-form-wrapper">
-            <input class="footer__subscribe-input" id="{{ id }}" type="email" width="60">
-            <button class="footer__subscribe-button" type="submit">{{ 'Submit'|t }}</button>
+            <input class="footer__subscribe-input" id="{{ id }}" type="email" name="email" width="60">
+            <input type="hidden" name="topic_id" value="USFEDCOURTS_C13">
+            <button class="footer__subscribe-button" name="commit" type="submit">{{ 'Submit'|t }}</button>
           </div>
         </form>
         {% block footer_social_media %}{% endblock %}
