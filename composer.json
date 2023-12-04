@@ -26,6 +26,7 @@
         "drupal/ape": "^1.6",
         "drupal/auto_entitylabel": "^3.0",
         "drupal/autologout": "^1.4",
+        "drupal/bean_migrate": "^1.0",
         "drupal/config_import_single": "^2.0",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-recommended": "^10.1",
@@ -76,7 +77,8 @@
         "drupal/views_bulk_operations": "^4.2",
         "drupal/webform": "^6.2@RC",
         "drupal/xmlsitemap": "^1.5",
-        "drush/drush": "^12.1"
+        "drush/drush": "^12.1",
+        "mglaman/composer-drupal-lenient": "^1.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -90,7 +92,8 @@
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "mglaman/composer-drupal-lenient": true
         },
         "sort-packages": true
     },
@@ -135,9 +138,15 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/bean_migrate" : {
+                "3369198 - Automated Drupal 10 compatibility fixes" : "https://www.drupal.org/files/issues/2023-11-27/3369198-4.patch"
+            },
             "drupal/core" : {
                 "Array filter issue" : "https://www.drupal.org/files/issues/2020-06-09/d7_field_instance-sort-3080034-6.patch"
             }
+        },
+        "drupal-lenient": {
+            "allowed-list": ["drupal/bean_migrate"]
         }
     },
     "require-dev": {
