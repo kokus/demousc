@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b03507cffa99eaa84a4092e5c61720a8",
+    "content-hash": "f1367defbe0e57137f5317e23b014fb0",
     "packages": [
         {
             "name": "akamai-open/edgegrid-auth",
@@ -1708,6 +1708,60 @@
             }
         },
         {
+            "name": "drupal/bean_migrate",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bean_migrate.git",
+                "reference": "1.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bean_migrate-1.0.0.zip",
+                "reference": "1.0.0",
+                "shasum": "f36e4853fbaa4b1bc8686f2248097d10f65c4f14"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "require-dev": {
+                "drupal/migmag": "^1.2"
+            },
+            "suggest": {
+                "drupal/block_content_revision_ui": "Adds Revision UI to Block Content entities."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0",
+                    "datestamp": "1656327529",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "huzooka",
+                    "homepage": "https://www.drupal.org/user/281301"
+                }
+            ],
+            "description": "Migrations from Drupal 7 Bean to Drupal 9 block content entities",
+            "homepage": "https://www.drupal.org/project/bean_migrate",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/bean_migrate",
+                "issues": "https://drupal.org/project/issues/bean_migrate"
+            }
+        },
+        {
             "name": "drupal/config_import_single",
             "version": "2.0.0",
             "source": {
@@ -1767,67 +1821,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/config_import_single",
                 "issues": "http://drupal.org/project/config_import_single"
-            }
-        },
-        {
-            "name": "drupal/config_pages",
-            "version": "2.15.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/config_pages.git",
-                "reference": "8.x-2.15"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_pages-8.x-2.15.zip",
-                "reference": "8.x-2.15",
-                "shasum": "55d4a898c6df03295e26ce07930c6b7d06183287"
-            },
-            "require": {
-                "drupal/core": "^8.5 | ^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.15",
-                    "datestamp": "1688847929",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "m.krestnicov",
-                    "homepage": "https://www.drupal.org/user/3193903"
-                },
-                {
-                    "name": "Qwaygon",
-                    "homepage": "https://www.drupal.org/user/636624"
-                },
-                {
-                    "name": "shumer",
-                    "homepage": "https://www.drupal.org/user/2297432"
-                }
-            ],
-            "description": "ConfigPages module",
-            "homepage": "http://drupal.org/project/config_pages",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/config_pages",
-                "issues": "http://drupal.org/project/issues/config_pages"
             }
         },
         {
@@ -4206,6 +4199,84 @@
             }
         },
         {
+            "name": "drupal/media_migration",
+            "version": "1.0.0-alpha16",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_migration.git",
+                "reference": "8.x-1.0-alpha16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_migration-8.x-1.0-alpha16.zip",
+                "reference": "8.x-1.0-alpha16",
+                "shasum": "718cedeb218add391f14e14e2cfc28b528412a3c"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10",
+                "drupal/migmag": "^1.5",
+                "drupal/migmag_process": "*",
+                "drupal/migrate_plus": ">=4.2 <7",
+                "drupal/smart_sql_idmap": "^1.0-beta1"
+            },
+            "require-dev": {
+                "drupal/entity_embed": "^1",
+                "drupal/linkit": "^5.0.0-beta11 || ^6.0.0-beta2",
+                "drupal/migrate_tools": "^4.1 || ^5 || ^6",
+                "drupal/migrate_upgrade": "^3 || ^4",
+                "drush/drush": "^9 || ^10 || ^11"
+            },
+            "suggest": {
+                "drupal/entity_embed": "Allows entities to be embedded using a text editor.",
+                "drupal/file_entity": "Extends Drupal file entities to be fieldable and viewable.",
+                "drupal/linkit": "Provides an easy interface for internal and external linking with wysiwyg editors.",
+                "drupal/linkit_media_library": "Create links from media library.",
+                "drupal/media_migration_tools": "Media Migration supporting module for Migrate Tools"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-alpha16",
+                    "datestamp": "1676991340",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "heddn",
+                    "homepage": "https://www.drupal.org/user/1463982"
+                },
+                {
+                    "name": "huzooka",
+                    "homepage": "https://www.drupal.org/user/281301"
+                },
+                {
+                    "name": "juampynr",
+                    "homepage": "https://www.drupal.org/user/682736"
+                },
+                {
+                    "name": "slv_",
+                    "homepage": "https://www.drupal.org/user/826088"
+                }
+            ],
+            "description": "Provides a Drupal 7 to 8 media migration.",
+            "homepage": "https://www.drupal.org/project/media_migration",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/media_migration",
+                "issues": "https://www.drupal.org/project/issues/media_migration"
+            }
+        },
+        {
             "name": "drupal/menu_item_extras",
             "version": "3.0.2",
             "source": {
@@ -4457,6 +4528,67 @@
                 "source": "https://git.drupalcode.org/project/metatag",
                 "issues": "https://www.drupal.org/project/issues/metatag",
                 "docs": "https://www.drupal.org/docs/8/modules/metatag"
+            }
+        },
+        {
+            "name": "drupal/migmag",
+            "version": "1.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/migmag.git",
+                "reference": "1.8.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migmag-1.8.1.zip",
+                "reference": "1.8.1",
+                "shasum": "d944bb896ff84d3df5d5177febacd5b3559955b1"
+            },
+            "require": {
+                "drupal/core": "^8.9 || ^9 || ^10"
+            },
+            "replace": {
+                "drupal/migmag_callback_upgrade": "self.version",
+                "drupal/migmag_menu_link_migrate": "self.version",
+                "drupal/migmag_process": "self.version",
+                "drupal/migmag_process_lookup_replace": "self.version",
+                "drupal/migmag_rollbackable": "self.version",
+                "drupal/migmag_rollbackable_replace": "self.version"
+            },
+            "require-dev": {
+                "drupal/eme": "^1@alpha",
+                "drupal/migmag_process": "*",
+                "drupal/migmag_rollbackable": "*",
+                "drupal/smart_sql_idmap": "^1.1@beta",
+                "drupal/tecla": "^1@RC",
+                "drush/drush": "^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.8.1",
+                    "datestamp": "1659090450",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "huzooka",
+                    "homepage": "https://www.drupal.org/user/281301"
+                }
+            ],
+            "description": "Toolset and utilities for Drupal migrations.",
+            "homepage": "https://www.drupal.org/project/migmag",
+            "support": {
+                "source": "https://git.drupalcode.org/project/migmag",
+                "issues": "https://www.drupal.org/project/issues/migmag"
             }
         },
         {
@@ -5461,6 +5593,55 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/sharethis",
                 "issues": "https://www.drupal.org/project/issues/sharethis"
+            }
+        },
+        {
+            "name": "drupal/smart_sql_idmap",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/smart_sql_idmap.git",
+                "reference": "1.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/smart_sql_idmap-1.2.1.zip",
+                "reference": "1.2.1",
+                "shasum": "2a39858bd2649fc4964e8ea728dd1e692ce302ba"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.2.1",
+                    "datestamp": "1695762609",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "huzooka",
+                    "homepage": "https://www.drupal.org/user/281301"
+                }
+            ],
+            "description": "A SQL id map for migrations with long plugin IDs",
+            "homepage": "https://www.drupal.org/project/smart_sql_idmap",
+            "keywords": [
+                "Drupal",
+                "Migration"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/smart_sql_idmap",
+                "issues": "https://www.drupal.org/project/issues/smart_sql_idmap"
             }
         },
         {
@@ -7238,6 +7419,64 @@
                 "source": "https://github.com/mck89/peast/tree/v1.15.4"
             },
             "time": "2023-08-12T08:29:29+00:00"
+        },
+        {
+            "name": "mglaman/composer-drupal-lenient",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mglaman/composer-drupal-lenient.git",
+                "reference": "9d9271499d86ceb1431de80f876800fadf10a9e1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mglaman/composer-drupal-lenient/zipball/9d9271499d86ceb1431de80f876800fadf10a9e1",
+                "reference": "9d9271499d86ceb1431de80f876800fadf10a9e1",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^2.0",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "composer/composer": "^2.3",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan": "^1.6",
+                "phpstan/phpstan-phpunit": "^1.1",
+                "phpstan/phpstan-strict-rules": "^1.2",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.6"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "ComposerDrupalLenient\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "ComposerDrupalLenient\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Matt Glaman",
+                    "email": "nmd.matt@gmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/mglaman/composer-drupal-lenient/issues",
+                "source": "https://github.com/mglaman/composer-drupal-lenient/tree/1.0.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/mglaman",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-03-21T19:06:37+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -17138,6 +17377,7 @@
         "drupal/gutenberg_uswds": 10,
         "drupal/html_processors": 20,
         "drupal/inline_entity_form": 5,
+        "drupal/media_migration": 15,
         "drupal/pathologic": 15,
         "drupal/webform": 5,
         "dmore/chrome-mink-driver": 20
@@ -17146,5 +17386,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
