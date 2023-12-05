@@ -103,6 +103,8 @@ function uscgov_preprocess_menu_local_task(&$variables) {
  *
  * This creates a 'social_media' array that's used by the social media
  * menu component.
+ *
+ * @throws Drupal\Core\File\Exception\InvalidStreamWrapperException
  */
 function uscgov_preprocess_field__config_pages__field_social_media(&$variables) {
   $variables['social_media'] = [];
