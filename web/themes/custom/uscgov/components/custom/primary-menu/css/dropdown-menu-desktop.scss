@@ -8,7 +8,6 @@
     z-index: 1;
     top: 100%;
     left: 0;
-    width: 100%;
     display: none;
     background: var(--header-menu-wrapper-background);
     border: solid 1px color('base');
@@ -18,24 +17,35 @@
     }
   }
 
+  .primary-menu__dropdown--mega {
+    width: 100%;
+  }
+
   .primary-menu__dropdown-first {
-    flex-basis: 320px;
-    flex-shrink: 0;
-    padding: var(--spacing-md-2);
-    background: color('primary-lighter');
+    .primary-menu__dropdown--mega & {
+      flex-basis: 320px;
+      flex-shrink: 0;
+      padding: var(--spacing-md-2);
+      background: color('primary-lighter');
+    }
   }
 
   .primary-menu__dropdown-second {
-    flex-grow: 1;
-    padding: var(--spacing-md-2);
+    .primary-menu__dropdown--mega & {
+      flex-grow: 1;
+      padding: var(--spacing-md-2);
+    }
   }
 
   .primary-menu--level-1 {
     margin: 0;
     padding: 0;
     list-style: none;
-    columns: 4;
-    column-gap: 0;
+
+    .primary-menu__dropdown--mega & {
+      columns: 4;
+      column-gap: 0;
+    }
   }
 
   .primary_menu__level-1-inner {
@@ -120,43 +130,45 @@
   }
 
   .primary-menu__link--level-1 {
-    position: relative; // Anchor pseudo-elements that make chevron.
-    display: block;
-    padding: var(--spacing-sm-2);
-    border-radius: 10px;
-    border: 1px solid transparent;
-    text-decoration: none;
-
-    &:hover {
-      border: 1px solid color('primary');
-      background: color('primary-lighter');
-    }
-
-    &::after {
-      position: absolute;
-      top: 23px;
-      right: var(--spacing-sm-2);
+    .primary-menu__dropdown--mega & {
+      position: relative; // Anchor pseudo-elements that make chevron.
       display: block;
-      width: 6px;
-      height: 6px;
-      border-left: solid 2px currentColor;
-      border-bottom: solid 2px currentColor;
-      rotate: -135deg;
-      content: "";
-    }
+      padding: var(--spacing-sm-2);
+      border-radius: 10px;
+      border: 1px solid transparent;
+      text-decoration: none;
 
-    .primary-menu__link-main-text {
-      display: block;
-      margin-bottom: var(--spacing-sm-1);
-      padding-right: 10px; // Make visual room for chevron.
-      font-weight: bold;
-      color: color('base-darker');
-      text-wrap: pretty;
-    }
+      &:hover {
+        border: 1px solid color('primary');
+        background: color('primary-lighter');
+      }
 
-    .primary-menu__link-description-text {
-      font-size: 14px;
-      color: color('base-dark');
+      &::after {
+        position: absolute;
+        top: 23px;
+        right: var(--spacing-sm-2);
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-left: solid 2px currentColor;
+        border-bottom: solid 2px currentColor;
+        rotate: -135deg;
+        content: "";
+      }
+
+      .primary-menu__link-main-text {
+        display: block;
+        margin-bottom: var(--spacing-sm-1);
+        padding-right: 10px; // Make visual room for chevron.
+        font-weight: bold;
+        color: color('base-darker');
+        text-wrap: pretty;
+      }
+
+      .primary-menu__link-description-text {
+        font-size: 14px;
+        color: color('base-dark');
+      }
     }
   }
 }
