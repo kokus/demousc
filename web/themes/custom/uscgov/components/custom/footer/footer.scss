@@ -41,7 +41,11 @@ $footer_break_large: 'min-width: 1400px';
 }
 
 .footer__bottom-first {
-  flex-shrink: 0;
+  @media ($footer_break_large) {
+    flex-basis: 550px;
+    flex-shrink: 0;
+    flex-grow: 1;
+  }
 }
 
 .footer__bottom-first,
