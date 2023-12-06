@@ -8,10 +8,10 @@ dependencies:
     - field.field.node.landing_view.field_landing_page_image
     - field.field.node.landing_view.field_lead_paragraph
     - field.field.node.landing_view.field_logo
+    - field.field.node.landing_view.field_metatag
     - field.field.node.landing_view.field_tags
     - node.type.landing_view
   module:
-    - image
     - user
 id: node.landing_view.section_landing
 targetEntityType: node
@@ -19,13 +19,11 @@ bundle: landing_view
 mode: section_landing
 content:
   field_landing_page_image:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: content
-      image_style: landing
-      image_loading:
-        attribute: lazy
+      view_mode: default
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
@@ -43,4 +41,5 @@ hidden:
   body: true
   field_lead_paragraph: true
   field_logo: true
+  field_metatag: true
   field_tags: true

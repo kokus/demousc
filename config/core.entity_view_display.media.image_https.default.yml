@@ -1,0 +1,31 @@
+uuid: ca8fdce0-0c9f-4411-a6e0-f2a9fa901f1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image_https.field_media_image_https
+    - image.style.large
+    - media.type.image_https
+  module:
+    - image
+id: media.image_https.default
+targetEntityType: media
+bundle: image_https
+mode: default
+content:
+  field_media_image_https:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

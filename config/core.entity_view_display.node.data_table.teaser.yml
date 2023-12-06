@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.data_table.field_data_table_title
     - field.field.node.data_table.field_date_updated
     - field.field.node.data_table.field_document_pdf
+    - field.field.node.data_table.field_metatag
     - field.field.node.data_table.field_publication_table_number
     - field.field.node.data_table.field_publication_type
     - field.field.node.data_table.field_report_name
@@ -54,6 +55,7 @@ hidden:
   field_data_table_title: true
   field_date_updated: true
   field_document_pdf: true
+  field_metatag: true
   field_publication_table_number: true
   field_publication_type: true
   field_report_name: true

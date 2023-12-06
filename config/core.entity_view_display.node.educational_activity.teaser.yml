@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.educational_activity.field_lead_gallery
     - field.field.node.educational_activity.field_lead_paragraph
     - field.field.node.educational_activity.field_logo
+    - field.field.node.educational_activity.field_metatag
     - field.field.node.educational_activity.field_tags
     - node.type.educational_activity
   module:
@@ -48,4 +49,5 @@ hidden:
   field_lead_gallery: true
   field_lead_paragraph: true
   field_logo: true
+  field_metatag: true
   field_tags: true

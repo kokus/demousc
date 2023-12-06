@@ -1,0 +1,22 @@
+uuid: fbe47536-f3b6-4533-8c7b-168107c82818
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.related_files
+    - field.storage.block_content.field_bean_description
+  module:
+    - text
+id: block_content.related_files.field_bean_description
+field_name: field_bean_description
+entity_type: block_content
+bundle: related_files
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

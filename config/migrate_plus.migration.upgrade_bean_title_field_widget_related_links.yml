@@ -1,0 +1,78 @@
+uuid: f4174056-226c-4e03-8a0a-9c9e23a5f4e3
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_bean_title_field_widget_related_links
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Bean title field widget configuration (related_links)'
+source:
+  plugin: bean_title_field_widget
+  entity_type: bean
+  constants:
+    form_mode: default
+    field_name: title
+    entity_type: block_content
+    widget_type: string_textfield
+    widget_settings:
+      size: '60,'
+      placeholder: ''
+    third_party_settings: {  }
+  type: related_links
+process:
+  bundle:
+    -
+      plugin: migration_lookup
+      migration: upgrade_bean_type_related_links
+      no_stub: true
+      source: type
+    -
+      plugin: skip_on_empty
+      method: row
+  form_mode:
+    -
+      plugin: get
+      source: constants/form_mode
+  field_name:
+    -
+      plugin: get
+      source: constants/field_name
+  entity_type:
+    -
+      plugin: get
+      source: constants/entity_type
+    -
+      plugin: static_map
+      map:
+        field_collection_item: paragraph
+        paragraphs_item: paragraph
+      bypass: true
+  options/weight:
+    -
+      plugin: get
+      source: widget_weight
+  options/type:
+    -
+      plugin: get
+      source: constants/widget_type
+  options/settings:
+    -
+      plugin: get
+      source: constants/widget_settings
+  options/third_party_settings:
+    -
+      plugin: get
+      source: constants/third_party_settings
+destination:
+  plugin: component_entity_form_display
+migration_dependencies:
+  required:
+    - upgrade_bean_title_field_instance_related_links
+  optional:
+    - upgrade_d7_field_collection_type
+    - upgrade_bean_type_related_links

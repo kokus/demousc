@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.fed_probation_journal.body
     - field.field.node.fed_probation_journal.field_auther
     - field.field.node.fed_probation_journal.field_document_pdf
+    - field.field.node.fed_probation_journal.field_metatag
     - field.field.node.fed_probation_journal.field_mydate
     - field.field.node.fed_probation_journal.field_tags
     - field.field.node.fed_probation_journal.field_test
@@ -42,6 +43,7 @@ content:
 hidden:
   field_auther: true
   field_document_pdf: true
+  field_metatag: true
   field_mydate: true
   field_tags: true
   field_test: true

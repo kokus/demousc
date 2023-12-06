@@ -1,0 +1,22 @@
+uuid: 05ee363e-654f-4b22-9857-c4b2057ef760
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.table_of_contents
+    - field.storage.block_content.field_bean_description
+  module:
+    - text
+id: block_content.table_of_contents.field_bean_description
+field_name: field_bean_description
+entity_type: block_content
+bundle: table_of_contents
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

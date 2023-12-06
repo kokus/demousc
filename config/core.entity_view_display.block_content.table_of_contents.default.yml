@@ -1,0 +1,33 @@
+uuid: 668015a7-b1f3-4cb0-8956-44451b81acd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.table_of_contents
+    - field.field.block_content.table_of_contents.field_bean_description
+    - field.field.block_content.table_of_contents.field_bean_node
+    - field.field.block_content.table_of_contents.title
+  module:
+    - text
+id: block_content.table_of_contents.default
+targetEntityType: block_content
+bundle: table_of_contents
+mode: default
+content:
+  field_bean_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_bean_node:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  title: true

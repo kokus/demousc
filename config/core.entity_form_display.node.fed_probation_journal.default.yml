@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.fed_probation_journal.body
     - field.field.node.fed_probation_journal.field_auther
     - field.field.node.fed_probation_journal.field_document_pdf
+    - field.field.node.fed_probation_journal.field_metatag
     - field.field.node.fed_probation_journal.field_mydate
     - field.field.node.fed_probation_journal.field_tags
     - field.field.node.fed_probation_journal.field_test
@@ -14,9 +15,79 @@ dependencies:
     - node.type.fed_probation_journal
   module:
     - datetime
-    - file
+    - field_group
+    - media_library
+    - metatag
     - path
     - text
+third_party_settings:
+  field_group:
+    group_federal_prob_journal:
+      children:
+        - body
+        - field_auther
+        - field_document_pdf
+        - field_mydate
+        - field_test
+        - field_volume_and_issue_number
+      label: 'Federal Probation Journal'
+      region: content
+      parent_name: group_node_form
+      weight: 4
+      format_type: tab
+      format_settings:
+        classes: 'group-federal-prob-journal field-group-fieldset'
+        show_empty_fields: false
+        id: ''
+        formatter: collapsible
+        description: ''
+        required_fields: true
+    group_import:
+      children:
+        - field_usc_import_timestamp
+      label: Import
+      region: content
+      parent_name: group_node_form
+      weight: 6
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_node_form:
+      children:
+        - group_federal_prob_journal
+        - group_import
+        - group_sidebar
+      label: 'Node Form'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: tabs
+      format_settings:
+        classes: 'group-node-form field-group-tabs'
+        show_empty_fields: false
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_sidebar:
+      children:
+        - field_sidebar
+      label: Sidebar
+      region: content
+      parent_name: group_node_form
+      weight: 5
+      format_type: tab
+      format_settings:
+        classes: 'group-sidebar field-group-fieldset'
+        show_empty_fields: false
+        id: ''
+        formatter: collapsible
+        description: ''
+        required_fields: true
 id: node.fed_probation_journal.default
 targetEntityType: node
 bundle: fed_probation_journal
@@ -47,11 +118,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_document_pdf:
-    type: file_generic
+    type: media_library_widget
     weight: 10
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_mydate:
     type: datetime_default

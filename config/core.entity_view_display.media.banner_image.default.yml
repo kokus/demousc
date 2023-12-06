@@ -1,0 +1,27 @@
+uuid: fdda1199-92d2-4eee-adf6-53e36075175c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.banner_image.field_media_banner_image
+    - media.type.banner_image
+  module:
+    - file
+id: media.banner_image.default
+targetEntityType: media
+bundle: banner_image
+mode: default
+content:
+  field_media_banner_image:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

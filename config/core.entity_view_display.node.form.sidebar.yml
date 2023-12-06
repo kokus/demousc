@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.form.field_form_category
     - field.field.node.form.field_form_number
     - field.field.node.form.field_hide_left_navigation
+    - field.field.node.form.field_metatag
     - field.field.node.form.field_short_title
     - field.field.node.form.field_superseded
     - field.field.node.form.field_tags
@@ -52,6 +53,7 @@ hidden:
   field_form_category: true
   field_form_number: true
   field_hide_left_navigation: true
+  field_metatag: true
   field_short_title: true
   field_superseded: true
   field_tags: true

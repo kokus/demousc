@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.report.field_lead_gallery
     - field.field.node.report.field_lead_paragraph
     - field.field.node.report.field_logo
+    - field.field.node.report.field_metatag
     - field.field.node.report.field_report_children
     - field.field.node.report.field_report_name
     - field.field.node.report.field_sidebar_title
@@ -19,7 +20,8 @@ dependencies:
     - node.type.report
   module:
     - datetime
-    - file
+    - media_library
+    - metatag
     - paragraphs
     - path
     - text
@@ -45,11 +47,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_banner_image:
-    type: file_generic
+    type: media_library_widget
     weight: 12
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_body_enhanced:
     type: entity_reference_paragraphs
@@ -70,25 +72,25 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_fc_be_audio:
-    type: file_generic
+    type: media_library_widget
     weight: 33
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_landing_page_image:
-    type: file_generic
+    type: media_library_widget
     weight: 18
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_lead_gallery:
-    type: file_generic
+    type: media_library_widget
     weight: 37
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_lead_paragraph:
     type: text_textarea
@@ -99,11 +101,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_logo:
-    type: file_generic
+    type: media_library_widget
     weight: 35
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_report_children:
     type: entity_reference_autocomplete

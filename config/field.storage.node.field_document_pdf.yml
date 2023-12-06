@@ -1,20 +1,17 @@
-uuid: 4c77eb5e-3ef8-4a07-933c-b93b597b86d4
+uuid: 75d823e2-51ab-4dc2-9757-5229530a44a4
 langcode: und
 status: true
 dependencies:
   module:
-    - file
+    - media
     - node
 id: node.field_document_pdf
 field_name: field_document_pdf
 entity_type: node
-type: file
+type: entity_reference
 settings:
-  target_type: file
-  display_field: false
-  display_default: false
-  uri_scheme: public
-module: file
+  target_type: media
+module: core
 locked: false
 cardinality: 2
 translatable: true

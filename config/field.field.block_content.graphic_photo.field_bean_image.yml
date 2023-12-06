@@ -1,0 +1,28 @@
+uuid: 48d3a8cb-d517-4367-b8c8-d254af18b880
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.graphic_photo
+    - field.storage.block_content.field_bean_image
+    - media.type.image
+    - media.type.image_http
+    - media.type.image_https
+id: block_content.graphic_photo.field_bean_image
+field_name: field_bean_image
+entity_type: block_content
+bundle: graphic_photo
+label: Image
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      image_https: image_https
+      image_http: image_http
+field_type: entity_reference

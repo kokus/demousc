@@ -48,12 +48,25 @@ process:
       source: field_criminogenic_language
   field_criminogenic_worksheet:
     -
-      plugin: sub_process
+      plugin: media_migration_delta_sort
       source: field_criminogenic_worksheet
+    -
+      plugin: sub_process
       process:
-        target_id: fid
-        display: display
-        description: description
+        target_id:
+          plugin: migration_lookup
+          source: fid
+          migration:
+            - upgrade_d7_file_entity_document_public
+            - upgrade_d7_file_entity_document_http
+            - upgrade_d7_file_entity_image_public
+            - upgrade_d7_file_entity_banner_image_public
+            - upgrade_d7_file_entity_audio_public
+            - upgrade_d7_file_entity_video_youtube
+            - upgrade_d7_file_entity_file_public
+            - upgrade_d7_file_entity_image_https
+            - upgrade_d7_file_entity_image_http
+          no_stub: true
   field_metatag:
     -
       plugin: d7_metatag_entities
@@ -71,4 +84,31 @@ migration_dependencies:
     - upgrade_d7_field_collection_piksel_programs
     - upgrade_d7_field_collection_criminogenic_extra_downlds
     - upgrade_d7_field_collection_criminogenic_worksheets
-  optional: {  }
+    - upgrade_d7_file_entity_document_public
+    - upgrade_d7_file_entity_document_http
+    - upgrade_d7_file_entity_image_public
+    - upgrade_d7_file_entity_banner_image_public
+    - upgrade_d7_file_entity_audio_public
+    - upgrade_d7_file_entity_video_youtube
+    - upgrade_d7_file_entity_file_public
+    - upgrade_d7_file_entity_image_https
+    - upgrade_d7_file_entity_image_http
+  optional:
+    - upgrade_d7_file_entity_image_public
+    - upgrade_d7_file_entity_banner_image_public
+    - upgrade_d7_file_entity_audio_public
+    - upgrade_d7_file_entity_video_youtube
+    - upgrade_d7_file_entity_document_public
+    - upgrade_d7_file_entity_file_public
+    - upgrade_d7_file_entity_image_https
+    - upgrade_d7_file_entity_document_http
+    - upgrade_d7_file_entity_image_http
+    - upgrade_d7_file_entity_document_public
+    - upgrade_d7_file_entity_document_http
+    - upgrade_d7_file_entity_image_public
+    - upgrade_d7_file_entity_banner_image_public
+    - upgrade_d7_file_entity_audio_public
+    - upgrade_d7_file_entity_video_youtube
+    - upgrade_d7_file_entity_file_public
+    - upgrade_d7_file_entity_image_https
+    - upgrade_d7_file_entity_image_http

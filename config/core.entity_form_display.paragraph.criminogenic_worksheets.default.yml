@@ -4,10 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.criminogenic_worksheets.field_criminogenic_language
-    - field.field.paragraph.criminogenic_worksheets.field_criminogenic_worksheet
     - paragraphs.paragraphs_type.criminogenic_worksheets
-  module:
-    - file
 id: paragraph.criminogenic_worksheets.default
 targetEntityType: paragraph
 bundle: criminogenic_worksheets
@@ -18,13 +15,6 @@ content:
     weight: 2
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_criminogenic_worksheet:
-    type: file_generic
-    weight: 3
-    region: content
-    settings:
-      progress_indicator: throbber
     third_party_settings: {  }
 hidden:
   created: true

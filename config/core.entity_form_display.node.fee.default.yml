@@ -12,7 +12,7 @@ dependencies:
     - node.type.fee
   module:
     - datetime
-    - file
+    - media_library
     - path
     - text
 id: node.fee.default
@@ -57,11 +57,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_logo:
-    type: file_generic
+    type: media_library_widget
     weight: 32
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete

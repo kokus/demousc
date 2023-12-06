@@ -12,13 +12,15 @@ dependencies:
     - field.field.node.form.field_form_category
     - field.field.node.form.field_form_number
     - field.field.node.form.field_hide_left_navigation
+    - field.field.node.form.field_metatag
     - field.field.node.form.field_short_title
     - field.field.node.form.field_superseded
     - field.field.node.form.field_tags
     - node.type.form
   module:
     - datetime
-    - file
+    - media_library
+    - metatag
     - paragraphs
     - path
     - text
@@ -74,11 +76,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_document_pdf:
-    type: file_generic
+    type: media_library_widget
     weight: 11
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_form_category:
     type: options_select
@@ -100,6 +102,14 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_short_title:
     type: string_textfield

@@ -10,11 +10,13 @@ dependencies:
     - field.field.node.basic_simple.field_lead_paragraph
     - field.field.node.basic_simple.field_link
     - field.field.node.basic_simple.field_logo
+    - field.field.node.basic_simple.field_metatag
     - field.field.node.basic_simple.field_tags
     - node.type.basic_simple
   module:
-    - file
     - link
+    - media_library
+    - metatag
     - path
     - text
 id: node.basic_simple.default
@@ -39,25 +41,25 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_fc_be_audio:
-    type: file_generic
+    type: media_library_widget
     weight: 11
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_landing_page_image:
-    type: file_generic
+    type: media_library_widget
     weight: 9
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_lead_gallery:
-    type: file_generic
+    type: media_library_widget
     weight: 33
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_lead_paragraph:
     type: text_textarea
@@ -76,11 +78,19 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
   field_logo:
-    type: file_generic
+    type: media_library_widget
     weight: 31
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete
