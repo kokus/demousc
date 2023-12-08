@@ -4,6 +4,11 @@ services:
 
     default: true
 
+    urls:
+      - url: /
+        visualdiff:
+          threshold: 90
+
     # Wait until the mysql service is done building
     depends: mysql
 
