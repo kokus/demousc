@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.criminogenic_extra_downlds.field_criminogenic_extra_downld
     - field.field.paragraph.criminogenic_extra_downlds.field_criminogenic_language
     - paragraphs.paragraphs_type.criminogenic_extra_downlds
   module:
@@ -19,4 +20,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_criminogenic_extra_downld: true

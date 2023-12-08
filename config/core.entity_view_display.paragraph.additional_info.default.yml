@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.additional_info.field_additional_info_type
+    - field.field.paragraph.additional_info.field_document_pdf
     - field.field.paragraph.additional_info.field_file_description
     - paragraphs.paragraphs_type.additional_info
   module:
@@ -28,4 +29,5 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-hidden: {  }
+hidden:
+  field_document_pdf: true

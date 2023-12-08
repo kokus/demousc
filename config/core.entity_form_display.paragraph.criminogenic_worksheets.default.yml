@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.criminogenic_worksheets.field_criminogenic_language
+    - field.field.paragraph.criminogenic_worksheets.field_criminogenic_worksheet
     - paragraphs.paragraphs_type.criminogenic_worksheets
 id: paragraph.criminogenic_worksheets.default
 targetEntityType: paragraph
@@ -18,4 +19,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_criminogenic_worksheet: true
   status: true
