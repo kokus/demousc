@@ -10,6 +10,7 @@ dependencies:
     - ape
     - autologout
     - block
+    - config_pages
     - contextual
     - environment_indicator
     - feeds
@@ -82,5 +83,6 @@ permissions:
   - 'purge akamai cache'
   - 'schedule publishing of nodes'
   - 'use text format full_html'
+  - 'view global_site_settings config page entity'
   - 'view scheduled content'
   - 'view the administration theme'
