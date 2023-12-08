@@ -45,6 +45,10 @@ services:
         - apt-get update
         - apt-get install -yq nodejs
 
+        # Use the tugboat-specific Drupal settings.
+        - rm -rf "${DOCROOT}/sites/default/settings.db.php"
+        - cp "${TUGBOAT_ROOT}/.tugboat/settings.local.php" "${DOCROOT}/sites/default/settings.db.php"
+
       # Commands that import files, databases,  or other assets. When an
       # existing preview is refreshed, the build workflow starts here,
       # skipping the init step, because the results of that step will
@@ -52,10 +56,6 @@ services:
       update:
         # Install/update packages managed by composer, including drush.
         - composer install --optimize-autoloader
-
-        # Use the tugboat-specific Drupal settings.
-        - rm -rf "${DOCROOT}/sites/default/settings.db.php"
-        - cp "${TUGBOAT_ROOT}/.tugboat/settings.local.php" "${DOCROOT}/sites/default/settings.db.php"
 
         # Set file permissions such that Drupal will not complain
         - chgrp -R www-data "${DOCROOT}/sites"
