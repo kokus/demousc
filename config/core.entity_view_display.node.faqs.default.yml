@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.faqs.body
+    - field.field.node.faqs.field_metatag
     - node.type.faqs
   module:
     - text
@@ -30,4 +31,5 @@ content:
     third_party_settings: {  }
     weight: 10
     region: content
-hidden: {  }
+hidden:
+  field_metatag: true

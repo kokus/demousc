@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.data_table.field_data_table_title
     - field.field.node.data_table.field_date_updated
     - field.field.node.data_table.field_document_pdf
+    - field.field.node.data_table.field_metatag
     - field.field.node.data_table.field_publication_table_number
     - field.field.node.data_table.field_publication_type
     - field.field.node.data_table.field_report_name
@@ -21,7 +22,8 @@ dependencies:
     - node.type.data_table
   module:
     - datetime
-    - file
+    - media_library
+    - metatag
     - path
     - text
 id: node.data_table.default
@@ -95,11 +97,19 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_document_pdf:
-    type: file_generic
+    type: media_library_widget
     weight: 18
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 122
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_publication_table_number:
     type: options_select

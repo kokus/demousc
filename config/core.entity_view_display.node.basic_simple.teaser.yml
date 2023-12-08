@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.basic_simple.field_lead_paragraph
     - field.field.node.basic_simple.field_link
     - field.field.node.basic_simple.field_logo
+    - field.field.node.basic_simple.field_metatag
     - field.field.node.basic_simple.field_tags
     - node.type.basic_simple
   module:
@@ -46,4 +47,5 @@ hidden:
   field_lead_paragraph: true
   field_link: true
   field_logo: true
+  field_metatag: true
   field_tags: true

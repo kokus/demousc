@@ -21,7 +21,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <sup> <sub>'
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <sup> <sub> <drupal-entity data-*>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_url:
@@ -37,10 +37,6 @@ filters:
     status: true
     weight: 50
     settings:
-      settings_source: global
-      local_settings:
-        protocol_style: full
-        local_paths: ''
       local_paths: ''
       protocol_style: path
   gutenberg:

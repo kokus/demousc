@@ -12,7 +12,6 @@ dependencies:
     - node.type.fee
   module:
     - datetime
-    - image
     - text
     - user
 id: node.fee.default
@@ -53,13 +52,11 @@ content:
     weight: 1
     region: content
   field_logo:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: logo
-      image_loading:
-        attribute: lazy
+      view_mode: default
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content

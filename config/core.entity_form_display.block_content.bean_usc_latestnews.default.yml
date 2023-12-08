@@ -1,0 +1,29 @@
+uuid: 32f6f632-c5df-4653-bf54-a3323de0df2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bean_usc_latestnews
+    - field.field.block_content.bean_usc_latestnews.title
+id: block_content.bean_usc_latestnews.default
+targetEntityType: block_content
+bundle: bean_usc_latestnews
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

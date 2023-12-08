@@ -1,0 +1,19 @@
+uuid: b9041ead-2f35-469f-a628-b03a7413f4d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bean_usc_notification
+    - field.storage.block_content.title
+id: block_content.bean_usc_notification.title
+field_name: title
+entity_type: block_content
+bundle: bean_usc_notification
+label: Title
+description: 'The Title of the block.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

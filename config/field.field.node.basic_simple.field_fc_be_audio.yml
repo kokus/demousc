@@ -1,12 +1,11 @@
-uuid: b1a5c39a-758b-4da1-891a-d5b1669394be
+uuid: 4bb82192-8c12-4176-9401-841f1d4a47c4
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_fc_be_audio
+    - media.type.audio
     - node.type.basic_simple
-  module:
-    - file
 id: node.basic_simple.field_fc_be_audio
 field_name: field_fc_be_audio
 entity_type: node
@@ -18,10 +17,8 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:file'
-  handler_settings: {  }
-  file_directory: ''
-  file_extensions: mp3
-  max_filesize: ''
-  description_field: false
-field_type: file
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+field_type: entity_reference

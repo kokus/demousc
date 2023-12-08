@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.fed_probation_journal.body
     - field.field.node.fed_probation_journal.field_auther
     - field.field.node.fed_probation_journal.field_document_pdf
+    - field.field.node.fed_probation_journal.field_metatag
     - field.field.node.fed_probation_journal.field_mydate
     - field.field.node.fed_probation_journal.field_tags
     - field.field.node.fed_probation_journal.field_test
@@ -28,6 +29,15 @@ content:
       trim_length: 850
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_document_pdf:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: federal_probation_journal_displa
+      link: false
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_mydate:
     type: datetime_default
@@ -58,7 +68,7 @@ content:
     region: content
 hidden:
   field_auther: true
-  field_document_pdf: true
+  field_metatag: true
   field_tags: true
   field_usc_import_timestamp: true
   field_volume_and_issue_number: true

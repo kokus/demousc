@@ -9,7 +9,7 @@ dependencies:
     - field.field.node.judge.field_tags
     - node.type.judge
   module:
-    - file
+    - media_library
     - paragraphs
     - path
     - text
@@ -35,11 +35,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_landing_page_image:
-    type: file_generic
+    type: media_library_widget
     weight: 11
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_milestone_activities:
     type: entity_reference_paragraphs

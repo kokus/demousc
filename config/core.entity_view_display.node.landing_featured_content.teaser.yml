@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.landing_featured_content.field_landing_page_type
     - field.field.node.landing_featured_content.field_lead_paragraph
     - field.field.node.landing_featured_content.field_logo
+    - field.field.node.landing_featured_content.field_metatag
     - field.field.node.landing_featured_content.field_referenced_nodes
     - node.type.landing_featured_content
   module:
@@ -46,4 +47,5 @@ hidden:
   field_landing_page_type: true
   field_lead_paragraph: true
   field_logo: true
+  field_metatag: true
   field_referenced_nodes: true

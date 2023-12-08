@@ -1,0 +1,19 @@
+uuid: bb9df87e-311b-46f2-b747-a8f219831bec
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bean_usc_courtlocator
+    - field.storage.block_content.title
+id: block_content.bean_usc_courtlocator.title
+field_name: title
+entity_type: block_content
+bundle: bean_usc_courtlocator
+label: Title
+description: 'The Title of the block.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

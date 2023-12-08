@@ -1,0 +1,29 @@
+uuid: 41503b24-51c8-4ca7-9120-f5ce8632ab15
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bean_usc_highcharts
+    - field.field.block_content.bean_usc_highcharts.title
+id: block_content.bean_usc_highcharts.default
+targetEntityType: block_content
+bundle: bean_usc_highcharts
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
