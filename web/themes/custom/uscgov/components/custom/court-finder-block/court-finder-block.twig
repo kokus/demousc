@@ -1,0 +1,34 @@
+<div class="court-finder-block">
+  <h2 class="court-finder-block__title">Find a Federal Court</h2>
+  <p class="court-finder-block__description">Find a federal court by location or court name.</p>
+  <fieldset class="court-finder-block__toggle">
+    <div class="court-finder-block__toggle-wrapper">
+      {% set location_id = 'court-location-radio' %}
+      <input id="{{ location_id }}" name="find-type" class="visually-hidden" type="radio" checked>
+      <label for="{{ location_id }}" class="court-finder-block__toggle-label">{{ 'Location'|t }}</label>
+    </div>
+     <div class="court-finder-block__toggle-wrapper">
+      {% set court_name_id = 'court-name-radio' %}
+      <input id="{{ court_name_id }}" name="find-type" class="visually-hidden" type="radio">
+      <label for="{{ court_name_id }}" class="court-finder-block__toggle-label">{{ 'Court name'|t }}</label>
+    </div>
+  </fieldset>
+  <form action="" class="court-finder-block__form court-finder-block__form--location">
+    <div class="court-finder-block__form-item-wrapper">
+      <input class="court-finder-block__input" type="text">
+      <button class="court-finder-block__form-submit">
+        <span class="visually-hidden">{{ 'Submit'|t }}</span>
+      </button>
+    </div>
+    <label for="" class="court-finder-block__form-label">{{ 'Search by address, city, state, or zip'|t }}</label>
+  </form>
+  <form action="" class="court-finder-block__form court-finder-block__form--name">
+    <div class="court-finder-block__form-item-wrapper">
+      <input class="court-finder-block__input" type="text">
+      <button class="court-finder-block__form-submit">
+        <span class="visually-hidden">{{ 'Submit'|t }}</span>
+      </button>
+    </div>
+    <label for="" class="court-finder-block__form-label">{{ 'Search by court, circuit, district, or building'|t }}</label>
+  </form>
+</div>

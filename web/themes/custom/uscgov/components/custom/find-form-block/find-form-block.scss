@@ -1,0 +1,45 @@
+.find-form-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px;
+  border-radius: 30px;
+  border: 1px solid #8C91A0;
+  background: #F8F9FF;
+  color: #525661;
+}
+
+.find-form-block__title {
+  margin: 0;
+}
+
+.find-form-block__description {
+  margin: 0;
+}
+
+.find-form-block__cta-wrapper a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 16px;
+  border-radius: 30px;
+  background-color: #0057A3;
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+  }
+
+  &:after {
+    display: block;
+    width: 18px;
+    height: 18px;
+    content: "";
+    background: currentColor;
+    mask-image: url('images/arrow.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+  }
+}

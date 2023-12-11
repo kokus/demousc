@@ -4,6 +4,11 @@
   padding-inline: 26px;
 }
 
+.container--small {
+  max-width: 955px;
+  margin-inline: auto;
+}
+
 .spacing:where(:not(:last-child)) {
   margin-bottom: var(--spacing-component);
 }
