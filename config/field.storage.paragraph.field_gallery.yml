@@ -1,23 +1,17 @@
-uuid: 04b7608d-95ee-489b-8d5f-93de4f576526
+uuid: 77881f89-9370-4530-b545-2b8ea20e7ddb
 langcode: und
 status: true
 dependencies:
   module:
-    - file
-    - image
+    - media
     - paragraphs
 id: paragraph.field_gallery
 field_name: field_gallery
 entity_type: paragraph
-type: image
+type: entity_reference
 settings:
-  target_type: file
-  display_field: false
-  display_default: false
-  uri_scheme: public
-  default_image:
-    uuid: ''
-module: image
+  target_type: media
+module: core
 locked: false
 cardinality: -1
 translatable: true

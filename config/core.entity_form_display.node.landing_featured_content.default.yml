@@ -10,10 +10,12 @@ dependencies:
     - field.field.node.landing_featured_content.field_landing_page_type
     - field.field.node.landing_featured_content.field_lead_paragraph
     - field.field.node.landing_featured_content.field_logo
+    - field.field.node.landing_featured_content.field_metatag
     - field.field.node.landing_featured_content.field_referenced_nodes
     - node.type.landing_featured_content
   module:
-    - file
+    - media_library
+    - metatag
     - paragraphs
     - path
     - text
@@ -39,11 +41,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_banner_image:
-    type: file_generic
+    type: media_library_widget
     weight: 10
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_hide_left_navigation:
     type: boolean_checkbox
@@ -53,11 +55,11 @@ content:
       display_label: true
     third_party_settings: {  }
   field_landing_page_image:
-    type: file_generic
+    type: media_library_widget
     weight: 32
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_landing_page_type:
     type: options_select
@@ -74,11 +76,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_logo:
-    type: file_generic
+    type: media_library_widget
     weight: 34
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_referenced_nodes:
     type: entity_reference_paragraphs

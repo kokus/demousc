@@ -11,10 +11,12 @@ dependencies:
     - field.field.node.educational_activity.field_lead_gallery
     - field.field.node.educational_activity.field_lead_paragraph
     - field.field.node.educational_activity.field_logo
+    - field.field.node.educational_activity.field_metatag
     - field.field.node.educational_activity.field_tags
     - node.type.educational_activity
   module:
-    - file
+    - media_library
+    - metatag
     - paragraphs
     - path
     - text
@@ -58,25 +60,25 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
   field_fc_be_audio:
-    type: file_generic
+    type: media_library_widget
     weight: 58
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_landing_page_image:
-    type: file_generic
+    type: media_library_widget
     weight: 67
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_lead_gallery:
-    type: file_generic
+    type: media_library_widget
     weight: 64
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_lead_paragraph:
     type: text_textarea
@@ -87,11 +89,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_logo:
-    type: file_generic
+    type: media_library_widget
     weight: 62
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete

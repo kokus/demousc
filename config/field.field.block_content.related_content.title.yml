@@ -1,0 +1,19 @@
+uuid: 40dfc4a3-916a-4220-b185-7968475f0b21
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.related_content
+    - field.storage.block_content.title
+id: block_content.related_content.title
+field_name: title
+entity_type: block_content
+bundle: related_content
+label: Title
+description: 'The Title of the block.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

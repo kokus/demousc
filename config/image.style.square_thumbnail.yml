@@ -5,8 +5,8 @@ dependencies: {  }
 name: square_thumbnail
 label: square_thumbnail
 effects:
-  ee9b52a7-3ad5-425c-9f0d-b2708c170ca3:
-    uuid: ee9b52a7-3ad5-425c-9f0d-b2708c170ca3
+  f0952124-0525-4a0e-bbcd-108229a008cf:
+    uuid: f0952124-0525-4a0e-bbcd-108229a008cf
     id: image_scale_and_crop
     weight: 0
     data:

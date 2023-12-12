@@ -145,6 +145,9 @@
             },
             "drupal/core" : {
                 "Array filter issue" : "https://www.drupal.org/files/issues/2020-06-09/d7_field_instance-sort-3080034-6.patch"
+            },
+            "drupal/entity_legal" : {
+                "3377137 - missing source" : "patches/entitylegal-3377137.patch"
             }
         },
         "drupal-lenient": {

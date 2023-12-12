@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.criminogenic_worksheets.field_criminogenic_language
-    - field.field.paragraph.criminogenic_worksheets.field_criminogenic_worksheet
     - paragraphs.paragraphs_type.criminogenic_worksheets
   module:
     - options
@@ -20,5 +19,4 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden:
-  field_criminogenic_worksheet: true
+hidden: {  }

@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.faqs.body
+    - field.field.node.faqs.field_metatag
     - node.type.faqs
   module:
+    - metatag
     - path
     - text
 id: node.faqs.default
@@ -28,6 +30,14 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   path:
     type: path

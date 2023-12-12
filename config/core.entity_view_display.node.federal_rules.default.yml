@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.federal_rules.body
     - field.field.node.federal_rules.field_date_updated
     - field.field.node.federal_rules.field_document_pdf
+    - field.field.node.federal_rules.field_metatag
     - field.field.node.federal_rules.field_rules_rule_or_form
     - field.field.node.federal_rules.field_rules_status
     - field.field.node.federal_rules.field_tags
@@ -39,6 +40,15 @@ content:
       format_type: month_d_yyyy
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_document_pdf:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
     region: content
   field_rules_rule_or_form:
     type: string
@@ -90,6 +100,6 @@ content:
     weight: 10
     region: content
 hidden:
-  field_document_pdf: true
+  field_metatag: true
   field_tags: true
   field_usc_import_timestamp: true

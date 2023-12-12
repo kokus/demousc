@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.camera.field_date_updated
     - field.field.node.camera.field_lead_paragraph
     - field.field.node.camera.field_logo
+    - field.field.node.camera.field_metatag
     - field.field.node.camera.field_piksel_category_id
     - field.field.node.camera.field_piksel_programs
     - field.field.node.camera.field_piksel_project_uuid
@@ -18,7 +19,6 @@ dependencies:
   module:
     - datetime
     - entity_reference_revisions
-    - image
     - text
     - user
 id: node.camera.default
@@ -58,13 +58,11 @@ content:
     weight: 1
     region: content
   field_logo:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: logo
-      image_loading:
-        attribute: lazy
+      view_mode: default
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
@@ -88,6 +86,7 @@ content:
     weight: 10
     region: content
 hidden:
+  field_metatag: true
   field_piksel_category_id: true
   field_piksel_project_uuid: true
   field_procedural_posture: true

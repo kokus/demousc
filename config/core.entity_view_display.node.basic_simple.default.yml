@@ -10,10 +10,10 @@ dependencies:
     - field.field.node.basic_simple.field_lead_paragraph
     - field.field.node.basic_simple.field_link
     - field.field.node.basic_simple.field_logo
+    - field.field.node.basic_simple.field_metatag
     - field.field.node.basic_simple.field_tags
     - node.type.basic_simple
   module:
-    - image
     - text
     - user
 id: node.basic_simple.default
@@ -28,6 +28,24 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
+  field_fc_be_audio:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_lead_gallery:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_lead_paragraph:
     type: text_default
     label: hidden
@@ -36,13 +54,11 @@ content:
     weight: 1
     region: content
   field_logo:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: logo
-      image_loading:
-        attribute: lazy
+      view_mode: default
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
@@ -57,8 +73,7 @@ content:
     weight: 10
     region: content
 hidden:
-  field_fc_be_audio: true
   field_landing_page_image: true
-  field_lead_gallery: true
   field_link: true
+  field_metatag: true
   field_tags: true

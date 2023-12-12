@@ -1,0 +1,29 @@
+uuid: 39ff6f63-eaa9-42da-b6c9-3dbdf1b2d141
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bean_usc_map
+    - field.field.block_content.bean_usc_map.title
+id: block_content.bean_usc_map.default
+targetEntityType: block_content
+bundle: bean_usc_map
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

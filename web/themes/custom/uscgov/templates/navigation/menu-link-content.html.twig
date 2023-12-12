@@ -17,7 +17,7 @@
 {{ menu.build_menu_link_content(attributes, menu_link_content, show_item_link, content, elements) }}
 
 {% macro build_menu_link_content(attributes, menu_link_content, show_item_link, content, elements) %}
-  {# {% set megamenu_enabled = menu_link_content.field_enable_megamenu.value %} #}
+  {% set megamenu_enabled = menu_link_content.field_enable_megamenu.value %}
 
   {% set menu_level = elements['#menu_level'] %}
   {% if menu_level == 0 and content.children %}
@@ -46,12 +46,12 @@
 
         {{ link(title, menu_link_content.link.uri, { class: ['primary-menu__dropdown-title-link'] }) }}
       </h3>
-      {% if content.field_description_text.0 %}
+      {% if megamenu_enabled and content.field_description_text.0 %}
         <p class="primary-menu__mega-description-text">
           {{ content.field_description_text|add_suggestion('bare') }}
         </p>
       {% endif %}
-      {% if content.field_popular_links.0 %}
+      {% if megamenu_enabled and  content.field_popular_links.0 %}
         <div class="primary-menu__mega-quick-links">
           <h4 class="primary-menu__mega-popular-links-title">
             {{ 'Popular'|t }}

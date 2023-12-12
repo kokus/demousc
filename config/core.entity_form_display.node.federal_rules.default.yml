@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.federal_rules.body
     - field.field.node.federal_rules.field_date_updated
     - field.field.node.federal_rules.field_document_pdf
+    - field.field.node.federal_rules.field_metatag
     - field.field.node.federal_rules.field_rules_rule_or_form
     - field.field.node.federal_rules.field_rules_status
     - field.field.node.federal_rules.field_tags
@@ -16,7 +17,8 @@ dependencies:
     - node.type.federal_rules
   module:
     - datetime
-    - file
+    - media_library
+    - metatag
     - path
     - text
 id: node.federal_rules.default
@@ -47,11 +49,19 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_document_pdf:
-    type: file_generic
+    type: media_library_widget
     weight: 11
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_rules_rule_or_form:
     type: string_textfield

@@ -1,20 +1,17 @@
-uuid: 9be50051-7c9d-4359-a6df-8ace0e971fad
+uuid: c920f2ab-51c4-4897-b443-15384c13ef53
 langcode: und
 status: true
 dependencies:
   module:
-    - file
+    - media
     - paragraphs
 id: paragraph.field_criminogenic_extra_downld
 field_name: field_criminogenic_extra_downld
 entity_type: paragraph
-type: file
+type: entity_reference
 settings:
-  target_type: file
-  display_field: false
-  display_default: false
-  uri_scheme: public
-module: file
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true

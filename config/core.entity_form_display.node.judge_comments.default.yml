@@ -12,7 +12,7 @@ dependencies:
     - node.type.judge_comments
   module:
     - datetime
-    - file
+    - media_library
     - path
     - text
 id: node.judge_comments.default
@@ -49,11 +49,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_document_pdf:
-    type: file_generic
+    type: media_library_widget
     weight: 20
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_rules_rule_or_form:
     type: string_textfield

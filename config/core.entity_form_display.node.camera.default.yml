@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.camera.field_date_updated
     - field.field.node.camera.field_lead_paragraph
     - field.field.node.camera.field_logo
+    - field.field.node.camera.field_metatag
     - field.field.node.camera.field_piksel_category_id
     - field.field.node.camera.field_piksel_programs
     - field.field.node.camera.field_piksel_project_uuid
@@ -17,7 +18,8 @@ dependencies:
     - node.type.camera
   module:
     - datetime
-    - file
+    - media_library
+    - metatag
     - paragraphs
     - path
     - text
@@ -63,11 +65,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_logo:
-    type: file_generic
+    type: media_library_widget
     weight: 59
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_piksel_category_id:
     type: string_textfield

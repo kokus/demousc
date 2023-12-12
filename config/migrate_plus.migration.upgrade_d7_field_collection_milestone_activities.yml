@@ -48,6 +48,12 @@ process:
     -
       plugin: get
       source: field_fc_be_body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: ckeditor_link_file_to_linkit
+    -
+      plugin: img_tag_to_embed
   field_fc_jma_date:
     -
       plugin: sub_process
@@ -78,5 +84,14 @@ destination:
 migration_dependencies:
   required:
     - upgrade_d7_field_collection_type
+    - upgrade_d7_file_entity_image_public
+    - upgrade_d7_file_entity_banner_image_public
+    - upgrade_d7_file_entity_audio_public
+    - upgrade_d7_file_entity_video_youtube
+    - upgrade_d7_file_entity_document_public
+    - upgrade_d7_file_entity_file_public
+    - upgrade_d7_file_entity_image_https
+    - upgrade_d7_file_entity_document_http
+    - upgrade_d7_file_entity_image_http
   optional:
     - upgrade_d7_field_instance

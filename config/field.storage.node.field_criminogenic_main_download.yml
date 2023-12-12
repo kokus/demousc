@@ -1,20 +1,17 @@
-uuid: fded4c97-a64c-4a35-b05b-54fa08d3137e
+uuid: 0b113f56-9c48-4f2b-83f9-5353f39e841e
 langcode: und
 status: true
 dependencies:
   module:
-    - file
+    - media
     - node
 id: node.field_criminogenic_main_download
 field_name: field_criminogenic_main_download
 entity_type: node
-type: file
+type: entity_reference
 settings:
-  target_type: file
-  display_field: false
-  display_default: false
-  uri_scheme: public
-module: file
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true

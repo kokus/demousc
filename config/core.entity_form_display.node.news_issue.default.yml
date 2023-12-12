@@ -10,7 +10,7 @@ dependencies:
     - field.field.node.news_issue.field_logo
     - node.type.news_issue
   module:
-    - file
+    - media_library
     - path
     - text
 id: node.news_issue.default
@@ -35,18 +35,18 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_banner_image:
-    type: file_generic
+    type: media_library_widget
     weight: 6
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_landing_page_image:
-    type: file_generic
+    type: media_library_widget
     weight: 12
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_lead_paragraph:
     type: text_textarea
@@ -57,11 +57,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_logo:
-    type: file_generic
+    type: media_library_widget
     weight: 32
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   path:
     type: path

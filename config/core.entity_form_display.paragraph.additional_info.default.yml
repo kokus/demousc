@@ -4,11 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.additional_info.field_additional_info_type
-    - field.field.paragraph.additional_info.field_document_pdf
     - field.field.paragraph.additional_info.field_file_description
     - paragraphs.paragraphs_type.additional_info
   module:
-    - file
     - text
 id: paragraph.additional_info.default
 targetEntityType: paragraph
@@ -20,13 +18,6 @@ content:
     weight: 3
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_document_pdf:
-    type: file_generic
-    weight: 5
-    region: content
-    settings:
-      progress_indicator: throbber
     third_party_settings: {  }
   field_file_description:
     type: text_textarea

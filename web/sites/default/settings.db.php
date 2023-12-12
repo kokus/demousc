@@ -26,3 +26,5 @@ $databases['migration']['default'] = [
   'driver' => 'mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 ];
+
+$databases['migrate']['default'] = $databases['migration']['default'];
