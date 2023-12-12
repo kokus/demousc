@@ -1,3 +1,7 @@
+@forward "../../sass/uswds/settings";
+@use "uswds-core" as *;
+$hero_break: 'min-width: 700px';
+
 .homepage-hero {
   position: relative;
   color: white;
@@ -8,7 +12,19 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 750px;
+
+  @media (min-width: 400px) {
+    height: 600px;
+  }
+
+  @media (min-width: 550px) {
+    height: 500px;
+  }
+
+  @media ($hero_break) {
+    height: 100%;
+  }
 
   img {
     position: absolute;
@@ -33,10 +49,18 @@
 .homepage-hero__container {
   position: relative; // Establish stacking context;
   display: grid;
-  grid-template-columns: 4fr 3fr;
-  column-gap: 100px;
+  grid-template-columns: 1fr;
   row-gap: 24px;
   padding-block: 48px;
+
+  @media ($hero_break) {
+    grid-template-columns: 4fr 3fr;
+    column-gap: 50px;
+  }
+
+  @media (min-width: 900px) {
+    column-gap: 100px;
+  }
 }
 
 .homepage-hero__first {
@@ -67,9 +91,13 @@
     gap: 5px;
     padding: 10px 16px;
     border-radius: 30px;
-    background-color: #EFD388;
-    color: #080A0D;
+    background-color: color('secondary-light');
+    color: color('base-darker');
     text-decoration: none;
+
+    &:hover {
+      color: color('base-darker');
+    }
 
     &:before {
       display: block;

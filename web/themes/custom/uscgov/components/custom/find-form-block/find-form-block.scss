@@ -1,16 +1,21 @@
+@forward "../../sass/uswds/settings";
+@use "uswds-core" as *;
+
 .find-form-block {
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding: 40px;
   border-radius: 30px;
-  border: 1px solid #8C91A0;
+  border: 1px solid color('base');
   background: #F8F9FF;
-  color: #525661;
+  color: color('base-dark');
 }
 
 .find-form-block__title {
+  @include u-font-family('sans');
   margin: 0;
+  color: color('base-darker');
 }
 
 .find-form-block__description {
@@ -23,7 +28,7 @@
   gap: 5px;
   padding: 10px 16px;
   border-radius: 30px;
-  background-color: #0057A3;
+  background-color: color('primary');
   color: white;
   text-decoration: none;
 

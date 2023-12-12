@@ -1,12 +1,15 @@
+@forward "../../sass/uswds/settings";
+@use "uswds-core" as *;
+
 .court-finder-block {
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding: 40px;
   border-radius: 30px;
-  border: 1px solid #8C91A0;
+  border: 1px solid color('base');
   background: #F8F9FF;
-  color: #525661;
+  color: color('base-dark');
 }
 
 .court-finder-block__toggle {
@@ -16,20 +19,18 @@
   padding: 0;
   border: 0;
   border-radius: 30px;
-  border: 1px solid #8C91A0;
-  background: #E4E4E4;
+  border: 1px solid color('base');
+  background: color('base-lighter');
 }
 
 .court-finder-block__title {
+  @include u-font-family('sans');
   margin: 0;
+  color: color('base-darker');
 }
 
 .court-finder-block__description {
   margin: 0;
-}
-
-.court-finder-block__toggle-wrapper {
-
 }
 
 .court-finder-block__toggle-label {
@@ -39,11 +40,12 @@
   border-radius: 30px;
   padding: 5px 15px;
   font-size: 14px;
-  color: #525661;
+  color: color('base-dark');
+  white-space: nowrap;
   cursor: pointer;
 
   input:checked + & {
-    background: #0057A3;
+    background: color('primary');
     color: white;
 
     &:after {
@@ -64,7 +66,6 @@
   }
 }
 
-
 .court-finder-block__location-form-label {
   font-size: 13px;
 }
@@ -78,7 +79,7 @@
   height: 40px;
   background: white;
   border-radius: 30px;
-  border: 1px solid #8C91A0;
+  border: 1px solid color('base');
 
   &:has(input:focus) {
     outline: .25rem solid #2491ff;
@@ -101,6 +102,7 @@
 .court-finder-block__input {
   flex-shrink: 1;
   width: 100%;
+  padding-inline: 10px;
   border: 0;
   appearance: none;
   background: transparent;
@@ -120,7 +122,8 @@
   border: 0;
   border-radius: 50%;
   background: transparent;
-  color: #525661;
+  color: color('base-dark');
+  cursor: pointer;
 
   &:after {
     display: block;
@@ -133,10 +136,9 @@
     mask-repeat: no-repeat;
     mask-position: center;
   }
-
 }
 
 .court-finder-block__form-label {
   font-size: 13px;
-  color: #525661;
+  color: color('base-dark');
 }
