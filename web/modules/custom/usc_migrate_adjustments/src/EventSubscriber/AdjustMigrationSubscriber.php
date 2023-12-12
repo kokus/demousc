@@ -2,9 +2,6 @@
 
 namespace Drupal\usc_migrate_adjustments\EventSubscriber;
 
-use Drupal\Core\Config\ConfigFactoryInterface;
-use Drupal\migrate\MigrateLookupInterface;
-use Drupal\migrate\Plugin\MigrationPluginManagerInterface;
 use Drupal\migrate_plus\Event\MigrateEvents as MigratePlusEvents;
 use Drupal\migrate_plus\Event\MigratePrepareRowEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -13,30 +10,6 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
  * Adjust migrations event subscriber.
  */
 class AdjustMigrationSubscriber implements EventSubscriberInterface {
-
-  /**
-   * The module config.
-   *
-   * @var array
-   */
-  protected $adjustMigrationSettings = [];
-
-  /**
-   * Constructs a new AdjustMigrationSubscriber instance.
-   *
-   * @param \Drupal\migrate\Plugin\MigrationPluginManagerInterface $migration_plugin_manager
-   *   The migration plugin manager.
-   * @param \Drupal\migrate\MigrateLookupInterface $migrate_lookup
-   *   The migrate lookup service.
-   * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
-   *   The entity type manager service.
-   */
-  public function __construct(
-    private MigrationPluginManagerInterface $migration_plugin_manager,
-    private MigrateLookupInterface $migrate_lookup,
-    ConfigFactoryInterface $configFactory) {
-    $this->adjustMigrationSettings = $configFactory->get('usc_migrate_adjustment.settings');
-  }
 
   /**
    * Migrate prepare row event handler.
