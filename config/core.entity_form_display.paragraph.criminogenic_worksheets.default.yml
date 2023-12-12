@@ -6,6 +6,8 @@ dependencies:
     - field.field.paragraph.criminogenic_worksheets.field_criminogenic_language
     - field.field.paragraph.criminogenic_worksheets.field_criminogenic_worksheet
     - paragraphs.paragraphs_type.criminogenic_worksheets
+  module:
+    - media_library
 id: paragraph.criminogenic_worksheets.default
 targetEntityType: paragraph
 bundle: criminogenic_worksheets
@@ -13,11 +15,17 @@ mode: default
 content:
   field_criminogenic_language:
     type: options_select
-    weight: 2
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_criminogenic_worksheet:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
 hidden:
   created: true
-  field_criminogenic_worksheet: true
   status: true

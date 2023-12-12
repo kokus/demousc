@@ -1,0 +1,57 @@
+uuid: e6480fbe-d57d-427a-8c96-e4ddcf1d7e6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.node.field_sidebar
+    - node.type.judge_comments
+id: node.judge_comments.field_sidebar
+field_name: field_sidebar
+entity_type: node
+bundle: judge_comments
+label: Sidebar
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      - basic
+      - basic_simple
+      - camera
+      - court
+      - criminogenic
+      - data_table
+      - educational_activity
+      - faq
+      - faqs
+      - federal_rules
+      - fed_probation_journal
+      - fee
+      - form
+      - front_promo_box
+      - judge
+      - judge_comments
+      - landing_featured_content
+      - landing_view
+      - news
+      - news_issue
+      - report
+      - usc_alert
+      - user_alert
+      - webform
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+    view:
+      args: {  }
+      display_name: er_rcs_sidebar
+      view_name: referenced_block_selection
+field_type: entity_reference
