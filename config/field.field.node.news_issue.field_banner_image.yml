@@ -4,9 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_banner_image
-    - media.type.image
-    - media.type.image_http
-    - media.type.image_https
+    - media.type.banner_image
     - node.type.news_issue
 id: node.news_issue.field_banner_image
 field_name: field_banner_image
@@ -22,7 +20,10 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      image: image
-      image_https: image_https
-      image_http: image_http
+      banner_image: banner_image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: banner_image
 field_type: entity_reference
