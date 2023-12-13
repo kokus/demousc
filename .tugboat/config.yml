@@ -63,6 +63,9 @@ services:
         - find "${DOCROOT}/sites" -type f -exec chmod 0664 {} \;
 
       build:
+        # Use the tugboat-specific Drupal settings.
+        - rm -rf "${DOCROOT}/sites/default/settings.db.php"
+        - cp "${TUGBOAT_ROOT}/.tugboat/settings.local.php" "${DOCROOT}/sites/default/settings.db.php"
         - vendor/bin/drush deploy -vvv
         # Compile theme.
         - cd web/themes/custom/uscgov/ && npm install && npx gulp init
