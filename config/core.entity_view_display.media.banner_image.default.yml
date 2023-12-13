@@ -5,18 +5,23 @@ dependencies:
   config:
     - field.field.media.banner_image.field_media_banner_image
     - media.type.banner_image
+    - image.style.large
+    - media.type.image
   module:
-    - file
+    - image
 id: media.banner_image.default
 targetEntityType: media
 bundle: banner_image
 mode: default
 content:
   field_media_banner_image:
-    type: file_default
+    type: image
     label: visually_hidden
     settings:
-      use_description_as_link_text: true
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content

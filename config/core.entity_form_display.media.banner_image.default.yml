@@ -5,8 +5,10 @@ dependencies:
   config:
     - field.field.media.banner_image.field_media_banner_image
     - media.type.banner_image
+    - image.style.thumbnail
+    - media.type.image
   module:
-    - file
+    - image
     - path
 id: media.banner_image.default
 targetEntityType: media
@@ -20,11 +22,12 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_media_banner_image:
-    type: file_generic
+    type: image_image
     weight: 0
     region: content
     settings:
       progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   name:
     type: string_textfield
