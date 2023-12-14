@@ -11,7 +11,7 @@ _core:
   default_config_hash: iFvfKZXNYG-BpoPlJpBs6KLWM9FqhHbEvbBAntWemjA
 name: 'Gutenberg Blocks text format'
 format: gutenberg
-weight: 0
+weight: -5
 filters:
   gutenberg:
     id: gutenberg

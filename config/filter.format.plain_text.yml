@@ -30,6 +30,13 @@ filters:
     status: true
     weight: 2
     settings: {  }
+  gutenberg:
+    id: gutenberg
+    provider: gutenberg
+    status: false
+    weight: 0
+    settings:
+      processor_settings: {  }
   filter_pathologic:
     id: filter_pathologic
     provider: pathologic
@@ -38,10 +45,3 @@ filters:
     settings:
       local_paths: ''
       protocol_style: full
-  gutenberg:
-    id: gutenberg
-    provider: gutenberg
-    status: false
-    weight: 0
-    settings:
-      processor_settings: {  }

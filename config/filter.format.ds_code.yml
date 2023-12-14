@@ -6,7 +6,7 @@ dependencies:
     - gutenberg
 name: 'Display Suite code'
 format: ds_code
-weight: 12
+weight: -2
 filters:
   filter_null:
     id: filter_null

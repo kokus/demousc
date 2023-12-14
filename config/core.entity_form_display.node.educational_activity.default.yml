@@ -12,9 +12,11 @@ dependencies:
     - field.field.node.educational_activity.field_lead_paragraph
     - field.field.node.educational_activity.field_logo
     - field.field.node.educational_activity.field_metatag
+    - field.field.node.educational_activity.field_sidebar
     - field.field.node.educational_activity.field_tags
     - node.type.educational_activity
   module:
+    - inline_entity_form
     - media_library
     - metatag
     - paragraphs
@@ -27,7 +29,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 4
+    weight: 7
     region: content
     settings:
       rows: 9
@@ -37,19 +39,19 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   field_activity_category:
     type: options_select
-    weight: 2
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   field_body_enhanced:
     type: entity_reference_paragraphs
-    weight: 67
+    weight: 8
     region: content
     settings:
       title: Paragraph
@@ -61,28 +63,28 @@ content:
     third_party_settings: {  }
   field_fc_be_audio:
     type: media_library_widget
-    weight: 58
+    weight: 6
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_landing_page_image:
     type: media_library_widget
-    weight: 67
+    weight: 10
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_lead_gallery:
     type: media_library_widget
-    weight: 64
+    weight: 5
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_lead_paragraph:
     type: text_textarea
-    weight: 63
+    weight: 4
     region: content
     settings:
       rows: 5
@@ -90,22 +92,48 @@ content:
     third_party_settings: {  }
   field_logo:
     type: media_library_widget
-    weight: 62
+    weight: 3
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_metatag:
     type: metatag_firehose
-    weight: 121
+    weight: 19
     region: content
     settings:
       sidebar: true
       use_details: true
     third_party_settings: {  }
+  field_sidebar:
+    type: inline_entity_form_complex
+    weight: 9
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      auto_open: true
+      allow_new: true
+      allow_existing: false
+      allow_edit: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      hide_fieldset: false
+      hide_title: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+      config_labels_button: _none
+      labels: {  }
+      add_existing_widget: autocomplete
+      auto_open_edit_form: false
+    third_party_settings: {  }
   field_tags:
-    type: entity_reference_autocomplete
-    weight: 3
+    type: entity_reference_autocomplete_tags
+    weight: 2
     region: content
     settings:
       match_operator: CONTAINS
@@ -115,39 +143,39 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 15
+    weight: 13
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   scheduler_settings:
-    weight: 50
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 120
+    weight: 18
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 16
+    weight: 14
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -155,7 +183,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 11
     region: content
     settings:
       match_operator: CONTAINS
@@ -164,7 +192,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
