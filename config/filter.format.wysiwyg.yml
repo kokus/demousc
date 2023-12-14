@@ -7,7 +7,7 @@ dependencies:
     - pathologic
 name: 'WYSIWYG (default)'
 format: wysiwyg
-weight: -10
+weight: -9
 filters:
   filter_null:
     id: filter_null
@@ -21,6 +21,10 @@ filters:
     status: true
     weight: -48
     settings:
+      settings_source: global
+      local_settings:
+        protocol_style: full
+        local_paths: ''
       local_paths: ''
       protocol_style: path
       local_paths_exploded:

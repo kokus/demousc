@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: bean_usc_govdelivery
-label: bean_usc_govdelivery
+label: 'GovDelivery Form'
 revision: 1
-description: null
+description: ''

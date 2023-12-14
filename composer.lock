@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d193aaa25cc7fa977b0e776337a6b308",
+    "content-hash": "63e440a2f863bd6cc8d744938b00161f",
     "packages": [
         {
             "name": "akamai-open/edgegrid-auth",
@@ -3610,10 +3610,6 @@
                 {
                     "name": "oknate",
                     "homepage": "https://www.drupal.org/user/471638"
-                },
-                {
-                    "name": "podarok",
-                    "homepage": "https://www.drupal.org/user/116002"
                 },
                 {
                     "name": "ram4nd",

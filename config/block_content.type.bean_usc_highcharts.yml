@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: bean_usc_highcharts
-label: bean_usc_highcharts
+label: 'High Charts'
 revision: 1
-description: null
+description: ''
