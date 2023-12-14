@@ -3,6 +3,8 @@
 namespace Drupal\piksel\Plugin\media\PikselProvider;
 
 use Drupal\Component\Serialization\Json;
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Config\ImmutableConfig;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Plugin\PluginBase;
 use Drupal\Core\Site\Settings;
@@ -30,6 +32,13 @@ class Program extends PluginBase implements PikselProviderInterface, ContainerFa
   protected $httpClient;
 
   /**
+   * The config object.
+   *
+   * @var \Drupal\Core\Config\ImmutableConfig
+   */
+  protected $config;
+
+  /**
    * Constructs a new OEmbed instance.
    *
    * @param array $configuration
@@ -40,10 +49,13 @@ class Program extends PluginBase implements PikselProviderInterface, ContainerFa
    *   The plugin implementation definition.
    * @param \GuzzleHttp\Client $http_client
    *   The HTTP client.
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $config
+   *   The config factory.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, Client $http_client) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, Client $http_client, ConfigFactoryInterface $config) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->httpClient = $http_client;
+    $this->config = $config->get('piksel.settings');
   }
 
   /**
@@ -56,7 +68,8 @@ class Program extends PluginBase implements PikselProviderInterface, ContainerFa
       $configuration,
       $plugin_id,
       $plugin_definition,
-      $container->get('http_client')
+      $container->get('http_client'),
+      $container->get('config.factory'),
     );
   }
 
@@ -66,11 +79,14 @@ class Program extends PluginBase implements PikselProviderInterface, ContainerFa
    * Search for projects.
    *
    * @throws \Exception
-   * @throws GuzzleException
+   * @throws \GuzzleHttp\Exception\GuzzleException
    */
   public function searchProjects(): array {
-    $response = $this->httpClient->get('https://player.piksel.tech/ws/ws_vod_project/api/bd1863e1-a59e-11e3-bfa8-005056865f49/mode/json/apiv/5');
-
+    $token = $this->config->get('token');
+    $endpoint = $this->config->get('piksel_endpoint');
+    $endpoint = str_replace('[token]', $token, $endpoint);
+    $endpoint = str_replace('[ws]', 'ws_vod_project', $endpoint);
+    $response = $this->httpClient->get($endpoint);
     $data = Json::decode($response->getBody()->getContents());
     return $data['response']['WsVodProjectResponse']['projects'];
   }
@@ -81,11 +97,14 @@ class Program extends PluginBase implements PikselProviderInterface, ContainerFa
    * Search for programs.
    *
    * @throws \Exception
-   * @throws GuzzleException
+   * @throws \GuzzleHttp\Exception\GuzzleException
    */
   public function searchPrograms(String $projectId): array {
-    $response = $this->httpClient->get('https://player.piksel.tech/ws/ws_program/api/bd1863e1-a59e-11e3-bfa8-005056865f49/mode/json/apiv/5?p=' . $projectId);
-
+    $token = $this->config->get('token');
+    $endpoint = $this->config->get('piksel_endpoint');
+    $endpoint = str_replace('[token]', $token, $endpoint);
+    $endpoint = str_replace('[ws]', 'ws_program', $endpoint);
+    $response = $this->httpClient->get($endpoint . '?p=' . $projectId);
     $data = Json::decode($response->getBody()->getContents());
     return $data['response']['WsProgramResponse']['programs'];
   }
@@ -94,11 +113,14 @@ class Program extends PluginBase implements PikselProviderInterface, ContainerFa
    * {@inheritdoc}
    *
    * @throws \Exception
-   * @throws GuzzleException
+   * @throws \GuzzleHttp\Exception\GuzzleException
    */
   public function load(string $id): Piksel {
-    $response = $this->httpClient->get('https://player.piksel.tech/ws/ws_program/api/bd1863e1-a59e-11e3-bfa8-005056865f49/mode/json/apiv/5?v=' . $id);
-
+    $token = $this->config->get('token');
+    $endpoint = $this->config->get('piksel_endpoint');
+    $endpoint = str_replace('[token]', $token, $endpoint);
+    $endpoint = str_replace('[ws]', 'ws_program', $endpoint);
+    $response = $this->httpClient->get($endpoint . '?v=' . $id);
     $data = Json::decode($response->getBody()->getContents());
     $program_object = $data['response']['WsProgramResponse']['program'];
 

@@ -193,8 +193,8 @@ class Piksel extends MediaSourceBase {
    * {@inheritdoc}
    *
    * @throws \Exception
-   * @throws GuzzleException
-   * @throws NotRegularDirectoryException
+   * @throws \GuzzleHttp\Exception\GuzzleException
+   * @throws \Drupal\Core\File\Exception\NotRegularDirectoryException
    */
   public function getMetadata(MediaInterface $media, $name): ?string {
     $piksel_id = $this->getSourceFieldValue($media);
@@ -249,25 +249,19 @@ class Piksel extends MediaSourceBase {
    * @param string $url
    *   The thumbnail URL.
    *
-   * @throws GuzzleException
-   * @throws NotRegularDirectoryException
+   * @throws \GuzzleHttp\Exception\GuzzleException
+   * @throws \Drupal\Core\File\Exception\NotRegularDirectoryException
    *
    * @return string|null
    *   The local thumbnail URI, or NULL if it could not be downloaded, or if the
    *   resource has no thumbnail at all.
    */
   protected function getLocalThumbnailUri(string $url): ?string {
-    // Use the configured directory to store thumbnails. The directory can
-    // contain basic (i.e., global) tokens. If any of the replaced tokens
-    // contain HTML, the tags will be removed and XML entities will be decoded.
     $configuration = $this->getConfiguration();
     $directory = $configuration['thumbnails_directory'];
     $directory = $this->token->replace($directory);
     $directory = PlainTextOutput::renderFromHtml($directory);
 
-    // The local thumbnail doesn't exist yet, so try to download it. First,
-    // ensure that the destination directory is writable, and if it's not,
-    // log an error and bail out.
     if (!$this->fileSystem->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS)) {
       $this->logger->warning('Could not prepare thumbnail destination directory @dir for oEmbed media.', [
         '@dir' => $directory,
@@ -275,9 +269,6 @@ class Piksel extends MediaSourceBase {
       return NULL;
     }
 
-    // The local filename of the thumbnail is always a hash of its remote URL.
-    // If a file with that name already exists in the thumbnails directory,
-    // regardless of its extension, return its URI.
     $hash = Crypt::hashBase64($url);
     $files = $this->fileSystem->scanDirectory($directory, "/^{$hash}\..*/");
     if (count($files) > 0) {
@@ -325,8 +316,6 @@ class Piksel extends MediaSourceBase {
       }
     }
 
-    // If the URL didn't give us any clues about the file extension, see if the
-    // response headers will give us a MIME type.
     $content_type = $response->getHeader('Content-Type');
     // If there was no Content-Type header, there's nothing else we can do.
     if (empty($content_type)) {
@@ -336,8 +325,6 @@ class Piksel extends MediaSourceBase {
     if ($extensions) {
       return reset($extensions);
     }
-    // If no file extension could be determined from the Content-Type header,
-    // we're stumped.
     return NULL;
   }
 

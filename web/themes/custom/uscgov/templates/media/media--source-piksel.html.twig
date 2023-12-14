@@ -24,7 +24,7 @@
   {{ title_suffix.contextual_links }}
   {% if media.field_file_title.value %}
     <div id="{{media.field_file_title.value}}">
-      <script src="https://player.piksel.tech/v/{{media.field_file_title.value}}?&embed=js&targetId={{media.field_file_title.value}}&de-responsive=true"
+      <script src="{{player_url}}"
           async>
       </script>
     </div>
