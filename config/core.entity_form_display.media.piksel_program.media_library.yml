@@ -1,0 +1,30 @@
+uuid: 682cf1a2-8682-47a1-a93c-197b711de424
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.piksel_program.field_file_title
+    - media.type.piksel_program
+id: media.piksel_program.media_library
+targetEntityType: media
+bundle: piksel_program
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_file_title: true
+  path: true
+  publish_on: true
+  scheduler_settings: true
+  status: true
+  uid: true
+  unpublish_on: true

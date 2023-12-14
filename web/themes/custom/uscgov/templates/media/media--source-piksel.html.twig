@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'media',
+    'media--type-' ~ media.bundle()|clean_class,
+    not media.isPublished() ? 'media--unpublished',
+    view_mode ? 'media--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+  {{ title_suffix.contextual_links }}
+  {% if media.field_file_title.value %}
+    <div id="{{media.field_file_title.value}}">
+      <script src="https://player.piksel.tech/v/{{media.field_file_title.value}}?&embed=js&targetId={{media.field_file_title.value}}&de-responsive=true"
+          async>
+      </script>
+    </div>
+  {% endif %}
+</article>

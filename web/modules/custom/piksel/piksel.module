@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Hook implementations.
+ */
+
+/**
+ * Implements template_preprocess_pager().
+ */
+function piksel_preprocess_pager(&$variables) {
+  // Remove the ajax_form parameter in our search pager since it breaks the
+  // pager AJAX responses.
+  if ($variables['pager']['#route_name'] === 'piksel.search') {
+    foreach ($variables['items']['pages'] ?? [] as $page => $link) {
+      $variables['items']['pages'][$page]['href'] = str_replace('&ajax_form=1', '', $link['href']);
+    }
+    if (isset($variables['items']['first'])) {
+      $variables['items']['first']['href'] = str_replace('&ajax_form=1', '', $variables['items']['first']['href']);
+    }
+    if (isset($variables['items']['previous'])) {
+      $variables['items']['previous']['href'] = str_replace('&ajax_form=1', '', $variables['items']['previous']['href']);
+    }
+    if (isset($variables['items']['next'])) {
+      $variables['items']['next']['href'] = str_replace('&ajax_form=1', '', $variables['items']['next']['href']);
+    }
+    if (isset($variables['items']['last'])) {
+      $variables['items']['last']['href'] = str_replace('&ajax_form=1', '', $variables['items']['last']['href']);
+    }
+  }
+}
