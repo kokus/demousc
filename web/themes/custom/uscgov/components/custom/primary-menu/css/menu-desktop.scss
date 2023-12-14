@@ -1,8 +1,9 @@
 @forward "../../sass/uswds/settings";
 @use "../../../../sass/custom/global/media-queries" as *;
+@use "../../../../sass/custom/global/mixins" as *;
 @use "uswds-core" as *;
 
-@media ($desktop_break) {
+@include custom-desktop-nav {
   .primary-menu--level-0 {
     display: flex;
     justify-content: center;

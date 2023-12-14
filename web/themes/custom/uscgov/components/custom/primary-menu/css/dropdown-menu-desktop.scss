@@ -1,8 +1,9 @@
 @forward "../../sass/uswds/settings";
 @use "../../../../sass/custom/global/media-queries" as *;
+@use "../../../../sass/custom/global/mixins" as *;
 @use "uswds-core" as *;
 
-@media ($desktop_break) {
+@include custom-desktop-nav {
   .primary-menu__dropdown {
     position: absolute;
     z-index: 1;
@@ -12,10 +13,10 @@
     display: none;
     background: var(--header-menu-wrapper-background);
     border: solid 1px color('base');
+  }
 
-    .primary-menu__button[aria-expanded="true"] ~ & {
-      display: flex;
-    }
+  .primary-menu__button[aria-expanded="true"] ~ .primary-menu__dropdown {
+    display: flex;
   }
 
   .primary-menu__dropdown-first {

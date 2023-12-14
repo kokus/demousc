@@ -1,3 +1,5 @@
+@use "media-queries" as *;
+
 @mixin visually-hidden {
   position: absolute !important;
   overflow: hidden;
@@ -5,4 +7,22 @@
   width: 1px;
   height: 1px;
   word-wrap: normal;
+}
+
+@mixin custom-desktop-nav {
+  #{if(&, '&:where(:not(body.is-mobile-nav *))', ':where(body:not(.is-mobile-nav))')} {
+    @media ($desktop_break) {
+      @content;
+    }
+  }
+}
+
+@mixin custom-mobile-nav {
+  #{if(&, '&:is(body.is-mobile-nav *)', 'body.is-mobile-nav')} {
+    @content;
+  }
+
+  @media ($mobile_break) {
+    @content;
+  }
 }

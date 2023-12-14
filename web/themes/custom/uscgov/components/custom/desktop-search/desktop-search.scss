@@ -16,7 +16,7 @@
   color: color('primary');
   cursor: pointer;
 
-  @media ($desktop_break) {
+  @include custom-desktop-nav {
     display: unset;
   }
 
@@ -121,7 +121,7 @@
   border: solid 1px color('base');
   text-align: center;
 
-  @media ($desktop_break) {
+  @include custom-desktop-nav {
     display: unset;
   }
 
