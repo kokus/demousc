@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: bean_usc_courtlocator
-label: bean_usc_courtlocator
+label: 'Court Locator Form'
 revision: 1
-description: null
+description: ''

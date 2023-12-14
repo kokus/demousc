@@ -5,7 +5,7 @@ dependencies: {  }
 id: banner_image
 label: 'Banner image'
 description: null
-source: file
+source: image
 queue_thumbnail_downloads: false
 new_revision: false
 source_configuration:

@@ -1,0 +1,24 @@
+uuid: 037f537b-e16b-4bf5-9730-0c431ad3ac2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_criminogenic_worksheet
+    - media.type.document
+    - paragraphs.paragraphs_type.criminogenic_worksheets
+id: paragraph.criminogenic_worksheets.field_criminogenic_worksheet
+field_name: field_criminogenic_worksheet
+entity_type: paragraph
+bundle: criminogenic_worksheets
+label: Worksheet
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+field_type: entity_reference

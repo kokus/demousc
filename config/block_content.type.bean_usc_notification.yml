@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: bean_usc_notification
-label: bean_usc_notification
+label: Notification
 revision: 1
-description: null
+description: ''

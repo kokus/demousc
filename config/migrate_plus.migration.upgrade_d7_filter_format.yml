@@ -49,6 +49,7 @@ process:
             editor_align: filter_align
             media_filter: entity_embed
             pathologic: filter_pathologic
+            htmlpurifier_basic: htmlpurifier
         settings:
           -
             plugin: filter_settings

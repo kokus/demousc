@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: bean_usc_map
-label: bean_usc_map
+label: 'Interactive Map'
 revision: 1
-description: null
+description: ''
