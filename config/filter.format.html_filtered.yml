@@ -7,7 +7,7 @@ dependencies:
     - pathologic
 name: 'HTML Filtered'
 format: html_filtered
-weight: -9
+weight: -8
 filters:
   filter_autop:
     id: filter_autop
@@ -37,6 +37,10 @@ filters:
     status: true
     weight: 50
     settings:
+      settings_source: global
+      local_settings:
+        protocol_style: full
+        local_paths: ''
       local_paths: ''
       protocol_style: path
   gutenberg:
