@@ -3,7 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.basic
+    - block_content.type.bean_usc_govdelivery
+    - block_content.type.bean_usc_notification
+    - block_content.type.graphic_photo
+    - block_content.type.related_content
+    - block_content.type.related_files
+    - block_content.type.related_links
+    - block_content.type.table_of_contents
+    - block_content.type.video
     - field.storage.node.field_sidebar
     - node.type.educational_activity
 id: node.educational_activity.field_sidebar
@@ -20,38 +27,17 @@ settings:
   handler: 'default:block_content'
   handler_settings:
     target_bundles:
-      - basic
-      - basic_simple
-      - camera
-      - court
-      - criminogenic
-      - data_table
-      - educational_activity
-      - faq
-      - faqs
-      - federal_rules
-      - fed_probation_journal
-      - fee
-      - form
-      - front_promo_box
-      - judge
-      - judge_comments
-      - landing_featured_content
-      - landing_view
-      - news
-      - news_issue
-      - report
-      - usc_alert
-      - user_alert
-      - webform
+      bean_usc_govdelivery: bean_usc_govdelivery
+      graphic_photo: graphic_photo
+      bean_usc_notification: bean_usc_notification
+      related_content: related_content
+      related_files: related_files
+      related_links: related_links
+      table_of_contents: table_of_contents
+      video: video
     sort:
       field: _none
       direction: ASC
-    behaviors:
-      views-select-list:
-        status: 0
-    view:
-      args: {  }
-      display_name: er_rcs_sidebar
-      view_name: referenced_block_selection
+    auto_create: false
+    auto_create_bundle: bean_usc_govdelivery
 field_type: entity_reference
