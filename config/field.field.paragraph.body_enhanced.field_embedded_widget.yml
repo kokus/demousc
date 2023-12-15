@@ -1,0 +1,35 @@
+uuid: 0b4b0b1d-f7d1-4146-9fb7-92624b9bb82f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bean_usc_highcharts
+    - block_content.type.bean_usc_map
+    - block_content.type.bean_usc_youtube
+    - field.storage.paragraph.field_embedded_widget
+    - paragraphs.paragraphs_type.body_enhanced
+id: paragraph.body_enhanced.field_embedded_widget
+field_name: field_embedded_widget
+entity_type: paragraph
+bundle: body_enhanced
+label: 'Embedded Widget'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      bean_usc_highcharts: bean_usc_highcharts
+      bean_usc_map: bean_usc_map
+      bean_usc_tweet: bean_usc_tweet
+      bean_usc_youtube: bean_usc_youtube
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

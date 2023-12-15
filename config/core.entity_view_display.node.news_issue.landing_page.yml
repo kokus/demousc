@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.news_issue.field_logo
     - node.type.news_issue
   module:
-    - image
     - text
     - user
 id: node.news_issue.landing_page
@@ -27,13 +26,11 @@ content:
     weight: 2
     region: content
   field_landing_page_image:
-    type: image
+    type: entity_reference_entity_view
     label: inline
     settings:
-      image_link: content
-      image_style: landing
-      image_loading:
-        attribute: lazy
+      view_mode: default
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content

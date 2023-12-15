@@ -7,7 +7,7 @@ dependencies:
     - pathologic
 name: 'WYSIWYG (default)'
 format: wysiwyg
-weight: -10
+weight: -9
 filters:
   filter_null:
     id: filter_null

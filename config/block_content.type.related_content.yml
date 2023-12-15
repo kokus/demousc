@@ -1,0 +1,8 @@
+uuid: b68c7361-9528-4020-84cc-8db81cf85362
+langcode: en
+status: true
+dependencies: {  }
+id: related_content
+label: 'Related Content'
+revision: 1
+description: ''

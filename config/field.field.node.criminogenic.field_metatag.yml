@@ -1,0 +1,21 @@
+uuid: 5a77f4da-e6d4-4c76-affa-7b732451cfa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.criminogenic
+  module:
+    - metatag
+id: node.criminogenic.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: criminogenic
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

@@ -1,0 +1,200 @@
+uuid: acbe9394-8318-48b0-97e5-90913b7565fa
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_bean_related_files
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Bean (Related Downloads)'
+source:
+  plugin: bean
+  type: related_files
+process:
+  id:
+    -
+      plugin: migration_lookup
+      migration: upgrade_bean_related_files
+      no_stub: true
+      source: bid
+    -
+      plugin: default_value
+      default_value:
+        - null
+        - null
+        - null
+    -
+      plugin: extract
+      index:
+        - 0
+  revision_id:
+    -
+      plugin: migration_lookup
+      migration: upgrade_bean_related_files
+      no_stub: true
+      source:
+        - bid
+        - vid
+    -
+      plugin: default_value
+      default_value:
+        - null
+        - null
+        - null
+    -
+      plugin: extract
+      index:
+        - 1
+  info:
+    -
+      plugin: get
+      source: label
+  type:
+    -
+      plugin: migration_lookup
+      migration: upgrade_bean_type_related_files
+      no_stub: true
+      source: type
+    -
+      plugin: skip_on_empty
+      method: row
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  uid:
+    -
+      plugin: get
+      source: uid
+  status:
+    -
+      plugin: get
+      source: status
+  changed:
+    -
+      plugin: get
+      source: changed
+  revision_user:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_created:
+    -
+      plugin: get
+      source: created
+  revision_default:
+    -
+      plugin: get
+      source: revision_default
+  content_translation_outdated:
+    -
+      plugin: default_value
+      source: translate
+      default_value: 0
+  content_translation_source:
+    -
+      plugin: default_value
+      source: source_language
+      default_value: und
+  content_translation_created:
+    -
+      plugin: get
+      source: etr_created
+  content_translation_uid:
+    -
+      plugin: get
+      source: etr_uid
+  title:
+    -
+      plugin: null_coalesce
+      source:
+        - title_field
+        - title
+  field_bean_document:
+    -
+      plugin: media_migration_delta_sort
+      source: field_bean_document
+    -
+      plugin: sub_process
+      process:
+        target_id:
+          plugin: migration_lookup
+          source: fid
+          migration:
+            - upgrade_d7_file_entity_document_public
+            - upgrade_d7_file_entity_document_http
+            - upgrade_d7_file_entity_image_public
+            - upgrade_d7_file_entity_banner_image_public
+            - upgrade_d7_file_entity_audio_public
+            - upgrade_d7_file_entity_video_youtube
+            - upgrade_d7_file_entity_file_public
+            - upgrade_d7_file_entity_image_https
+            - upgrade_d7_file_entity_image_http
+          no_stub: true
+  field_bean_description:
+    -
+      plugin: get
+      source: field_bean_description
+    -
+      plugin: media_wysiwyg_filter
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity_complete:block_content'
+  translations: true
+migration_dependencies:
+  required:
+    - upgrade_bean_type_related_files
+    - upgrade_bean_title_field_instance_related_files
+    - upgrade_d7_file_entity_document_public
+    - upgrade_d7_file_entity_document_http
+  optional:
+    - upgrade_bean_title_field_formatter_related_files
+    - upgrade_bean_title_field_widget_related_files
+    - upgrade_d7_field_instance_widget_settings
+    - upgrade_d7_field_formatter_settings
+    - upgrade_d7_field_instance
+    - upgrade_d7_user
+    - upgrade_bean_type_bean_usc_courtlocator
+    - upgrade_bean_type_bean_usc_govdelivery
+    - upgrade_bean_type_bean_usc_highcharts
+    - upgrade_bean_type_bean_usc_latestnews
+    - upgrade_bean_type_bean_usc_map
+    - upgrade_bean_type_bean_usc_notification
+    - upgrade_bean_type_bean_usc_youtube
+    - upgrade_bean_type_graphic_photo
+    - upgrade_bean_type_related_content
+    - upgrade_bean_type_related_files
+    - upgrade_bean_type_related_links
+    - upgrade_bean_type_table_of_contents
+    - upgrade_bean_type_video
+    - upgrade_d7_file_entity_image_public
+    - upgrade_d7_file_entity_banner_image_public
+    - upgrade_d7_file_entity_audio_public
+    - upgrade_d7_file_entity_video_youtube
+    - upgrade_d7_file_entity_document_public
+    - upgrade_d7_file_entity_file_public
+    - upgrade_d7_file_entity_image_https
+    - upgrade_d7_file_entity_document_http
+    - upgrade_d7_file_entity_image_http
+    - upgrade_bean_related_files
+    - upgrade_d7_file_entity_document_public
+    - upgrade_d7_file_entity_document_http
+    - upgrade_d7_file_entity_image_public
+    - upgrade_d7_file_entity_banner_image_public
+    - upgrade_d7_file_entity_audio_public
+    - upgrade_d7_file_entity_video_youtube
+    - upgrade_d7_file_entity_file_public
+    - upgrade_d7_file_entity_image_https
+    - upgrade_d7_file_entity_image_http

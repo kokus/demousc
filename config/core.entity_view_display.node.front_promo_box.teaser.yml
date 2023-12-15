@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.front_promo_box.field_bean_image
     - field.field.node.front_promo_box.field_bean_video
     - field.field.node.front_promo_box.field_link
+    - field.field.node.front_promo_box.field_metatag
     - field.field.node.front_promo_box.field_more_link
     - field.field.node.front_promo_box.field_promo_box_location
     - node.type.front_promo_box
@@ -41,5 +42,6 @@ hidden:
   field_bean_image: true
   field_bean_video: true
   field_link: true
+  field_metatag: true
   field_more_link: true
   field_promo_box_location: true

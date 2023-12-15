@@ -1,0 +1,43 @@
+uuid: 2e708923-b434-4a1f-92bd-f33f3e9a8486
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_bean_type_table_of_contents
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Bean type (table_of_contents)'
+source:
+  plugin: bean_type
+  entity_type: bean
+  constants:
+    revision: 1
+  type: table_of_contents
+process:
+  id:
+    -
+      plugin: bean_unique_type
+      source: type
+  label:
+    -
+      plugin: null_coalesce
+      source:
+        - label
+        - type
+  description:
+    -
+      plugin: get
+      source: description
+  revision:
+    -
+      plugin: get
+      source: constants/revision
+destination:
+  plugin: 'entity:block_content_type'
+migration_dependencies:
+  required: {  }
+  optional: {  }

@@ -1,12 +1,11 @@
-uuid: 11d416be-3c1d-4e4a-8f49-be49fb72bdd7
+uuid: fbb0cb02-86eb-4495-bbd6-aa4a08ba25ae
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_banner_image
+    - media.type.banner_image
     - node.type.news_issue
-  module:
-    - image
 id: node.news_issue.field_banner_image
 field_name: field_banner_image
 entity_type: node
@@ -18,16 +17,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:file'
-  handler_settings: {  }
-  file_directory: ''
-  file_extensions: 'png gif jpg jpeg'
-  max_filesize: ''
-  max_resolution: ''
-  min_resolution: 1140x250
-  alt_field: false
-  alt_field_required: true
-  title_field: false
-  title_field_required: false
-  default_image: 0
-field_type: image
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      banner_image: banner_image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: banner_image
+field_type: entity_reference

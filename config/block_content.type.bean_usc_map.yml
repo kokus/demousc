@@ -1,0 +1,8 @@
+uuid: 90511030-a661-488d-af8b-4db2716d8efe
+langcode: en
+status: true
+dependencies: {  }
+id: bean_usc_map
+label: 'Interactive Map'
+revision: 1
+description: ''

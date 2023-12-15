@@ -1,0 +1,19 @@
+uuid: 968e5467-1b91-4ff9-87dd-3188f880c755
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bean_usc_highcharts
+    - field.storage.block_content.title
+id: block_content.bean_usc_highcharts.title
+field_name: title
+entity_type: block_content
+bundle: bean_usc_highcharts
+label: Title
+description: 'The Title of the block.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

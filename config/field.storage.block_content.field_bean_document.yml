@@ -1,0 +1,20 @@
+uuid: 7711aa7d-1d1c-45ce-a440-9f98e2fea8ab
+langcode: und
+status: true
+dependencies:
+  module:
+    - block_content
+    - media
+id: block_content.field_bean_document
+field_name: field_bean_document
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

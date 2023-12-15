@@ -9,12 +9,15 @@ cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
   - Configuration
+  - 'Bean map processed'
 migration_group: migrate_drupal_7
 label: 'Field instance configuration'
 source:
   plugin: d7_field_instance
   constants:
     status: true
+    bean: bean
+  mapMigrationProcessValueToMedia: true
 process:
   type:
     -
@@ -25,6 +28,16 @@ process:
     -
       plugin: get
       source: entity_type
+    -
+      plugin: static_map
+      map:
+        bean: block_content
+      bypass: true
+    -
+      plugin: static_map
+      map:
+        file: media
+      bypass: true
     -
       plugin: static_map
       map:
@@ -47,14 +60,49 @@ process:
       source_value: entity_type
       expected_value: field_collection_item
       process:
-        plugin: substr
-        start: 6
-  bundle:
+        plugin: paragraphs_strip_field_prefix
+  bean_bundle:
+    -
+      plugin: bean_compare
+      source:
+        - entity_type
+        - constants/bean
+    -
+      plugin: skip_on_empty
+      method: process
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_bean_type_graphic_photo
+        - upgrade_bean_type_related_content
+        - upgrade_bean_type_related_files
+        - upgrade_bean_type_related_links
+        - upgrade_bean_type_table_of_contents
+        - upgrade_bean_type_video
+        - upgrade_bean_type_bean_usc_courtlocator
+        - upgrade_bean_type_bean_usc_govdelivery
+        - upgrade_bean_type_bean_usc_highcharts
+        - upgrade_bean_type_bean_usc_latestnews
+        - upgrade_bean_type_bean_usc_map
+        - upgrade_bean_type_bean_usc_notification
+        - upgrade_bean_type_bean_usc_youtube
+      no_stub: true
+      source: bundle
+    -
+      plugin: skip_on_empty
+      method: process
+  original_bundle:
     -
       plugin: field_bundle
       source:
         - entity_type
         - '@bundle_mapped'
+  bundle:
+    -
+      plugin: null_coalesce
+      source:
+        - '@bean_bundle'
+        - '@original_bundle'
   label:
     -
       plugin: get
@@ -89,6 +137,10 @@ process:
         - field_definition
     inline_entity_form:
       plugin: inline_entity_form_field_instance_settings
+    media_image:
+      plugin: media_image_field_instance_settings
+    file_entity:
+      plugin: file_entity_field_instance_settings
     field_collection:
       plugin: field_collection_field_instance_settings
   default_value_function:
@@ -122,4 +174,39 @@ migration_dependencies:
   optional:
     - upgrade_d7_node_type
     - upgrade_d7_taxonomy_vocabulary
+    - upgrade_bean_type_bean_usc_courtlocator
+    - upgrade_bean_type_bean_usc_govdelivery
+    - upgrade_bean_type_bean_usc_highcharts
+    - upgrade_bean_type_bean_usc_latestnews
+    - upgrade_bean_type_bean_usc_map
+    - upgrade_bean_type_bean_usc_notification
+    - upgrade_bean_type_bean_usc_youtube
+    - upgrade_bean_type_graphic_photo
+    - upgrade_bean_type_related_content
+    - upgrade_bean_type_related_files
+    - upgrade_bean_type_related_links
+    - upgrade_bean_type_table_of_contents
+    - upgrade_bean_type_video
+    - upgrade_d7_file_entity_type_image
+    - upgrade_d7_file_entity_type_banner_image
+    - upgrade_d7_file_entity_type_audio
+    - upgrade_d7_file_entity_type_remote_video
+    - upgrade_d7_file_entity_type_document
+    - upgrade_d7_file_entity_type_file
+    - upgrade_d7_file_entity_type_image_https
+    - upgrade_d7_file_entity_type_document_http
+    - upgrade_d7_file_entity_type_image_http
     - upgrade_d7_field_collection_type
+    - upgrade_bean_type_graphic_photo
+    - upgrade_bean_type_related_content
+    - upgrade_bean_type_related_files
+    - upgrade_bean_type_related_links
+    - upgrade_bean_type_table_of_contents
+    - upgrade_bean_type_video
+    - upgrade_bean_type_bean_usc_courtlocator
+    - upgrade_bean_type_bean_usc_govdelivery
+    - upgrade_bean_type_bean_usc_highcharts
+    - upgrade_bean_type_bean_usc_latestnews
+    - upgrade_bean_type_bean_usc_map
+    - upgrade_bean_type_bean_usc_notification
+    - upgrade_bean_type_bean_usc_youtube

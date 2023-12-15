@@ -10,10 +10,12 @@ dependencies:
     - field.field.node.criminogenic.field_criminogenic_subject_area
     - field.field.node.criminogenic.field_criminogenic_target_aud
     - field.field.node.criminogenic.field_criminogenic_worksheets
+    - field.field.node.criminogenic.field_metatag
     - node.type.criminogenic
   module:
-    - file
     - link
+    - media_library
+    - metatag
     - paragraphs
     - path
     - text
@@ -59,11 +61,11 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
   field_criminogenic_main_download:
-    type: file_generic
+    type: media_library_widget
     weight: 10
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_criminogenic_subject_area:
     type: options_select
@@ -88,6 +90,14 @@ content:
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 27
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   path:
     type: path
