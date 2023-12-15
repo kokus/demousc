@@ -63,6 +63,8 @@ services:
         - find "${DOCROOT}/sites" -type f -exec chmod 0664 {} \;
 
       build:
+        # Install/update packages managed by composer, including drush.
+        - composer install --optimize-autoloader
         # Use the tugboat-specific Drupal settings.
         - rm -rf "${DOCROOT}/sites/default/settings.db.php"
         - cp "${TUGBOAT_ROOT}/.tugboat/settings.local.php" "${DOCROOT}/sites/default/settings.db.php"
