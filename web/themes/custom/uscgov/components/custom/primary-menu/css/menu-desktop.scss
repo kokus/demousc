@@ -6,6 +6,7 @@
 @include custom-desktop-nav {
   .primary-menu--level-0 {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
     list-style: none;

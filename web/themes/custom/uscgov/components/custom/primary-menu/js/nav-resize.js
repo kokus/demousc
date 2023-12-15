@@ -12,7 +12,7 @@
    * @param {Element} navItem - The first item within the primary navigation.
    */
   function transitionToDesktopNavigation(navWrapper, navItem) {
-    document.body.classList.remove('is-always-mobile-nav');
+    document.body.classList.remove('is-mobile-nav');
 
     // Double check to see if the navigation is wrapping, and if so, re-enable
     // mobile navigation. This solves an edge cases where if the amount of
@@ -20,7 +20,7 @@
     // page is loaded at a narrower viewport and then widened, the mobile nav
     // may not be enabled.
     if (navWrapper.clientHeight > navItem.clientHeight) {
-      document.body.classList.add('is-always-mobile-nav');
+      document.body.classList.add('is-mobile-nav');
     }
   }
 
@@ -31,16 +31,16 @@
    * @param {ResizeObserverEntry} entries - Object passed from ResizeObserver.
    */
   function checkIfDesktopNavigationWraps(entries) {
-    const navItem = document.querySelector('.primary-nav__menu-item');
+    const navItem = document.querySelector('.primary-menu__menu-item');
 
     if (
-      Drupal.olivero.isDesktopNav() &&
-      entries[0].contentRect.height > navItem.clientHeight
+      !Drupal.uscgov.isMobileMenuSystem() &&
+      entries[0].contentRect.height > (navItem.clientHeight * 1.5)
     ) {
       const navMediaQuery = window.matchMedia(
-        `(max-width: ${window.innerWidth + 15}px)`, // 5px adds a small buffer before switching back.
+        `(max-width: ${window.innerWidth + 15}px)`, // Adds a small buffer before switching back.
       );
-      document.body.classList.add('is-always-mobile-nav');
+      document.body.classList.add('is-mobile-nav');
 
       // In the event that the viewport was resized, we remember the viewport
       // width with a one-time event listener ,so we can attempt to transition
@@ -77,8 +77,8 @@
   Drupal.behaviors.automaticMobileNav = {
     attach(context) {
       once(
-        'olivero-automatic-mobile-nav',
-        '[data-drupal-selector="primary-nav-menu--level-1"]',
+        'automatic-mobile-nav',
+        '.header__navigation .primary-menu--level-0',
         context,
       ).forEach(init);
     },
