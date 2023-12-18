@@ -19,7 +19,7 @@
     // navigation items always causes the primary navigation to wrap, and the
     // page is loaded at a narrower viewport and then widened, the mobile nav
     // may not be enabled.
-    if (navWrapper.clientHeight > navItem.clientHeight) {
+    if (navWrapper.clientHeight > (navItem.clientHeight * 1.5)) {
       document.body.classList.add('is-mobile-nav');
     }
   }
