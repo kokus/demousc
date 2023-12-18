@@ -1,0 +1,24 @@
+uuid: 4b816e9b-d8ec-460b-9721-81d89ffa0b98
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.graphic_photo
+    - field.field.block_content.graphic_photo.field_bean_image
+    - field.field.block_content.graphic_photo.title
+id: block_content.graphic_photo.default
+targetEntityType: block_content
+bundle: graphic_photo
+mode: default
+content:
+  field_bean_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  title: true

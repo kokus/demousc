@@ -1,0 +1,145 @@
+uuid: a2364a1a-dc59-49b5-9939-571dc9025283
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_bean_related_content
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Bean (Related Content)'
+source:
+  plugin: bean
+  type: related_content
+process:
+  id:
+    -
+      plugin: migration_lookup
+      migration: upgrade_bean_related_content
+      no_stub: true
+      source: bid
+    -
+      plugin: default_value
+      default_value:
+        - null
+        - null
+        - null
+    -
+      plugin: extract
+      index:
+        - 0
+  revision_id:
+    -
+      plugin: migration_lookup
+      migration: upgrade_bean_related_content
+      no_stub: true
+      source:
+        - bid
+        - vid
+    -
+      plugin: default_value
+      default_value:
+        - null
+        - null
+        - null
+    -
+      plugin: extract
+      index:
+        - 1
+  info:
+    -
+      plugin: get
+      source: label
+  type:
+    -
+      plugin: migration_lookup
+      migration: upgrade_bean_type_related_content
+      no_stub: true
+      source: type
+    -
+      plugin: skip_on_empty
+      method: row
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  uid:
+    -
+      plugin: get
+      source: uid
+  status:
+    -
+      plugin: get
+      source: status
+  changed:
+    -
+      plugin: get
+      source: changed
+  revision_user:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_created:
+    -
+      plugin: get
+      source: created
+  revision_default:
+    -
+      plugin: get
+      source: revision_default
+  content_translation_outdated:
+    -
+      plugin: default_value
+      source: translate
+      default_value: 0
+  content_translation_source:
+    -
+      plugin: default_value
+      source: source_language
+      default_value: und
+  content_translation_created:
+    -
+      plugin: get
+      source: etr_created
+  content_translation_uid:
+    -
+      plugin: get
+      source: etr_uid
+  title:
+    -
+      plugin: null_coalesce
+      source:
+        - title_field
+        - title
+  field_bean_node:
+    -
+      plugin: get
+      source: field_bean_node
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity_complete:block_content'
+  translations: true
+migration_dependencies:
+  required:
+    - upgrade_bean_type_related_content
+    - upgrade_bean_title_field_instance_related_content
+  optional:
+    - upgrade_bean_title_field_formatter_related_content
+    - upgrade_bean_title_field_widget_related_content
+    - upgrade_d7_field_instance_widget_settings
+    - upgrade_d7_field_formatter_settings
+    - upgrade_d7_field_instance
+    - upgrade_d7_user
+    - upgrade_bean_related_content
+    - upgrade_bean_type_related_content

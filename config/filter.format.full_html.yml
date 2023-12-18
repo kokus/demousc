@@ -9,8 +9,15 @@ _core:
   default_config_hash: HvAE4vD_4-nvhwLobIN3k5rTE9zq9AQG8UScfnwuKQo
 name: 'Full HTML'
 format: full_html
-weight: -8
+weight: -10
 filters:
+  gutenberg:
+    id: gutenberg
+    provider: gutenberg
+    status: false
+    weight: 0
+    settings:
+      processor_settings: {  }
   filter_url:
     id: filter_url
     provider: filter
@@ -30,12 +37,9 @@ filters:
     status: true
     weight: 50
     settings:
+      settings_source: global
+      local_settings:
+        protocol_style: full
+        local_paths: ''
       local_paths: ''
       protocol_style: path
-  gutenberg:
-    id: gutenberg
-    provider: gutenberg
-    status: false
-    weight: 0
-    settings:
-      processor_settings: {  }

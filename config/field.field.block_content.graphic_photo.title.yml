@@ -1,0 +1,19 @@
+uuid: 8da17a51-004c-4273-b9a8-668b0c8ebd3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.graphic_photo
+    - field.storage.block_content.title
+id: block_content.graphic_photo.title
+field_name: title
+entity_type: block_content
+bundle: graphic_photo
+label: Title
+description: 'The Title of the block.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

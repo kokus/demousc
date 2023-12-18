@@ -1,0 +1,21 @@
+uuid: 6f4ca0ed-b523-4ec5-8b78-070ef1c66ed9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.front_promo_box
+  module:
+    - metatag
+id: node.front_promo_box.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: front_promo_box
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

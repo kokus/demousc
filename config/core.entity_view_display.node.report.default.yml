@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.report.field_lead_gallery
     - field.field.node.report.field_lead_paragraph
     - field.field.node.report.field_logo
+    - field.field.node.report.field_metatag
     - field.field.node.report.field_report_children
     - field.field.node.report.field_report_name
     - field.field.node.report.field_sidebar_title
@@ -19,9 +20,32 @@ dependencies:
     - node.type.report
   module:
     - datetime
-    - image
+    - field_group
     - text
     - user
+third_party_settings:
+  field_group:
+    group_node_metadata:
+      children:
+        - field_date_updated
+      label: Metadata
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: 'group-node-metadata field-group-div'
+        show_empty_fields: false
+        id: node_report_full_group_node_metadata
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: none
+        formatter: open
+        description: ''
 id: node.report.default
 targetEntityType: node
 bundle: report
@@ -34,12 +58,39 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
+  field_banner_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_date_updated:
     type: datetime_default
     label: inline
     settings:
       timezone_override: ''
       format_type: month_d_yyyy
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_fc_be_audio:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_lead_gallery:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
     third_party_settings: {  }
     weight: 4
     region: content
@@ -51,13 +102,11 @@ content:
     weight: 3
     region: content
   field_logo:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: logo
-      image_loading:
-        attribute: lazy
+      view_mode: default
+      link: false
     third_party_settings: {  }
     weight: 2
     region: content
@@ -88,10 +137,8 @@ content:
     weight: 10
     region: content
 hidden:
-  field_banner_image: true
   field_body_enhanced: true
-  field_fc_be_audio: true
   field_landing_page_image: true
-  field_lead_gallery: true
+  field_metatag: true
   field_report_name: true
   field_tags: true

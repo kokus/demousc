@@ -1,20 +1,17 @@
-uuid: 6c26f2a2-e322-4d55-a450-5856a2f571a5
+uuid: 23d14f06-cb6c-4ed4-ba5b-c22f9dcc1e0f
 langcode: und
 status: true
 dependencies:
   module:
-    - file
+    - media
     - paragraphs
 id: paragraph.field_fc_be_video
 field_name: field_fc_be_video
 entity_type: paragraph
-type: file
+type: entity_reference
 settings:
-  target_type: file
-  display_field: false
-  display_default: false
-  uri_scheme: public
-module: file
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true

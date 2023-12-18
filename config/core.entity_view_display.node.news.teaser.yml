@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.news.field_landing_page_image
     - field.field.node.news.field_lead_gallery
     - field.field.node.news.field_lead_paragraph
+    - field.field.node.news.field_metatag
     - field.field.node.news.field_news_issue
     - field.field.node.news.field_related_topics
     - field.field.node.news.field_tags
@@ -48,6 +49,7 @@ hidden:
   field_landing_page_image: true
   field_lead_gallery: true
   field_lead_paragraph: true
+  field_metatag: true
   field_news_issue: true
   field_related_topics: true
   field_tags: true

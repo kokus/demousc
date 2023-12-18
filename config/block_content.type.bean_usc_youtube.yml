@@ -1,0 +1,8 @@
+uuid: 17573ffa-57bc-43de-a0c4-0466bae53668
+langcode: en
+status: true
+dependencies: {  }
+id: bean_usc_youtube
+label: 'Youtube Playlist'
+revision: 1
+description: ''

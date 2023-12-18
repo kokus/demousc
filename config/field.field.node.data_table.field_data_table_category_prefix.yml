@@ -23,4 +23,7 @@ settings:
       data_table_category_prefix: data_table_category_prefix
     sort:
       field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference
