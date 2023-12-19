@@ -12,6 +12,8 @@ dependencies:
     - field.field.config_pages.global_site_settings.field_homepage_hero_cta
     - field.field.config_pages.global_site_settings.field_homepage_hero_description
     - field.field.config_pages.global_site_settings.field_homepage_hero_title
+    - field.field.config_pages.global_site_settings.field_homepage_quick_links_title
+    - field.field.config_pages.global_site_settings.field_hompage_quick_links
     - field.field.config_pages.global_site_settings.field_seal_te
     - field.field.config_pages.global_site_settings.field_social_media
     - image.style.full_page_hero_full
@@ -101,6 +103,23 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 7
+    region: content
+  field_homepage_quick_links_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_hompage_quick_links:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 11
     region: content
   field_seal_te:
     type: basic_string

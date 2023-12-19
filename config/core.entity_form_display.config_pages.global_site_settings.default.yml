@@ -12,6 +12,8 @@ dependencies:
     - field.field.config_pages.global_site_settings.field_homepage_hero_cta
     - field.field.config_pages.global_site_settings.field_homepage_hero_description
     - field.field.config_pages.global_site_settings.field_homepage_hero_title
+    - field.field.config_pages.global_site_settings.field_homepage_quick_links_title
+    - field.field.config_pages.global_site_settings.field_hompage_quick_links
     - field.field.config_pages.global_site_settings.field_seal_te
     - field.field.config_pages.global_site_settings.field_social_media
     - image.style.thumbnail
@@ -79,6 +81,8 @@ third_party_settings:
         - field_homepage_hero_title
         - field_homepage_hero_description
         - field_homepage_hero_cta
+        - field_homepage_quick_links_title
+        - field_hompage_quick_links
       label: 'Homepage Hero'
       region: content
       parent_name: ''
@@ -167,6 +171,32 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_homepage_quick_links_title:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_hompage_quick_links:
+    type: paragraphs
+    weight: 12
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
   field_seal_te:
     type: string_textarea
     weight: 3
@@ -177,7 +207,7 @@ content:
     third_party_settings: {  }
   field_social_media:
     type: paragraphs
-    weight: 8
+    weight: 14
     region: content
     settings:
       title: Paragraph

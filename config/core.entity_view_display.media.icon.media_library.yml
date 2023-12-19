@@ -1,0 +1,32 @@
+uuid: 40e4f6c8-4bc7-4153-81dc-0987e0cf0f19
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.icon.field_media_file_1
+    - image.style.medium
+    - media.type.icon
+  module:
+    - image
+id: media.icon.media_library
+targetEntityType: media
+bundle: icon
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_media_file_1: true
+  name: true
+  uid: true
