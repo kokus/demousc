@@ -1,0 +1,878 @@
+uuid: 45dc1b4d-ec15-45ce-bf46-952f3108cee7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_auther
+    - field.storage.node.field_document_pdf
+    - field.storage.node.field_mydate
+    - field.storage.node.field_test
+    - node.type.fed_probation_journal
+    - taxonomy.vocabulary.probation_journal_topic
+  module:
+    - datetime
+    - node
+    - taxonomy
+    - user
+id: federal_probation_journal_landing
+label: 'Federal Probation Journal Landing'
+module: views
+description: ''
+tag: default
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      title: 'Federal Probation Journal View'
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: field
+          label: 'Article Title'
+          alter:
+            alter_text: true
+            text: '<div  width="50">{{ title }}</div>'
+            word_boundary: false
+            ellipsis: false
+        field_auther:
+          id: field_auther
+          table: node__field_auther
+          field: field_auther
+          plugin_id: field
+          exclude: true
+          delta_limit: 10
+          delta_offset: 0
+        field_test:
+          id: field_test
+          table: node__field_test
+          field: field_test
+          plugin_id: field
+          delta_offset: 0
+        field_mydate:
+          id: field_mydate
+          table: node__field_mydate
+          field: field_mydate
+          plugin_id: field
+          settings:
+            format_type: month_year
+            fromto: both
+            multiple_number: ''
+            multiple_from: ''
+            multiple_to: ''
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 25
+          id: 0
+          quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          reset_button: true
+      access:
+        type: perm
+      cache:
+        type: none
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          empty: true
+          content:
+            value: 'There are no matching Federal Probation Journal entries'
+            format: wysiwyg
+      sorts:
+        field_mydate_value:
+          id: field_mydate_value
+          table: node__field_mydate
+          field: field_mydate_value
+          plugin_id: datetime
+          order: DESC
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            fed_probation_journal: fed_probation_journal
+          group: 1
+        combine:
+          id: combine
+          table: views
+          field: combine
+          plugin_id: combine
+          operator: allwords
+          group: 1
+          exposed: true
+          expose:
+            operator_id: combine_op
+            label: 'Search for Title or Author'
+            operator: combine_op
+            identifier: combine
+            remember_roles:
+              authenticated: authenticated
+              anonymous: anonymous
+              admin: admin
+              publisher: publisher
+              approver: approver
+              content_creator: content_creator
+          fields:
+            title: title
+            field_auther: field_auther
+        field_mydate_value:
+          id: field_mydate_value
+          table: node__field_mydate
+          field: field_mydate_value
+          plugin_id: datetime
+          operator: or
+          exposed: true
+          expose:
+            operator_id: field_mydate_value_op
+            label: Year
+            operator: field_mydate_value_op
+            identifier: field_mydate_value
+            remember_roles: {  }
+          granularity: year
+          year_range: '1998:+0'
+        field_test_tid:
+          id: field_test_tid
+          table: node__field_test
+          field: field_test_target_id
+          entity_type: node
+          plugin_id: taxonomy_index_tid
+          operator: or
+          exposed: true
+          expose:
+            operator_id: field_test_tid_op
+            label: Topic
+            operator: in
+            identifier: field_test_tid
+            remember_roles:
+              authenticated: authenticated
+              anonymous: anonymous
+              admin: admin
+              publisher: publisher
+              approver: approver
+              content_creator: content_creator
+          vid: probation_journal_topic
+          type: select
+          hierarchy: true
+          field_name: field_test
+      style:
+        type: table
+        options:
+          columns:
+            title: title
+            field_topic_category: field_topic_category
+            field_auther: field_auther
+            field_mydate: field_mydate
+            name: name
+          default: field_mydate
+          info:
+            title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+            field_topic_category:
+              align: ''
+              separator: ''
+              empty_column: false
+            field_auther:
+              align: ''
+              separator: ''
+              empty_column: false
+            field_mydate:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+            name:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+      query:
+        type: views_query
+        options:
+          distinct: true
+      relationships:
+        term_node_tid:
+          id: term_node_tid
+          table: node_field_data
+          field: term_node_tid
+          entity_type: node
+          plugin_id: node_term_data
+          vids: {  }
+      use_more_always: false
+      link_display: page_2
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+      display_extenders: {  }
+      style_plugin: table
+      style_options:
+        columns:
+          title: title
+          field_topic_category: field_topic_category
+          field_auther: field_auther
+          field_mydate: field_mydate
+          name: name
+        default: field_mydate
+        info:
+          title:
+            sortable: 1
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_topic_category:
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_auther:
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_mydate:
+            sortable: 1
+            default_sort_order: desc
+            align: ''
+            separator: ''
+            empty_column: 0
+          name:
+            sortable: 1
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_auther'
+        - 'config:field.storage.node.field_mydate'
+        - 'config:field.storage.node.field_test'
+  page:
+    id: page
+    display_title: Page
+    display_plugin: page
+    position: 2
+    display_options:
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: field
+          alter:
+            word_boundary: false
+            ellipsis: false
+        field_auther:
+          id: field_auther
+          table: node__field_auther
+          field: field_auther
+          plugin_id: field
+          exclude: true
+          delta_limit: 10
+          delta_offset: 0
+        field_mydate:
+          id: field_mydate
+          table: node__field_mydate
+          field: field_mydate
+          plugin_id: field
+          label: Issue
+          settings:
+            format_type: long
+            fromto: both
+            multiple_number: ''
+            multiple_from: ''
+            multiple_to: ''
+      exposed_form:
+        type: basic
+        options:
+          reset_button: true
+      sorts:
+        field_mydate_value:
+          id: field_mydate_value
+          table: node__field_mydate
+          field: field_mydate_value
+          plugin_id: datetime
+          order: DESC
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            fed_probation_journal: fed_probation_journal
+          group: 1
+        combine:
+          id: combine
+          table: views
+          field: combine
+          plugin_id: combine
+          operator: allwords
+          group: 1
+          exposed: true
+          expose:
+            operator_id: combine_op
+            label: 'Search for Title or Author'
+            operator: combine_op
+            identifier: combine
+            remember_roles:
+              authenticated: authenticated
+              anonymous: anonymous
+              admin: admin
+              publisher: publisher
+              approver: approver
+              content_creator: content_creator
+          fields:
+            title: title
+            field_auther: field_auther
+      style:
+        type: table
+        options:
+          columns:
+            title: title
+            field_month: field_month
+            field_year: field_year
+            field_rules_rule_or_form: field_rules_rule_or_form
+            nothing: nothing
+          default: '-1'
+          info:
+            title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+            field_month:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+            field_year:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+            field_rules_rule_or_form:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+            nothing:
+              align: ''
+              separator: ''
+              empty_column: false
+      query:
+        type: views_query
+        options:
+          distinct: true
+          pure_distinct: true
+      defaults:
+        query: false
+        exposed_form: false
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        arguments: false
+        filters: false
+        filter_groups: false
+      display_extenders: {  }
+      path: federal-probation-journal
+      style_plugin: table
+      style_options:
+        columns:
+          title: title
+          field_month: field_month
+          field_year: field_year
+          field_rules_rule_or_form: field_rules_rule_or_form
+          nothing: nothing
+        default: '-1'
+        info:
+          title:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_month:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_year:
+            sortable: 1
+            default_sort_order: desc
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_rules_rule_or_form:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+          nothing:
+            align: ''
+            separator: ''
+            empty_column: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_auther'
+        - 'config:field.storage.node.field_mydate'
+  page_1:
+    id: page_1
+    display_title: 'Topic Display'
+    display_plugin: page
+    position: 3
+    display_options:
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: field
+          alter:
+            word_boundary: false
+            ellipsis: false
+        field_document_pdf:
+          id: field_document_pdf
+          table: node__field_document_pdf
+          field: field_document_pdf
+          plugin_id: field
+          click_sort_column: fid
+          type: entity_reference_label
+          settings:
+            target_type: media
+          delta_offset: 0
+        field_test:
+          id: field_test
+          table: node__field_test
+          field: field_test
+          plugin_id: field
+          delta_offset: 0
+        field_mydate:
+          id: field_mydate
+          table: node__field_mydate
+          field: field_mydate
+          plugin_id: field
+          label: Issue
+          settings:
+            format_type: month_year
+            fromto: both
+            multiple_number: ''
+            multiple_from: ''
+            multiple_to: ''
+      sorts:
+        field_mydate_value:
+          id: field_mydate_value
+          table: node__field_mydate
+          field: field_mydate_value
+          plugin_id: datetime
+          order: DESC
+      arguments:
+        term_node_tid_depth:
+          id: term_node_tid_depth
+          table: node_field_data
+          field: term_node_tid_depth
+          plugin_id: taxonomy_index_tid_depth
+          default_action: default
+          default_argument_type: taxonomy_tid
+          summary_options:
+            items_per_page: 25
+          summary:
+            number_of_records: 0
+            format: default_summary
+          depth: 2
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            fed_probation_journal: fed_probation_journal
+      style:
+        type: table
+        options:
+          columns:
+            title: title
+            field_document_pdf: field_document_pdf
+            field_test: field_test
+            field_mydate: field_mydate
+          default: '-1'
+          info:
+            title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+            field_document_pdf:
+              align: ''
+              separator: ''
+              empty_column: false
+            field_test:
+              align: ''
+              separator: ''
+              empty_column: false
+            field_mydate:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        relationships: false
+        fields: false
+        sorts: false
+        arguments: false
+        filters: false
+        filter_groups: false
+        header: false
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          empty: true
+          content: '<a href="/statistics-reports/publications/federal-probation-journal" > Return to Federal Probation Journal</a>'
+      display_extenders: {  }
+      path: prob
+      style_plugin: table
+      style_options:
+        columns:
+          title: title
+          field_document_pdf: field_document_pdf
+          field_test: field_test
+          field_mydate: field_mydate
+        default: '-1'
+        info:
+          title:
+            sortable: 1
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_document_pdf:
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_test:
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_mydate:
+            sortable: 1
+            default_sort_order: desc
+            align: ''
+            separator: ''
+            empty_column: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_document_pdf'
+        - 'config:field.storage.node.field_mydate'
+        - 'config:field.storage.node.field_test'
+  page_2:
+    id: page_2
+    display_title: Author
+    display_plugin: page
+    position: 4
+    display_options:
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: field
+          alter:
+            word_boundary: false
+            ellipsis: false
+        field_document_pdf:
+          id: field_document_pdf
+          table: node__field_document_pdf
+          field: field_document_pdf
+          plugin_id: field
+          click_sort_column: fid
+          type: entity_reference_label
+          settings:
+            target_type: media
+          delta_offset: 0
+        field_test:
+          id: field_test
+          table: node__field_test
+          field: field_test
+          plugin_id: field
+          delta_offset: 0
+        field_mydate:
+          id: field_mydate
+          table: node__field_mydate
+          field: field_mydate
+          plugin_id: field
+          label: Issue
+          settings:
+            format_type: month_year
+            fromto: both
+            multiple_number: ''
+            multiple_from: ''
+            multiple_to: ''
+      sorts:
+        field_mydate_value:
+          id: field_mydate_value
+          table: node__field_mydate
+          field: field_mydate_value
+          plugin_id: datetime
+          order: DESC
+      arguments:
+        field_auther_value:
+          id: field_auther_value
+          table: node__field_auther
+          field: field_auther_value
+          plugin_id: string
+          title_enable: true
+          title: '%1'
+          default_argument_type: fixed
+          summary_options:
+            items_per_page: 25
+          summary:
+            number_of_records: 0
+            format: default_summary
+          limit: 0
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            fed_probation_journal: fed_probation_journal
+      style:
+        type: table
+        options:
+          columns:
+            title: title
+            field_month: field_month
+            field_year: field_year
+            field_topic_category: field_topic_category
+            nothing: nothing
+            field_document_pdf: field_document_pdf
+            field_mydate: field_mydate
+          default: '-1'
+          info:
+            title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+            field_month:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+            field_year:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+            field_topic_category:
+              align: ''
+              separator: ''
+              empty_column: false
+            nothing:
+              align: ''
+              separator: ''
+              empty_column: false
+            field_document_pdf:
+              align: ''
+              separator: ''
+              empty_column: false
+            field_mydate:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        css_class: false
+        style: false
+        row: false
+        relationships: false
+        fields: false
+        sorts: false
+        arguments: false
+        filters: false
+        filter_groups: false
+        header: false
+      css_class: view-content
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          empty: true
+          content: '<a href="/statistics-reports/publications/federal-probation-journal" > Return to Federal Probation Journal</a>'
+      display_extenders: {  }
+      path: probation-journal-author
+      style_plugin: table
+      style_options:
+        columns:
+          title: title
+          field_month: field_month
+          field_year: field_year
+          field_topic_category: field_topic_category
+          nothing: nothing
+          field_document_pdf: field_document_pdf
+          field_mydate: field_mydate
+        default: '-1'
+        info:
+          title:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_month:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_year:
+            sortable: 1
+            default_sort_order: desc
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_topic_category:
+            align: ''
+            separator: ''
+            empty_column: 0
+          nothing:
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_document_pdf:
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_mydate:
+            sortable: 1
+            default_sort_order: desc
+            align: ''
+            separator: ''
+            empty_column: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_document_pdf'
+        - 'config:field.storage.node.field_mydate'
+        - 'config:field.storage.node.field_test'

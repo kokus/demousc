@@ -1,0 +1,419 @@
+uuid: 7350b27a-f614-4dfd-bc3c-bb1e2e0e39bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.promo_header
+    - core.entity_view_mode.node.teaser
+    - node.type.front_promo_box
+  module:
+    - node
+    - options
+    - user
+id: front_promo_boxes
+label: 'Front Promo Boxes'
+module: views
+description: ''
+tag: default
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      title: 'Front Promo Boxes'
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: field
+          label: ''
+          alter:
+            word_boundary: false
+            ellipsis: false
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 1
+      exposed_form:
+        type: basic
+      access:
+        type: perm
+      cache:
+        type: none
+      sorts:
+        promote:
+          id: promote
+          table: node_field_data
+          field: promote
+          plugin_id: standard
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          plugin_id: date
+          order: DESC
+          granularity: minute
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            front_promo_box: front_promo_box
+          group: 1
+        status_extra:
+          id: status_extra
+          table: node_field_data
+          field: status_extra
+          plugin_id: node_status
+          operator: or
+          group: 1
+        promote:
+          id: promote
+          table: node_field_data
+          field: promote
+          plugin_id: boolean
+          operator: or
+          value: '1'
+          group: 1
+        field_promo_box_location_value:
+          id: field_promo_box_location_value
+          table: node__field_promo_box_location
+          field: field_promo_box_location_value
+          plugin_id: list_field
+          operator: empty
+          value:
+            1: '1'
+          group: 1
+      style:
+        type: default
+        options:
+          row_class: column
+          default_row_class: false
+          row_class_special: false
+      row:
+        type: 'entity:node'
+      query:
+        type: views_query
+        options: {  }
+      use_more_always: false
+      display_extenders: {  }
+      style_plugin: default
+      style_options:
+        row_class: column
+        default_row_class: false
+        row_class_special: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_promo_bottom_left:
+    id: block_promo_bottom_left
+    display_title: 'Block: Bottom Left'
+    display_plugin: block
+    position: 4
+    display_options:
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            front_promo_box: front_promo_box
+          group: 1
+        status_extra:
+          id: status_extra
+          table: node_field_data
+          field: status_extra
+          plugin_id: node_status
+          operator: or
+          group: 1
+        promote:
+          id: promote
+          table: node_field_data
+          field: promote
+          plugin_id: boolean
+          operator: or
+          value: '1'
+          group: 1
+        field_promo_box_location_value:
+          id: field_promo_box_location_value
+          table: node__field_promo_box_location
+          field: field_promo_box_location_value
+          plugin_id: list_field
+          operator: or
+          value:
+            3: '3'
+          group: 1
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        filters: false
+        filter_groups: false
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_promo_bottom_middle:
+    id: block_promo_bottom_middle
+    display_title: 'Block: Bottom Middle'
+    display_plugin: block
+    position: 5
+    display_options:
+      filters:
+        status_extra:
+          id: status_extra
+          table: node_field_data
+          field: status_extra
+          plugin_id: node_status
+          operator: or
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            front_promo_box: front_promo_box
+          group: 1
+        promote:
+          id: promote
+          table: node_field_data
+          field: promote
+          plugin_id: boolean
+          operator: or
+          value: '1'
+          group: 1
+        field_promo_box_location_value:
+          id: field_promo_box_location_value
+          table: node__field_promo_box_location
+          field: field_promo_box_location_value
+          plugin_id: list_field
+          operator: or
+          value:
+            4: '4'
+          group: 1
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        filters: false
+        filter_groups: false
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_promo_bottom_right:
+    id: block_promo_bottom_right
+    display_title: 'Block: Bottom Right'
+    display_plugin: block
+    position: 6
+    display_options:
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            front_promo_box: front_promo_box
+          group: 1
+        status_extra:
+          id: status_extra
+          table: node_field_data
+          field: status_extra
+          plugin_id: node_status
+          operator: or
+          group: 1
+        promote:
+          id: promote
+          table: node_field_data
+          field: promote
+          plugin_id: boolean
+          operator: or
+          value: '1'
+          group: 1
+        field_promo_box_location_value:
+          id: field_promo_box_location_value
+          table: node__field_promo_box_location
+          field: field_promo_box_location_value
+          plugin_id: list_field
+          operator: or
+          value:
+            5: '5'
+          group: 1
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        filters: false
+        filter_groups: false
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_promo_header_left:
+    id: block_promo_header_left
+    display_title: 'Block: Header Left'
+    display_plugin: block
+    position: 2
+    display_options:
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            front_promo_box: front_promo_box
+          group: 1
+        status_extra:
+          id: status_extra
+          table: node_field_data
+          field: status_extra
+          plugin_id: node_status
+          operator: or
+          group: 1
+        promote:
+          id: promote
+          table: node_field_data
+          field: promote
+          plugin_id: boolean
+          operator: or
+          value: '1'
+          group: 1
+        field_promo_box_location_value:
+          id: field_promo_box_location_value
+          table: node__field_promo_box_location
+          field: field_promo_box_location_value
+          plugin_id: list_field
+          operator: or
+          value:
+            1: '1'
+          group: 1
+      style:
+        type: default
+        options:
+          row_class: column
+          default_row_class: false
+          row_class_special: false
+      row:
+        type: 'entity:node'
+        options:
+          view_mode: promo_header
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+      display_extenders: {  }
+      style_plugin: default
+      style_options:
+        row_class: column
+        default_row_class: false
+        row_class_special: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_promo_top_right:
+    id: block_promo_top_right
+    display_title: 'Block: Top Right'
+    display_plugin: block
+    position: 3
+    display_options:
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            front_promo_box: front_promo_box
+          group: 1
+        status_extra:
+          id: status_extra
+          table: node_field_data
+          field: status_extra
+          plugin_id: node_status
+          operator: or
+          group: 1
+        promote:
+          id: promote
+          table: node_field_data
+          field: promote
+          plugin_id: boolean
+          operator: or
+          value: '1'
+          group: 1
+        field_promo_box_location_value:
+          id: field_promo_box_location_value
+          table: node__field_promo_box_location
+          field: field_promo_box_location_value
+          plugin_id: list_field
+          operator: or
+          value:
+            2: '2'
+          group: 1
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        filters: false
+        filter_groups: false
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
