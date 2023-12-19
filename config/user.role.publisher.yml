@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - config_pages
     - contextual
     - node
     - path
@@ -30,5 +31,6 @@ permissions:
   - 'create url aliases'
   - 'notify of path changes'
   - 'schedule publishing of nodes'
+  - 'view global_site_settings config page entity'
   - 'view scheduled content'
   - 'view the administration theme'

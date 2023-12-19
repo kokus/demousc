@@ -8,6 +8,7 @@ dependencies:
     - taxonomy.vocabulary.tags
   module:
     - comment
+    - config_pages
     - contextual
     - file
     - node
@@ -45,5 +46,6 @@ permissions:
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'view all revisions'
+  - 'view global_site_settings config page entity'
   - 'view own unpublished content'
   - 'view the administration theme'

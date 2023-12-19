@@ -3,6 +3,9 @@ name: Social media menu
 props:
   type: object
   properties:
+    logo_path:
+      title: Path to logo
+      type: string
     social_media:
       type: array
       properties:
