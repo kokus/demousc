@@ -41,3 +41,4 @@ hidden:
   field_banner_image: true
   field_lead_paragraph: true
   field_logo: true
+  field_sidebar: true

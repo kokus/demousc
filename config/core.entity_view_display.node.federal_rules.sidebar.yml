@@ -48,6 +48,7 @@ hidden:
   field_metatag: true
   field_rules_rule_or_form: true
   field_rules_status: true
+  field_sidebar: true
   field_tags: true
   field_term_entity_reference: true
   field_term_entity_reference2: true

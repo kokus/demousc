@@ -18,6 +18,12 @@ filters:
     weight: 0
     settings:
       processor_settings: {  }
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
   filter_url:
     id: filter_url
     provider: filter
@@ -25,12 +31,6 @@ filters:
     weight: 0
     settings:
       filter_url_length: 72
-  filter_autop:
-    id: filter_autop
-    provider: filter
-    status: true
-    weight: 0
-    settings: {  }
   filter_pathologic:
     id: filter_pathologic
     provider: pathologic

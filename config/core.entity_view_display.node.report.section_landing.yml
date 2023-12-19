@@ -57,5 +57,6 @@ hidden:
   field_metatag: true
   field_report_children: true
   field_report_name: true
+  field_sidebar: true
   field_sidebar_title: true
   field_tags: true

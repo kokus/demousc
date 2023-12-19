@@ -101,5 +101,6 @@ content:
     region: content
 hidden:
   field_metatag: true
+  field_sidebar: true
   field_tags: true
   field_usc_import_timestamp: true
