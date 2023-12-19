@@ -21,6 +21,7 @@ dependencies:
     - node.type.news_issue
     - node.type.report
   module:
+    - config_pages
     - node
     - pathauto
     - system
@@ -63,5 +64,6 @@ permissions:
   - 'edit any news_issue content'
   - 'edit any report content'
   - 'notify of path changes'
+  - 'view global_site_settings config page entity'
   - 'view own unpublished content'
   - 'view the administration theme'

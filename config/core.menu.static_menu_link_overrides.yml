@@ -7,3 +7,9 @@ definitions:
     weight: -46
     expanded: false
     enabled: false
+  config_pages__global_site_settings:
+    menu_name: admin
+    parent: system.themes_page
+    weight: 0
+    expanded: false
+    enabled: true
