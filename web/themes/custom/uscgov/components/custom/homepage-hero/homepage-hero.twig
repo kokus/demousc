@@ -17,13 +17,20 @@
     <div class="homepage-hero__second">
       {{ include('uscgov:court-finder-block') }}
     </div>
-    <div class="homepage-hero__third">
-      {% embed 'uscgov:hero-block-secondary' with {
 
-      }
-      %}
-
-      {% endembed %}
-    </div>
+    {% if hero_block_secondary_title|render %}
+      <div class="homepage-hero__third">
+        {% embed 'uscgov:hero-block-secondary' with {
+            title: hero_block_secondary_title,
+            description: hero_block_secondary_description,
+            cta: block('hero_block_secondary_cta'),
+          }
+        %}
+          {% block cta %}
+            {{ cta|raw }}
+          {% endblock %}
+        {% endembed %}
+      </div>
+    {% endif %}
   </div>
 </div>

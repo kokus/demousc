@@ -1,9 +1,11 @@
 <div class="hero-block-secondary">
-  <h2 class="hero-block-secondary__title">{{ 'Find a Form'|t }} </h2>
-  <p class="hero-block-secondary__description">
-    {{ 'Search for national federal court forms by keyword, number or category.'|t }}
-  </p>
+  <h2 class="hero-block-secondary__title">{{ title }}</h2>
+  {% if description %}
+    <p class="hero-block-secondary__description">
+      {{ description }}
+    </p>
+  {% endif %}
   <div class="hero-block-secondary__cta-wrapper">
-    <a href="#">{{ 'Search for a form'|t }}</a>
+    {% block cta %}{% endblock %}
   </div>
 </div>
