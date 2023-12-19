@@ -1,0 +1,4 @@
+ {{ include('uscgov:quicklinks', {
+    title: config_pages_field('global_site_settings', 'field_homepage_quick_links_title', 'full')|add_suggestion('bare'),
+    quicklinks,
+  }, with_context = false) }}

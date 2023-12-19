@@ -19,42 +19,8 @@
     {% endblock %}
   {% endembed %}
 
+  {{ config_pages_field('global_site_settings', 'field_hompage_quick_links', 'full') }}
 
-  {{ include('uscgov:quicklinks', {
-    title: 'Quick Links',
-    quicklinks: [
-      {
-        title: 'Bankruptcy',
-        url: '#',
-        svg_path: '/themes/custom/uscgov/images/bankruptcy.svg',
-      },
-      {
-        title: 'Bankruptcy',
-        url: '#',
-        svg_path: '/themes/custom/uscgov/images/bankruptcy.svg',
-      },
-      {
-        title: 'Bankruptcy',
-        url: '#',
-        svg_path: '/themes/custom/uscgov/images/bankruptcy.svg',
-      },
-      {
-        title: 'Bankruptcy (but not me of course)',
-        url: '#',
-        svg_path: '/themes/custom/uscgov/images/bankruptcy.svg',
-      },
-      {
-        title: 'Bankruptcy',
-        url: '#',
-        svg_path: '/themes/custom/uscgov/images/bankruptcy.svg',
-      },
-      {
-        title: 'Bankruptcy',
-        url: '#',
-        svg_path: '/themes/custom/uscgov/images/bankruptcy.svg',
-      },
-    ],
-  }, with_context = false) }}
   <div class="container">
     {{ page.highlighted }}
     {{ page.help }}
