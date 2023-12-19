@@ -54,15 +54,13 @@ services:
       # skipping the init step, because the results of that step will
       # already be present.
       update:
-        # Install/update packages managed by composer, including drush.
-        - composer install --optimize-autoloader
-
         # Set file permissions such that Drupal will not complain
         - chgrp -R www-data "${DOCROOT}/sites"
         - find "${DOCROOT}/sites" -type d -exec chmod 2775 {} \;
         - find "${DOCROOT}/sites" -type f -exec chmod 0664 {} \;
 
       build:
+        - composer install --optimize-autoloader
         # Use the tugboat-specific Drupal settings.
         - rm -rf "${DOCROOT}/sites/default/settings.db.php"
         - cp "${TUGBOAT_ROOT}/.tugboat/settings.local.php" "${DOCROOT}/sites/default/settings.db.php"
