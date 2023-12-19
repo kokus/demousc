@@ -1,14 +1,17 @@
 <div class="homepage-hero">
   <div class="homepage-hero__background-wrapper">
-    <img src="{{ componentMetadata.path}}/stock.jpg" alt="">
+    {% block homepage_hero_image %}{% endblock %}
   </div>
   <div class="homepage-hero__container container--small">
     <div class="homepage-hero__first">
-      <h1 class="homepage-hero__title">The Federal Courts
-of the United States</h1>
-      <p class="homepage-hero__description">Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices. slkdn lkslkn Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque.</p>
+      <h1 class="homepage-hero__title">
+        {{ title }}
+      </h1>
+      <p class="homepage-hero__description">
+        {{ description }}
+      </p>
       <div class="homepage-hero__cta-wrapper">
-        <a href="#">About the Federal Courts</a>
+        {% block homepage_hero_link %}{% endblock %}
       </div>
     </div>
     <div class="homepage-hero__second">

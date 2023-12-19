@@ -7,8 +7,18 @@
     {% endblock %}
   {% endembed %}
 
-  {% embed 'uscgov:homepage-hero' %}
+  {% embed 'uscgov:homepage-hero' with {
+    title: config_pages_field('global_site_settings', 'field_homepage_hero_title', 'full')|add_suggestion('bare'),
+    description: config_pages_field('global_site_settings', 'field_homepage_hero_description', 'full')|add_suggestion('bare'),
+  } %}
+    {% block homepage_hero_image %}
+      {{ config_pages_field('global_site_settings', 'field_hero_background_image', 'full')|add_suggestion('bare') }}
+    {% endblock %}
+    {% block homepage_hero_link %}
+      {{ config_pages_field('global_site_settings', 'field_homepage_hero_cta', 'full')|add_suggestion('bare') }}
+    {% endblock %}
   {% endembed %}
+
 
   {{ include('uscgov:quicklinks', {
     title: 'Quick Links',
