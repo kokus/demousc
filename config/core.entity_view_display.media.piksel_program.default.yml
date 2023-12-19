@@ -1,0 +1,25 @@
+uuid: a104dd8c-3830-49fb-ae81-821bb69be98f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.piksel_program.field_file_title
+    - media.type.piksel_program
+id: media.piksel_program.default
+targetEntityType: media
+bundle: piksel_program
+mode: default
+content:
+  field_file_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true
