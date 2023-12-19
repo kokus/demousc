@@ -1,12 +1,11 @@
-uuid: 08ef2f68-ae37-4d3d-ac00-6dd19b552f40
+uuid: 4df360b6-c092-4893-a3b6-04dcd32d1601
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_criminogenic_extra_downld
+    - media.type.document
     - paragraphs.paragraphs_type.criminogenic_extra_downlds
-  module:
-    - file
 id: paragraph.criminogenic_extra_downlds.field_criminogenic_extra_downld
 field_name: field_criminogenic_extra_downld
 entity_type: paragraph
@@ -18,10 +17,8 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:file'
-  handler_settings: {  }
-  file_directory: criminogenic
-  file_extensions: 'txt doc pdf docx'
-  max_filesize: ''
-  description_field: false
-field_type: file
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+field_type: entity_reference

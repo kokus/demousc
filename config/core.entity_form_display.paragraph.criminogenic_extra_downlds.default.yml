@@ -7,22 +7,22 @@ dependencies:
     - field.field.paragraph.criminogenic_extra_downlds.field_criminogenic_language
     - paragraphs.paragraphs_type.criminogenic_extra_downlds
   module:
-    - file
+    - media_library
 id: paragraph.criminogenic_extra_downlds.default
 targetEntityType: paragraph
 bundle: criminogenic_extra_downlds
 mode: default
 content:
   field_criminogenic_extra_downld:
-    type: file_generic
-    weight: 2
+    type: media_library_widget
+    weight: 1
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_criminogenic_language:
     type: options_select
-    weight: 1
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

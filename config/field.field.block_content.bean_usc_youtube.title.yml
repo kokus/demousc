@@ -1,0 +1,19 @@
+uuid: c862fd19-9eb9-407d-ba75-1473ea817008
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bean_usc_youtube
+    - field.storage.block_content.title
+id: block_content.bean_usc_youtube.title
+field_name: title
+entity_type: block_content
+bundle: bean_usc_youtube
+label: Title
+description: 'The Title of the block.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -19,7 +19,11 @@ default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:file'
-  handler_settings: {  }
+  handler_settings:
+    target_bundles:
+      image: image
+      image_https: image_https
+      image_http: image_http
   file_directory: ''
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''

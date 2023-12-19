@@ -1,0 +1,6 @@
+services:
+  usc_migrate_adjustments.event_subscriber:
+    class: Drupal\usc_migrate_adjustments\EventSubscriber\AdjustMigrationSubscriber
+    arguments: {}
+    tags:
+      - { name: event_subscriber }

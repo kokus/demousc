@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.report.field_lead_gallery
     - field.field.node.report.field_lead_paragraph
     - field.field.node.report.field_logo
+    - field.field.node.report.field_metatag
     - field.field.node.report.field_report_children
     - field.field.node.report.field_report_name
     - field.field.node.report.field_sidebar_title
@@ -53,6 +54,7 @@ hidden:
   field_lead_gallery: true
   field_lead_paragraph: true
   field_logo: true
+  field_metatag: true
   field_report_children: true
   field_report_name: true
   field_sidebar_title: true

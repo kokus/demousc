@@ -14,10 +14,6 @@ label: 'Content blocks'
 source:
   plugin: d7_block_custom
 process:
-  id:
-    -
-      plugin: get
-      source: bid
   info:
     -
       plugin: get

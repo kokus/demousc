@@ -11,12 +11,12 @@ dependencies:
     - field.field.node.news.field_landing_page_image
     - field.field.node.news.field_lead_gallery
     - field.field.node.news.field_lead_paragraph
+    - field.field.node.news.field_metatag
     - field.field.node.news.field_news_issue
     - field.field.node.news.field_related_topics
     - field.field.node.news.field_tags
     - node.type.news
   module:
-    - image
     - text
     - user
 id: node.news.landing_page
@@ -33,13 +33,11 @@ content:
     weight: 3
     region: content
   field_landing_page_image:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: content
-      image_style: landing
-      image_loading:
-        attribute: lazy
+      view_mode: default
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
@@ -59,6 +57,7 @@ hidden:
   field_fc_be_audio: true
   field_lead_gallery: true
   field_lead_paragraph: true
+  field_metatag: true
   field_news_issue: true
   field_related_topics: true
   field_tags: true

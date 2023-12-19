@@ -1,23 +1,17 @@
-uuid: ffe2e726-58b2-4e48-8ea8-40dc0c0943cd
+uuid: 867abbca-7198-4955-ae5f-870c84b6c0ae
 langcode: und
 status: true
 dependencies:
   module:
-    - file
-    - image
+    - media
     - node
 id: node.field_landing_page_image
 field_name: field_landing_page_image
 entity_type: node
-type: image
+type: entity_reference
 settings:
-  target_type: file
-  display_field: false
-  display_default: false
-  uri_scheme: public
-  default_image:
-    uuid: ''
-module: image
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true

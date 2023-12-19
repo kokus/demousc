@@ -1,23 +1,17 @@
-uuid: 63c61e1d-bfeb-4db6-904b-4b71cca5cd7b
+uuid: af4ba021-69c7-40e9-80b3-a1ee2526247c
 langcode: und
 status: true
 dependencies:
   module:
-    - file
-    - image
+    - media
     - node
 id: node.field_banner_image
 field_name: field_banner_image
 entity_type: node
-type: image
+type: entity_reference
 settings:
-  target_type: file
-  display_field: false
-  display_default: false
-  uri_scheme: public
-  default_image:
-    uuid: ''
-module: image
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true

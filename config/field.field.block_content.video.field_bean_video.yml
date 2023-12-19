@@ -1,0 +1,23 @@
+uuid: e23d2887-9071-4176-88cd-08e4f1260086
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video
+    - field.storage.block_content.field_bean_video
+id: block_content.video.field_bean_video
+field_name: field_bean_video
+entity_type: block_content
+bundle: video
+label: Video
+description: 'Attach a YouTube video by entering its full URL (e.g. http://www.youtube.com/watch?v=0TMYwBAzAOo).'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+field_type: entity_reference

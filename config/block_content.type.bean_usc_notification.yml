@@ -1,0 +1,8 @@
+uuid: 78d9ac11-156c-4580-8019-14c194cf30ab
+langcode: en
+status: true
+dependencies: {  }
+id: bean_usc_notification
+label: Notification
+revision: 1
+description: ''

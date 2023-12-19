@@ -1,12 +1,14 @@
 uuid: 523722f4-3377-43f3-a63f-255898d5a6d5
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - gutenberg
 _core:
   default_config_hash: oz6NyPDAB4HB6N9hgH2LwNVtCd-sXbMG1fbn5KsRIDI
 name: 'Restricted HTML'
 format: restricted_html
-weight: 1
+weight: -3
 filters:
   filter_html:
     id: filter_html

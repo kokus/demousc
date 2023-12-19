@@ -1,0 +1,61 @@
+uuid: 352b70b1-c057-4313-b4f4-3b86fedb5200
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.preview
+    - field.field.media.audio.field_file_description
+    - field.field.media.audio.field_file_title
+    - field.field.media.audio.field_media_audio_file
+    - image.style.thumbnail
+    - media.type.audio
+  module:
+    - image
+    - user
+id: media.audio.preview
+targetEntityType: media
+bundle: audio
+mode: preview
+content:
+  created:
+    type: timestamp
+    label: hidden
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  uid:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_file_description: true
+  field_file_title: true
+  field_media_audio_file: true
+  name: true

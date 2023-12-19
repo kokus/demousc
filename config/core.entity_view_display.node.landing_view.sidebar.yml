@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.landing_view.field_landing_page_image
     - field.field.node.landing_view.field_lead_paragraph
     - field.field.node.landing_view.field_logo
+    - field.field.node.landing_view.field_metatag
     - field.field.node.landing_view.field_tags
     - node.type.landing_view
   module:
@@ -40,4 +41,5 @@ hidden:
   field_landing_page_image: true
   field_lead_paragraph: true
   field_logo: true
+  field_metatag: true
   field_tags: true

@@ -7,12 +7,14 @@ dependencies:
     - field.field.node.front_promo_box.field_bean_image
     - field.field.node.front_promo_box.field_bean_video
     - field.field.node.front_promo_box.field_link
+    - field.field.node.front_promo_box.field_metatag
     - field.field.node.front_promo_box.field_more_link
     - field.field.node.front_promo_box.field_promo_box_location
     - node.type.front_promo_box
   module:
     - file
     - link
+    - metatag
     - path
     - text
 id: node.front_promo_box.default
@@ -57,6 +59,14 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_more_link:
     type: link_default

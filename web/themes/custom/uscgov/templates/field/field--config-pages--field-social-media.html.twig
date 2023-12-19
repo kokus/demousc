@@ -1,9 +1,1 @@
 {{ include('uscgov:social-media-menu', { social_media }, with_context = false) }}
-
-{#
-  Ensure cachability metadata bubbles up.
-  @see https://www.drupal.org/project/drupal/issues/2660002
-#}
-{% for item in items %}
-  {% set catch_cache = item.content|render %}
-{% endfor %}

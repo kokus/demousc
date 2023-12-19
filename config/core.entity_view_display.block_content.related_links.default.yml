@@ -1,0 +1,26 @@
+uuid: a1e6daad-abe3-4291-88e2-63fc7af73287
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.related_links
+    - field.field.block_content.related_links.field_bean_description
+    - field.field.block_content.related_links.field_bean_links
+    - field.field.block_content.related_links.title
+  module:
+    - text
+id: block_content.related_links.default
+targetEntityType: block_content
+bundle: related_links
+mode: default
+content:
+  field_bean_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_bean_links: true
+  title: true

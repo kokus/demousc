@@ -1,0 +1,8 @@
+uuid: 8fcf2df7-4e3c-48d7-91d6-257efedc1cd1
+langcode: en
+status: true
+dependencies: {  }
+id: bean_usc_govdelivery
+label: 'GovDelivery Form'
+revision: 1
+description: ''

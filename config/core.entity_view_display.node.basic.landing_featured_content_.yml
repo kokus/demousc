@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.basic.field_lead_gallery
     - field.field.node.basic.field_lead_paragraph
     - field.field.node.basic.field_logo
+    - field.field.node.basic.field_metatag
     - field.field.node.basic.field_tags
     - node.type.basic
   module:
@@ -40,4 +41,5 @@ hidden:
   field_lead_gallery: true
   field_lead_paragraph: true
   field_logo: true
+  field_metatag: true
   field_tags: true
