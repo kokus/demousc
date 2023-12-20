@@ -22,31 +22,10 @@
     width: 100%;
   }
 
-  .primary-menu__dropdown-first {
-    .primary-menu__dropdown--mega & {
-      flex-basis: 320px;
-      flex-shrink: 0;
-      padding: var(--spacing-md-2);
-      background: color('primary-lighter');
-    }
-  }
-
-  .primary-menu__dropdown-second {
-    .primary-menu__dropdown--mega & {
-      flex-grow: 1;
-      padding: var(--spacing-md-2);
-    }
-  }
-
   .primary-menu--level-1 {
     margin: 0;
     padding: 0;
     list-style: none;
-
-    .primary-menu__dropdown--mega & {
-      columns: 4;
-      column-gap: 0;
-    }
   }
 
   .primary_menu__level-1-inner {
@@ -130,8 +109,25 @@
     display: none;
   }
 
-  .primary-menu__link--level-1 {
-    .primary-menu__dropdown--mega & {
+  .primary-menu__dropdown--mega {
+    .primary-menu__dropdown-first {
+      flex-basis: 320px;
+      flex-shrink: 0;
+      padding: var(--spacing-md-2);
+      background: color('primary-lighter');
+    }
+
+    .primary-menu__dropdown-second {
+      flex-grow: 1;
+      padding: var(--spacing-md-2);
+    }
+
+    .primary-menu--level-1 {
+      columns: 4;
+      column-gap: 0;
+    }
+
+    .primary-menu__link--level-1{
       position: relative; // Anchor pseudo-elements that make chevron.
       display: block;
       padding: var(--spacing-sm-2);
