@@ -97,6 +97,7 @@ module:
   path_alias: 0
   pathologic: 0
   phpass: 0
+  piksel: 0
   redirect: 0
   redis: 0
   remote_stream_wrapper: 0
@@ -117,6 +118,7 @@ module:
   toolbar: 0
   tour: 0
   transliterate_filenames: 0
+  usc_migrate_adjustments: 0
   usc_migrate_boolean: 0
   usc_migrate_gutenberg: 0
   usc_migrate_list: 0

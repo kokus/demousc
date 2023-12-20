@@ -1,0 +1,8 @@
+uuid: 1246c582-22e8-4ff8-89d1-faf70e8f9d68
+langcode: en
+status: true
+dependencies: {  }
+id: bean_usc_latestnews
+label: 'Latest News'
+revision: 1
+description: ''

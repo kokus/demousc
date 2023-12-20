@@ -1,0 +1,58 @@
+uuid: 728c9821-f907-40c1-acfe-8099ed569ceb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.table_of_contents
+    - field.storage.block_content.field_bean_node
+    - node.type.basic
+    - node.type.basic_simple
+    - node.type.camera
+    - node.type.data_table
+    - node.type.educational_activity
+    - node.type.faqs
+    - node.type.federal_rules
+    - node.type.fee
+    - node.type.form
+    - node.type.judge
+    - node.type.landing_featured_content
+    - node.type.landing_view
+    - node.type.news
+    - node.type.news_issue
+    - node.type.report
+id: block_content.table_of_contents.field_bean_node
+field_name: field_bean_node
+entity_type: block_content
+bundle: table_of_contents
+label: 'Content Nodes'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      basic: basic
+      basic_simple: basic_simple
+      camera: camera
+      data_table: data_table
+      educational_activity: educational_activity
+      faqs: faqs
+      federal_rules: federal_rules
+      fee: fee
+      form: form
+      judge: judge
+      landing_featured_content: landing_featured_content
+      landing_view: landing_view
+      news: news
+      news_issue: news_issue
+      report: report
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

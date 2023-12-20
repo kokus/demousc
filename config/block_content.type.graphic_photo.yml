@@ -1,0 +1,8 @@
+uuid: 5f5830e6-9bdd-433c-ab00-6f599e7b75f0
+langcode: en
+status: true
+dependencies: {  }
+id: graphic_photo
+label: Graphic/Photo
+revision: 1
+description: ''

@@ -1,0 +1,61 @@
+uuid: 3857bd00-4104-4b06-b401-b7c75d15ea9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.news_issue_view
+    - field.field.media.image.field_file_description
+    - field.field.media.image.field_link
+    - field.field.media.image.field_media_image
+    - image.style.thumbnail
+    - media.type.image
+  module:
+    - image
+    - user
+id: media.image.news_issue_view
+targetEntityType: media
+bundle: image
+mode: news_issue_view
+content:
+  created:
+    type: timestamp
+    label: hidden
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  uid:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_file_description: true
+  field_link: true
+  field_media_image: true
+  name: true

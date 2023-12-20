@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.form.field_form_category
     - field.field.node.form.field_form_number
     - field.field.node.form.field_hide_left_navigation
+    - field.field.node.form.field_metatag
     - field.field.node.form.field_short_title
     - field.field.node.form.field_superseded
     - field.field.node.form.field_tags
@@ -69,6 +70,15 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
+  field_document_pdf:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
   field_form_category:
     type: entity_reference_label
     label: inline
@@ -96,8 +106,8 @@ content:
     weight: 10
     region: content
 hidden:
-  field_document_pdf: true
   field_hide_left_navigation: true
+  field_metatag: true
   field_short_title: true
   field_superseded: true
   field_tags: true

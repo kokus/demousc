@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.camera.field_date_updated
     - field.field.node.camera.field_lead_paragraph
     - field.field.node.camera.field_logo
+    - field.field.node.camera.field_metatag
     - field.field.node.camera.field_piksel_category_id
     - field.field.node.camera.field_piksel_programs
     - field.field.node.camera.field_piksel_project_uuid
@@ -47,9 +48,11 @@ hidden:
   field_date_updated: true
   field_lead_paragraph: true
   field_logo: true
+  field_metatag: true
   field_piksel_category_id: true
   field_piksel_programs: true
   field_piksel_project_uuid: true
   field_procedural_posture: true
+  field_program: true
   field_subject_matter: true
   field_tags: true

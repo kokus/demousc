@@ -1,0 +1,19 @@
+uuid: 89f0639f-9687-4059-81cf-16fba444ae2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.table_of_contents
+    - field.storage.block_content.title
+id: block_content.table_of_contents.title
+field_name: title
+entity_type: block_content
+bundle: table_of_contents
+label: Title
+description: 'The Title of the block.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

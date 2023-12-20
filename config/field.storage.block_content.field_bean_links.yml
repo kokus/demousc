@@ -1,0 +1,19 @@
+uuid: f36e3c6c-dcf8-430c-a1c6-b8664e70dc73
+langcode: und
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+id: block_content.field_bean_links
+field_name: field_bean_links
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -5,6 +5,9 @@
  * Functions to support theming.
  */
 
+use Drupal\config_pages\Entity\ConfigPages;
+use Drupal\Core\Cache\CacheableMetadata;
+
 /**
  * Implements hook_preprocess_image_widget().
  */
@@ -107,7 +110,6 @@ function uscgov_preprocess_menu_local_task(&$variables) {
  * @throws Drupal\Core\File\Exception\InvalidStreamWrapperException
  */
 function uscgov_preprocess_field__config_pages__field_social_media(&$variables) {
-  $variables['social_media'] = [];
   foreach ($variables['items'] as &$item) {
     $variables['social_media'][] = [
       'url' => $item['content']['#paragraph']->field_hyperlink->uri,
@@ -115,4 +117,15 @@ function uscgov_preprocess_field__config_pages__field_social_media(&$variables) 
       'path_to_logo' => \Drupal::service('file_url_generator')->generateString($item['content']['#paragraph']->field_svg_icon->entity->uri->value),
     ];
   }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Adds cache dependency for page settings(config page).
+ */
+function uscgov_preprocess_page(array &$variables) {
+  $global_site_settings = ConfigPages::config('global_site_settings');
+  // Add a cache dependency.
+  CacheableMetadata::createFromObject($global_site_settings)->applyTo($variables);
 }

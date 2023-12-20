@@ -1,23 +1,17 @@
-uuid: db9f07fa-1a35-4ba5-b4b4-05e4d6057b69
+uuid: a526a451-6bc6-495f-9bd2-13734894c391
 langcode: und
 status: true
 dependencies:
   module:
-    - file
-    - image
+    - media
     - paragraphs
 id: paragraph.field_fc_be_image
 field_name: field_fc_be_image
 entity_type: paragraph
-type: image
+type: entity_reference
 settings:
-  target_type: file
-  display_field: false
-  display_default: false
-  uri_scheme: public
-  default_image:
-    uuid: ''
-module: image
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true

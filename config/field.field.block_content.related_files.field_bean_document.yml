@@ -1,0 +1,24 @@
+uuid: bfa9c289-7e64-4c65-80c8-1a55d01d1257
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.related_files
+    - field.storage.block_content.field_bean_document
+    - media.type.document
+id: block_content.related_files.field_bean_document
+field_name: field_bean_document
+entity_type: block_content
+bundle: related_files
+label: Files
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+field_type: entity_reference

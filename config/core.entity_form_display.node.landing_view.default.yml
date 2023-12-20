@@ -7,12 +7,111 @@ dependencies:
     - field.field.node.landing_view.field_landing_page_image
     - field.field.node.landing_view.field_lead_paragraph
     - field.field.node.landing_view.field_logo
+    - field.field.node.landing_view.field_metatag
     - field.field.node.landing_view.field_tags
     - node.type.landing_view
   module:
-    - file
+    - field_group
+    - media_library
+    - metatag
     - path
     - text
+third_party_settings:
+  field_group:
+    group_body_simple:
+      children:
+        - body
+      label: 'Body (Simple)'
+      region: content
+      parent_name: group_node_form
+      weight: 9
+      format_type: tab
+      format_settings:
+        classes: 'group-body-simple field-group-tab'
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_landing_page:
+      children:
+        - field_landing_page_image
+      label: 'Featured Page'
+      region: content
+      parent_name: group_node_form
+      weight: 12
+      format_type: tab
+      format_settings:
+        classes: 'group-landing-page field-group-tab'
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_lead_elements:
+      children:
+        - field_lead_paragraph
+        - field_logo
+      label: 'Lead Elements'
+      region: content
+      parent_name: group_node_form
+      weight: 8
+      format_type: tab
+      format_settings:
+        classes: 'group-lead-elements field-group-tab'
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_node_form:
+      children:
+        - group_body_simple
+        - group_landing_page
+        - group_lead_elements
+        - group_sidebar
+        - group_view
+      label: 'Node Form'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        classes: 'group-node-form field-group-tabs'
+        show_empty_fields: false
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_sidebar:
+      children:
+        - field_sidebar
+      label: Sidebar
+      region: content
+      parent_name: group_node_form
+      weight: 11
+      format_type: tab
+      format_settings:
+        classes: 'group-sidebar field-group-tab'
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_view:
+      children:
+        - field_view
+      label: View
+      region: content
+      parent_name: group_node_form
+      weight: 10
+      format_type: tab
+      format_settings:
+        classes: 'group-view field-group-tab'
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
 id: node.landing_view.default
 targetEntityType: node
 bundle: landing_view
@@ -35,11 +134,11 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_landing_page_image:
-    type: file_generic
+    type: media_library_widget
     weight: 11
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
   field_lead_paragraph:
     type: text_textarea
@@ -50,11 +149,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_logo:
-    type: file_generic
+    type: media_library_widget
     weight: 32
     region: content
     settings:
-      progress_indicator: throbber
+      media_types: {  }
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 121
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete

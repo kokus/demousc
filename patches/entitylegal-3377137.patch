@@ -1,0 +1,51 @@
+From aa2d9a3d056c603bd2acf42fec16245cbefd56be Mon Sep 17 00:00:00 2001
+From: Sweetchuck <Sweetchuck@23728.no-reply.drupal.org>
+Date: Wed, 26 Jul 2023 20:01:29 +0200
+Subject: [PATCH] Issue #3377137 - Add source_module key to the @MigrateSource
+ annotations
+
+---
+ src/Plugin/migrate/source/EntityLegalDocument.php           | 1 +
+ src/Plugin/migrate/source/EntityLegalDocumentAcceptance.php | 1 +
+ src/Plugin/migrate/source/EntityLegalDocumentVersion.php    | 1 +
+ 3 files changed, 3 insertions(+)
+
+diff --git a/src/Plugin/migrate/source/EntityLegalDocument.php b/src/Plugin/migrate/source/EntityLegalDocument.php
+index ee603bd..1b18a40 100644
+--- a/src/Plugin/migrate/source/EntityLegalDocument.php
++++ b/src/Plugin/migrate/source/EntityLegalDocument.php
+@@ -9,6 +9,7 @@ use Drupal\migrate_drupal\Plugin\migrate\source\DrupalSqlBase;
+  *
+  * @MigrateSource(
+  *   id = "entity_legal_document",
++ *   source_module = "entity_legal",
+  *   source_provider = "entity_legal"
+  * )
+  */
+diff --git a/src/Plugin/migrate/source/EntityLegalDocumentAcceptance.php b/src/Plugin/migrate/source/EntityLegalDocumentAcceptance.php
+index 107bf1f..088a8fb 100644
+--- a/src/Plugin/migrate/source/EntityLegalDocumentAcceptance.php
++++ b/src/Plugin/migrate/source/EntityLegalDocumentAcceptance.php
+@@ -9,6 +9,7 @@ use Drupal\migrate_drupal\Plugin\migrate\source\d7\FieldableEntity;
+  *
+  * @MigrateSource(
+  *   id = "entity_legal_document_acceptance",
++ *   source_module = "entity_legal",
+  *   source_provider = "entity_legal"
+  * )
+  */
+diff --git a/src/Plugin/migrate/source/EntityLegalDocumentVersion.php b/src/Plugin/migrate/source/EntityLegalDocumentVersion.php
+index 6a8a5d1..1d5edc5 100644
+--- a/src/Plugin/migrate/source/EntityLegalDocumentVersion.php
++++ b/src/Plugin/migrate/source/EntityLegalDocumentVersion.php
+@@ -10,6 +10,7 @@ use Drupal\migrate_drupal\Plugin\migrate\source\d7\FieldableEntity;
+  *
+  * @MigrateSource(
+  *   id = "entity_legal_document_version",
++ *   source_module = "entity_legal",
+  *   source_provider = "entity_legal"
+  * )
+  */
+-- 
+GitLab
+

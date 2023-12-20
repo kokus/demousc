@@ -13,13 +13,13 @@ dependencies:
     - field.field.node.report.field_lead_gallery
     - field.field.node.report.field_lead_paragraph
     - field.field.node.report.field_logo
+    - field.field.node.report.field_metatag
     - field.field.node.report.field_report_children
     - field.field.node.report.field_report_name
     - field.field.node.report.field_sidebar_title
     - field.field.node.report.field_tags
     - node.type.report
   module:
-    - image
     - text
     - user
 id: node.report.landing_page
@@ -36,13 +36,11 @@ content:
     weight: 3
     region: content
   field_landing_page_image:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: content
-      image_style: landing
-      image_loading:
-        attribute: lazy
+      view_mode: default
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
@@ -64,6 +62,7 @@ hidden:
   field_lead_gallery: true
   field_lead_paragraph: true
   field_logo: true
+  field_metatag: true
   field_report_children: true
   field_report_name: true
   field_sidebar_title: true

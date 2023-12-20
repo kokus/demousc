@@ -5,8 +5,8 @@ dependencies: {  }
 name: promo
 label: 'Promo (875x555)'
 effects:
-  6d1fd53f-24f8-4f54-a4a0-73a001b8de49:
-    uuid: 6d1fd53f-24f8-4f54-a4a0-73a001b8de49
+  3d6e51be-654a-4e7e-82dc-9a6a28c947c2:
+    uuid: 3d6e51be-654a-4e7e-82dc-9a6a28c947c2
     id: image_scale_and_crop
     weight: 2
     data:

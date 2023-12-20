@@ -8,17 +8,19 @@ dependencies:
     - field.field.node.camera.field_date_updated
     - field.field.node.camera.field_lead_paragraph
     - field.field.node.camera.field_logo
+    - field.field.node.camera.field_metatag
     - field.field.node.camera.field_piksel_category_id
     - field.field.node.camera.field_piksel_programs
     - field.field.node.camera.field_piksel_project_uuid
     - field.field.node.camera.field_procedural_posture
+    - field.field.node.camera.field_program
+    - field.field.node.camera.field_sidebar
     - field.field.node.camera.field_subject_matter
     - field.field.node.camera.field_tags
     - node.type.camera
   module:
     - datetime
     - entity_reference_revisions
-    - image
     - text
     - user
 id: node.camera.default
@@ -31,7 +33,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 5
     region: content
   field_court_name:
     type: entity_reference_label
@@ -39,7 +41,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 4
+    weight: 3
     region: content
   field_date_updated:
     type: datetime_default
@@ -48,7 +50,7 @@ content:
       timezone_override: ''
       format_type: month_d_yyyy
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_lead_paragraph:
     type: text_default
@@ -58,13 +60,11 @@ content:
     weight: 1
     region: content
   field_logo:
-    type: image
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: logo
-      image_loading:
-        attribute: lazy
+      view_mode: default
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
@@ -75,21 +75,32 @@ content:
       view_mode: full
       link: ''
     third_party_settings: {  }
-    weight: 5
+    weight: 4
+    region: content
+  field_program:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 6
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 8
     region: content
   sharethis:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 7
     region: content
 hidden:
+  field_metatag: true
   field_piksel_category_id: true
   field_piksel_project_uuid: true
   field_procedural_posture: true
+  field_sidebar: true
   field_subject_matter: true
   field_tags: true

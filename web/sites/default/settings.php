@@ -765,6 +765,10 @@ if (extension_loaded('redis') && getenv('DRUPAL_REDIS_HOST') && getenv('DRUPAL_R
   include $app_root . '/' . $site_path . '/settings.redis.php';
 }
 
+if (getenv('PIKSEL_TOKEN')) {
+	$config['piksel.settings']['token'] = getenv('PIKSEL_TOKEN');
+}
+
 /**
  * Load local development override configuration, if available.
  *

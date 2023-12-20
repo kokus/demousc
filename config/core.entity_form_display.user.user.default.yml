@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_last_password_reset
+    - field.field.user.user.field_metatag
     - field.field.user.user.field_password_expiration
     - field.field.user.user.field_pending_expire_sent
     - field.field.user.user.user_picture
@@ -11,6 +12,7 @@ dependencies:
   module:
     - datetime
     - image
+    - metatag
     - path
     - user
 _core:
@@ -31,6 +33,14 @@ content:
     weight: 4
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 33
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_password_expiration:
     type: boolean_checkbox
@@ -53,7 +63,7 @@ content:
     region: content
   user_picture:
     type: image_image
-    weight: 31
+    weight: 32
     region: content
     settings:
       progress_indicator: throbber

@@ -1,0 +1,19 @@
+uuid: 46ad177e-dd38-4e14-85a8-13836552abef
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video
+    - field.storage.block_content.title
+id: block_content.video.title
+field_name: title
+entity_type: block_content
+bundle: video
+label: Title
+description: 'The Title of the block.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

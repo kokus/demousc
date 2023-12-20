@@ -1,0 +1,22 @@
+uuid: 0443177a-b6c5-486f-b316-cec7433cf2e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video
+    - field.storage.block_content.field_bean_description
+  module:
+    - text
+id: block_content.video.field_bean_description
+field_name: field_bean_description
+entity_type: block_content
+bundle: video
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long
