@@ -7,7 +7,7 @@
   display: block; // Necessary on iPad mobile Safari for padding.
   padding: var(--spacing-sm-3) var(--spacing-sm-3) 0 var(--spacing-sm-3);
 
-  @media ($desktop_break) {
+  @include custom-desktop-nav {
     display: none;
   }
 }
