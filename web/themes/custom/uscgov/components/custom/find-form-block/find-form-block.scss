@@ -1,0 +1,50 @@
+@forward "../../sass/uswds/settings";
+@use "uswds-core" as *;
+
+.find-form-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px;
+  border-radius: 30px;
+  border: 1px solid color('base');
+  background: #F8F9FF;
+  color: color('base-dark');
+}
+
+.find-form-block__title {
+  @include u-font-family('sans');
+  margin: 0;
+  color: color('base-darker');
+}
+
+.find-form-block__description {
+  margin: 0;
+}
+
+.find-form-block__cta-wrapper a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 16px;
+  border-radius: 30px;
+  background-color: color('primary');
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+  }
+
+  &:after {
+    display: block;
+    width: 18px;
+    height: 18px;
+    content: "";
+    background: currentColor;
+    mask-image: url('images/arrow.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+  }
+}

@@ -1,0 +1,40 @@
+@forward "../../sass/uswds/settings";
+@use "uswds-core" as *;
+
+.quicklinks {
+  margin-block: 40px;
+}
+
+.quicklinks__title {
+  @include u-font-family('sans');
+  margin: 0 0 16px;
+}
+
+.quicklinks__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 13px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 400px) {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  > * {
+    flex: 1;
+  }
+}
+
+.quicklinks__item {
+  display: flex;
+}
