@@ -42,6 +42,7 @@ libraryOverrides:
   js:
     js/mobile-menu.js: {}
     js/dropdown-menu-desktop.js: {}
+    js/nav-resize.js: {}
   dependencies:
     - core/drupal
     - core/once

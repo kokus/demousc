@@ -1,3 +1,6 @@
+@use "media-queries" as *;
+
+// Keep content available to screen readers while hiding from sighted users.
 @mixin visually-hidden {
   position: absolute !important;
   overflow: hidden;
@@ -5,4 +8,28 @@
   width: 1px;
   height: 1px;
   word-wrap: normal;
+}
+
+// Creates custom scoped media query to ensure that desktop navigation styles
+// never apply when the `.is-mobile-nav` is *not* applied to the body tag.
+@mixin custom-desktop-nav {
+  #{if(&, '&:where(:not(body.is-mobile-nav *))', ':where(body:not(.is-mobile-nav))')} {
+    @media ($desktop_break) {
+      @content;
+    }
+  }
+}
+
+// Creates custom scoped media query to ensure that mobile navigation styles
+// only apply when
+// 1) Any time the `.is-mobile-nav` *is* applied to the body tag.
+// 2) Below the specified minimum viewport width.
+@mixin custom-mobile-nav {
+  #{if(&, '&:is(body.is-mobile-nav *)', 'body.is-mobile-nav')} {
+    @content;
+  }
+
+  @media ($mobile_break) {
+    @content;
+  }
 }

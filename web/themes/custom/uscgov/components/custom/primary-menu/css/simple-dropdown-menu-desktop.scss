@@ -1,8 +1,9 @@
 @forward "../../sass/uswds/settings";
 @use "../../../../sass/custom/global/media-queries" as *;
+@use "../../../../sass/custom/global/mixins" as *;
 @use "uswds-core" as *;
 
-@media ($desktop_break) {
+@include custom-desktop-nav {
   .primary-menu__menu-item:has(.primary-menu__dropdown--simple) .primary-menu__button[aria-expanded=true]:before {
     height: 3px;
   }
