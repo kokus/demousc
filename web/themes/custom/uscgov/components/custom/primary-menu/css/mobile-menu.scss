@@ -1,8 +1,9 @@
 @forward "../../sass/uswds/settings";
 @use "../../../../sass/custom/global/media-queries" as *;
+@use "../../../../sass/custom/global/mixins" as *;
 @use "uswds-core" as *;
 
-@media ($mobile_break) {
+@include custom-mobile-nav {
   .primary-menu__dropdown-first {
     padding: var(--spacing-sm-2) var(--spacing-sm-3);
     background-color: var(--header-menu-mobile-header-background);
@@ -93,8 +94,11 @@
     scale: 0 1;
     transform-origin: right;
     background: var(--header-menu-wrapper-background);
+  }
 
-    .primary-menu__button[aria-expanded="true"] ~ & {
+  .primary-menu__button[aria-expanded="true"] {
+    ~ .primary-menu__dropdown,
+    ~ .primary-menu__level-2-wrapper {
       transform: rotateY(0deg);
       scale: 1;
       visibility: visible;
