@@ -1,5 +1,5 @@
 {% set quicklinks_id = 'quicklinks-title'|clean_unique_id %}
-<nav class="quicklinks container" aria-labelledby="{{ quicklinks_id }}">
+<nav class="quicklinks container--small" aria-labelledby="{{ quicklinks_id }}">
   <h2 id="{{ quicklinks_id }}" class="quicklinks__title">{{ title }}</h2>
   <ul class="quicklinks__list">
     {% for quicklink in quicklinks %}
