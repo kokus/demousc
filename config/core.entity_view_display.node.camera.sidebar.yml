@@ -61,6 +61,6 @@ hidden:
   field_piksel_programs: true
   field_piksel_project_uuid: true
   field_procedural_posture: true
-  field_sidebar: true
   field_program: true
+  field_sidebar: true
   field_subject_matter: true
