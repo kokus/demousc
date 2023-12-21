@@ -137,8 +137,7 @@ module:
   paragraphs: 11
   minimal: 1000
 theme:
-  olivero: 0
   claro: 0
-  gin: 0
   uscgov: 0
+  uscadmin: 0
 profile: minimal

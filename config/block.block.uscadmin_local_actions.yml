@@ -1,13 +1,13 @@
-uuid: e702e918-5668-464b-8b8b-26299c7902cd
+uuid: 860ca948-43e8-4fc4-80fb-016bd2f9fbd6
 langcode: en
 status: true
 dependencies:
   theme:
-    - gin
+    - uscadmin
 _core:
-  default_config_hash: OQ9aJ-4qVwK1x00o9EOYK4eFDjQr_HLpbPiJaPSVZiQ
-id: gin_local_actions
-theme: gin
+  default_config_hash: CdXfDmRgAvms7EQovxxWPdYi0GitxeRbVtScYK16ZH0
+id: uscadmin_local_actions
+theme: uscadmin
 region: content
 weight: -10
 provider: null

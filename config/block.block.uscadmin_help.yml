@@ -1,16 +1,16 @@
-uuid: d2dbf74c-cf0c-4c4c-9c1a-da7a516ee642
+uuid: 3265fa17-6d2b-4375-a643-a30ece9d1c11
 langcode: en
 status: true
 dependencies:
   module:
     - help
   theme:
-    - olivero
+    - uscadmin
 _core:
-  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
-id: olivero_help
-theme: olivero
-region: content_above
+  default_config_hash: jccFSSVqV0WCDb6NtML1VWAWTtDbZ-zn5YgTRMgMrIM
+id: uscadmin_help
+theme: uscadmin
+region: help
 weight: 0
 provider: null
 plugin: help_block
