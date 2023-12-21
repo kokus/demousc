@@ -89,6 +89,7 @@ class PikselAddForm extends AddFormBase {
     $form['input_wrapper']['projects'] = [
       '#type' => 'select',
       '#title' => $this->t('Project'),
+      '#chosen' => TRUE,
       '#required' => TRUE,
       '#options' => $projects_list,
       '#ajax' => [
@@ -141,21 +142,21 @@ class PikselAddForm extends AddFormBase {
           '#attributes' => [
             'class' => ['container'],
           ],
-          '#tag' => 'ul',
+          '#tag' => 'div',
           'description'  => [
             '#type'   => 'html_tag',
-            '#tag'    => 'li',
-            '#value'  => t('Description:') . $program_array['Description'],
+            '#tag'    => 'p',
+            '#value'  => t('Description: ') . $program_array['Description'],
           ],
           'duration'  => [
             '#type'   => 'html_tag',
-            '#tag'    => 'li',
-            '#value'  => t('Duration:') . $program_array['duration'],
+            '#tag'    => 'p',
+            '#value'  => t('Duration: ') . $program_array['duration'],
           ],
           'image'  => [
             '#type'   => 'html_tag',
-            '#tag'    => 'li',
-            '#value'  => '<img src="' . $program_array['thumbnailUrl'] . '"/>',
+            '#tag'    => 'p',
+            '#value'  => '<img width="320" src="' . $program_array['asset']['thumbnailUrl'] . '"/>',
           ],
         ],
       ];

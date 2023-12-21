@@ -54,9 +54,6 @@ services:
       # skipping the init step, because the results of that step will
       # already be present.
       update:
-        # Install/update packages managed by composer, including drush.
-        - composer install --optimize-autoloader
-
         # Set file permissions such that Drupal will not complain
         - chgrp -R www-data "${DOCROOT}/sites"
         - find "${DOCROOT}/sites" -type d -exec chmod 2775 {} \;

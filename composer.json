@@ -16,6 +16,10 @@
         {
             "url": "https://github.com/jidrone/drall.git",
             "type": "git"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
@@ -27,6 +31,7 @@
         "drupal/auto_entitylabel": "^3.0",
         "drupal/autologout": "^1.4",
         "drupal/bean_migrate": "^1.0",
+        "drupal/chosen": "^4.0",
         "drupal/config_import_single": "^2.0",
         "drupal/config_pages": "^2.15",
         "drupal/core-composer-scaffold": "^10.1",
@@ -72,6 +77,7 @@
         "drupal/remote_stream_wrapper": "^2.0",
         "drupal/scheduler": "^2.0",
         "drupal/seckit": "^2.0",
+        "drupal/select2": "^1.15",
         "drupal/sharethis": "^3.0",
         "drupal/taxonomy_manager": "^2.0",
         "drupal/transliterate_filenames": "^2.0",
@@ -110,7 +116,9 @@
                 "type:drupal-core"
             ],
             "web/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
             ],
             "web/modules/contrib/{$name}": [
                 "type:drupal-module"
@@ -134,6 +142,7 @@
                 "type:drupal-custom-theme"
             ]
         },
+        "installer-types": ["bower-asset", "npm-asset"],
         "enable-patching": true,
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
@@ -144,7 +153,8 @@
                 "3369198 - Automated Drupal 10 compatibility fixes" : "https://www.drupal.org/files/issues/2023-11-27/3369198-4.patch"
             },
             "drupal/core" : {
-                "Array filter issue" : "https://www.drupal.org/files/issues/2020-06-09/d7_field_instance-sort-3080034-6.patch"
+                "Array filter issue" : "https://www.drupal.org/files/issues/2020-06-09/d7_field_instance-sort-3080034-6.patch",
+                "Migrate views issue" : "https://www.drupal.org/files/issues/2023-04-19/3068442-28.patch"
             },
             "drupal/entity_legal" : {
                 "3377137 - missing source" : "patches/entitylegal-3377137.patch"

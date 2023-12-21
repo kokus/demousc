@@ -1,0 +1,174 @@
+uuid: 51c05858-0c70-4cc1-a684-3de0fce6ae9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_updated
+    - node.type.federal_rules
+    - taxonomy.vocabulary.file_types
+  content:
+    - 'taxonomy_term:file_types:389cad53-7e72-48c3-b755-1b03cd740791'
+  module:
+    - datetime
+    - node
+    - taxonomy
+    - user
+id: federal_rules_landing_rules_amendments
+label: 'Federal Rules Landing Rules Amendments'
+module: views
+description: ''
+tag: 'landing page'
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      title: 'Preliminary Draft of Proposed Rule Amendments'
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: field
+          alter:
+            word_boundary: false
+            ellipsis: false
+        field_date_updated:
+          id: field_date_updated
+          table: node__field_date_updated
+          field: field_date_updated
+          plugin_id: field
+          label: 'Date Submitted'
+          settings:
+            format_type: month_d_yyyy
+            fromto: both
+            multiple_number: ''
+            multiple_from: ''
+            multiple_to: ''
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 30
+          id: 0
+          quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          reset_button: true
+          expose_sort_order: false
+      access:
+        type: perm
+      cache:
+        type: none
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          empty: true
+          content:
+            value: 'Your search did not match any results. Please try again using fewer search criteria.'
+            format: wysiwyg
+      sorts:
+        field_date_updated_value:
+          id: field_date_updated_value
+          table: node__field_date_updated
+          field: field_date_updated_value
+          plugin_id: datetime
+          order: DESC
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            federal_rules: federal_rules
+        field_term_entity_reference2_target_id:
+          id: field_term_entity_reference2_target_id
+          table: node__field_term_entity_reference2
+          field: field_term_entity_reference2_target_id
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            894: 894
+          vid: file_types
+      style:
+        type: table
+        options:
+          default_row_class: false
+          columns:
+            title: title
+            field_date_updated: field_date_updated
+          default: '-1'
+          info:
+            title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+            field_date_updated:
+              sortable: false
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+          override: false
+          row_class_special: false
+          class: ''
+      query:
+        type: views_query
+        options: {  }
+      use_more_always: false
+      display_extenders: {  }
+      style_plugin: table
+      style_options:
+        default_row_class: false
+        row_class_special: false
+        columns:
+          title: title
+          field_date_updated: field_date_updated
+        class: ''
+        default: '-1'
+        info:
+          title:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_date_updated:
+            sortable: 0
+            default_sort_order: desc
+            align: ''
+            separator: ''
+            empty_column: 0
+        override: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_date_updated'

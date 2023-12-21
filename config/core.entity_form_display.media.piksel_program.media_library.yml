@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_library
+    - field.field.media.piksel_program.field_alternate_text
     - field.field.media.piksel_program.field_file_title
+    - field.field.media.piksel_program.field_title
     - media.type.piksel_program
 id: media.piksel_program.media_library
 targetEntityType: media
@@ -21,7 +23,9 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_alternate_text: true
   field_file_title: true
+  field_title: true
   path: true
   publish_on: true
   scheduler_settings: true

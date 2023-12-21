@@ -86,7 +86,7 @@ class Program extends PluginBase implements PikselProviderInterface, ContainerFa
     $endpoint = $this->config->get('piksel_endpoint');
     $endpoint = str_replace('[token]', $token, $endpoint);
     $endpoint = str_replace('[ws]', 'ws_vod_project', $endpoint);
-    $response = $this->httpClient->get($endpoint);
+    $response = $this->httpClient->get($endpoint . '?end=50');
     $data = Json::decode($response->getBody()->getContents());
     return $data['response']['WsVodProjectResponse']['projects'];
   }
@@ -104,7 +104,7 @@ class Program extends PluginBase implements PikselProviderInterface, ContainerFa
     $endpoint = $this->config->get('piksel_endpoint');
     $endpoint = str_replace('[token]', $token, $endpoint);
     $endpoint = str_replace('[ws]', 'ws_program', $endpoint);
-    $response = $this->httpClient->get($endpoint . '?p=' . $projectId);
+    $response = $this->httpClient->get($endpoint . '?p=' . $projectId . '&end=50');
     $data = Json::decode($response->getBody()->getContents());
     return $data['response']['WsProgramResponse']['programs'];
   }
@@ -126,8 +126,8 @@ class Program extends PluginBase implements PikselProviderInterface, ContainerFa
 
     return new Piksel(
       $id,
-      $program_object['thumbnailUrl'],
-      $program_object['posterUrl'],
+      $program_object['Title'],
+      $program_object['asset']['thumbnailUrl'] ? $program_object['asset']['thumbnailUrl'] : $program_object['thumbnailUrl'],
       $program_object['Description'],
       $program_object['Title'],
     );

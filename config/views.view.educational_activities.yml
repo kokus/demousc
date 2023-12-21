@@ -1,0 +1,162 @@
+uuid: d2021dce-3c7f-4e72-930e-361f9f9f2e01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_activity_category
+    - node.type.educational_activity
+    - taxonomy.vocabulary.educational_activity_categorie
+  content:
+    - 'taxonomy_term:educational_activity_categorie:11e85e5a-ff8f-48ac-8107-8b04db6b0277'
+    - 'taxonomy_term:educational_activity_categorie:202570c0-3f39-42df-af69-1d8aadab081c'
+    - 'taxonomy_term:educational_activity_categorie:7b80970d-d7f5-4d73-b00a-fa7aacaf927e'
+    - 'taxonomy_term:educational_activity_categorie:91e7dc0e-52fb-4976-89cf-91b5da672f76'
+    - 'taxonomy_term:educational_activity_categorie:b8c378ce-0794-4b3b-bdfb-016255a731cb'
+    - 'taxonomy_term:educational_activity_categorie:b987e145-ffaf-4ba8-a1f8-96e1bc6f4d8b'
+    - 'taxonomy_term:educational_activity_categorie:e9e11514-6636-41f1-b63b-1665917cc573'
+    - 'taxonomy_term:educational_activity_categorie:ef0cc1f1-5733-474a-a274-50a09c4a461c'
+  module:
+    - node
+    - taxonomy
+    - user
+id: educational_activities
+label: 'Educational Activities'
+module: views
+description: ''
+tag: default
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      title: 'Landing Page Educational Activities'
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: field
+          alter:
+            word_boundary: false
+            ellipsis: false
+        field_activity_category:
+          id: field_activity_category
+          table: node__field_activity_category
+          field: field_activity_category
+          plugin_id: field
+          element_label_colon: false
+          type: entity_reference_label
+          settings:
+            target_type: taxonomy_term
+          delta_offset: 0
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 25
+          id: 0
+          quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          reset_button: true
+          expose_sort_order: false
+      access:
+        type: perm
+      cache:
+        type: none
+      sorts:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: standard
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            educational_activity: educational_activity
+          group: 1
+        field_activity_category_tid_1:
+          id: field_activity_category_tid_1
+          table: node__field_activity_category
+          field: field_activity_category_target_id
+          entity_type: node
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            449: 449
+            452: 452
+            450: 450
+            453: 453
+            451: 451
+            454: 454
+            456: 456
+            455: 455
+          group: 1
+          reduce_duplicates: true
+          vid: educational_activity_categorie
+          type: select
+          hierarchy: true
+          field_name: field_activity_category
+        term_node_tid_depth:
+          id: term_node_tid_depth
+          table: node_field_data
+          field: term_node_tid_depth
+          plugin_id: taxonomy_index_tid
+          operator: in
+          exposed: true
+          expose:
+            operator_id: term_node_tid_depth_op
+            label: 'Search by activity category'
+            operator: in
+            identifier: cat
+            remember_roles:
+              authenticated: authenticated
+              anonymous: anonymous
+              admin: admin
+              publisher: publisher
+              approver: approver
+              content_creator: content_creator
+          vid: educational_activity_categorie
+          type: select
+          hierarchy: true
+          depth: '2'
+      style:
+        type: table
+      query:
+        type: views_query
+        options: {  }
+      use_more_always: false
+      display_extenders: {  }
+      style_plugin: table
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_activity_category'

@@ -1,0 +1,123 @@
+uuid: 129fdf69-29dd-4efd-a16a-84c883ec2059
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: tag_uscourts
+label: 'Tag (US Courts)'
+module: views
+description: "A view to emulate Drupal core's handling of taxonomy/term."
+tag: default
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      title: Tag
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: field
+          label: ''
+          element_label_colon: false
+          element_default_classes: false
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 50
+          id: 0
+          quantity: 9
+      exposed_form:
+        type: basic
+      access:
+        type: none
+      cache:
+        type: none
+      sorts:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: standard
+      arguments:
+        term_node_tid_depth:
+          id: term_node_tid_depth
+          table: node_field_data
+          field: term_node_tid_depth
+          plugin_id: taxonomy_index_tid_depth
+          default_action: default
+          default_argument_type: taxonomy_tid
+          default_argument_options:
+            term_page: ''
+          summary_options:
+            items_per_page: 25
+          summary:
+            number_of_records: 0
+            format: default_summary
+          depth: 3
+      filters:
+        status_extra:
+          id: status_extra
+          table: node_field_data
+          field: status_extra
+          plugin_id: node_status
+          operator: or
+          group: 0
+          expose:
+            operator: ''
+      style:
+        type: default
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+      use_more_always: false
+      display_extenders: {  }
+      style_plugin: list
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+      tags: {  }
+  page_rt:
+    id: page_rt
+    display_title: 'Taxonomy Page: Related Topics'
+    display_plugin: page
+    position: 2
+    display_options:
+      title: 'Related Topics'
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        title: false
+      display_extenders: {  }
+      path: content/taxonomy/related-topics
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+      tags: {  }
