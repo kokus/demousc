@@ -58,7 +58,7 @@
   --color-primitive-neutral-base-dark: #080A0D;
   --color-primitive-neutral-gray-background: #F9FAFB;;
   --color-primitive-neutral-gray-surface-variant: #F8F9FF;
-  --color-primitive-neutral-gray-backgrond-variant: #F4F6FB;
+  --color-primitive-neutral-gray-background-variant: #F4F6FB;
   --color-primitive-neutral-gray-surface-variant-dark: #E4E4E4;
   --color-primitive-neutral-gray-muted-light: #BEC2CC;
   --color-primitive-neutral-gray-muted-dark: #8C91A0;
@@ -103,4 +103,43 @@
   --color-primitive-theme-accent-gold-primary: var(--color-primitive-theme-secondary-gold-primary);
   --color-primitive-theme-accent-gold-dark: #A07510;
   --color-primitive-theme-accent-gold-darker: var(--color-primitive-theme-secondary-gold-darker);
+
+
+  --color-token-base-background-surface: var(--color-primitive-neutral-base-light);
+  --color-token-base-background-surface-variant: var(--color-primitive-neutral-gray-surface-variant);
+  --color-token-base-background-background-variant: var(--color-primitive-neutral-gray-background-variant);
+  --color-token-base-background-background: var(--color-primitive-neutral-gray-background);
+  --color-token-base-background-surface-variant-dark: var(--color-primitive-neutral-gray-surface-variant-dark);
+
+  --color-token-base-border-muted-dark: var(--color-primitive-neutral-gray-muted-dark);
+  --color-token-base-border-base-secondary-dark: var(--color-primitive-neutral-gray-base-secondary-dark);
+  --color-token-base-border-muted-light: var(--color-primitive-neutral-gray-muted-light);
+
+  --color-token-base-text-icon-base-dark: var(--color-token-base-theme-base-dark);
+  --color-token-base-text-icon-base-secondary-dark: var(--color-primitive-neutral-gray-base-secondary-dark);
+  --color-token-base-text-icon-muted-dark: var(--color-primitive-neutral-gray-muted-dark);
+  --color-token-base-text-icon-muted-light: var(--color-primitive-neutral-gray-muted-light);
+  --color-token-base-text-icon-base-light: var(--color-primitive-neutral-base-light);
+
+  --color-token-base-theme-base-light: #FEFEFE;
+  --color-token-base-theme-base-dark: #080A0D;
+
+
+  --color-token-primary-link-icon-link: var(--color-token-primary-blue-primary);
+  --color-token-primary-link-icon
+  --color-token-primary-link-icon
+  --color-token-primary-link-icon
+
+  --color-token-primary-blue-darkest: var(--color-primitive-theme-primary-darkest);
+  --color-token-primary-blue-darker: var(--color-primitive-theme-primary-darker);
+  --color-token-primary-blue-dark: var(--color-primitive-theme-primary-dark);
+  --color-token-primary-blue-primary: var(--color-primitive-theme-primary-primary);
+  --color-token-primary-blue-light: var(--color-primitive-theme-primary-light);
+  --color-token-primary-blue-lighter: var(--color-primitive-theme-primary-lighter);
+
+  --color-token-
+  --color-token-
+  --color-token-
+  --color-token-
+
 }
