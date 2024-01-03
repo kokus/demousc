@@ -53,4 +53,54 @@
   --spacing-xl-3: 96px;
   --spacing-xl-1: 80px;
   --spacing-xxl-1: 104px;
+
+  --color-primitive-neutral-base-light: #FEFEFE;
+  --color-primitive-neutral-base-dark: #080A0D;
+  --color-primitive-neutral-gray-background: #F9FAFB;;
+  --color-primitive-neutral-gray-surface-variant: #F8F9FF;
+  --color-primitive-neutral-gray-backgrond-variant: #F4F6FB;
+  --color-primitive-neutral-gray-surface-variant-dark: #E4E4E4;
+  --color-primitive-neutral-gray-muted-light: #BEC2CC;
+  --color-primitive-neutral-gray-muted-dark: #8C91A0;
+  --color-primitive-neutral-gray-medium: #727583;
+  --color-primitive-neutral-gray-base-secondary-dark: #525661;
+
+  --color-primitive-theme-primary-lighter: #E6F1FA;
+  --color-primitive-theme-primary-light: #73A4CF;
+  --color-primitive-theme-primary-primary: #0057A3;
+  --color-primitive-theme-primary-dark: #01417F;
+  --color-primitive-theme-primary-darker: #002D5A;
+  --color-primitive-theme-primary-darkest: #002045;
+
+  --color-primitive-theme-secondary-gold-lighter: #FCF6E7;
+  --color-primitive-theme-secondary-gold-light: #EFD388;
+  --color-primitive-theme-secondary-gold-primary: #DFA611;
+  --color-primitive-theme-secondary-gold-dark: #A07510;
+  --color-primitive-theme-secondary-gold-darker: #725214;
+  --color-primitive-theme-secondary-gold-darkest: #433205;
+
+  --color-primitive-theme-secondary-gray-lighter: #F1F1F3;
+  --color-primitive-theme-secondary-gray-light: #AAACB5;
+  --color-primitive-theme-secondary-gray-primary: #727583;
+  --color-primitive-theme-secondary-gray-dark: #44464F;
+  --color-primitive-theme-secondary-gray-darker: #222327;
+  --color-primitive-theme-secondary-gray-darkest: #0B0C0D;
+
+  --color-primitive-theme-accent-red-lighter: #DAB4A9;
+  --color-primitive-theme-accent-red-light: #C76F57;
+  --color-primitive-theme-accent-red-primary: #A34329;
+  --color-primitive-theme-accent-red-dark: #722F1D;
+  --color-primitive-theme-accent-red-darker: #522215;
+
+  --color-primitive-theme-accent-green-lighter: #C9D6B3;
+  --color-primitive-theme-accent-green-light: #819E4D;
+  --color-primitive-theme-accent-green-primary: #4B7500;
+  --color-primitive-theme-accent-green-dark: #2D4600;
+  --color-primitive-theme-accent-green-darker: #1E2F00;
+
+  --color-primitive-theme-accent-gold-lighter: var(--color-primitive-theme-secondary-gold-lighter);
+  --color-primitive-theme-accent-gold-light: var(--color-primitive-theme-secondary-gold-light);
+  --color-primitive-theme-accent-gold-primary: var(--color-primitive-theme-secondary-gold-primary);
+  --color-primitive-theme-accent-gold-dark: #A07510;
+  --color-primitive-theme-accent-gold-darker: var(--color-primitive-theme-secondary-gold-darker);
 }
