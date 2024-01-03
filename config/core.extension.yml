@@ -103,6 +103,7 @@ module:
   redirect: 0
   redis: 0
   remote_stream_wrapper: 0
+  responsive_image: 0
   scheduler: 0
   sdc: 0
   search: 0
