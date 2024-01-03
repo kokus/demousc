@@ -55,3 +55,4 @@ content:
 hidden:
   body: true
   field_landing_page_image: true
+  field_sidebar: true

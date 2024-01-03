@@ -67,6 +67,7 @@ content:
 hidden:
   field_metatag: true
   field_mydate: true
+  field_sidebar: true
   field_tags: true
   field_test: true
   field_usc_import_timestamp: true

@@ -57,3 +57,4 @@ hidden:
   field_logo: true
   field_metatag: true
   field_referenced_nodes: true
+  field_sidebar: true

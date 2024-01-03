@@ -105,5 +105,6 @@ hidden:
   field_metatag: true
   field_publication_table_number: true
   field_publication_type: true
+  field_sidebar: true
   field_tags: true
   field_topic: true

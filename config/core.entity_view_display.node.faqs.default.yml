@@ -32,4 +32,5 @@ content:
     weight: 10
     region: content
 hidden:
+  field_faqs: true
   field_metatag: true

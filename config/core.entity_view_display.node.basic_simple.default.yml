@@ -76,4 +76,5 @@ hidden:
   field_landing_page_image: true
   field_link: true
   field_metatag: true
+  field_sidebar: true
   field_tags: true

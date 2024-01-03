@@ -81,4 +81,5 @@ hidden:
   field_metatag: true
   field_news_issue: true
   field_related_topics: true
+  field_sidebar: true
   field_tags: true

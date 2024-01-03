@@ -79,3 +79,4 @@ hidden:
   field_landing_page_image: true
   field_landing_page_type: true
   field_metatag: true
+  field_sidebar: true

@@ -28,6 +28,10 @@ $quicklink_break: 'min-width: 400px';
     outline-width: 4px;
     box-shadow: 0px 8px 24px 0px rgba(160, 163, 176, 0.24), 0px 16px 32px 8px rgba(112, 117, 136, 0.16);
   }
+
+  .ext {
+    display: none;
+  }
 }
 
 .quicklink-item__icon {

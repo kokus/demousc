@@ -50,4 +50,5 @@ hidden:
   field_lead_paragraph: true
   field_logo: true
   field_metatag: true
+  field_sidebar: true
   field_tags: true

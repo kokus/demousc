@@ -141,4 +141,5 @@ hidden:
   field_landing_page_image: true
   field_metatag: true
   field_report_name: true
+  field_sidebar: true
   field_tags: true

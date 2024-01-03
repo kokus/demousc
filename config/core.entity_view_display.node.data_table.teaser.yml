@@ -60,6 +60,7 @@ hidden:
   field_publication_type: true
   field_report_name: true
   field_reporting_period_increment: true
+  field_sidebar: true
   field_tags: true
   field_topic: true
   field_usc_import_timestamp: true

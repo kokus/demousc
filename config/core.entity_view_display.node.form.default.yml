@@ -109,5 +109,6 @@ hidden:
   field_hide_left_navigation: true
   field_metatag: true
   field_short_title: true
+  field_sidebar: true
   field_superseded: true
   field_tags: true

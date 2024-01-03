@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - config_pages
+    - media
     - system
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
@@ -14,3 +15,4 @@ is_admin: false
 permissions:
   - 'access content'
   - 'view global_site_settings config page entity'
+  - 'view media'
