@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.basic.field_lead_paragraph
     - field.field.node.basic.field_logo
     - field.field.node.basic.field_metatag
+    - field.field.node.basic.field_sidebar
     - field.field.node.basic.field_tags
     - node.type.basic
   module:
@@ -55,7 +56,16 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 4
+    weight: 3
+    region: content
+  field_landing_page_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 7
     region: content
   field_lead_gallery:
     type: entity_reference_entity_view
@@ -82,10 +92,28 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_sidebar:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_tags:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 11
     region: content
   sharethis:
     settings: {  }
@@ -93,7 +121,4 @@ content:
     weight: 10
     region: content
 hidden:
-  field_landing_page_image: true
   field_metatag: true
-  field_sidebar: true
-  field_tags: true

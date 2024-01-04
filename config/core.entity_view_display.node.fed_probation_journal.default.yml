@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.fed_probation_journal.field_document_pdf
     - field.field.node.fed_probation_journal.field_metatag
     - field.field.node.fed_probation_journal.field_mydate
+    - field.field.node.fed_probation_journal.field_sidebar
     - field.field.node.fed_probation_journal.field_tags
     - field.field.node.fed_probation_journal.field_test
     - field.field.node.fed_probation_journal.field_usc_import_timestamp
@@ -28,7 +29,15 @@ content:
     settings:
       trim_length: 850
     third_party_settings: {  }
-    weight: 5
+    weight: 2
+    region: content
+  field_auther:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
     region: content
   field_document_pdf:
     type: entity_reference_entity_view
@@ -37,7 +46,7 @@ content:
       view_mode: federal_probation_journal_displa
       link: false
     third_party_settings: {  }
-    weight: 6
+    weight: 3
     region: content
   field_mydate:
     type: datetime_default
@@ -46,7 +55,25 @@ content:
       timezone_override: ''
       format_type: month_year
     third_party_settings: {  }
-    weight: 3
+    weight: 1
+    region: content
+  field_sidebar:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_tags:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_test:
     type: entity_reference_label
@@ -54,22 +81,34 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 0
+    region: content
+  field_usc_import_timestamp:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_volume_and_issue_number:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 10
     region: content
   sharethis:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 9
     region: content
 hidden:
-  field_auther: true
   field_metatag: true
-  field_sidebar: true
-  field_tags: true
-  field_usc_import_timestamp: true
-  field_volume_and_issue_number: true
