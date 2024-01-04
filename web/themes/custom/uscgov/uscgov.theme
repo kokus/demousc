@@ -134,11 +134,13 @@ function uscgov_preprocess_page(array &$variables) {
  * Implements hook_preprocess_HOOK().
  *
  * Creates a quicklinks array to pass to SDC component.
+ *
+ * @throws \Exception
  */
 function uscgov_preprocess_field__config_pages__field_hompage_quick_links(array &$variables) {
   foreach ($variables['items'] as &$item) {
     $variables['quicklinks'][] = [
-      'url' =>  $item['content']['#paragraph']->field_icon_link_link->first()->getUrl(),
+      'url' => $item['content']['#paragraph']->field_icon_link_link->first()->getUrl(),
       'title' => $item['content']['#paragraph']->field_icon_link_link->title,
       'svg_path' => \Drupal::service('file_url_generator')->generateString($item['content']['#paragraph']->field_icon->entity->field_media_file_1->entity->uri->value),
     ];
