@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.landing_view.field_lead_paragraph
     - field.field.node.landing_view.field_logo
     - field.field.node.landing_view.field_metatag
+    - field.field.node.landing_view.field_sidebar
     - field.field.node.landing_view.field_tags
     - node.type.landing_view
   module:
@@ -50,8 +51,8 @@ third_party_settings:
         required_fields: true
     group_lead_elements:
       children:
-        - field_lead_paragraph
         - field_logo
+        - field_lead_paragraph
       label: 'Lead Elements'
       region: content
       parent_name: group_node_form
@@ -66,11 +67,11 @@ third_party_settings:
         required_fields: true
     group_node_form:
       children:
-        - group_body_simple
-        - group_landing_page
         - group_lead_elements
-        - group_sidebar
+        - group_body_simple
         - group_view
+        - group_sidebar
+        - group_landing_page
       label: 'Node Form'
       region: content
       parent_name: ''
@@ -98,8 +99,7 @@ third_party_settings:
         description: ''
         required_fields: true
     group_view:
-      children:
-        - field_view
+      children: {  }
       label: View
       region: content
       parent_name: group_node_form
@@ -129,7 +129,7 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -157,11 +157,21 @@ content:
     third_party_settings: {  }
   field_metatag:
     type: metatag_firehose
-    weight: 121
+    weight: 12
     region: content
     settings:
       sidebar: true
       use_details: true
+    third_party_settings: {  }
+  field_sidebar:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete
@@ -175,39 +185,39 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 15
+    weight: 5
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   scheduler_settings:
-    weight: 50
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 120
+    weight: 11
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 16
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -215,7 +225,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
@@ -224,7 +234,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
