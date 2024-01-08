@@ -2,16 +2,26 @@ uuid: 52b831a7-4c4e-4c94-b8c7-44f34706bbe7
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.landing_featured_content
+    - node.type.landing_view
   module:
     - config_pages
     - contextual
+    - field_ui
+    - file
+    - gutenberg
+    - media
     - node
+    - paragraphs
     - path
     - pathauto
     - redirect
     - scheduler
     - system
     - taxonomy
+    - toolbar
+    - webform
 id: publisher
 label: publisher
 weight: 3
@@ -20,17 +30,46 @@ permissions:
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
   - 'access site reports'
+  - 'access taxonomy overview'
+  - 'access toolbar'
   - 'access user profiles'
+  - 'administer media'
   - 'administer menu'
+  - 'administer node display'
+  - 'administer node fields'
   - 'administer nodes'
+  - 'administer paragraph display'
+  - 'administer paragraph fields'
   - 'administer redirects'
   - 'administer taxonomy'
   - 'administer users'
   - 'bypass node access'
+  - 'create landing_featured_content content'
+  - 'create landing_view content'
+  - 'create media'
   - 'create url aliases'
+  - 'create webform'
+  - 'delete any file'
+  - 'delete any media'
+  - 'delete any webform'
+  - 'delete media'
+  - 'delete own files'
   - 'notify of path changes'
   - 'schedule publishing of nodes'
+  - 'update any media'
+  - 'update media'
+  - 'use gutenberg'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view any webform submission'
   - 'view global_site_settings config page entity'
+  - 'view landing_view revisions'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view own webform submission'
   - 'view scheduled content'
   - 'view the administration theme'

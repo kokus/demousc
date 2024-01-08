@@ -15,11 +15,13 @@ dependencies:
     - field.field.node.report.field_metatag
     - field.field.node.report.field_report_children
     - field.field.node.report.field_report_name
+    - field.field.node.report.field_sidebar
     - field.field.node.report.field_sidebar_title
     - field.field.node.report.field_tags
     - node.type.report
   module:
     - datetime
+    - entity_reference_revisions
     - field_group
     - text
     - user
@@ -67,6 +69,15 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_body_enhanced:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
   field_date_updated:
     type: datetime_default
     label: inline
@@ -84,6 +95,15 @@ content:
       link: false
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_landing_page_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 12
     region: content
   field_lead_gallery:
     type: entity_reference_entity_view
@@ -116,7 +136,25 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 22
+    weight: 8
+    region: content
+  field_report_name:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_sidebar:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 14
     region: content
   field_sidebar_title:
     type: string
@@ -124,22 +162,26 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 23
+    weight: 9
+    region: content
+  field_tags:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 15
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 10
     region: content
   sharethis:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 7
     region: content
 hidden:
-  field_body_enhanced: true
-  field_landing_page_image: true
   field_metatag: true
-  field_report_name: true
-  field_sidebar: true
-  field_tags: true

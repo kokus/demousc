@@ -11,9 +11,11 @@ dependencies:
     - field.field.node.basic_simple.field_link
     - field.field.node.basic_simple.field_logo
     - field.field.node.basic_simple.field_metatag
+    - field.field.node.basic_simple.field_sidebar
     - field.field.node.basic_simple.field_tags
     - node.type.basic_simple
   module:
+    - link
     - text
     - user
 id: node.basic_simple.default
@@ -37,6 +39,15 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  field_landing_page_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
   field_lead_gallery:
     type: entity_reference_entity_view
     label: hidden
@@ -53,6 +64,18 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
   field_logo:
     type: entity_reference_entity_view
     label: hidden
@@ -62,19 +85,33 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  links:
-    settings: {  }
+  field_sidebar:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
     third_party_settings: {  }
-    weight: 100
+    weight: 7
     region: content
-  sharethis:
+  field_tags:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  links:
     settings: {  }
     third_party_settings: {  }
     weight: 10
     region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
 hidden:
-  field_landing_page_image: true
-  field_link: true
   field_metatag: true
-  field_sidebar: true
-  field_tags: true

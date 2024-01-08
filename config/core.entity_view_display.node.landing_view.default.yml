@@ -8,9 +8,11 @@ dependencies:
     - field.field.node.landing_view.field_lead_paragraph
     - field.field.node.landing_view.field_logo
     - field.field.node.landing_view.field_metatag
+    - field.field.node.landing_view.field_sidebar
     - field.field.node.landing_view.field_tags
     - node.type.landing_view
   module:
+    - gutenberg
     - text
     - user
 id: node.landing_view.default
@@ -19,9 +21,11 @@ bundle: landing_view
 mode: default
 content:
   body:
-    type: text_default
+    type: gutenberg_text
     label: hidden
-    settings: {  }
+    settings:
+      format: gutenberg
+      content_only: true
     third_party_settings: {  }
     weight: 2
     region: content

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.judge_comments.field_date_updated
     - field.field.node.judge_comments.field_document_pdf
     - field.field.node.judge_comments.field_rules_rule_or_form
+    - field.field.node.judge_comments.field_sidebar
     - field.field.node.judge_comments.field_tags
     - node.type.judge_comments
   module:
@@ -77,17 +78,39 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_rules_rule_or_form:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_sidebar:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 4
     region: content
   sharethis:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 3
     region: content
-hidden:
-  field_rules_rule_or_form: true
-  field_sidebar: true
-  field_tags: true
+hidden: {  }
