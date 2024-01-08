@@ -1,4 +1,5 @@
 @use "../global/media-queries" as *;
+@use "uswds-core" as *;
 
 :root {
   // //
@@ -64,12 +65,12 @@
   --color-primitive-neutral-gray-muted-light: #BEC2CC;
   --color-primitive-neutral-gray-muted-dark: #8C91A0;
   --color-primitive-neutral-gray-medium: #727583;
-  --color-primitive-neutral-gray-base-secondary-dark: #525661;
+  --color-primitive-neutral-gray-base-secondary-dark: #{color('base-dark')}; // #525661
 
   --color-primitive-theme-primary-lighter: #E6F1FA;
   --color-primitive-theme-primary-light: #73A4CF;
-  --color-primitive-theme-primary-primary: #0057A3;
-  --color-primitive-theme-primary-dark: #01417F;
+  --color-primitive-theme-primary-primary: #{color('primary')}; // #0057A3
+  --color-primitive-theme-primary-dark: #{color('primary-vivid')}; // #01417F
   --color-primitive-theme-primary-darker: #002D5A;
   --color-primitive-theme-primary-darkest: #002045;
 

@@ -6,12 +6,23 @@
   --surface-primary: var(--color-primitive-theme-primary-primary);
   --text-on-surface-primary: var(--color-primitive-neutral-base-light);
 
+
+
   --surface-primary-lighter: var(--color-primitive-theme-primary-lighter);
   --text-on-surface-primary-lighter: var(--color-token-base-text-icon-base-dark);
 
+  --surface-body: var(--color-primitive-neutral-base-light);
+  --text-on-surface-body: var(--color-primitive-neutral-gray-base-secondary-dark);
+
+
+
   --surface-base-lightest: var(--color-token-base-background-background-variant);
   --text-on-surface-base-lightest: var(--color-token-base-text-icon-base-secondary-dark);
+  --text-on-surface-base-lightest--dark: var(--color-primitive-neutral-base-dark);
 
+
+  --text-link: var(--color-primitive-theme-primary-primary);
+  --text-link-dark: var(--color-primitive-theme-primary-dark);
 
 
 

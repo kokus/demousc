@@ -62,7 +62,7 @@
       border-top: 1px solid color('base');
       border-right: 1px solid color('base');
       border-left: 1px solid color('base');
-      background: var(--header-menu-wrapper-background);
+      background: var(--surface-base-lightest);
 
       &:after {
         scale: -1;
@@ -78,7 +78,7 @@
         height: 42px; // @todo magic number.
         border-right: 1px solid color('base');
         border-left: 1px solid color('base');
-        background: var(--header-menu-wrapper-background);
+        background: var(--surface-base-lightest);
         content: "";
       }
     }
