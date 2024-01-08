@@ -54,6 +54,7 @@
   --spacing-xl-1: 80px;
   --spacing-xxl-1: 104px;
 
+  --color-primitive-neutral-white: white;
   --color-primitive-neutral-base-light: #FEFEFE;
   --color-primitive-neutral-base-dark: #080A0D;
   --color-primitive-neutral-gray-background: #F9FAFB;;
@@ -124,11 +125,10 @@
   --color-token-base-theme-base-light: #FEFEFE;
   --color-token-base-theme-base-dark: #080A0D;
 
-
   --color-token-primary-link-icon-link: var(--color-token-primary-blue-primary);
-  --color-token-primary-link-icon
-  --color-token-primary-link-icon
-  --color-token-primary-link-icon
+  --color-token-primary-link-icon-icon: var(--color-token-primary-blue-dark);
+  --color-token-primary-link-icon-link-visited: ;
+  --color-token-primary-link-icon-link-hover: var(--color-token-primary-blue-dark);
 
   --color-token-primary-blue-darkest: var(--color-primitive-theme-primary-darkest);
   --color-token-primary-blue-darker: var(--color-primitive-theme-primary-darker);
@@ -137,9 +137,17 @@
   --color-token-primary-blue-light: var(--color-primitive-theme-primary-light);
   --color-token-primary-blue-lighter: var(--color-primitive-theme-primary-lighter);
 
-  --color-token-
-  --color-token-
-  --color-token-
-  --color-token-
+  --color-token-secondary-gold-lighter: var(--color-primitive-theme-secondary-gold-lighter);
+  --color-token-secondary-gold-light: var(--color-primitive-theme-secondary-gold-light);
+  --color-token-secondary-gold-primary: var(--color-primitive-theme-secondary-gold-primary);
+  --color-token-secondary-gold-dark: var(--color-primitive-theme-secondary-gold-dark);
+  --color-token-secondary-gold-darker: var(--color-primitive-theme-secondary-gold-darker);
+  --color-token-secondary-gold-darkest: var(--color-primitive-theme-secondary-gold-darkest);
 
+  --color-token-secondary-gray-lighter: var(--color-primitive-theme-secondary-gray-lighter);
+  --color-token-secondary-gray-light: var(--color-primitive-theme-secondary-gray-light);
+  --color-token-secondary-gray-primary: var(--color-primitive-theme-secondary-gray-primary);
+  --color-token-secondary-gray-dark: var(--color-primitive-theme-secondary-gray-dark);
+  --color-token-secondary-gray-darker: var(--color-primitive-theme-secondary-gray-darker);
+  --color-token-secondary-gray-darkest: var(--color-primitive-theme-secondary-gray-darkest);
 }

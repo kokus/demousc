@@ -1,0 +1,31 @@
+:root {
+  // --surface
+  --surface-primary-darker: var(--color-token-primary-blue-darker);
+  --text-on-surface-primary-darker: var(--color-primitive-neutral-base-light);
+
+  --surface-primary: var(--color-primitive-theme-primary-primary);
+  --text-on-surface-primary: var(--color-primitive-neutral-base-light);
+
+  --surface-primary-lighter: var(--color-primitive-theme-primary-lighter);
+  --text-on-surface-primary-lighter: var(--color-token-base-text-icon-base-dark);
+
+  --surface-base-lightest: var(--color-token-base-background-background-variant);
+  --text-on-surface-base-lightest: var(--color-token-base-text-icon-base-secondary-dark);
+
+
+
+
+
+
+
+
+
+
+  --surface-form: var(--color-primitive-neutral-white);
+  --surface-button: var(--surface-primary);
+  --text-on-surface-button: var(--text-on-surface-primary);
+
+
+  --border-primary: var(--color-primitive-theme-primary-primary);
+  --border-muted-dark: var(--color-token-base-border-muted-dark);
+}

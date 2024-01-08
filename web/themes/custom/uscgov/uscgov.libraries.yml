@@ -22,6 +22,7 @@ uswds:
 uswds-variables:
   css:
     base:
+      dist/custom/css/base/custom-variables.css: {  }
       dist/custom/css/base/css-variables.css: {  }
 uswds-utilities:
   css:
