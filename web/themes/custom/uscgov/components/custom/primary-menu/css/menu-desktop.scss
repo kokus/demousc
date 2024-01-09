@@ -30,15 +30,15 @@
     line-height: 1;
     font: inherit;
     font-size: 16px;
-    color: color('primary-darker');
+    color: var(--text-link-darkest);
 
     &:hover {
-      border-bottom-color: color('primary');
+      border-bottom-color: var(--border-primary);
     }
 
     .primary-menu__menu-item--active-trail &,
     &.is-active {
-      border-bottom-color: color('primary-dark');
+      border-bottom-color: var(--border-primary-dark);
     }
   }
 
@@ -51,8 +51,8 @@
       width: 6px;
       height: 6px;
       rotate: -45deg;
-      border-left: solid 2px color('primary-darker');
-      border-bottom: solid 2px color('primary-darker');
+      border-left: solid 2px var(--border-primary-dark);
+      border-bottom: solid 2px var(--border-primary-dark);
       content: "";
     }
 

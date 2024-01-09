@@ -71,8 +71,8 @@
   --color-primitive-theme-primary-light: #73A4CF;
   --color-primitive-theme-primary-primary: #{color('primary')}; // #0057A3
   --color-primitive-theme-primary-dark: #{color('primary-vivid')}; // #01417F
-  --color-primitive-theme-primary-darker: #002D5A;
-  --color-primitive-theme-primary-darkest: #002045;
+  --color-primitive-theme-primary-darker: #{color('primary-dark')}; // #002D5A;
+  --color-primitive-theme-primary-darkest: #{color('primary-darker')}; // #002045
 
   --color-primitive-theme-secondary-gold-lighter: #FCF6E7;
   --color-primitive-theme-secondary-gold-light: #EFD388;

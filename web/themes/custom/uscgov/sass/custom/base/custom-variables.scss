@@ -10,7 +10,7 @@
 
   --surface-primary-lighter: var(--color-primitive-theme-primary-lighter);
   --text-on-surface-primary-lighter: var(--color-token-base-text-icon-base-dark);
-  --text-on-surface-base-lighter-light: var(--color-token-base-text-icon-base-secondary-dark);
+  --text-on-surface-base-lighter--light: var(--color-token-base-text-icon-base-secondary-dark);
 
   --surface-body: var(--color-primitive-neutral-base-light);
   --text-on-surface-body: var(--color-primitive-neutral-gray-base-secondary-dark);
@@ -24,7 +24,7 @@
 
   --text-link: var(--color-primitive-theme-primary-primary);
   --text-link-dark: var(--color-primitive-theme-primary-dark);
-
+  --text-link-darkest: var(--color-primitive-theme-primary-darkest);
 
 
 
@@ -39,5 +39,6 @@
 
 
   --border-primary: var(--color-primitive-theme-primary-primary);
+  --border-primary-dark: var(--color-primitive-theme-primary-darker);
   --border-muted-dark: var(--color-token-base-border-muted-dark);
 }
