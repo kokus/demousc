@@ -67,7 +67,7 @@
   --color-primitive-neutral-gray-medium: #727583;
   --color-primitive-neutral-gray-base-secondary-dark: #{color('base-dark')}; // #525661
 
-  --color-primitive-theme-primary-lighter: #E6F1FA;
+  --color-primitive-theme-primary-lighter: #{color('primary-lighter')}; //#E6F1FA
   --color-primitive-theme-primary-light: #73A4CF;
   --color-primitive-theme-primary-primary: #{color('primary')}; // #0057A3
   --color-primitive-theme-primary-dark: #{color('primary-vivid')}; // #01417F
