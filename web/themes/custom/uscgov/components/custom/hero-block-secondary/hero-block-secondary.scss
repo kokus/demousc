@@ -7,15 +7,15 @@
   gap: 24px;
   padding: 40px;
   border-radius: 30px;
-  border: 1px solid color('base');
-  background: #F8F9FF;
-  color: color('base-dark');
+  border: 1px solid var(--border-muted-dark);
+  background: var(--surface-base-light);
+  color: var(--text-on-surface-base-light);
 }
 
 .hero-block-secondary__title {
   @include u-font-family('sans');
   margin: 0;
-  color: color('base-darker');
+  color: var(--text-on-surface-base-light-dark);
 }
 
 .hero-block-secondary__description {
@@ -28,12 +28,12 @@
   gap: 5px;
   padding: 10px 16px;
   border-radius: 30px;
-  background-color: color('primary');
-  color: white;
+  background-color: var(--surface-button);
+  color: var(--text-on-surface-button);
   text-decoration: none;
 
   &:hover {
-    color: white;
+    color: var(--text-on-surface-button);
   }
 
   &:after {

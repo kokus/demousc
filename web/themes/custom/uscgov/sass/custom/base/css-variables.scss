@@ -76,7 +76,7 @@
   --color-primitive-theme-primary-darkest: #{color('primary-darker')}; // #002045
 
   --color-primitive-theme-secondary-gold-lighter: #FCF6E7;
-  --color-primitive-theme-secondary-gold-light: #EFD388;
+  --color-primitive-theme-secondary-gold-light: #{color('secondary-light')}; // #EFD388
   --color-primitive-theme-secondary-gold-primary: #DFA611;
   --color-primitive-theme-secondary-gold-dark: #A07510;
   --color-primitive-theme-secondary-gold-darker: #725214;
