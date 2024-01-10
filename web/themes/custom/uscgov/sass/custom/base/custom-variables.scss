@@ -1,35 +1,34 @@
 :root {
   // --surface
-  --surface-primary-darker: var(--color-token-primary-blue-darker);
+  --surface-primary-darker: var(--color-primitive-theme-primary-darker);
   --text-on-surface-primary-darker: var(--color-primitive-neutral-base-light);
 
   --surface-primary: var(--color-primitive-theme-primary-primary);
   --text-on-surface-primary: var(--color-primitive-neutral-base-light);
 
 
-
-  --surface-primary-lighter: var(--color-primitive-theme-primary-lighter);
+  --surface-primary-lighter: var(--color-primitive-theme-primary-lighter); // #E6F1FA
   --text-on-surface-primary-lighter: var(--color-token-base-text-icon-base-dark);
   --text-on-surface-base-lighter--light: var(--color-token-base-text-icon-base-secondary-dark);
 
-  --surface-body: var(--color-primitive-neutral-base-light);
+  --surface-body: var(--color-primitive-neutral-base-light); // #FEFEFE
   --text-on-surface-body: var(--color-primitive-neutral-gray-base-secondary-dark);
 
+  --surface-base-light: var(--color-primitive-neutral-gray-surface-variant); // #F8F9FF
+  --text-on-surface-base-light: var(--color-primitive-neutral-gray-base-secondary-dark); // #525661
+  --text-on-surface-base-light-dark: var(--color-primitive-neutral-base-dark); // #080A0D
 
-
-  --surface-base-lightest: var(--color-token-base-background-background-variant);
+  --surface-base-lightest: var(--color-token-base-background-background-variant); // #F4F6FB
   --text-on-surface-base-lightest: var(--color-token-base-text-icon-base-secondary-dark);
   --text-on-surface-base-lightest--dark: var(--color-primitive-neutral-base-dark);
 
+  --surface-base-medium: var(--color-primitive-neutral-gray-surface-variant-dark); // #E4E4E4
+  --text-on-surface-base-medium: var(--color-primitive-neutral-gray-base-secondary-dark); // #525661
 
-  --text-link: var(--color-primitive-theme-primary-primary);
+
+  --text-link: var(--color-primitive-theme-primary-primary); // color('primary') #0057A3
   --text-link-dark: var(--color-primitive-theme-primary-dark);
   --text-link-darkest: var(--color-primitive-theme-primary-darkest);
-
-
-
-
-
 
 
 
@@ -41,4 +40,5 @@
   --border-primary: var(--color-primitive-theme-primary-primary);
   --border-primary-dark: var(--color-primitive-theme-primary-darker);
   --border-muted-dark: var(--color-token-base-border-muted-dark);
+  --border-form: var(--border-muted-dark); // color('base') #8C91A0
 }

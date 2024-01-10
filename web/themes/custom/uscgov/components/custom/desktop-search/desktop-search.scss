@@ -13,7 +13,7 @@
   appearance: none;
   border: 0;
   background: none;
-  color: color('primary');
+  color: var(--text-link);
   cursor: pointer;
 
   @include custom-desktop-nav {
@@ -27,9 +27,9 @@
   &[aria-expanded="true"] {
     position: relative; // Anchor pseudo.
     border-radius: 10px 10px 0 0;
-    border-top: 1px solid color('base');
-    border-right: 1px solid color('base');
-    border-left: 1px solid color('base');
+    border-top: 1px solid var(--border-muted-dark);
+    border-right: 1px solid var(--border-muted-dark);
+    border-left: 1px solid var(--border-muted-dark);
     background: var(--surface-base-lightest);
 
     &:before {
@@ -39,8 +39,8 @@
       z-index: 2; // Appear above dropdown.
       width: calc(100% + 2px);
       height: 42px; // @todo magic number.
-      border-right: 1px solid color('base');
-      border-left: 1px solid color('base');
+      border-right: 1px solid var(--border-muted-dark);
+      border-left: 1px solid var(--border-muted-dark);
       background: var(--surface-base-lightest);
       content: "";
     }
@@ -118,7 +118,7 @@
   height: 200px;
   padding: var(--spacing-md-1);
   background: var(--surface-base-lightest);
-  border: solid 1px color('base');
+  border: solid 1px var(--border-muted-dark);
   text-align: center;
 
   @include custom-desktop-nav {
@@ -133,20 +133,20 @@
 .desktop-search__label {
   display: block;
   margin-bottom: var(--spacing-sm-1);
-  color: color('base-dark');
+  color: var(--text-on-surface-base-light);
   font-size: 24px;
   font-weight: 700;
 }
 
 .desktop-search__form-wrapper {
-  --form-background: white;
+  --form-background: var(--surface-form);
 
   display: flex;
   max-width: 600px;
   height: var(--spacing-lg-1);
   margin-inline: auto;
   background: var(--form-background);
-  border: solid 1px color('base');
+  border: solid 1px var(--border-muted-dark);
   border-radius: 30px;
 
   &:has(input:focus) {
@@ -179,7 +179,7 @@
   border-radius: 50%;
   border: solid 1px transparent;
   appearance: none;
-  background: color('primary');
+  background: var(--surface-primary);
   color: var(--form-background);
 
   path {
