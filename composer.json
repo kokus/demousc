@@ -78,12 +78,12 @@
         "drupal/scheduler": "^2.0",
         "drupal/seckit": "^2.0",
         "drupal/sharethis": "^3.0",
+        "drupal/simple_sitemap": "^4.1",
         "drupal/taxonomy_manager": "^2.0",
         "drupal/transliterate_filenames": "^2.0",
         "drupal/usfedgov_google_analytics": "^2.0",
         "drupal/views_bulk_operations": "^4.2",
         "drupal/webform": "^6.2@RC",
-        "drupal/xmlsitemap": "^1.5",
         "drush/drush": "^12.1",
         "mglaman/composer-drupal-lenient": "^1.0"
     },

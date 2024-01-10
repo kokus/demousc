@@ -57,7 +57,6 @@ dependencies:
     - usfedgov_google_analytics
     - views_ui
     - webform
-    - xmlsitemap
 id: admin
 label: admin
 weight: 2
@@ -166,7 +165,6 @@ permissions:
   - 'administer webform element access'
   - 'administer webform labels'
   - 'administer webform submission'
-  - 'administer xmlsitemap'
   - 'bypass honeypot protection'
   - 'bypass node access'
   - 'change own logout threshold'
@@ -200,7 +198,6 @@ permissions:
   - feeds_log.access
   - 'import configuration'
   - 'notify of path changes'
-  - 'override xmlsitemap link settings'
   - 'purge akamai cache'
   - 'schedule publishing of nodes'
   - 'search content'

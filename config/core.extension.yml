@@ -109,6 +109,7 @@ module:
   serialization: 0
   sharethis: 0
   shortcut: 0
+  simple_sitemap: 0
   smart_sql_idmap: 0
   syslog: 0
   system: 0
@@ -131,7 +132,6 @@ module:
   webform_ui: 0
   extlink: 1
   pathauto: 1
-  xmlsitemap: 1
   password_policy: 10
   views: 10
   paragraphs: 11
