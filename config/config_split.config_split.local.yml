@@ -10,7 +10,8 @@ stackable: false
 no_patching: false
 storage: folder
 folder: ../config_split/local/
-module: {  }
+module:
+  stage_file_proxy: 0
 theme: {  }
 complete_list:
   - system.logging
