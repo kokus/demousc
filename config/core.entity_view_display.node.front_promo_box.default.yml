@@ -13,8 +13,10 @@ dependencies:
     - image.style.promo
     - node.type.front_promo_box
   module:
+    - file
     - image_link_formatter
     - link
+    - options
     - text
     - user
 id: node.front_promo_box.default
@@ -28,7 +30,7 @@ content:
     settings:
       trim_length: 300
     third_party_settings: {  }
-    weight: 4
+    weight: 2
     region: content
   field_bean_image:
     type: image_link_formatter
@@ -39,7 +41,15 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 2
+    weight: 1
+    region: content
+  field_bean_video:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_link:
     type: link
@@ -51,20 +61,36 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 1
+    weight: 0
+    region: content
+  field_more_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_promo_box_location:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 7
     region: content
   sharethis:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 6
     region: content
 hidden:
-  field_bean_video: true
   field_metatag: true
-  field_more_link: true
-  field_promo_box_location: true

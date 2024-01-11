@@ -3,23 +3,45 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.basic_html
+    - filter.format.ds_code
     - filter.format.full_html
+    - filter.format.gutenberg
+    - filter.format.restricted_html
+    - filter.format.webform_default
+    - node.type.landing_featured_content
+    - node.type.landing_view
   module:
     - action
     - akamai
     - ape
+    - auto_entitylabel
     - autologout
     - block
+    - block_content
+    - config
     - config_pages
     - contextual
+    - devel
     - environment_indicator
+    - extlink
     - feeds
+    - feeds_log
+    - field_ui
+    - file
     - filter
+    - google_tag
+    - gutenberg
     - honeypot
     - image
+    - linkit
+    - media
+    - menu_link_content
     - menu_position
     - metatag
+    - module_filter
     - node
+    - paragraphs
     - path
     - pathauto
     - redirect
@@ -27,10 +49,14 @@ dependencies:
     - search
     - seckit
     - sharethis
+    - shortcut
     - system
     - taxonomy
+    - taxonomy_manager
+    - toolbar
     - usfedgov_google_analytics
     - views_ui
+    - webform
     - xmlsitemap
 id: admin
 label: admin
@@ -38,29 +64,82 @@ weight: 2
 is_admin: null
 permissions:
   - 'access administration pages'
+  - 'access any webform configuration'
+  - 'access block library'
+  - 'access config_pages overview'
   - 'access content overview'
   - 'access contextual links'
+  - 'access devel information'
   - 'access environment indicator'
+  - 'access feed overview'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access own webform configuration'
+  - 'access shortcuts'
   - 'access site in maintenance mode'
   - 'access site reports'
+  - 'access taxonomy manager list'
+  - 'access taxonomy overview'
+  - 'access toolbar'
   - 'access user profiles'
+  - 'access webform help'
+  - 'access webform overview'
+  - 'access webform submission user'
+  - 'administer account settings'
   - 'administer actions'
   - 'administer akamai'
   - 'administer ape'
   - 'administer autologout'
+  - 'administer block content'
+  - 'administer block types'
+  - 'administer block_content display'
+  - 'administer block_content fields'
+  - 'administer block_content form display'
+  - 'administer block_content_type labels'
   - 'administer blocks'
+  - 'administer config_pages display'
+  - 'administer config_pages fields'
+  - 'administer config_pages form display'
+  - 'administer config_pages types'
+  - 'administer config_pages_type labels'
   - 'administer content types'
+  - 'administer display modes'
   - 'administer environment indicator settings'
+  - 'administer extlink'
   - 'administer federal google analytics'
   - 'administer feeds'
+  - 'administer feeds_feed display'
+  - 'administer feeds_feed fields'
+  - 'administer feeds_feed form display'
+  - 'administer feeds_feed_type labels'
   - 'administer filters'
+  - 'administer google_tag_container'
   - 'administer honeypot'
   - 'administer image styles'
+  - 'administer linkit profiles'
+  - 'administer media'
+  - 'administer media display'
+  - 'administer media fields'
+  - 'administer media form display'
+  - 'administer media_type labels'
   - 'administer menu'
+  - 'administer menu labels'
   - 'administer menu positions'
+  - 'administer menu_link_content display'
+  - 'administer menu_link_content fields'
+  - 'administer menu_link_content form display'
   - 'administer meta tags'
+  - 'administer module_filter'
   - 'administer modules'
+  - 'administer node display'
+  - 'administer node fields'
+  - 'administer node form display'
+  - 'administer node_type labels'
   - 'administer nodes'
+  - 'administer paragraph display'
+  - 'administer paragraph fields'
+  - 'administer paragraph form display'
+  - 'administer paragraphs_type labels'
   - 'administer pathauto'
   - 'administer permissions'
   - 'administer redirects'
@@ -68,21 +147,85 @@ permissions:
   - 'administer search'
   - 'administer seckit'
   - 'administer sharethis'
+  - 'administer shortcut_set labels'
+  - 'administer shortcuts'
   - 'administer site configuration'
   - 'administer taxonomy'
+  - 'administer taxonomy_term display'
+  - 'administer taxonomy_term fields'
+  - 'administer taxonomy_term form display'
+  - 'administer taxonomy_vocabulary labels'
   - 'administer themes'
   - 'administer url aliases'
+  - 'administer user display'
+  - 'administer user fields'
+  - 'administer user form display'
   - 'administer users'
   - 'administer views'
+  - 'administer webform'
+  - 'administer webform element access'
+  - 'administer webform labels'
+  - 'administer webform submission'
   - 'administer xmlsitemap'
   - 'bypass honeypot protection'
   - 'bypass node access'
   - 'change own logout threshold'
+  - 'create landing_featured_content content'
+  - 'create landing_view content'
+  - 'create media'
   - 'create url aliases'
+  - 'create webform'
+  - 'customize shortcut links'
+  - 'delete all revisions'
+  - 'delete any file'
+  - 'delete any media'
+  - 'delete any webform'
+  - 'delete any webform submission'
+  - 'delete config_pages entity'
+  - 'delete media'
+  - 'delete own files'
+  - 'delete own webform'
+  - 'delete own webform submission'
+  - 'edit any webform'
+  - 'edit any webform submission'
+  - 'edit config_pages entity'
+  - 'edit global_site_settings config page entity'
+  - 'edit own webform'
+  - 'edit own webform submission'
+  - 'edit webform assets'
+  - 'edit webform source'
+  - 'edit webform twig'
+  - 'edit webform variants'
+  - 'export configuration'
+  - feeds_log.access
+  - 'import configuration'
   - 'notify of path changes'
+  - 'override xmlsitemap link settings'
   - 'purge akamai cache'
   - 'schedule publishing of nodes'
+  - 'search content'
+  - 'switch shortcut sets'
+  - 'switch users'
+  - 'synchronize configuration'
+  - 'update any media'
+  - 'update media'
+  - 'use advanced search'
+  - 'use gutenberg'
+  - 'use text format basic_html'
+  - 'use text format ds_code'
   - 'use text format full_html'
+  - 'use text format gutenberg'
+  - 'use text format restricted_html'
+  - 'use text format webform_default'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view any webform submission'
+  - 'view config_pages entity'
   - 'view global_site_settings config page entity'
+  - 'view landing_view revisions'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view own webform submission'
   - 'view scheduled content'
   - 'view the administration theme'

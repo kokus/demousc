@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.educational_activity.field_lead_paragraph
     - field.field.node.educational_activity.field_logo
     - field.field.node.educational_activity.field_metatag
+    - field.field.node.educational_activity.field_sidebar
     - field.field.node.educational_activity.field_tags
     - node.type.educational_activity
   module:
@@ -30,6 +31,15 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
+  field_activity_category:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
   field_body_enhanced:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -37,7 +47,7 @@ content:
       view_mode: full
       link: ''
     third_party_settings: {  }
-    weight: 6
+    weight: 5
     region: content
   field_fc_be_audio:
     type: entity_reference_entity_view
@@ -47,6 +57,15 @@ content:
       link: false
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_landing_page_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_lead_gallery:
     type: entity_reference_entity_view
@@ -73,19 +92,33 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_sidebar:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_tags:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 7
     region: content
   sharethis:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 6
     region: content
 hidden:
-  field_activity_category: true
-  field_landing_page_image: true
   field_metatag: true
-  field_sidebar: true
-  field_tags: true

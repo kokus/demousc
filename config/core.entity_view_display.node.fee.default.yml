@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.fee.field_date_updated
     - field.field.node.fee.field_lead_paragraph
     - field.field.node.fee.field_logo
+    - field.field.node.fee.field_sidebar
     - field.field.node.fee.field_tags
     - node.type.fee
   module:
@@ -24,7 +25,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 2
     region: content
   field_date_effective:
     type: datetime_default
@@ -60,16 +61,32 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_sidebar:
+    type: entity_reference_entity_view
+    label: inline
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_tags:
+    type: entity_reference_entity_view
+    label: inline
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 8
     region: content
   sharethis:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 7
     region: content
-hidden:
-  field_sidebar: true
-  field_tags: true
+hidden: {  }

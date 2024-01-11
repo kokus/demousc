@@ -68,6 +68,14 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_piksel_category_id:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
   field_piksel_programs:
     type: entity_reference_revisions_entity_view
     label: hidden
@@ -77,6 +85,23 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
+  field_piksel_project_uuid:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_procedural_posture:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
   field_program:
     type: entity_reference_entity_view
     label: hidden
@@ -85,6 +110,33 @@ content:
       link: false
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_sidebar:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_subject_matter:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_tags:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 14
     region: content
   links:
     settings: {  }
@@ -98,9 +150,3 @@ content:
     region: content
 hidden:
   field_metatag: true
-  field_piksel_category_id: true
-  field_piksel_project_uuid: true
-  field_procedural_posture: true
-  field_sidebar: true
-  field_subject_matter: true
-  field_tags: true

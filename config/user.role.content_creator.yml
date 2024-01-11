@@ -21,16 +21,27 @@ dependencies:
     - node.type.report
   module:
     - config_pages
+    - gutenberg
+    - media
     - node
     - pathauto
     - system
+    - taxonomy
+    - toolbar
+    - webform
 id: content_creator
 label: 'content creator'
 weight: 5
 is_admin: null
 permissions:
   - 'access administration pages'
+  - 'access content overview'
+  - 'access media overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
   - 'access user profiles'
+  - 'administer media'
+  - 'administer taxonomy'
   - 'create basic content'
   - 'create basic_simple content'
   - 'create data_table content'
@@ -42,9 +53,12 @@ permissions:
   - 'create judge content'
   - 'create landing_featured_content content'
   - 'create landing_view content'
+  - 'create media'
   - 'create news content'
   - 'create news_issue content'
   - 'create report content'
+  - 'create webform'
+  - 'delete media'
   - 'edit any basic content'
   - 'edit any basic_simple content'
   - 'edit any camera content'
@@ -62,6 +76,13 @@ permissions:
   - 'edit any news_issue content'
   - 'edit any report content'
   - 'notify of path changes'
+  - 'update media'
+  - 'use gutenberg'
+  - 'view all media revisions'
+  - 'view all revisions'
   - 'view global_site_settings config page entity'
+  - 'view landing_view revisions'
+  - 'view media'
   - 'view own unpublished content'
+  - 'view own unpublished media'
   - 'view the administration theme'
