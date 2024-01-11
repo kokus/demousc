@@ -182,6 +182,7 @@
         "drupal/core-dev": "^10",
         "drupal/devel": "^5.0",
         "drupal/drupal-extension": "^5.0",
+        "drupal/stage_file_proxy": "^2.1",
         "kint-php/kint": "^5.0",
         "mglaman/drupal-check": "^1.1",
         "mglaman/phpstan-drupal": "^1",
