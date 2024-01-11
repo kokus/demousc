@@ -86,16 +86,15 @@ final class State extends ContentEntityBase implements CourtFinderEntityInterfac
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['circuit_code'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('Circuit code'))
-      ->setDescription(t('Circuit code'))
+    $fields['circuit_id'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Circuit ID'))
+      ->setDescription(t('The circuit ID, which the state belongs to.'))
       ->setSettings([
-        'max_length' => 255,
-        'text_processing' => 0,
+        'target_type' => 'usc_circuit',
       ])
       ->setDefaultValue('')
       ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
+        'type' => 'options_select',
         'weight' => 0,
       ])
       ->setDisplayConfigurable('form', TRUE)

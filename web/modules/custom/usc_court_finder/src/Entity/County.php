@@ -71,31 +71,29 @@ final class County extends ContentEntityBase implements CourtFinderEntityInterfa
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['state_code'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('State code'))
-      ->setDescription(t('State code'))
+    $fields['state_id'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('State ID'))
+      ->setDescription(t('The State ID, which the district belongs to.'))
       ->setSettings([
-        'max_length' => 255,
-        'text_processing' => 0,
+        'target_type' => 'usc_state',
       ])
       ->setDefaultValue('')
       ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
+        'type' => 'options_select',
         'weight' => 0,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['district_code'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('District code'))
-      ->setDescription(t('District code'))
+    $fields['district_id'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('District ID'))
+      ->setDescription(t('The District ID, which the county belongs to.'))
       ->setSettings([
-        'max_length' => 255,
-        'text_processing' => 0,
+        'target_type' => 'usc_district',
       ])
       ->setDefaultValue('')
       ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
+        'type' => 'options_select',
         'weight' => 0,
       ])
       ->setDisplayConfigurable('form', TRUE)

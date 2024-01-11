@@ -86,47 +86,16 @@ final class District extends ContentEntityBase implements CourtFinderEntityInter
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['state_code'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('State code'))
-      ->setDescription(t('State code'))
+    $fields['state_id'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('State ID'))
+      ->setDescription(t('The State ID, which the district belongs to.'))
       ->setSettings([
-        'max_length' => 255,
-        'text_processing' => 0,
+        'target_type' => 'usc_state',
       ])
       ->setDefaultValue('')
       ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
+        'type' => 'options_select',
         'weight' => 0,
-      ])
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
-
-    $fields['longitude'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('Longitude'))
-      ->setDescription(t('Longitude'))
-      ->setSettings([
-        'max_length' => 255,
-        'text_processing' => 0,
-      ])
-      ->setDefaultValue('')
-      ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
-        'weight' => 16,
-      ])
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
-
-    $fields['latitude'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('Latitude'))
-      ->setDescription(t('Latitude'))
-      ->setSettings([
-        'max_length' => 255,
-        'text_processing' => 0,
-      ])
-      ->setDefaultValue('')
-      ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
-        'weight' => 17,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);

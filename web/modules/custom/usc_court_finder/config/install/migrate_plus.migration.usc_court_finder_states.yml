@@ -1,0 +1,35 @@
+id: usc_court_finder_states
+label: US Court Finder States
+migration_group: usc_court_finder
+
+source:
+  plugin: 'csv'
+  path: 'modules/custom/usc_court_finder/source_files/states.csv'
+  delimiter: ','
+  enclosure: '"'
+  header_offset: 0
+  ids:
+    - code
+  fields:
+    0:
+      name: code
+    1:
+      name: name
+    2:
+      name: circuit_code
+
+process:
+  code: code
+  name: name
+  circuit_id:
+    source: circuit_code
+    plugin: migration_lookup
+    migration: usc_court_finder_circuits
+
+
+destination:
+  plugin: entity:usc_state
+
+migration_dependencies:
+  required:
+    - usc_court_finder_circuits
