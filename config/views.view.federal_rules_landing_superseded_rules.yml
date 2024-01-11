@@ -1,0 +1,365 @@
+uuid: faa8ccfe-d9ba-4960-9d9f-88ec66c90ba8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_updated
+    - field.storage.node.field_document_pdf
+    - field.storage.node.field_term_entity_reference2
+    - node.type.federal_rules
+    - taxonomy.vocabulary.committees_
+    - taxonomy.vocabulary.file_types
+  content:
+    - 'taxonomy_term:committees_:0c2a26a3-62ae-476e-a1de-6a9c06482efa'
+    - 'taxonomy_term:committees_:6152b997-972d-4469-a701-ae56e30b3af1'
+    - 'taxonomy_term:committees_:64d61304-3162-40f8-a7c3-315d8e92c8d7'
+    - 'taxonomy_term:committees_:6a2bca47-9eae-43ea-a7e4-629519604af5'
+    - 'taxonomy_term:committees_:dfa24965-295d-4751-ab11-1018395e5805'
+    - 'taxonomy_term:file_types:8c1d4293-8f9d-4be4-ac6e-d8b771cf0a1c'
+  module:
+    - datetime
+    - node
+    - taxonomy
+    - user
+id: federal_rules_landing_superseded_rules
+label: 'Federal Rules Landing Superseded Rules'
+module: views
+description: ''
+tag: 'landing page'
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      title: 'Landing Page Federal Rules Superseded Rules'
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: field
+          label: 'Name of Superseded Rules Pamphlet'
+          alter:
+            word_boundary: false
+            ellipsis: false
+        field_date_updated:
+          id: field_date_updated
+          table: node__field_date_updated
+          field: field_date_updated
+          plugin_id: field
+          label: Date
+          settings:
+            format_type: month_year
+            fromto: both
+            multiple_number: ''
+            multiple_from: ''
+            multiple_to: ''
+        field_term_entity_reference2:
+          id: field_term_entity_reference2
+          table: node__field_term_entity_reference2
+          field: field_term_entity_reference2
+          plugin_id: field
+          exclude: true
+          settings:
+            link: 0
+        field_document_pdf:
+          id: field_document_pdf
+          table: node__field_document_pdf
+          field: field_document_pdf
+          plugin_id: field
+          label: Download
+          exclude: true
+          element_label_class: 'sorter-false hidden'
+          element_label_colon: false
+          element_default_classes: false
+          click_sort_column: fid
+          type: entity_reference_label
+          settings:
+            target_type: media
+          delta_limit: 1
+          delta_offset: 0
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 30
+          id: 0
+          quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          reset_button: true
+          expose_sort_order: false
+          autosubmit_hide: false
+      access:
+        type: perm
+      cache:
+        type: none
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          empty: true
+          content:
+            value: 'Your search did not match any results. Please try again using fewer search criteria.'
+            format: html_filtered
+      sorts:
+        field_date_updated_value:
+          id: field_date_updated_value
+          table: node__field_date_updated
+          field: field_date_updated_value
+          plugin_id: datetime
+          order: DESC
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            federal_rules: federal_rules
+          group: 1
+        term_node_tid_depth_1:
+          id: term_node_tid_depth_1
+          table: node_field_data
+          field: term_node_tid_depth
+          plugin_id: taxonomy_index_tid
+          operator: in
+          value:
+            846: 846
+          group: 1
+          expose:
+            operator_id: term_node_tid_depth_1_op
+            label: 'Select the type of record or report'
+            operator: term_node_tid_depth_1_op
+            identifier: fcategory
+            remember_roles:
+              authenticated: authenticated
+              anonymous: anonymous
+              admin: admin
+              publisher: publisher
+              approver: approver
+              content_creator: content_creator
+          vid: file_types
+          type: select
+          hierarchy: true
+          ui_name: 'Taxonomy: File Types (Category)'
+          depth: '1'
+        term_node_tid_depth:
+          id: term_node_tid_depth
+          table: node_field_data
+          field: term_node_tid_depth
+          plugin_id: taxonomy_index_tid
+          operator: in
+          value:
+            40: 40
+            41: 41
+            42: 42
+            43: 43
+            44: 44
+          group: 1
+          exposed: true
+          expose:
+            operator_id: term_node_tid_depth_op
+            label: 'Select a rules category'
+            operator: in
+            identifier: committee
+            remember_roles:
+              authenticated: authenticated
+              anonymous: anonymous
+              admin: admin
+              publisher: publisher
+              approver: approver
+              content_creator: content_creator
+            reduce: true
+          vid: committees_
+          type: select
+          hierarchy: true
+          ui_name: 'Taxonomy: Committee'
+          depth: '1'
+        field_date_updated_value:
+          id: field_date_updated_value
+          table: node__field_date_updated
+          field: field_date_updated_value
+          plugin_id: datetime
+          operator: or
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_updated_value_op
+            label: 'Select a year'
+            operator: field_date_updated_value_op
+            identifier: year
+            remember_roles: {  }
+          granularity: year
+          year_range: '1935:+0'
+      style:
+        type: table
+        options:
+          columns:
+            title: title
+            field_date_updated: field_date_updated
+            field_term_entity_reference2: field_term_entity_reference2
+            field_document_pdf: field_document_pdf
+          default: field_date_updated
+          info:
+            title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+            field_date_updated:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+            field_term_entity_reference2:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+            field_document_pdf:
+              align: ''
+              separator: ''
+              empty_column: false
+          class: ''
+      query:
+        type: views_query
+        options: {  }
+      relationships:
+        field_term_entity_reference_target_id:
+          id: field_term_entity_reference_target_id
+          table: node__field_term_entity_reference
+          field: field_term_entity_reference_target_id
+          plugin_id: standard
+          target_type: taxonomy_term
+          field_name: field_term_entity_reference
+      use_more_always: false
+      display_extenders: {  }
+      style_plugin: table
+      style_options:
+        columns:
+          title: title
+          field_date_updated: field_date_updated
+          field_term_entity_reference2: field_term_entity_reference2
+          field_document_pdf: field_document_pdf
+        class: ''
+        default: field_date_updated
+        info:
+          title:
+            sortable: 1
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_date_updated:
+            sortable: 1
+            default_sort_order: desc
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_term_entity_reference2:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+          field_document_pdf:
+            align: ''
+            separator: ''
+            empty_column: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_date_updated'
+        - 'config:field.storage.node.field_document_pdf'
+        - 'config:field.storage.node.field_term_entity_reference2'
+  page_federal_rules:
+    id: page_federal_rules
+    display_title: 'Taxonomy Display'
+    display_plugin: page
+    position: 2
+    display_options:
+      arguments:
+        term_node_tid_depth:
+          id: term_node_tid_depth
+          table: node_field_data
+          field: term_node_tid_depth
+          plugin_id: taxonomy_index_tid_depth
+          default_action: default
+          default_argument_type: taxonomy_tid
+          summary_options:
+            items_per_page: 25
+          summary:
+            number_of_records: 0
+            format: default_summary
+          depth: 3
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            federal_rules: federal_rules
+          group: 1
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        arguments: false
+        filters: false
+        filter_groups: false
+      display_extenders: {  }
+      path: content/taxonomy/federal-rules2
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_date_updated'
+        - 'config:field.storage.node.field_document_pdf'
+        - 'config:field.storage.node.field_term_entity_reference2'

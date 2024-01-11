@@ -3,20 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.article
+    - node.type.landing_featured_content
+    - node.type.landing_view
     - node.type.page
     - taxonomy.vocabulary.tags
   module:
-    - comment
     - config_pages
     - contextual
     - file
+    - gutenberg
+    - media
     - node
     - path
     - system
     - taxonomy
     - toolbar
     - tour
+    - webform
 _core:
   default_config_hash: NtMgnXp0miNtJhag07NSjwdCm4zpJwhlDFs1HgyL4wI
 id: content_editor
@@ -28,24 +31,39 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access media overview'
+  - 'access taxonomy overview'
   - 'access toolbar'
   - 'access tour'
+  - 'administer media'
+  - 'administer media types'
+  - 'administer taxonomy'
   - 'administer url aliases'
-  - 'create article content'
+  - 'create landing_featured_content content'
+  - 'create landing_view content'
+  - 'create media'
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
-  - 'delete article revisions'
-  - 'delete own article content'
+  - 'create webform'
+  - 'delete any media'
+  - 'delete any webform'
+  - 'delete media'
   - 'delete own files'
   - 'delete own page content'
   - 'delete page revisions'
-  - 'edit own article content'
-  - 'edit own comments'
   - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'
+  - 'update any media'
+  - 'update media'
+  - 'use gutenberg'
+  - 'view all media revisions'
   - 'view all revisions'
   - 'view global_site_settings config page entity'
+  - 'view landing_view revisions'
+  - 'view media'
   - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view own webform submission'
   - 'view the administration theme'

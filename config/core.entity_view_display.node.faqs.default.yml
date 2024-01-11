@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.faqs.body
+    - field.field.node.faqs.field_faqs
     - field.field.node.faqs.field_metatag
     - node.type.faqs
   module:
+    - faqfield
     - text
     - user
 id: node.faqs.default
@@ -21,16 +23,29 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_faqs:
+    type: faqfield_accordion
+    label: hidden
+    settings:
+      active: 0
+      heightStyle: auto
+      collapsible: false
+      event: click
+      animate:
+        easing: linear
+        duration: 200
+    third_party_settings: {  }
+    weight: 3
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 2
     region: content
   sharethis:
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 1
     region: content
 hidden:
-  field_faqs: true
   field_metatag: true

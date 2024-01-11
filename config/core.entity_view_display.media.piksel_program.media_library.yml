@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.media_library
+    - field.field.media.piksel_program.field_alternate_text
     - field.field.media.piksel_program.field_file_title
+    - field.field.media.piksel_program.field_title
     - image.style.medium
     - media.type.piksel_program
   module:
@@ -27,6 +29,8 @@ content:
     region: content
 hidden:
   created: true
+  field_alternate_text: true
   field_file_title: true
+  field_title: true
   name: true
   uid: true
