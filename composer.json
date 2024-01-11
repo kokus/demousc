@@ -84,6 +84,7 @@
         "drupal/usfedgov_google_analytics": "^2.0",
         "drupal/views_bulk_operations": "^4.2",
         "drupal/webform": "^6.2@RC",
+        "drupal/xmlsitemap": "*",
         "drupal/yoast_seo": "^2.0@alpha",
         "drush/drush": "^12.1",
         "mglaman/composer-drupal-lenient": "^1.0"
@@ -101,7 +102,8 @@
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "cweagans/composer-patches": true,
-            "mglaman/composer-drupal-lenient": true
+            "mglaman/composer-drupal-lenient": true,
+            "php-http/discovery": true
         },
         "sort-packages": true
     },
