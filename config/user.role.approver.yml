@@ -30,6 +30,7 @@ dependencies:
     - taxonomy
     - toolbar
     - webform
+    - yoast_seo
 id: approver
 label: approver
 weight: 4
@@ -80,6 +81,7 @@ permissions:
   - 'notify of path changes'
   - 'update media'
   - 'use gutenberg'
+  - 'use yoast seo'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view global_site_settings config page entity'
