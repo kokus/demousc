@@ -57,6 +57,7 @@ dependencies:
     - usfedgov_google_analytics
     - views_ui
     - webform
+    - yoast_seo
 id: admin
 label: admin
 weight: 2
@@ -214,6 +215,7 @@ permissions:
   - 'use text format gutenberg'
   - 'use text format restricted_html'
   - 'use text format webform_default'
+  - 'use yoast seo'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view any webform submission'
