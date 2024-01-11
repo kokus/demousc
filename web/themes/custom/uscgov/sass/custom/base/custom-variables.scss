@@ -8,8 +8,9 @@
 
 
   --surface-primary-lighter: var(--color-primitive-theme-primary-lighter); // #E6F1FA
-  --text-on-surface-primary-lighter: var(--color-token-base-text-icon-base-dark);
+  --text-on-surface-primary-lighter: var(--color-token-base-text-icon-base-dark); // #080A0D
   --text-on-surface-base-lighter--light: var(--color-token-base-text-icon-base-secondary-dark);
+  --text-on-surface-base-lighter--primary: var(--color-primitive-theme-primary-dark); // #01417F
 
   --surface-body: var(--color-primitive-neutral-base-light); // #FEFEFE
   --text-on-surface-body: var(--color-primitive-neutral-gray-base-secondary-dark);
@@ -41,7 +42,8 @@
 
 
   --border-primary: var(--color-primitive-theme-primary-primary);
-  --border-primary-dark: var(--color-primitive-theme-primary-darker);
+  --border-primary-dark: var(--color-primitive-theme-primary-dark); // #01417F
+  --border-primary-darker: var(--color-primitive-theme-primary-darker); // #002D5A
   --border-muted-dark: var(--color-token-base-border-muted-dark);
   --border-form: var(--border-muted-dark); // color('base') #8C91A0
 }

@@ -38,7 +38,7 @@
 
     .primary-menu__menu-item--active-trail &,
     &.is-active {
-      border-bottom-color: var(--border-primary-dark);
+      border-bottom-color: var(--border-primary-darker);
     }
   }
 
@@ -51,8 +51,8 @@
       width: 6px;
       height: 6px;
       rotate: -45deg;
-      border-left: solid 2px var(--border-primary-dark);
-      border-bottom: solid 2px var(--border-primary-dark);
+      border-left: solid 2px var(--border-primary-darker);
+      border-bottom: solid 2px var(--border-primary-darker);
       content: "";
     }
 
