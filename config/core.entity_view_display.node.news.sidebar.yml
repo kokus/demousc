@@ -14,7 +14,9 @@ dependencies:
     - field.field.node.news.field_metatag
     - field.field.node.news.field_news_issue
     - field.field.node.news.field_related_topics
+    - field.field.node.news.field_sidebar
     - field.field.node.news.field_tags
+    - field.field.node.news.field_yoast_seo
     - node.type.news
   module:
     - text
@@ -54,3 +56,4 @@ hidden:
   field_related_topics: true
   field_sidebar: true
   field_tags: true
+  field_yoast_seo: true

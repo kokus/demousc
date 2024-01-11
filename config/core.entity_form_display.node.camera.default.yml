@@ -261,6 +261,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     weight: 21
@@ -299,5 +304,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_program: true
   publish_on: true
   unpublish_on: true
