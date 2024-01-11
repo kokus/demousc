@@ -1,0 +1,21 @@
+uuid: 61eb979a-987f-45fd-b477-330e17e1a4bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_yoast_seo
+    - node.type.camera
+  module:
+    - yoast_seo
+id: node.camera.field_yoast_seo
+field_name: field_yoast_seo
+entity_type: node
+bundle: camera
+label: 'Yoast SEO'
+description: 'Real Time SEO'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo

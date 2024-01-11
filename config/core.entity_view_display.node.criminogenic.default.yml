@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.criminogenic.field_criminogenic_target_aud
     - field.field.node.criminogenic.field_criminogenic_worksheets
     - field.field.node.criminogenic.field_metatag
+    - field.field.node.criminogenic.field_yoast_seo
     - node.type.criminogenic
   module:
     - entity_reference_revisions
@@ -18,6 +19,7 @@ dependencies:
     - options
     - text
     - user
+    - yoast_seo
 id: node.criminogenic.default
 targetEntityType: node
 bundle: criminogenic
@@ -84,6 +86,13 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_yoast_seo:
+    type: yoastseo_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
     region: content
   links:
     settings: {  }

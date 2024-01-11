@@ -7,7 +7,9 @@ dependencies:
     - field.field.node.judge.body
     - field.field.node.judge.field_landing_page_image
     - field.field.node.judge.field_milestone_activities
+    - field.field.node.judge.field_sidebar
     - field.field.node.judge.field_tags
+    - field.field.node.judge.field_yoast_seo
     - node.type.judge
   module:
     - text
@@ -38,4 +40,6 @@ content:
 hidden:
   field_landing_page_image: true
   field_milestone_activities: true
+  field_sidebar: true
   field_tags: true
+  field_yoast_seo: true

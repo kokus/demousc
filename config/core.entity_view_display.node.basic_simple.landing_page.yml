@@ -12,7 +12,9 @@ dependencies:
     - field.field.node.basic_simple.field_link
     - field.field.node.basic_simple.field_logo
     - field.field.node.basic_simple.field_metatag
+    - field.field.node.basic_simple.field_sidebar
     - field.field.node.basic_simple.field_tags
+    - field.field.node.basic_simple.field_yoast_seo
     - node.type.basic_simple
   module:
     - text
@@ -58,3 +60,4 @@ hidden:
   field_metatag: true
   field_sidebar: true
   field_tags: true
+  field_yoast_seo: true

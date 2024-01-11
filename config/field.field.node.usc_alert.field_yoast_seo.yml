@@ -1,0 +1,21 @@
+uuid: 7ca301f8-ba5c-4738-8988-cec0c56e32b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_yoast_seo
+    - node.type.usc_alert
+  module:
+    - yoast_seo
+id: node.usc_alert.field_yoast_seo
+field_name: field_yoast_seo
+entity_type: node
+bundle: usc_alert
+label: 'Yoast SEO'
+description: 'Real Time SEO'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo
