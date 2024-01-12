@@ -84,7 +84,7 @@
         "drupal/usfedgov_google_analytics": "^2.0",
         "drupal/views_bulk_operations": "^4.2",
         "drupal/webform": "^6.2@RC",
-        "drupal/xmlsitemap": "*",
+        "drupal/xmlsitemap": "^1.5",
         "drupal/yoast_seo": "^2.0@alpha",
         "drush/drush": "^12.1",
         "mglaman/composer-drupal-lenient": "^1.0"
