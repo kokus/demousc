@@ -87,9 +87,9 @@ services:
       # skipping the init step, because the results of that step will
       # already be present.
       update:
-        - scp agileana@170.187.136.164:dbs_tugboat/uscgov.sql.gz /tmp/database.sql.gz
-        - zcat /tmp/database.sql.gz | mysql tugboat
-        - rm /tmp/database.sql.gz
+      # - scp agileana@170.187.136.164:dbs_tugboat/uscgov.sql.gz /tmp/database.sql.gz
+      # - zcat /tmp/database.sql.gz | mysql tugboat
+      # - rm /tmp/database.sql.gz
 
   redis:
     image: tugboatqa/redis:6.2
