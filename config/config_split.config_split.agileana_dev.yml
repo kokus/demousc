@@ -1,0 +1,17 @@
+uuid: 2c9b975e-5c40-454c-ad26-9f6668e8c084
+langcode: en
+status: false
+dependencies: {  }
+id: agileana_dev
+label: 'Agileana Development'
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config_split/agileana_dev/
+module: {  }
+theme: {  }
+complete_list:
+  - system.logging
+partial_list: {  }

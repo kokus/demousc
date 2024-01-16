@@ -22,7 +22,6 @@ dependencies:
     - config
     - config_pages
     - contextual
-    - devel
     - environment_indicator
     - extlink
     - feeds
@@ -69,7 +68,6 @@ permissions:
   - 'access config_pages overview'
   - 'access content overview'
   - 'access contextual links'
-  - 'access devel information'
   - 'access environment indicator'
   - 'access feed overview'
   - 'access files overview'
@@ -205,7 +203,6 @@ permissions:
   - 'schedule publishing of nodes'
   - 'search content'
   - 'switch shortcut sets'
-  - 'switch users'
   - 'synchronize configuration'
   - 'update any media'
   - 'update media'
