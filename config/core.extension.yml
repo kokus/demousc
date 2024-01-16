@@ -18,13 +18,13 @@ module:
   ckeditor5: 0
   config: 0
   config_pages: 0
+  config_split: 0
   contextual: 0
   ctools: 0
   customerror: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
-  devel: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
@@ -102,6 +102,7 @@ module:
   redis: 0
   remote_stream_wrapper: 0
   responsive_image: 0
+  robotstxt: 0
   scheduler: 0
   sdc: 0
   search: 0
@@ -138,8 +139,7 @@ module:
   paragraphs: 11
   minimal: 1000
 theme:
-  olivero: 0
   claro: 0
-  gin: 0
   uscgov: 0
+  uscadmin: 0
 profile: minimal

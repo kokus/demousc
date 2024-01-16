@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d807c98a2127c1ded793202e19732434",
+    "content-hash": "1008274e2c47ad4b06b9b83d97bb81b9",
     "packages": [
         {
             "name": "akamai-open/edgegrid-auth",
@@ -2031,6 +2031,84 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/config_pages",
                 "issues": "http://drupal.org/project/issues/config_pages"
+            }
+        },
+        {
+            "name": "drupal/config_split",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/config_split.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_split-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "be9fd0aba1206e0f19e8448f69d4210e53dae069"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "conflict": {
+                "drush/drush": "<10"
+            },
+            "require-dev": {
+                "drupal/config_filter": "^1||^2"
+            },
+            "suggest": {
+                "drupal/chosen": "Chosen uses the Chosen jQuery plugin to make the <select> elements more user-friendly.",
+                "drupal/select2_all": "Applies the Select2 library to all select fields on the site similar to the Chosen module."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1699259254",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^10 || ^11"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Fabian Bircher",
+                    "homepage": "https://www.drupal.org/u/bircher",
+                    "email": "opensource@fabianbircher.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Nuvole Web",
+                    "homepage": "http://nuvole.org",
+                    "email": "info@nuvole.org",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "pescetti",
+                    "homepage": "https://www.drupal.org/user/436244"
+                }
+            ],
+            "description": "Configuration filter for importing and exporting extra config",
+            "homepage": "https://www.drupal.org/project/config_split",
+            "keywords": [
+                "Drupal",
+                "configuration",
+                "configuration management"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/config_split",
+                "issues": "https://www.drupal.org/project/issues/config_split",
+                "slack": "https://drupal.slack.com/archives/C45342CDD"
             }
         },
         {
@@ -5562,6 +5640,63 @@
             "homepage": "https://www.drupal.org/project/remote_stream_wrapper",
             "support": {
                 "source": "https://git.drupalcode.org/project/remote_stream_wrapper"
+            }
+        },
+        {
+            "name": "drupal/robotstxt",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/robotstxt.git",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/robotstxt-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "08c2b8dcd7b7f7e3bf0f7b7b88f128603d3b11b1"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1671555186",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "hass",
+                    "homepage": "https://www.drupal.org/u/hass"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/53579/committers"
+                },
+                {
+                    "name": "mikeegoulding",
+                    "homepage": "https://www.drupal.org/user/2867877"
+                },
+                {
+                    "name": "Todd Nienkerk",
+                    "homepage": "https://www.drupal.org/user/92096"
+                }
+            ],
+            "description": "Generates the robots.txt file dynamically and gives you the chance to edit it, on a per-site basis, from the web UI.",
+            "homepage": "https://www.drupal.org/project/robotstxt",
+            "support": {
+                "source": "https://git.drupal.org/project/robotstxt.git",
+                "issues": "https://www.drupal.org/project/issues/robotstxt"
             }
         },
         {
@@ -17703,5 +17838,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

@@ -786,3 +786,19 @@ if (getenv('PIKSEL_TOKEN')) {
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
+
+/**
+ * Enable config split using server host name
+ */
+#
+switch ($_SERVER["HTTP_HOST"]){
+  case "uscourts.lndo.site":
+    $config['config_split.config_split.local']['status'] = TRUE;
+    break;
+  case "uscourts-dev.agileana.com":
+    $config['config_split.config_split.agileana_dev']['status'] = TRUE;
+      break;
+  case "www.uscourts.gov";
+  $config['config_split.config_split.prod']['status'] = TRUE;
+  break;
+}

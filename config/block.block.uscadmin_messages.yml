@@ -1,17 +1,17 @@
-uuid: bf41d9c1-aac7-47c1-ba42-ba21352ed1f0
+uuid: 7bdf0ddf-6100-430a-979a-b74b14b03da2
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - olivero
+    - uscadmin
 _core:
-  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
-id: olivero_messages
-theme: olivero
+  default_config_hash: '-Ac3ISpIT0PQ-whzD7_dw0SdKi6dAbRFNWdSjOiVDqg'
+id: uscadmin_messages
+theme: uscadmin
 region: highlighted
-weight: -5
+weight: 0
 provider: null
 plugin: system_messages_block
 settings:
