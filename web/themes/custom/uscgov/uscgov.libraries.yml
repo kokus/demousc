@@ -22,8 +22,9 @@ uswds:
 uswds-variables:
   css:
     base:
-      dist/custom/css/base/custom-variables.css: {  }
-      dist/custom/css/base/css-variables.css: {  }
+      dist/custom/css/base/variables-figma.css: {  }
+      dist/custom/css/base/variables-colors.css: {  }
+      dist/custom/css/base/variables-spacing.css: {  }
 uswds-utilities:
   css:
     base:
