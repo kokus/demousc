@@ -103,7 +103,7 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "cweagans/composer-patches": true,
             "mglaman/composer-drupal-lenient": true,
-            "php-http/discovery": true
+            "php-http/discovery": false
         },
         "sort-packages": true
     },
