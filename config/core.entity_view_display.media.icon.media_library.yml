@@ -5,28 +5,23 @@ dependencies:
   config:
     - core.entity_view_mode.media.media_library
     - field.field.media.icon.field_media_file_1
-    - image.style.medium
     - media.type.icon
   module:
-    - image
+    - file
 id: media.icon.media_library
 targetEntityType: media
 bundle: icon
 mode: media_library
 content:
-  thumbnail:
-    type: image
+  field_media_file_1:
+    type: file_url_plain
     label: hidden
-    settings:
-      image_link: ''
-      image_style: medium
-      image_loading:
-        attribute: lazy
+    settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
   created: true
-  field_media_file_1: true
   name: true
+  thumbnail: true
   uid: true

@@ -34,6 +34,7 @@
         "drupal/chosen": "^4.0",
         "drupal/config_import_single": "^2.0",
         "drupal/config_pages": "^2.15",
+        "drupal/config_split": "^2.0",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/ctools": "^4.0",
@@ -75,17 +76,16 @@
         "drupal/redirect": "^1.9",
         "drupal/redis": "^1.7",
         "drupal/remote_stream_wrapper": "^2.0",
+        "drupal/robotstxt": "^1.5",
         "drupal/scheduler": "^2.0",
         "drupal/seckit": "^2.0",
         "drupal/sharethis": "^3.0",
-        "drupal/simple_sitemap": "^4.1",
         "drupal/taxonomy_manager": "^2.0",
         "drupal/transliterate_filenames": "^2.0",
         "drupal/usfedgov_google_analytics": "^2.0",
         "drupal/views_bulk_operations": "^4.2",
         "drupal/webform": "^6.2@RC",
         "drupal/xmlsitemap": "^1.5",
-        "drupal/yoast_seo": "^2.0@alpha",
         "drush/drush": "^12.1",
         "mglaman/composer-drupal-lenient": "^1.0"
     },
@@ -103,7 +103,7 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "cweagans/composer-patches": true,
             "mglaman/composer-drupal-lenient": true,
-            "php-http/discovery": false
+            "php-http/discovery": true
         },
         "sort-packages": true
     },
@@ -111,6 +111,9 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/robots.txt": false
             }
         },
         "installer-paths": {
@@ -158,11 +161,17 @@
                 "Array filter issue" : "https://www.drupal.org/files/issues/2020-06-09/d7_field_instance-sort-3080034-6.patch",
                 "Migrate views issue" : "https://www.drupal.org/files/issues/2023-04-19/3068442-28.patch"
             },
+            "drupal/entity_legal" : {
+                "3377137 - missing source" : "patches/entitylegal-3377137.patch"
+            },
             "drupal/faqfield" : {
                 "3012114 - Migrate process plugin?" : "https://www.drupal.org/files/issues/2020-11-19/add-migrate-support-3012114-4.patch"
             },
             "drupal/htmlpurifier" : {
                 "3167171 - Drupal 7 → 8/9 migration" : "https://www.drupal.org/files/issues/2020-08-25/3167171-2.patch"
+            },
+            "drupal/paragraphs" : {
+                "3192993 - [migrate_upgrade compatibility] d7_field_instance upgrade fails due to redundant 'field_' prefix removal on bundle" : "https://www.drupal.org/files/issues/2021-01-29/paragraphs-n3192993-5.patch"
             }
         },
         "drupal-lenient": {
@@ -177,6 +186,7 @@
         "drupal/core-dev": "^10",
         "drupal/devel": "^5.0",
         "drupal/drupal-extension": "^5.0",
+        "drupal/stage_file_proxy": "^2.1",
         "kint-php/kint": "^5.0",
         "mglaman/drupal-check": "^1.1",
         "mglaman/phpstan-drupal": "^1",
