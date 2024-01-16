@@ -158,17 +158,11 @@
                 "Array filter issue" : "https://www.drupal.org/files/issues/2020-06-09/d7_field_instance-sort-3080034-6.patch",
                 "Migrate views issue" : "https://www.drupal.org/files/issues/2023-04-19/3068442-28.patch"
             },
-            "drupal/entity_legal" : {
-                "3377137 - missing source" : "patches/entitylegal-3377137.patch"
-            },
             "drupal/faqfield" : {
                 "3012114 - Migrate process plugin?" : "https://www.drupal.org/files/issues/2020-11-19/add-migrate-support-3012114-4.patch"
             },
             "drupal/htmlpurifier" : {
                 "3167171 - Drupal 7 → 8/9 migration" : "https://www.drupal.org/files/issues/2020-08-25/3167171-2.patch"
-            },
-            "drupal/paragraphs" : {
-                "3192993 - [migrate_upgrade compatibility] d7_field_instance upgrade fails due to redundant 'field_' prefix removal on bundle" : "https://www.drupal.org/files/issues/2021-01-29/paragraphs-n3192993-5.patch"
             }
         },
         "drupal-lenient": {
