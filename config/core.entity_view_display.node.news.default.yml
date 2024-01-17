@@ -15,12 +15,14 @@ dependencies:
     - field.field.node.news.field_related_topics
     - field.field.node.news.field_sidebar
     - field.field.node.news.field_tags
+    - field.field.node.news.field_yoast_seo
     - node.type.news
   module:
     - datetime
     - entity_reference_revisions
     - text
     - user
+    - yoast_seo
 id: node.news.default
 targetEntityType: node
 bundle: news
@@ -120,6 +122,13 @@ content:
       link: true
     third_party_settings: {  }
     weight: 10
+    region: content
+  field_yoast_seo:
+    type: yoastseo_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
     region: content
   links:
     settings: {  }

@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.front_promo_box.field_metatag
     - field.field.node.front_promo_box.field_more_link
     - field.field.node.front_promo_box.field_promo_box_location
+    - field.field.node.front_promo_box.field_yoast_seo
     - image.style.promo
     - node.type.front_promo_box
   module:
@@ -19,6 +20,7 @@ dependencies:
     - options
     - text
     - user
+    - yoast_seo
 id: node.front_promo_box.default
 targetEntityType: node
 bundle: front_promo_box
@@ -81,6 +83,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_yoast_seo:
+    type: yoastseo_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
     region: content
   links:
     settings: {  }

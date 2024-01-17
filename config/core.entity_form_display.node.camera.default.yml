@@ -13,9 +13,11 @@ dependencies:
     - field.field.node.camera.field_piksel_programs
     - field.field.node.camera.field_piksel_project_uuid
     - field.field.node.camera.field_procedural_posture
+    - field.field.node.camera.field_program
     - field.field.node.camera.field_sidebar
     - field.field.node.camera.field_subject_matter
     - field.field.node.camera.field_tags
+    - field.field.node.camera.field_yoast_seo
     - node.type.camera
   module:
     - datetime
@@ -26,6 +28,7 @@ dependencies:
     - paragraphs
     - path
     - text
+    - yoast_seo
 third_party_settings:
   field_group:
     group_node_form:
@@ -243,6 +246,16 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_yoast_seo:
+    type: yoast_seo_widget
+    weight: 131
+    region: content
+    settings:
+      edit_title: false
+      edit_description: false
+      render_theme: null
+      render_view_mode: default
+    third_party_settings: {  }
   path:
     type: path
     weight: 18
@@ -258,6 +271,16 @@ content:
     third_party_settings: {  }
   scheduler_settings:
     weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap_index_now:
+    weight: 130
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -299,5 +322,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_program: true
   publish_on: true
   unpublish_on: true

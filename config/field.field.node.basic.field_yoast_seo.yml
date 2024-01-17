@@ -1,0 +1,21 @@
+uuid: 1292a6fc-b24d-4dfc-b468-42e3999c692a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_yoast_seo
+    - node.type.basic
+  module:
+    - yoast_seo
+id: node.basic.field_yoast_seo
+field_name: field_yoast_seo
+entity_type: node
+bundle: basic
+label: 'Yoast SEO'
+description: 'Real Time SEO'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo

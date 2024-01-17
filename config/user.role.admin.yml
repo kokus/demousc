@@ -56,7 +56,7 @@ dependencies:
     - usfedgov_google_analytics
     - views_ui
     - webform
-    - xmlsitemap
+    - yoast_seo
 id: admin
 label: admin
 weight: 2
@@ -164,7 +164,6 @@ permissions:
   - 'administer webform element access'
   - 'administer webform labels'
   - 'administer webform submission'
-  - 'administer xmlsitemap'
   - 'bypass honeypot protection'
   - 'bypass node access'
   - 'change own logout threshold'
@@ -198,7 +197,6 @@ permissions:
   - feeds_log.access
   - 'import configuration'
   - 'notify of path changes'
-  - 'override xmlsitemap link settings'
   - 'purge akamai cache'
   - 'schedule publishing of nodes'
   - 'search content'
@@ -214,6 +212,7 @@ permissions:
   - 'use text format gutenberg'
   - 'use text format restricted_html'
   - 'use text format webform_default'
+  - 'use yoast seo'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view any webform submission'

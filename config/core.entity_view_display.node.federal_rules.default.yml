@@ -15,11 +15,13 @@ dependencies:
     - field.field.node.federal_rules.field_term_entity_reference2
     - field.field.node.federal_rules.field_term_entity_reference3
     - field.field.node.federal_rules.field_usc_import_timestamp
+    - field.field.node.federal_rules.field_yoast_seo
     - node.type.federal_rules
   module:
     - datetime
     - text
     - user
+    - yoast_seo
 id: node.federal_rules.default
 targetEntityType: node
 bundle: federal_rules
@@ -121,6 +123,13 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     weight: 10
+    region: content
+  field_yoast_seo:
+    type: yoastseo_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
     region: content
   links:
     settings: {  }

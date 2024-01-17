@@ -16,8 +16,10 @@ dependencies:
     - field.field.node.report.field_metatag
     - field.field.node.report.field_report_children
     - field.field.node.report.field_report_name
+    - field.field.node.report.field_sidebar
     - field.field.node.report.field_sidebar_title
     - field.field.node.report.field_tags
+    - field.field.node.report.field_yoast_seo
     - node.type.report
   module:
     - user
@@ -60,3 +62,4 @@ hidden:
   field_sidebar: true
   field_sidebar_title: true
   field_tags: true
+  field_yoast_seo: true
