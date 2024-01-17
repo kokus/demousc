@@ -58,6 +58,18 @@ type_settings:
         - draft
       to: needs_approval
       weight: 0
+    draft_published:
+      label: draft_published
+      from:
+        - draft
+      to: published
+      weight: 10
+    draft_ready:
+      label: draft_ready
+      from:
+        - draft
+      to: ready_publishing
+      weight: 9
     needs_review_draft:
       label: needs_review-draft
       from:
