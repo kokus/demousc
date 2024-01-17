@@ -25,7 +25,6 @@ module:
   datetime: 0
   datetime_range: 0
   dblog: 0
-  devel: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
@@ -133,16 +132,14 @@ module:
   workbench: 0
   workbench_access: 0
   workflows: 0
+  yoast_seo: 0
   extlink: 1
   pathauto: 1
-  xmlsitemap: 1
   password_policy: 10
   views: 10
   paragraphs: 11
   minimal: 1000
 theme:
-  olivero: 0
   claro: 0
-  gin: 0
   uscgov: 0
 profile: minimal
