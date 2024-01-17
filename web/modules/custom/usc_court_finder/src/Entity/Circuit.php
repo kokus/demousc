@@ -33,7 +33,7 @@ use Drupal\Core\Field\BaseFieldDefinition;
  *   fieldable = TRUE,
  *   entity_keys = {
  *     "id" = "id",
- *     "label" = "code",
+ *     "label" = "name",
  *     "uuid" = "uuid"
  *   },
  *   links = {

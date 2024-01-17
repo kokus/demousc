@@ -176,6 +176,9 @@
             },
             "drupal/htmlpurifier" : {
                 "3167171 - Drupal 7 → 8/9 migration" : "https://www.drupal.org/files/issues/2020-08-25/3167171-2.patch"
+            },
+            "drupal/search_api_location" : {
+                "3310137 - Exposed filter doesn't display Distance units for Select list input" : "https://www.drupal.org/files/issues/2022-09-16/3310137-exposed-filter-doesnt.patch"
             }
         },
         "drupal-lenient": {

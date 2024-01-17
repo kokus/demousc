@@ -6,6 +6,7 @@ dependencies:
     - search_api.server.usc_server
   module:
     - usc_court_finder
+    - taxonomy
     - search_api_location
     - search_api
 id: usc_court_finder_locations
@@ -76,6 +77,11 @@ processor_settings:
   aggregated_field: {  }
   custom_value: {  }
   entity_type: {  }
+  hierarchy:
+    weights:
+      preprocess_index: -45
+    fields:
+      district_id: taxonomy_term-parent
   language_with_fallback: {  }
   rendered_item: {  }
 tracker_settings:
