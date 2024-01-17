@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.usc_alert.body
+    - field.field.node.usc_alert.field_yoast_seo
     - node.type.usc_alert
   module:
     - path
     - text
+    - yoast_seo
 id: node.usc_alert.default
 targetEntityType: node
 bundle: usc_alert
@@ -29,6 +31,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_yoast_seo:
+    type: yoast_seo_widget
+    weight: 131
+    region: content
+    settings:
+      edit_title: false
+      edit_description: false
+      render_theme: null
+      render_view_mode: default
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
@@ -44,6 +56,16 @@ content:
     third_party_settings: {  }
   scheduler_settings:
     weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap_index_now:
+    weight: 130
     region: content
     settings: {  }
     third_party_settings: {  }

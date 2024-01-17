@@ -34,6 +34,7 @@
         "drupal/chosen": "^4.0",
         "drupal/config_import_single": "^2.0",
         "drupal/config_pages": "^2.15",
+        "drupal/config_split": "^2.0",
         "drupal/core-composer-scaffold": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/ctools": "^4.0",
@@ -75,9 +76,12 @@
         "drupal/redirect": "^1.9",
         "drupal/redis": "^1.7",
         "drupal/remote_stream_wrapper": "^2.0",
+        "drupal/robotstxt": "^1.5",
         "drupal/scheduler": "^2.0",
         "drupal/seckit": "^2.0",
         "drupal/sharethis": "^3.0",
+        "drupal/simple_sitemap": "^4.1",
+        "drupal/stage_file_proxy": "^2.1",
         "drupal/taxonomy_manager": "^2.0",
         "drupal/transliterate_filenames": "^2.0",
         "drupal/usfedgov_google_analytics": "^2.0",
@@ -86,6 +90,7 @@
         "drupal/workbench": "^1.4",
         "drupal/workbench_access": "^2.0",
         "drupal/xmlsitemap": "^1.5",
+        "drupal/yoast_seo": "^2.0@alpha",
         "drush/drush": "^12.1",
         "mglaman/composer-drupal-lenient": "^1.0"
     },
@@ -111,6 +116,9 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/robots.txt": false
             }
         },
         "installer-paths": {
@@ -177,6 +185,7 @@
         "drupal/core-dev": "^10",
         "drupal/devel": "^5.0",
         "drupal/drupal-extension": "^5.0",
+        "drupal/stage_file_proxy": "^2.1",
         "kint-php/kint": "^5.0",
         "mglaman/drupal-check": "^1.1",
         "mglaman/phpstan-drupal": "^1",

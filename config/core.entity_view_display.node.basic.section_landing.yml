@@ -13,7 +13,9 @@ dependencies:
     - field.field.node.basic.field_lead_paragraph
     - field.field.node.basic.field_logo
     - field.field.node.basic.field_metatag
+    - field.field.node.basic.field_sidebar
     - field.field.node.basic.field_tags
+    - field.field.node.basic.field_yoast_seo
     - node.type.basic
   module:
     - user
@@ -52,3 +54,4 @@ hidden:
   field_metatag: true
   field_sidebar: true
   field_tags: true
+  field_yoast_seo: true

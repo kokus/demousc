@@ -9,6 +9,8 @@ dependencies:
     - field.field.node.news_issue.field_landing_page_image
     - field.field.node.news_issue.field_lead_paragraph
     - field.field.node.news_issue.field_logo
+    - field.field.node.news_issue.field_sidebar
+    - field.field.node.news_issue.field_yoast_seo
     - node.type.news_issue
   module:
     - user
@@ -42,3 +44,4 @@ hidden:
   field_lead_paragraph: true
   field_logo: true
   field_sidebar: true
+  field_yoast_seo: true

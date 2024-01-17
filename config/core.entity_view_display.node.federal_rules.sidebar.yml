@@ -10,11 +10,13 @@ dependencies:
     - field.field.node.federal_rules.field_metatag
     - field.field.node.federal_rules.field_rules_rule_or_form
     - field.field.node.federal_rules.field_rules_status
+    - field.field.node.federal_rules.field_sidebar
     - field.field.node.federal_rules.field_tags
     - field.field.node.federal_rules.field_term_entity_reference
     - field.field.node.federal_rules.field_term_entity_reference2
     - field.field.node.federal_rules.field_term_entity_reference3
     - field.field.node.federal_rules.field_usc_import_timestamp
+    - field.field.node.federal_rules.field_yoast_seo
     - node.type.federal_rules
   module:
     - text
@@ -54,3 +56,4 @@ hidden:
   field_term_entity_reference2: true
   field_term_entity_reference3: true
   field_usc_import_timestamp: true
+  field_yoast_seo: true

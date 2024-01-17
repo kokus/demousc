@@ -2,6 +2,8 @@ uuid: 19ddedfd-1c40-4cf5-a0f0-ab1f57eccf52
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - uscgov
 _core:
@@ -17,4 +19,8 @@ settings:
   label: 'Page title'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

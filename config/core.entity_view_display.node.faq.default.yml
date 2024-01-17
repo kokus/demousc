@@ -1,0 +1,33 @@
+uuid: 5f31658f-49da-4317-a1a7-d6eb7fb100af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.faq.field_yoast_seo
+    - node.type.faq
+  module:
+    - user
+    - yoast_seo
+id: node.faq.default
+targetEntityType: node
+bundle: faq
+mode: default
+content:
+  field_yoast_seo:
+    type: yoastseo_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden: {  }

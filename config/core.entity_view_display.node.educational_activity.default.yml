@@ -14,11 +14,13 @@ dependencies:
     - field.field.node.educational_activity.field_metatag
     - field.field.node.educational_activity.field_sidebar
     - field.field.node.educational_activity.field_tags
+    - field.field.node.educational_activity.field_yoast_seo
     - node.type.educational_activity
   module:
     - entity_reference_revisions
     - text
     - user
+    - yoast_seo
 id: node.educational_activity.default
 targetEntityType: node
 bundle: educational_activity
@@ -109,6 +111,13 @@ content:
       link: true
     third_party_settings: {  }
     weight: 11
+    region: content
+  field_yoast_seo:
+    type: yoastseo_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
     region: content
   links:
     settings: {  }

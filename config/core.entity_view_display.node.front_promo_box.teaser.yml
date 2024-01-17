@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.front_promo_box.field_metatag
     - field.field.node.front_promo_box.field_more_link
     - field.field.node.front_promo_box.field_promo_box_location
+    - field.field.node.front_promo_box.field_yoast_seo
     - node.type.front_promo_box
   module:
     - text
@@ -45,3 +46,4 @@ hidden:
   field_metatag: true
   field_more_link: true
   field_promo_box_location: true
+  field_yoast_seo: true

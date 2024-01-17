@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.report.field_sidebar
     - field.field.node.report.field_sidebar_title
     - field.field.node.report.field_tags
+    - field.field.node.report.field_yoast_seo
     - node.type.report
   module:
     - datetime
@@ -25,6 +26,7 @@ dependencies:
     - field_group
     - text
     - user
+    - yoast_seo
 third_party_settings:
   field_group:
     group_node_metadata:
@@ -172,6 +174,13 @@ content:
       link: true
     third_party_settings: {  }
     weight: 15
+    region: content
+  field_yoast_seo:
+    type: yoastseo_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
     region: content
   links:
     settings: {  }

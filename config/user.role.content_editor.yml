@@ -20,6 +20,7 @@ dependencies:
     - toolbar
     - tour
     - webform
+    - yoast_seo
 _core:
   default_config_hash: NtMgnXp0miNtJhag07NSjwdCm4zpJwhlDFs1HgyL4wI
 id: content_editor
@@ -58,6 +59,7 @@ permissions:
   - 'update any media'
   - 'update media'
   - 'use gutenberg'
+  - 'use yoast seo'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view global_site_settings config page entity'

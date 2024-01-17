@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.court.body
+    - field.field.node.court.field_yoast_seo
     - node.type.court
   module:
     - path
     - text
+    - yoast_seo
 id: node.court.default
 targetEntityType: node
 bundle: court
@@ -29,6 +31,16 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_yoast_seo:
+    type: yoast_seo_widget
+    weight: 131
+    region: content
+    settings:
+      edit_title: false
+      edit_description: false
+      render_theme: null
+      render_view_mode: default
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
@@ -41,6 +53,16 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap_index_now:
+    weight: 130
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox

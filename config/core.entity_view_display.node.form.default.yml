@@ -17,12 +17,14 @@ dependencies:
     - field.field.node.form.field_sidebar
     - field.field.node.form.field_superseded
     - field.field.node.form.field_tags
+    - field.field.node.form.field_yoast_seo
     - node.type.form
   module:
     - datetime
     - entity_reference_revisions
     - text
     - user
+    - yoast_seo
 id: node.form.default
 targetEntityType: node
 bundle: form
@@ -141,6 +143,13 @@ content:
       link: true
     third_party_settings: {  }
     weight: 12
+    region: content
+  field_yoast_seo:
+    type: yoastseo_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
     region: content
   links:
     settings: {  }
