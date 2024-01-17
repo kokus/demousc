@@ -1,3 +1,8 @@
+/**
+ * @file
+ * Customization of the menu link form.
+ */
+
 [data-drupal-selector="menu-link-content-main-form"] :is(.field--name-description, .field--name-expanded, .field--name-weight) {
   display: none;
 }
