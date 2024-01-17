@@ -13,5 +13,7 @@ folder: ../config_split/agileana_dev/
 module: {  }
 theme: {  }
 complete_list:
+  - robotstxt.settings
+  - simple_sitemap.settings
   - system.logging
 partial_list: {  }
