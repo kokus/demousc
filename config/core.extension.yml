@@ -142,4 +142,5 @@ module:
 theme:
   claro: 0
   uscgov: 0
+  uscadmin: 0
 profile: minimal
