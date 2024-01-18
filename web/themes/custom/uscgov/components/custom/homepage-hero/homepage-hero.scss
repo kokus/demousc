@@ -4,7 +4,7 @@ $hero_break: 'min-width: 700px';
 
 .homepage-hero {
   position: relative;
-  color: white;
+  color: var(--text-on-surface-primary-darker);
 }
 
 .homepage-hero__background-wrapper {
@@ -91,12 +91,12 @@ $hero_break: 'min-width: 700px';
     gap: 5px;
     padding: 10px 16px;
     border-radius: 30px;
-    background-color: color('secondary-light');
-    color: color('base-darker');
+    background-color: var(--surface-button-secondary);
+    color: var(--text-on-surface-button-secondary);
     text-decoration: none;
 
     &:hover {
-      color: color('base-darker');
+      color: var(--text-on-surface-button-secondary);
     }
 
     &:before {
