@@ -13,6 +13,8 @@ folder: ../config_split/prod/
 module: {  }
 theme: {  }
 complete_list:
+  - robotstxt.settings
+  - simple_sitemap.settings
   - system.logging
 partial_list:
   - core.extension
