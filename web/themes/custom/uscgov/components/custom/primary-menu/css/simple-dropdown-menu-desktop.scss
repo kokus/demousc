@@ -34,15 +34,15 @@
     }
 
     .primary-menu__dropdown-title-link {
-      color: color('primary');
+      color: var(--text-link);
       border-top-right-radius: var(--border-radius, 0);
       border-top: solid 1px transparent;
       border-bottom: solid 1px transparent;
 
       &:hover {
-        background: color('primary-lighter');
-        border-top-color: color('primary');
-        border-bottom-color: color('primary');
+        background: var(--surface-primary-lighter);
+        border-top-color: var(--border-primary);
+        border-bottom-color: var(--border-primary);
       }
     }
 
@@ -52,14 +52,14 @@
 
     .primary-menu__link--level-1 {
       text-decoration: none;
-      color: #000000;
+      color: var(--text-on-surface-base-lightest--dark);
       border-top: solid 1px transparent;
       border-bottom: solid 1px transparent;
 
       &:hover {
-        background: color('primary-lighter');
-        border-top-color: color('primary');
-        border-bottom-color: color('primary');
+        background: var(--surface-primary-lighter);
+        border-top-color: var(--border-primary);
+        border-bottom-color: var(--border-primary);
       }
     }
 
