@@ -6,11 +6,13 @@ dependencies:
     - field.field.node.faqs.body
     - field.field.node.faqs.field_faqs
     - field.field.node.faqs.field_metatag
+    - field.field.node.faqs.field_yoast_seo
     - node.type.faqs
   module:
     - faqfield
     - text
     - user
+    - yoast_seo
 id: node.faqs.default
 targetEntityType: node
 bundle: faqs
@@ -36,6 +38,13 @@ content:
         duration: 200
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_yoast_seo:
+    type: yoastseo_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
     region: content
   links:
     settings: {  }

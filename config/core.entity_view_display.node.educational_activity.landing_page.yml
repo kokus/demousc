@@ -13,7 +13,9 @@ dependencies:
     - field.field.node.educational_activity.field_lead_paragraph
     - field.field.node.educational_activity.field_logo
     - field.field.node.educational_activity.field_metatag
+    - field.field.node.educational_activity.field_sidebar
     - field.field.node.educational_activity.field_tags
+    - field.field.node.educational_activity.field_yoast_seo
     - node.type.educational_activity
   module:
     - text
@@ -60,3 +62,4 @@ hidden:
   field_metatag: true
   field_sidebar: true
   field_tags: true
+  field_yoast_seo: true

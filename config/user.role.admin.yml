@@ -22,7 +22,6 @@ dependencies:
     - config
     - config_pages
     - contextual
-    - devel
     - environment_indicator
     - extlink
     - feeds
@@ -57,7 +56,7 @@ dependencies:
     - usfedgov_google_analytics
     - views_ui
     - webform
-    - xmlsitemap
+    - yoast_seo
 id: admin
 label: admin
 weight: 2
@@ -69,7 +68,6 @@ permissions:
   - 'access config_pages overview'
   - 'access content overview'
   - 'access contextual links'
-  - 'access devel information'
   - 'access environment indicator'
   - 'access feed overview'
   - 'access files overview'
@@ -166,7 +164,6 @@ permissions:
   - 'administer webform element access'
   - 'administer webform labels'
   - 'administer webform submission'
-  - 'administer xmlsitemap'
   - 'bypass honeypot protection'
   - 'bypass node access'
   - 'change own logout threshold'
@@ -200,12 +197,10 @@ permissions:
   - feeds_log.access
   - 'import configuration'
   - 'notify of path changes'
-  - 'override xmlsitemap link settings'
   - 'purge akamai cache'
   - 'schedule publishing of nodes'
   - 'search content'
   - 'switch shortcut sets'
-  - 'switch users'
   - 'synchronize configuration'
   - 'update any media'
   - 'update media'
@@ -217,6 +212,7 @@ permissions:
   - 'use text format gutenberg'
   - 'use text format restricted_html'
   - 'use text format webform_default'
+  - 'use yoast seo'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view any webform submission'

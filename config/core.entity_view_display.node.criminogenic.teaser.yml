@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.criminogenic.field_criminogenic_target_aud
     - field.field.node.criminogenic.field_criminogenic_worksheets
     - field.field.node.criminogenic.field_metatag
+    - field.field.node.criminogenic.field_yoast_seo
     - node.type.criminogenic
   module:
     - text
@@ -47,3 +48,4 @@ hidden:
   field_criminogenic_target_aud: true
   field_criminogenic_worksheets: true
   field_metatag: true
+  field_yoast_seo: true

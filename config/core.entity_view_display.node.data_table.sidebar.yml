@@ -17,9 +17,11 @@ dependencies:
     - field.field.node.data_table.field_publication_type
     - field.field.node.data_table.field_report_name
     - field.field.node.data_table.field_reporting_period_increment
+    - field.field.node.data_table.field_sidebar
     - field.field.node.data_table.field_tags
     - field.field.node.data_table.field_topic
     - field.field.node.data_table.field_usc_import_timestamp
+    - field.field.node.data_table.field_yoast_seo
     - node.type.data_table
   module:
     - text
@@ -64,3 +66,4 @@ hidden:
   field_tags: true
   field_topic: true
   field_usc_import_timestamp: true
+  field_yoast_seo: true

@@ -9,10 +9,12 @@ dependencies:
     - field.field.node.fed_probation_journal.field_document_pdf
     - field.field.node.fed_probation_journal.field_metatag
     - field.field.node.fed_probation_journal.field_mydate
+    - field.field.node.fed_probation_journal.field_sidebar
     - field.field.node.fed_probation_journal.field_tags
     - field.field.node.fed_probation_journal.field_test
     - field.field.node.fed_probation_journal.field_usc_import_timestamp
     - field.field.node.fed_probation_journal.field_volume_and_issue_number
+    - field.field.node.fed_probation_journal.field_yoast_seo
     - node.type.fed_probation_journal
   module:
     - text
@@ -50,3 +52,4 @@ hidden:
   field_test: true
   field_usc_import_timestamp: true
   field_volume_and_issue_number: true
+  field_yoast_seo: true

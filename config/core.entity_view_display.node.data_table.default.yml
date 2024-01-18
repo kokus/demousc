@@ -20,11 +20,13 @@ dependencies:
     - field.field.node.data_table.field_tags
     - field.field.node.data_table.field_topic
     - field.field.node.data_table.field_usc_import_timestamp
+    - field.field.node.data_table.field_yoast_seo
     - node.type.data_table
   module:
     - datetime
     - text
     - user
+    - yoast_seo
 id: node.data_table.default
 targetEntityType: node
 bundle: data_table
@@ -167,6 +169,13 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     weight: 6
+    region: content
+  field_yoast_seo:
+    type: yoastseo_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
     region: content
   links:
     settings: {  }

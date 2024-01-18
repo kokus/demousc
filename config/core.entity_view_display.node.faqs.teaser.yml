@@ -5,7 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.faqs.body
+    - field.field.node.faqs.field_faqs
     - field.field.node.faqs.field_metatag
+    - field.field.node.faqs.field_yoast_seo
     - node.type.faqs
   module:
     - text
@@ -36,3 +38,4 @@ content:
 hidden:
   field_faqs: true
   field_metatag: true
+  field_yoast_seo: true

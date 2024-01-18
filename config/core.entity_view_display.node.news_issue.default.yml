@@ -9,10 +9,12 @@ dependencies:
     - field.field.node.news_issue.field_lead_paragraph
     - field.field.node.news_issue.field_logo
     - field.field.node.news_issue.field_sidebar
+    - field.field.node.news_issue.field_yoast_seo
     - node.type.news_issue
   module:
     - text
     - user
+    - yoast_seo
 id: node.news_issue.default
 targetEntityType: node
 bundle: news_issue
@@ -67,6 +69,13 @@ content:
       link: true
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_yoast_seo:
+    type: yoastseo_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
     region: content
   links:
     settings: {  }

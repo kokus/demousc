@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.usc_alert.body
+    - field.field.node.usc_alert.field_yoast_seo
     - node.type.usc_alert
   module:
     - text
@@ -32,4 +33,5 @@ content:
     third_party_settings: {  }
     weight: 10
     region: content
-hidden: {  }
+hidden:
+  field_yoast_seo: true

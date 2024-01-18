@@ -22,6 +22,7 @@ dependencies:
     - taxonomy
     - toolbar
     - webform
+    - yoast_seo
 id: publisher
 label: publisher
 weight: 3
@@ -62,6 +63,7 @@ permissions:
   - 'update any media'
   - 'update media'
   - 'use gutenberg'
+  - 'use yoast seo'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view any webform submission'

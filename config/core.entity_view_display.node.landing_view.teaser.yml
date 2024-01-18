@@ -9,7 +9,9 @@ dependencies:
     - field.field.node.landing_view.field_lead_paragraph
     - field.field.node.landing_view.field_logo
     - field.field.node.landing_view.field_metatag
+    - field.field.node.landing_view.field_sidebar
     - field.field.node.landing_view.field_tags
+    - field.field.node.landing_view.field_yoast_seo
     - node.type.landing_view
   module:
     - text
@@ -44,3 +46,4 @@ hidden:
   field_metatag: true
   field_sidebar: true
   field_tags: true
+  field_yoast_seo: true

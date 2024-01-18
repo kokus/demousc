@@ -1,0 +1,21 @@
+uuid: 399a1c8b-f7bc-445a-8084-bc793aeee447
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_yoast_seo
+    - node.type.judge_comments
+  module:
+    - yoast_seo
+id: node.judge_comments.field_yoast_seo
+field_name: field_yoast_seo
+entity_type: node
+bundle: judge_comments
+label: 'Yoast SEO'
+description: 'Real Time SEO'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo

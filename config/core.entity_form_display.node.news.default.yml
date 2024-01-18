@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.news.field_related_topics
     - field.field.node.news.field_sidebar
     - field.field.node.news.field_tags
+    - field.field.node.news.field_yoast_seo
     - node.type.news
   module:
     - datetime
@@ -25,6 +26,7 @@ dependencies:
     - paragraphs
     - path
     - text
+    - yoast_seo
 third_party_settings:
   field_group:
     group_node_form:
@@ -242,8 +244,8 @@ content:
     weight: 21
     region: content
     settings:
-      sidebar: true
-      use_details: true
+      sidebar: false
+      use_details: false
     third_party_settings: {  }
   field_news_issue:
     type: options_select
@@ -293,6 +295,16 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_yoast_seo:
+    type: yoast_seo_widget
+    weight: 131
+    region: content
+    settings:
+      edit_title: false
+      edit_description: false
+      render_theme: null
+      render_view_mode: default
+    third_party_settings: {  }
   path:
     type: path
     weight: 17
@@ -308,6 +320,16 @@ content:
     third_party_settings: {  }
   scheduler_settings:
     weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap_index_now:
+    weight: 130
     region: content
     settings: {  }
     third_party_settings: {  }

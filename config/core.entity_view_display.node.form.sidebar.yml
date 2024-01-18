@@ -15,8 +15,10 @@ dependencies:
     - field.field.node.form.field_hide_left_navigation
     - field.field.node.form.field_metatag
     - field.field.node.form.field_short_title
+    - field.field.node.form.field_sidebar
     - field.field.node.form.field_superseded
     - field.field.node.form.field_tags
+    - field.field.node.form.field_yoast_seo
     - node.type.form
   module:
     - text
@@ -58,3 +60,4 @@ hidden:
   field_sidebar: true
   field_superseded: true
   field_tags: true
+  field_yoast_seo: true
