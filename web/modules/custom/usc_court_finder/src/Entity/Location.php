@@ -116,9 +116,8 @@ final class Location extends ContentEntityBase implements CourtFinderEntityInter
     $fields['circuit_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Circuit ID'))
       ->setDescription(t('The circuit ID, which the location belongs to.'))
-      ->setSettings([
-        'target_type' => 'usc_circuit',
-      ])
+      ->setSetting('target_type', 'taxonomy_term')
+      ->setSetting('handler_settings', ['target_bundles' => ['usc_court_finder_hierarchy' => 'usc_court_finder_hierarchy']])
       ->setDefaultValue('')
       ->setDisplayOptions('form', [
         'type' => 'options_select',
@@ -132,9 +131,6 @@ final class Location extends ContentEntityBase implements CourtFinderEntityInter
       ->setDescription(t('The District ID, which the location belongs to.'))
       ->setSetting('target_type', 'taxonomy_term')
       ->setSetting('handler_settings', ['target_bundles' => ['usc_court_finder_hierarchy' => 'usc_court_finder_hierarchy']])
-      /*->setSettings([
-        'target_type' => 'usc_district',
-      ])*/
       ->setDefaultValue('')
       ->setDisplayOptions('form', [
         'type' => 'options_select',

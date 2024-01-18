@@ -1,5 +1,0 @@
-services:
-  usc_court_finder.import_commands:
-    class: \Drupal\usc_court_finder\Drush\Commands\CourtFinderCommands
-    tags:
-      - { name: drush.command }
