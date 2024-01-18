@@ -21,12 +21,12 @@
 }
 
 .mobile-search__form-wrapper {
-  --form-background: white;
+  --form-background: var(--surface-form);
 
   display: flex;
   height: var(--spacing-md-2);
   background: var(--form-background);
-  border: solid 1px color('base');
+  border: solid 1px var(--border-form);
   border-radius: 30px;
 }
 
@@ -50,8 +50,8 @@
   border-radius: 50%;
   border: solid 1px transparent;
   appearance: none;
-  background: color('primary');
-  color: var(--form-background);
+  background: var(--surface-button);
+  color: var(--text-on-surface-button);
 
   path {
     fill: currentColor;
