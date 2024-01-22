@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5bf4c57e4a49c99ce533db69a3032ca8",
+    "content-hash": "c1470deedf5fdc8772673723b2faa154",
     "packages": [
         {
             "name": "akamai-open/edgegrid-auth",
@@ -1722,7 +1722,7 @@
                 "shasum": "f36e4853fbaa4b1bc8686f2248097d10f65c4f14"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10"
+                "drupal/core": "^8 || ^9 || ^10 || ^11"
             },
             "require-dev": {
                 "drupal/migmag": "^1.2"
@@ -3343,6 +3343,70 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ]
+        },
+        {
+            "name": "drupal/glossify",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/glossify.git",
+                "reference": "3.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/glossify-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "70b172252d29a0c33524d5eec8c2636cfc9b0940"
+            },
+            "require": {
+                "drupal/core": "^8.9 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0",
+                    "datestamp": "1683548185",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
+                    "name": "beljaako",
+                    "homepage": "https://www.drupal.org/user/1031430"
+                },
+                {
+                    "name": "Grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
+                },
+                {
+                    "name": "keesje",
+                    "homepage": "https://www.drupal.org/user/48715"
+                },
+                {
+                    "name": "sanduhrs",
+                    "homepage": "https://www.drupal.org/user/28074"
+                },
+                {
+                    "name": "WorldFallz",
+                    "homepage": "https://www.drupal.org/user/155304"
+                }
+            ],
+            "description": "API module to automatically create links or tooltips based on other content or taxonomy terms.",
+            "homepage": "https://www.drupal.org/project/glossify",
+            "support": {
+                "source": "https://git.drupalcode.org/project/glossify"
+            }
         },
         {
             "name": "drupal/google_tag",

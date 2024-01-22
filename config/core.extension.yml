@@ -43,6 +43,8 @@ module:
   file_mdm_font: 0
   filter: 0
   fpa: 0
+  glossify: 0
+  glossify_taxonomy: 0
   google_tag: 0
   gutenberg: 0
   gutenberg_uswds: 0

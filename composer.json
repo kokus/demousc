@@ -47,6 +47,7 @@
         "drupal/field_group": "^3.4",
         "drupal/fpa": "^4.0",
         "drupal/gin": "^3.0@RC",
+        "drupal/glossify": "^3.0",
         "drupal/google_tag": "^2.0",
         "drupal/gutenberg_uswds": "^1.0@beta",
         "drupal/honeypot": "^2.1",
@@ -163,9 +164,6 @@
             "drupal/core" : {
                 "Array filter issue" : "https://www.drupal.org/files/issues/2020-06-09/d7_field_instance-sort-3080034-6.patch",
                 "Migrate views issue" : "https://www.drupal.org/files/issues/2023-04-19/3068442-28.patch"
-            },
-            "drupal/entity_legal" : {
-                "3377137 - missing source" : "patches/entitylegal-3377137.patch"
             },
             "drupal/faqfield" : {
                 "3012114 - Migrate process plugin?" : "https://www.drupal.org/files/issues/2020-11-19/add-migrate-support-3012114-4.patch"
