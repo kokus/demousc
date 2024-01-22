@@ -3,28 +3,8 @@ entity.usc_autocomplete.add_form:
   title: 'Add Autocomplete'
   appears_on:
     - entity.usc_autocomplete.collection
-entity.usc_circuit.add_form:
-  route_name: entity.usc_circuit.add_form
-  title: 'Add Circuit'
-  appears_on:
-    - entity.usc_circuit.collection
-entity.usc_county.add_form:
-  route_name: entity.usc_county.add_form
-  title: 'Add County'
-  appears_on:
-    - entity.usc_county.collection
-entity.usc_district.add_form:
-  route_name: 'entity.usc_district.add_form'
-  title: 'Add District'
-  appears_on:
-    - entity.usc_district.collection
 entity.usc_location.add_form:
   route_name: 'entity.usc_location.add_form'
   title: 'Add Location'
   appears_on:
     - entity.usc_location.collection
-entity.usc_state.add_form:
-  route_name: 'entity.usc_state.add_form'
-  title: 'Add State'
-  appears_on:
-    - entity.usc_state.collection
