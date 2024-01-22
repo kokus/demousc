@@ -113,32 +113,28 @@ final class Location extends ContentEntityBase implements CourtFinderEntityInter
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['circuit'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('Circuit'))
-      ->setDescription(t('Circuit'))
-      ->setSettings([
-        'max_length' => 255,
-        'text_processing' => 0,
-      ])
+    $fields['circuit_id'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Circuit ID'))
+      ->setDescription(t('The circuit ID, which the location belongs to.'))
+      ->setSetting('target_type', 'taxonomy_term')
+      ->setSetting('handler_settings', ['target_bundles' => ['usc_court_finder_hierarchy' => 'usc_court_finder_hierarchy']])
       ->setDefaultValue('')
       ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
-        'weight' => 4,
+        'type' => 'options_select',
+        'weight' => 0,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['district'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('District'))
-      ->setDescription(t('District'))
-      ->setSettings([
-        'max_length' => 255,
-        'text_processing' => 0,
-      ])
+    $fields['district_id'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('District ID'))
+      ->setDescription(t('The District ID, which the location belongs to.'))
+      ->setSetting('target_type', 'taxonomy_term')
+      ->setSetting('handler_settings', ['target_bundles' => ['usc_court_finder_hierarchy' => 'usc_court_finder_hierarchy']])
       ->setDefaultValue('')
       ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
-        'weight' => 5,
+        'type' => 'options_select',
+        'weight' => 0,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
@@ -283,36 +279,6 @@ final class Location extends ContentEntityBase implements CourtFinderEntityInter
       ->setDisplayOptions('form', [
         'type' => 'number',
         'weight' => 15,
-      ])
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
-
-    $fields['longitude'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('Longitude'))
-      ->setDescription(t('Longitude'))
-      ->setSettings([
-        'max_length' => 255,
-        'text_processing' => 0,
-      ])
-      ->setDefaultValue('')
-      ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
-        'weight' => 16,
-      ])
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
-
-    $fields['latitude'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('Latitude'))
-      ->setDescription(t('Latitude'))
-      ->setSettings([
-        'max_length' => 255,
-        'text_processing' => 0,
-      ])
-      ->setDefaultValue('')
-      ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
-        'weight' => 17,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
