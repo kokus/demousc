@@ -67,7 +67,7 @@ services:
         - cp "${TUGBOAT_ROOT}/.tugboat/settings.local.php" "${DOCROOT}/sites/default/settings.db.php"
         - vendor/bin/drush deploy -vvv
         # Compile theme.
-        - cd web/themes/custom/uscgov/ && npm install && npx gulp init
+        #- cd web/themes/custom/uscgov/ && npm install && npx gulp init
 
   # This 'mysql' key acts as the hostname to access the service by from the php service.
   mysql:
