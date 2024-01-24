@@ -1,3 +1,68 @@
 @forward "settings";
-@forward "usa-input";
+
+@forward "usa-checkbox";
+@forward "usa-combo-box";
+@forward "usa-date-picker";
+@forward "usa-error-message";
+@forward "usa-fieldset";
+@forward "usa-file-input";
+@forward "usa-form-group";
 @forward "usa-form";
+@forward "usa-hint";
+@forward "usa-input-prefix-suffix";
+@forward "usa-input";
+@forward "usa-input-mask";
+@forward "usa-label";
+@forward "usa-legend";
+@forward "usa-memorable-date";
+@forward "usa-radio";
+@forward "usa-range";
+@forward "usa-select";
+@forward "usa-textarea";
+@forward "usa-time-picker";
+
+.usa-form {
+  max-width: unset;
+}
+
+.usa-fieldset {
+  margin-block: 18px;
+}
+
+.usa-textarea,
+.usa-input {
+  border-radius: 5px;
+  width: auto;
+
+  &[type="color"] {
+    width: revert;
+    padding: revert;
+  }
+}
+
+.usa-range {
+  width: auto;
+  background: transparent;
+}
+
+.usa-select {
+  border-radius: 5px;
+  width: auto;
+}
+
+.description {
+  margin-block: 9px;
+  font-size: 13px;
+  color: var(--text-on-surface-base-light);
+}
+
+.js input.form-autocomplete {
+  background-position: right 10px center;
+}
+
+
+.usa-input-required {
+  &:after {
+    content: "*";
+  }
+}
