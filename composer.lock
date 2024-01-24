@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24010ea46cbb372a184d5ec07685293c",
+    "content-hash": "0597d5878f08cf37e07f005b765202b7",
     "packages": [
         {
             "name": "akamai-open/edgegrid-auth",
@@ -1847,7 +1847,7 @@
                 "shasum": "f36e4853fbaa4b1bc8686f2248097d10f65c4f14"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10"
+                "drupal/core": "^8 || ^9 || ^10 || ^11"
             },
             "require-dev": {
                 "drupal/migmag": "^1.2"
@@ -3192,6 +3192,54 @@
             }
         },
         {
+            "name": "drupal/field_formatter_range",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/field_formatter_range.git",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/field_formatter_range-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "75b89bf3c398133b67267a7753a8710bc6e5c171"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1647624727",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Grimreaper",
+                    "homepage": "https://www.drupal.org/user/2388214"
+                },
+                {
+                    "name": "pdureau",
+                    "homepage": "https://www.drupal.org/user/1903334"
+                }
+            ],
+            "description": "Enhances the field formatters with range and offset settings.",
+            "homepage": "https://www.drupal.org/project/field_formatter_range",
+            "support": {
+                "source": "https://git.drupalcode.org/project/field_formatter_range"
+            }
+        },
+        {
             "name": "drupal/field_group",
             "version": "3.4.0",
             "source": {
@@ -3709,70 +3757,6 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ]
-        },
-        {
-            "name": "drupal/glossify",
-            "version": "3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/glossify.git",
-                "reference": "3.0.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/glossify-3.0.0.zip",
-                "reference": "3.0.0",
-                "shasum": "70b172252d29a0c33524d5eec8c2636cfc9b0940"
-            },
-            "require": {
-                "drupal/core": "^8.9 || ^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "3.0.0",
-                    "datestamp": "1683548185",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Anybody",
-                    "homepage": "https://www.drupal.org/user/291091"
-                },
-                {
-                    "name": "beljaako",
-                    "homepage": "https://www.drupal.org/user/1031430"
-                },
-                {
-                    "name": "Grevil",
-                    "homepage": "https://www.drupal.org/user/3668491"
-                },
-                {
-                    "name": "keesje",
-                    "homepage": "https://www.drupal.org/user/48715"
-                },
-                {
-                    "name": "sanduhrs",
-                    "homepage": "https://www.drupal.org/user/28074"
-                },
-                {
-                    "name": "WorldFallz",
-                    "homepage": "https://www.drupal.org/user/155304"
-                }
-            ],
-            "description": "API module to automatically create links or tooltips based on other content or taxonomy terms.",
-            "homepage": "https://www.drupal.org/project/glossify",
-            "support": {
-                "source": "https://git.drupalcode.org/project/glossify"
-            }
         },
         {
             "name": "drupal/google_tag",
@@ -6671,103 +6655,6 @@
             }
         },
         {
-            "name": "drupal/stage_file_proxy",
-            "version": "2.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/stage_file_proxy.git",
-                "reference": "2.1.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/stage_file_proxy-2.1.3.zip",
-                "reference": "2.1.3",
-                "shasum": "64070ee4b6469ad031dd06382552128d8c361275"
-            },
-            "require": {
-                "drupal/core": "^9 || ^10",
-                "php": ">=8"
-            },
-            "require-dev": {
-                "drupal/coder": "^8.3",
-                "drush/drush": "^11"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.1.3",
-                    "datestamp": "1702477024",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "stage_file_proxy.drush.services.yml": "^11"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "scripts": {
-                "phpcs": [
-                    "vendor/bin/phpcs -p ."
-                ],
-                "phpcbf": [
-                    "vendor/bin/phpcbf -p ."
-                ],
-                "test": [
-                    "@phpcs"
-                ]
-            },
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "BarisW",
-                    "homepage": "https://www.drupal.org/user/107229"
-                },
-                {
-                    "name": "geek-merlin",
-                    "homepage": "https://www.drupal.org/user/229048"
-                },
-                {
-                    "name": "greggles",
-                    "homepage": "https://www.drupal.org/user/36762"
-                },
-                {
-                    "name": "markdorison",
-                    "homepage": "https://www.drupal.org/user/346106"
-                },
-                {
-                    "name": "moshe weitzman",
-                    "homepage": "https://www.drupal.org/user/23"
-                },
-                {
-                    "name": "msonnabaum",
-                    "homepage": "https://www.drupal.org/user/75278"
-                },
-                {
-                    "name": "netaustin",
-                    "homepage": "https://www.drupal.org/user/199298"
-                },
-                {
-                    "name": "robwilmshurst",
-                    "homepage": "https://www.drupal.org/user/144488"
-                },
-                {
-                    "name": "smustgrave",
-                    "homepage": "https://www.drupal.org/user/3252890"
-                }
-            ],
-            "description": "Provides stage_file_proxy module.",
-            "homepage": "https://www.drupal.org/project/stage_file_proxy",
-            "support": {
-                "source": "https://git.drupalcode.org/project/stage_file_proxy"
-            }
-        },
-        {
             "name": "drupal/taxonomy_manager",
             "version": "2.0.9",
             "source": {
@@ -7212,6 +7099,134 @@
                 "issues": "https://www.drupal.org/project/issues/webform?version=8.x",
                 "docs": "https://www.drupal.org/docs/8/modules/webform",
                 "forum": "https://drupal.stackexchange.com/questions/tagged/webform"
+            }
+        },
+        {
+            "name": "drupal/workbench",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/workbench.git",
+                "reference": "8.x-1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/workbench-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "bec38d8c333c1b72402f2e66be29838b65235fcd"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.4",
+                    "datestamp": "1666723245",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "agentrickard",
+                    "homepage": "https://www.drupal.org/user/20975"
+                },
+                {
+                    "name": "bbinkovitz",
+                    "homepage": "https://www.drupal.org/user/161263"
+                },
+                {
+                    "name": "becw",
+                    "homepage": "https://www.drupal.org/user/81067"
+                },
+                {
+                    "name": "caroltron",
+                    "homepage": "https://www.drupal.org/user/171342"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "robeano",
+                    "homepage": "https://www.drupal.org/user/67660"
+                },
+                {
+                    "name": "stevector",
+                    "homepage": "https://www.drupal.org/user/179805"
+                }
+            ],
+            "description": "Provides convenient dashboards and shortcuts for editors.",
+            "homepage": "https://www.drupal.org/project/workbench",
+            "support": {
+                "source": "https://git.drupalcode.org/project/workbench"
+            }
+        },
+        {
+            "name": "drupal/workbench_access",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/workbench_access.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/workbench_access-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "112dc52da87c23c61aee9bcb7329f35d59e6fa11"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "require-dev": {
+                "drupal/inline_entity_form": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1676497401",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9 || ^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "agentrickard",
+                    "homepage": "https://www.drupal.org/user/20975"
+                },
+                {
+                    "name": "becw",
+                    "homepage": "https://www.drupal.org/user/81067"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                }
+            ],
+            "description": "Hierarchical access control for content.",
+            "homepage": "https://www.drupal.org/project/workbench_access",
+            "support": {
+                "source": "https://git.drupalcode.org/project/workbench_access"
             }
         },
         {
@@ -15481,6 +15496,103 @@
                 }
             ],
             "time": "2023-12-13T17:17:05+00:00"
+        },
+        {
+            "name": "drupal/stage_file_proxy",
+            "version": "2.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/stage_file_proxy.git",
+                "reference": "2.1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/stage_file_proxy-2.1.3.zip",
+                "reference": "2.1.3",
+                "shasum": "64070ee4b6469ad031dd06382552128d8c361275"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10",
+                "php": ">=8"
+            },
+            "require-dev": {
+                "drupal/coder": "^8.3",
+                "drush/drush": "^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.3",
+                    "datestamp": "1702477024",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "stage_file_proxy.drush.services.yml": "^11"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "phpcs": [
+                    "vendor/bin/phpcs -p ."
+                ],
+                "phpcbf": [
+                    "vendor/bin/phpcbf -p ."
+                ],
+                "test": [
+                    "@phpcs"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "BarisW",
+                    "homepage": "https://www.drupal.org/user/107229"
+                },
+                {
+                    "name": "geek-merlin",
+                    "homepage": "https://www.drupal.org/user/229048"
+                },
+                {
+                    "name": "greggles",
+                    "homepage": "https://www.drupal.org/user/36762"
+                },
+                {
+                    "name": "markdorison",
+                    "homepage": "https://www.drupal.org/user/346106"
+                },
+                {
+                    "name": "moshe weitzman",
+                    "homepage": "https://www.drupal.org/user/23"
+                },
+                {
+                    "name": "msonnabaum",
+                    "homepage": "https://www.drupal.org/user/75278"
+                },
+                {
+                    "name": "netaustin",
+                    "homepage": "https://www.drupal.org/user/199298"
+                },
+                {
+                    "name": "robwilmshurst",
+                    "homepage": "https://www.drupal.org/user/144488"
+                },
+                {
+                    "name": "smustgrave",
+                    "homepage": "https://www.drupal.org/user/3252890"
+                }
+            ],
+            "description": "Provides stage_file_proxy module.",
+            "homepage": "https://www.drupal.org/project/stage_file_proxy",
+            "support": {
+                "source": "https://git.drupalcode.org/project/stage_file_proxy"
+            }
         },
         {
             "name": "friends-of-behat/mink-extension",
