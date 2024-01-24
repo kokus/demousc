@@ -12,6 +12,7 @@ module:
   big_pipe: 0
   block: 0
   block_content: 0
+  block_visibility_groups: 0
   breakpoint: 0
   chosen: 0
   chosen_lib: 0
@@ -35,6 +36,7 @@ module:
   feeds: 0
   feeds_log: 0
   field: 0
+  field_formatter_range: 0
   field_group: 0
   field_group_migrate: 0
   field_ui: 0
@@ -44,6 +46,8 @@ module:
   file_mdm_font: 0
   filter: 0
   fpa: 0
+  glossify: 0
+  glossify_taxonomy: 0
   google_tag: 0
   gutenberg: 0
   gutenberg_uswds: 0
