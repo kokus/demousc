@@ -161,7 +161,7 @@ function uscgov_preprocess_form_element(array &$variables) {
  * Implements hook_preprocess_form_element_label().
  */
 function uscgov_preprocess_form_element_label(&$variables) {
-  $element_type = false;
+  $element_type = FALSE;
 
   if (isset($variables['attributes']['data-element-type'])) {
     $element_type = $variables['attributes']['data-element-type'];
