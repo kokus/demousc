@@ -13,7 +13,7 @@ entity_type: node
 bundle: fee
 label: 'Yoast SEO'
 description: 'Real Time SEO'
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
