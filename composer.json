@@ -42,10 +42,13 @@
         "drupal/entity_legal": "^4",
         "drupal/environment_indicator": "^4.0",
         "drupal/extlink": "^1.7",
+        "drupal/facets": "^3.0",
         "drupal/faqfield": "^7.1",
         "drupal/feeds": "^3.0@beta",
         "drupal/field_group": "^3.4",
         "drupal/fpa": "^4.0",
+        "drupal/geocoder": "^4.18",
+        "drupal/geofield": "^1.57",
         "drupal/gin": "^3.0@RC",
         "drupal/google_tag": "^2.0",
         "drupal/gutenberg_uswds": "^1.0@beta",
@@ -66,6 +69,7 @@
         "drupal/metatag": "^2.0",
         "drupal/migrate_manifest": "^3.1",
         "drupal/migrate_plus": "^6.0",
+        "drupal/migrate_source_csv": "^3.6",
         "drupal/migrate_tools": "^6.0",
         "drupal/migrate_upgrade": "^4.0",
         "drupal/module_filter": "^4.0",
@@ -79,19 +83,23 @@
         "drupal/remote_stream_wrapper": "^2.0",
         "drupal/robotstxt": "^1.5",
         "drupal/scheduler": "^2.0",
+        "drupal/search_api_location": "^1.0@alpha",
         "drupal/seckit": "^2.0",
         "drupal/sharethis": "^3.0",
         "drupal/simple_sitemap": "^4.1",
-        "drupal/stage_file_proxy": "^2.1",
         "drupal/taxonomy_manager": "^2.0",
         "drupal/transliterate_filenames": "^2.0",
         "drupal/usfedgov_google_analytics": "^2.0",
         "drupal/views_bulk_operations": "^4.2",
         "drupal/webform": "^6.2@RC",
+        "drupal/workbench": "^1.4",
+        "drupal/workbench_access": "^2.0",
         "drupal/xmlsitemap": "^1.5",
         "drupal/yoast_seo": "^2.0@alpha",
         "drush/drush": "^12.1",
-        "mglaman/composer-drupal-lenient": "^1.0"
+        "geocoder-php/nominatim-provider": "^5.7",
+        "mglaman/composer-drupal-lenient": "^1.0",
+        "symfony/http-client": "^6.3"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -171,8 +179,8 @@
             "drupal/htmlpurifier" : {
                 "3167171 - Drupal 7 → 8/9 migration" : "https://www.drupal.org/files/issues/2020-08-25/3167171-2.patch"
             },
-            "drupal/paragraphs" : {
-                "3192993 - [migrate_upgrade compatibility] d7_field_instance upgrade fails due to redundant 'field_' prefix removal on bundle" : "https://www.drupal.org/files/issues/2021-01-29/paragraphs-n3192993-5.patch"
+            "drupal/search_api_location" : {
+                "3310137 - Exposed filter doesn't display Distance units for Select list input" : "https://www.drupal.org/files/issues/2022-09-16/3310137-exposed-filter-doesnt.patch"
             }
         },
         "drupal-lenient": {

@@ -1,0 +1,14 @@
+uuid: 6843b645-7baa-4310-bb9a-248b86a17e18
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.site_sections
+id: site_section
+plural_label: 'Site Sections'
+label: 'Site Section'
+scheme: taxonomy
+scheme_settings:
+  vocabularies:
+    - site_sections
+  fields: {  }
