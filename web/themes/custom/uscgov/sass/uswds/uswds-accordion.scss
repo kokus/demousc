@@ -1,1 +1,54 @@
 @forward "usa-accordion";
+
+.expand-link,
+.collapse-link {
+  float: right;
+  position: relative;
+  &::before {
+    content: "";
+    background-image: url("img/usa-icons/add.svg"),linear-gradient(transparent,transparent);
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -23px;
+    top: -2px;
+  }
+}
+
+.expand-link {
+  &::before {
+    background-image: url("img/usa-icons/add.svg"),linear-gradient(transparent,transparent);
+  }
+}
+.collapse-link {
+  &::before {
+    background-image: url("img/usa-icons/remove.svg"),linear-gradient(transparent,transparent);
+  }
+}
+.operations-group {
+  display: inline-block;
+  width: 100%;
+
+  .expand-link {
+    display: none;
+  }
+
+  &.collapsed {
+    .collapse-link {
+      display: none;
+    }
+    .expand-link {
+      display: inline-block;
+    }
+  }
+}
+
+// Ensure accordion items that have nested required fields are marked with an asterisk.
+.usa-accordion:has(.usa-accordion__content :is([required], .required, [aria-required="true"])) {
+  .usa-accordion__button:after {
+    content: "*";
+  }
+}
