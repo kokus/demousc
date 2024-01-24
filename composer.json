@@ -31,6 +31,7 @@
         "drupal/auto_entitylabel": "^3.0",
         "drupal/autologout": "^1.4",
         "drupal/bean_migrate": "^1.0",
+        "drupal/block_visibility_groups": "^2.0",
         "drupal/chosen": "^4.0",
         "drupal/config_import_single": "^2.0",
         "drupal/config_pages": "^2.15",
