@@ -86,6 +86,7 @@ services:
       # existing preview is refreshed, the build workflow starts here,
       # skipping the init step, because the results of that step will
       # already be present.
+      update:
 
   redis:
     image: tugboatqa/redis:6.2
