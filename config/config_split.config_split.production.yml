@@ -1,4 +1,4 @@
-uuid: a0f46c67-f244-417e-bd6b-14d6c2a2494f
+uuid: 882707b4-a751-40f4-be24-42c18494e512
 langcode: en
 status: false
 dependencies: {  }
@@ -10,11 +10,8 @@ stackable: false
 no_patching: false
 storage: folder
 folder: ../config_split/prod/
-module: {  }
+module:
+  restrict_ip: 0
 theme: {  }
-complete_list:
-  - robotstxt.settings
-  - simple_sitemap.settings
-  - system.logging
-partial_list:
-  - core.extension
+complete_list: {  }
+partial_list: {  }

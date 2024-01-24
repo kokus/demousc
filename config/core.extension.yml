@@ -19,7 +19,6 @@ module:
   config: 0
   config_pages: 0
   config_split: 0
-  content_moderation: 0
   contextual: 0
   ctools: 0
   customerror: 0
@@ -35,7 +34,6 @@ module:
   feeds: 0
   feeds_log: 0
   field: 0
-  field_formatter_range: 0
   field_group: 0
   field_group_migrate: 0
   field_ui: 0
@@ -45,8 +43,6 @@ module:
   file_mdm_font: 0
   filter: 0
   fpa: 0
-  glossify: 0
-  glossify_taxonomy: 0
   google_tag: 0
   gutenberg: 0
   gutenberg_uswds: 0
@@ -82,6 +78,8 @@ module:
   menu_position: 0
   menu_ui: 0
   metatag: 0
+  metatag_dc: 0
+  metatag_favicons: 0
   metatag_open_graph: 0
   metatag_twitter_cards: 0
   migmag: 0
@@ -115,7 +113,6 @@ module:
   sharethis: 0
   shortcut: 0
   simple_sitemap: 0
-  simple_sitemap_engines: 0
   smart_sql_idmap: 0
   syslog: 0
   system: 0
@@ -136,9 +133,6 @@ module:
   views_ui: 0
   webform: 0
   webform_ui: 0
-  workbench: 0
-  workbench_access: 0
-  workflows: 0
   yoast_seo: 0
   extlink: 1
   pathauto: 1
@@ -150,4 +144,5 @@ theme:
   claro: 0
   uscgov: 0
   uscadmin: 0
+  gin: 0
 profile: minimal
