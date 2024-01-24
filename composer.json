@@ -45,6 +45,7 @@
         "drupal/facets": "^3.0",
         "drupal/faqfield": "^7.1",
         "drupal/feeds": "^3.0@beta",
+        "drupal/field_formatter_range": "^1.4",
         "drupal/field_group": "^3.4",
         "drupal/fpa": "^4.0",
         "drupal/geocoder": "^4.18",

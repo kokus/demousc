@@ -41,7 +41,7 @@ services:
         - apt-get install -yq ca-certificates curl gnupg
         - mkdir -p /etc/apt/keyrings
         - curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-        - echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_18.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
+        - echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
         - apt-get update
         - apt-get install -yq nodejs
 
@@ -90,6 +90,6 @@ services:
         - scp agileana@170.187.136.164:dbs_tugboat/uscgov.sql.gz /tmp/database.sql.gz
         - zcat /tmp/database.sql.gz | mysql tugboat
         - rm /tmp/database.sql.gz
-        
+
   redis:
     image: tugboatqa/redis:6.2
