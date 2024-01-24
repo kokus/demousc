@@ -13,7 +13,7 @@ entity_type: node
 bundle: landing_featured_content
 label: 'Yoast SEO'
 description: 'Real Time SEO'
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
