@@ -115,7 +115,6 @@ migration_dependencies:
     - upgrade_d7_menu
   optional:
     - upgrade_d7_node_complete_basic
-    - upgrade_d7_node_complete_basic_simple
     - upgrade_d7_node_complete_camera
     - upgrade_d7_node_complete_court
     - upgrade_d7_node_complete_criminogenic

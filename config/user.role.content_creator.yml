@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - node.type.basic
-    - node.type.basic_simple
     - node.type.camera
     - node.type.data_table
     - node.type.educational_activity
@@ -43,7 +42,6 @@ permissions:
   - 'administer media'
   - 'administer taxonomy'
   - 'create basic content'
-  - 'create basic_simple content'
   - 'create data_table content'
   - 'create educational_activity content'
   - 'create faqs content'
@@ -60,7 +58,6 @@ permissions:
   - 'create webform'
   - 'delete media'
   - 'edit any basic content'
-  - 'edit any basic_simple content'
   - 'edit any camera content'
   - 'edit any data_table content'
   - 'edit any educational_activity content'
