@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - node.type.basic
-    - node.type.basic_simple
     - node.type.camera
     - node.type.criminogenic
     - node.type.data_table
@@ -121,7 +120,6 @@ type_settings:
   entity_types:
     node:
       - basic
-      - basic_simple
       - camera
       - criminogenic
       - data_table

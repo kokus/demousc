@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - node.type.basic
-    - node.type.basic_simple
     - node.type.camera
     - node.type.court
     - node.type.data_table
@@ -116,7 +115,6 @@ display:
           operator: in
           value:
             basic: basic
-            basic_simple: basic_simple
             data_table: data_table
             educational_activity: educational_activity
             federal_rules: federal_rules
@@ -390,7 +388,6 @@ display:
           operator: in
           value:
             basic: basic
-            basic_simple: basic_simple
             educational_activity: educational_activity
             landing_featured_content: landing_featured_content
             landing_view: landing_view
@@ -559,7 +556,6 @@ display:
           operator: in
           value:
             basic: basic
-            basic_simple: basic_simple
             camera: camera
             data_table: data_table
             educational_activity: educational_activity
