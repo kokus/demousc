@@ -101,7 +101,6 @@
         "drupal/xmlsitemap": "^1.5",
         "drupal/yoast_seo": "^2.0@alpha",
         "drush/drush": "^12.1",
-        "mglaman/composer-drupal-lenient": "^1.0",
         "geocoder-php/nominatim-provider": "^5.7",
         "mglaman/composer-drupal-lenient": "^1.0",
         "symfony/http-client": "^6.3"
