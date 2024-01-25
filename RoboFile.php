@@ -145,7 +145,7 @@ class RoboFile extends Tasks {
   public function backupDatabase($dir = 'db_backups/', $max_files = 5) {
     $date = date('Y-m-d-H:i:s');
     $collection = $this->collectionBuilder();
-    $collection->taskExec("vendor/bin/drush sql-dump | gzip -f > $dir/$date.sql.gz")
+    $collection->taskExec("vendor/bin/drush sql-dump --extra-dump=--no-tablespaces | gzip -f > $dir/$date.sql.gz")
       ->addCode(
         // Maintain a max number of backups.
         function () use ($dir, $max_files) {
