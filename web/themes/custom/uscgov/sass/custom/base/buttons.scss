@@ -1,0 +1,80 @@
+/**
+ * Custom button styles.
+ */
+.button,
+input[type="submit"] {
+  --surface-color: var(--surface-button);
+  --text-color: var(--text-on-surface-button);
+  --border-color: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--surface-color);
+  border: solid 1px var(--border-color);
+  color: var(--text-color);
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 115%;
+  border-radius: 30px;
+  cursor: pointer;
+
+  &:where(:not([disabled])):hover {
+    --surface-color: var(--surface-button-dark);
+    text-decoration: underline;
+  }
+
+  &:where(:not([disabled])):active {
+    --surface-color: var(--surface-button-darker);
+    text-decoration: underline;
+  }
+
+  &[disabled] {
+    --surface-color: var(--surface-base-medium);
+    --text-color: var(--text-on-surface-base-medium);
+
+    cursor: not-allowed;
+  }
+
+  &.button--outline {
+    --surface-color: transparent;
+    --text-color: var(--text-link);
+    --border-color: currentColor;
+
+    &:where(:not([disabled])):hover,
+    &:where(:not([disabled])):active {
+      --surface-color: var(--surface-primary-lighter);
+    }
+
+    &:where(:not([disabled])):active {
+      border-width: 3px;
+    }
+
+    &[disabled] {
+      --text-color: var(--color-primitive-neutral-gray-muted-dark);
+    }
+  }
+
+  &.button--ghost {
+    --surface-color: transparent;
+    --text-color: var(--text-link);
+    --border-color: transparent;
+
+    padding-inline: 0;
+
+    &:where(:not([disabled])):hover {
+      --text-color: var(--text-on-surface-base-lighter--primary);
+    }
+
+    &:where(:not([disabled])):active {
+      --text-color: var(--color-primitive-theme-primary-darker);
+    }
+
+    &[disabled] {
+      --text-color: var(--color-primitive-neutral-gray-muted-dark);
+
+      background: transparent;
+    }
+  }
+}
