@@ -1,0 +1,22 @@
+# user 
+- d7_user
+
+# files
+- d7_file
+- d7_file_private
+- d7_file_entity
+
+# taxonomy 
+- d7_taxonomy_term
+
+# paragraphs 
+- d7_paragraphs
+- d7_paragraphs_revisions
+
+# nodes 
+- d7_node
+- d7_node_complete
+- d7_node_revision
+
+# paths 
+- d7_url_alias
