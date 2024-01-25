@@ -91,6 +91,7 @@
         "drupal/seckit": "^2.0",
         "drupal/sharethis": "^3.0",
         "drupal/simple_sitemap": "^4.1",
+        "drupal/sitewide_alert": "^2.2",
         "drupal/taxonomy_manager": "^2.0",
         "drupal/transliterate_filenames": "^2.0",
         "drupal/usfedgov_google_analytics": "^2.0",
