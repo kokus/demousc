@@ -52,7 +52,6 @@
         "drupal/geocoder": "^4.18",
         "drupal/geofield": "^1.57",
         "drupal/gin": "^3.0@RC",
-        "drupal/glossify": "^3.0",
         "drupal/google_tag": "^2.0",
         "drupal/gutenberg_uswds": "^1.0@beta",
         "drupal/honeypot": "^2.1",
@@ -84,6 +83,7 @@
         "drupal/redirect": "^1.9",
         "drupal/redis": "^1.7",
         "drupal/remote_stream_wrapper": "^2.0",
+        "drupal/restrict_ip": "^4.0@beta",
         "drupal/robotstxt": "^1.5",
         "drupal/scheduler": "^2.0",
         "drupal/search_api_location": "^1.0@alpha",
@@ -100,6 +100,7 @@
         "drupal/xmlsitemap": "^1.5",
         "drupal/yoast_seo": "^2.0@alpha",
         "drush/drush": "^12.1",
+        "mglaman/composer-drupal-lenient": "^1.0",
         "geocoder-php/nominatim-provider": "^5.7",
         "mglaman/composer-drupal-lenient": "^1.0",
         "symfony/http-client": "^6.3"

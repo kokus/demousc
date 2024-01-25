@@ -11,11 +11,14 @@ no_patching: false
 storage: folder
 folder: ../config_split/local/
 module:
+  restrict_ip: 0
   stage_file_proxy: 0
 theme: {  }
 complete_list:
+  - restrict_ip.settings
   - robotstxt.settings
   - simple_sitemap.settings
+  - stage_file_proxy.settings
   - system.logging
 partial_list:
   - core.extension
