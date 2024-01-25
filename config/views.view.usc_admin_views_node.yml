@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - node.type.basic
-    - node.type.basic_simple
     - node.type.camera
     - node.type.court
     - node.type.data_table
@@ -215,7 +214,6 @@ display:
             all: all
             usc_alert: usc_alert
             basic: basic
-            basic_simple: basic_simple
             camera: camera
             court: court
             data_table: data_table
