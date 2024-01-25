@@ -1,16 +1,16 @@
-uuid: d0ffe2a2-42f8-4328-907e-caceb0c4c3ce
+uuid: 37ef610b-48da-4918-8e0f-0ce3446ddfd4
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_link
-    - node.type.basic_simple
+    - node.type.basic
   module:
     - link
-id: node.basic_simple.field_link
+id: node.basic.field_link
 field_name: field_link
 entity_type: node
-bundle: basic_simple
+bundle: basic
 label: '<iframe>'
 description: 'Enter the fully qualified URL of a page to display as an iframe. <strong>Note:</strong> Only use pages on uscourts.gov domain (e.g. https://psds.uscourts.gov/seminar.fwx). <strong>Warning:</strong> If you are on test, stage or dev servers, iframe will not load a page if its response header has X-Frame-Options set to SAMEORIGIN.'
 required: false
