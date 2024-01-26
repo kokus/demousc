@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * This theme file alters the menu-link-form.
+ */
+
+/**
  * Implements hook_form_alter().
  */
 function uscadmin_form_alter(&$form, $form_state, $form_id) {
