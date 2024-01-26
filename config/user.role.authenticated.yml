@@ -12,6 +12,7 @@ dependencies:
     - gutenberg
     - media
     - node
+    - restrict_ip
     - system
     - toolbar
 _core:
@@ -25,6 +26,7 @@ permissions:
   - 'access environment indicator'
   - 'access toolbar'
   - 'access user profiles'
+  - 'bypass ip restriction'
   - 'use gutenberg'
   - 'use text format html_filtered'
   - 'use text format widget'

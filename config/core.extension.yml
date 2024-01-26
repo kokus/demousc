@@ -27,6 +27,7 @@ module:
   datetime: 0
   datetime_range: 0
   dblog: 0
+  devel: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
@@ -110,6 +111,7 @@ module:
   redis: 0
   remote_stream_wrapper: 0
   responsive_image: 0
+  restrict_ip: 0
   robotstxt: 0
   scheduler: 0
   sdc: 0

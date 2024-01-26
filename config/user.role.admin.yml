@@ -44,6 +44,7 @@ dependencies:
     - path
     - pathauto
     - redirect
+    - restrict_ip
     - scheduler
     - search
     - seckit
@@ -141,6 +142,7 @@ permissions:
   - 'administer pathauto'
   - 'administer permissions'
   - 'administer redirects'
+  - 'administer restricted ip addresses'
   - 'administer scheduler'
   - 'administer search'
   - 'administer seckit'
@@ -165,6 +167,7 @@ permissions:
   - 'administer webform labels'
   - 'administer webform submission'
   - 'bypass honeypot protection'
+  - 'bypass ip restriction'
   - 'bypass node access'
   - 'change own logout threshold'
   - 'create landing_featured_content content'

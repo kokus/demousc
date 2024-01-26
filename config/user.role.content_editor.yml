@@ -15,6 +15,7 @@ dependencies:
     - media
     - node
     - path
+    - restrict_ip
     - system
     - taxonomy
     - toolbar
@@ -40,6 +41,7 @@ permissions:
   - 'administer media types'
   - 'administer taxonomy'
   - 'administer url aliases'
+  - 'bypass ip restriction'
   - 'create landing_featured_content content'
   - 'create landing_view content'
   - 'create media'

@@ -797,8 +797,14 @@ switch ($_SERVER["HTTP_HOST"]){
     break;
   case "uscourts-dev.agileana.com":
     $config['config_split.config_split.agileana_dev']['status'] = TRUE;
-      break;
+    $config['restrict_ip.settings']['enable'] = TRUE;
+    $config['restrict_ip.settings']['ip_whitelist'] = [
+      '23.22.149.231',
+      '35.169.255.4',
+    ];
+    break;
   case "www.uscourts.gov";
   $config['config_split.config_split.prod']['status'] = TRUE;
+  $config['restrict_ip.settings']['enable'] = FALSE;
   break;
 }
