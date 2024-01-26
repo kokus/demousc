@@ -6,5 +6,6 @@ dependencies:
     - file
 id: file.landing_page
 label: landing_page
+description: ''
 targetEntityType: file
 cache: true

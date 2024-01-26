@@ -11,13 +11,6 @@ name: 'Full HTML'
 format: full_html
 weight: -10
 filters:
-  filter_url:
-    id: filter_url
-    provider: filter
-    status: true
-    weight: 0
-    settings:
-      filter_url_length: 72
   filter_autop:
     id: filter_autop
     provider: filter
@@ -36,6 +29,13 @@ filters:
         local_paths: ''
       local_paths: ''
       protocol_style: path
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
   gutenberg:
     id: gutenberg
     provider: gutenberg

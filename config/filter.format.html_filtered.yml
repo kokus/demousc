@@ -24,13 +24,6 @@ filters:
       allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <sup> <sub> <drupal-entity data-*>'
       filter_html_help: false
       filter_html_nofollow: false
-  filter_url:
-    id: filter_url
-    provider: filter
-    status: true
-    weight: 0
-    settings:
-      filter_url_length: 72
   filter_pathologic:
     id: filter_pathologic
     provider: pathologic
@@ -43,6 +36,13 @@ filters:
         local_paths: ''
       local_paths: ''
       protocol_style: path
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
   gutenberg:
     id: gutenberg
     provider: gutenberg
