@@ -6,8 +6,8 @@
  * @see http://robo.li/
  */
 
-use Robo\Tasks;
 use Robo\Symfony\ConsoleIO;
+use Robo\Tasks;
 
 /**
  * Robo Tasks.
@@ -79,7 +79,7 @@ class RoboFile extends Tasks {
     return $collection;
   }
 
-    /**
+  /**
    * Site update.
    */
   public function appUpdate(ConsoleIO $io) {
@@ -89,7 +89,8 @@ class RoboFile extends Tasks {
       ->addTask($this->runDeploy())
       ->addTask($this->themeInit())
       ->addTask($this->themeBuild())
-      ->addTaskList($this->fixContainerPerms());;
+      ->addTaskList($this->fixContainerPerms());
+    ;
     return $collection;
   }
 
@@ -139,7 +140,7 @@ class RoboFile extends Tasks {
    *
    * @param string $dir
    *   The directory where the backups will be stored.
-   * @param integer $max_files
+   * @param int $max_files
    *   The max number go backups to maintain.
    */
   public function backupDatabase($dir = 'db_backups/', $max_files = 5) {
@@ -167,9 +168,10 @@ class RoboFile extends Tasks {
           }
         );
 
-  } catch (Exception $e) {
-      echo 'Caught exception during database backup: ',  $e->getMessage(), "\n";
-  }
+    }
+    catch (Exception $e) {
+      echo 'Caught exception during database backup: ', $e->getMessage(), "\n";
+    }
     return $collection;
   }
 
@@ -183,7 +185,7 @@ class RoboFile extends Tasks {
       ->run();
   }
 
-    /**
+  /**
    * Runs Codesniffer.
    */
   public function phpcs() {
