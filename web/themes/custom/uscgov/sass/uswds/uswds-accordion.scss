@@ -1,6 +1,4 @@
-@forward "../../sass/uswds/settings";
-@forward "usa-accordion/src/styles";
-@forward "override";
+@forward "usa-accordion";
 
 .expand-link,
 .collapse-link {
@@ -45,5 +43,12 @@
     .expand-link {
       display: inline-block;
     }
+  }
+}
+
+// Ensure accordion items that have nested required fields are marked with an asterisk.
+.usa-accordion:has(.usa-accordion__content :is([required], .required, [aria-required="true"])) {
+  .usa-accordion__button:after {
+    content: "*";
   }
 }

@@ -4,6 +4,10 @@
 
 
 .usa-banner__content {
+  body & {
+    background-color: transparent;
+  }
+
   @media (scripting: enabled) {
     display: none;
 

@@ -10,12 +10,15 @@
  * - required: An indicator for whether the textarea is required.
  * - value: The textarea content.
  *
+ * @ingroup templates
+ *
  * @see template_preprocess_textarea()
  */
 #}
 {%
   set classes = [
     'form-textarea',
+    'usa-textarea',
     resizable ? 'resize-' ~ resizable,
     required ? 'required',
   ]

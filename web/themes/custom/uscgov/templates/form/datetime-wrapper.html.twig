@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override of a datetime form wrapper.
+ * Default theme implementation of a datetime form wrapper.
  *
  * Available variables:
  * - content: The form element to be output, usually a datelist, or datetime.
@@ -10,12 +10,15 @@
  * - description: Description text for the form element.
  * - required: An indicator for whether the associated form element is required.
  *
+ * @ingroup templates
+ *
  * @see template_preprocess_datetime_wrapper()
  */
 #}
 {%
   set title_classes = [
     'label',
+    'control-label',
     required ? 'js-form-required',
     required ? 'form-required',
   ]
@@ -25,12 +28,12 @@
 {% endif %}
 {{ content }}
 {% if errors %}
-  <div class="form-item--error-message">
+  <div class="usa-error-message form-item--error-message" role="alert">
     <strong>{{ errors }}</strong>
   </div>
 {% endif %}
 {% if description %}
-  <div{{ description_attributes.addClass('description') }}>
+  <div{{ description_attributes.addClass('description', 'help-block') }}>
     {{ description }}
   </div>
 {% endif %}

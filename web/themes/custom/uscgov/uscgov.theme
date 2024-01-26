@@ -124,7 +124,7 @@ function uscgov_preprocess_field__config_pages__field_social_media(&$variables) 
  *
  * Adds cache dependency for page settings(config page).
  */
-function uscgov_preprocess_page(array &$variables) {
+function uscgov_preprocess_page(&$variables) {
   $global_site_settings = ConfigPages::config('global_site_settings');
   // Add a cache dependency.
   CacheableMetadata::createFromObject($global_site_settings)->applyTo($variables);
@@ -146,5 +146,43 @@ function uscgov_preprocess_field__config_pages__field_hompage_quick_links(array 
         'svg_path' => \Drupal::service('file_url_generator')->generateString($item['content']['#paragraph']->field_icon->entity->field_media_file_1->entity->uri->value),
       ];
     }
+  }
+}
+
+/**
+ * Implements hook_preprocess_form_element().
+ */
+function uscgov_preprocess_form_element(array &$variables) {
+  // Pass the form element type to the label template preprocess.
+  $variables['label']['#attributes']["data-element-type"] = $variables['element']['#type'];
+}
+
+/**
+ * Implements hook_preprocess_form_element_label().
+ */
+function uscgov_preprocess_form_element_label(&$variables) {
+  $element_type = FALSE;
+
+  if (isset($variables['attributes']['data-element-type'])) {
+    $element_type = $variables['attributes']['data-element-type'];
+  }
+
+  if (!empty($variables['required'])) {
+    $variables['attributes']['class'][] = 'usa-input-required';
+  }
+
+  $variables['is_checkbox'] = $element_type == 'checkbox' ? TRUE : FALSE;
+  $variables['is_radio'] = $element_type == 'radio' ? TRUE : FALSE;
+}
+
+/**
+ * Implements hook_preprocess_preprocess_input().
+ */
+function uscgov_preprocess_input(&$variables) {
+  $haystack = $variables['attributes']['class'] ?? [];
+
+  // If 'error' CSS class is present, add the appropriate USWDS CSS class.
+  if (in_array('error', $haystack)) {
+    $variables['attributes']['class'][] = 'usa-input--error';
   }
 }
