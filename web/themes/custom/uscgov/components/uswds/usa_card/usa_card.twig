@@ -15,19 +15,10 @@
       <h2 class="usa-card__heading">{{ title }}</h2>
     </div>
 
-    {% if image.type != 'none' %}
+    {% if image.0 %}
       <div class="usa-card__media {{ settings.media_inset ? 'usa-card__media--inset' }} {{ settings.media_exdent ? 'usa-card__media--exdent' }}">
         <div class="usa-card__img">
-          {% if image.type == 'entity' %}
-            {{ image.entity }}
-          {% endif %}
-          {% if image.type == 'url' %}
-            <img
-              src={{ image.url }}
-              alt="{{ image.alt }}"
-              title="{{ image.title }}"
-            />
-          {% endif %}
+          {{ image }}
         </div>
       </div>
     {% endif %}
