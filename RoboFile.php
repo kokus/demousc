@@ -145,27 +145,31 @@ class RoboFile extends Tasks {
   public function backupDatabase($dir = 'db_backups/', $max_files = 5) {
     $date = date('Y-m-d-H:i:s');
     $collection = $this->collectionBuilder();
-    $collection->taskExec("vendor/bin/drush sql-dump --extra-dump=--no-tablespaces | gzip -f > $dir/$date.sql.gz")
-      ->addCode(
-        // Maintain a max number of backups.
-        function () use ($dir, $max_files) {
-          $dir = new DirectoryIterator($dir);
-          $files = [];
-          foreach ($dir as $fileInfo) {
-            if (!$fileInfo->isDot() && $fileInfo->isFile()) {
-              $files[$fileInfo->getMTime()] = $fileInfo->getPathname();
+    try {
+      $collection->taskExec("vendor/bin/drush sql-dump --extra-dump=--no-tablespaces | gzip -f > $dir/$date.sql.gz")
+        ->addCode(
+          // Maintain a max number of backups.
+          function () use ($dir, $max_files) {
+            $dir = new DirectoryIterator($dir);
+            $files = [];
+            foreach ($dir as $fileInfo) {
+              if (!$fileInfo->isDot() && $fileInfo->isFile()) {
+                $files[$fileInfo->getMTime()] = $fileInfo->getPathname();
+              }
+            }
+            krsort($files);
+            $i = 0;
+            foreach ($files as $file) {
+              if (++$i > $max_files) {
+                unlink($file);
+              }
             }
           }
-          krsort($files);
-          $i = 0;
-          foreach ($files as $file) {
-            if (++$i > $max_files) {
-              unlink($file);
-            }
-          }
-        }
-      );
+        );
 
+  } catch (Exception $e) {
+      echo 'Caught exception during database backup: ',  $e->getMessage(), "\n";
+  }
     return $collection;
   }
 
