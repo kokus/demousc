@@ -14,10 +14,18 @@
   margin: 0;
   border-radius: 30px;
   overflow: hidden; // Needed for border radius.
+
+  &:has(.usa-card__media--inset) {
+    --container-padding-x: 24px;
+  }
 }
 
 .usa-card__header {
-  padding: var(--container-padding-y) var(--container-padding-x) 0;
+  padding: calc(var(--container-padding-y) - var(--gap)) var(--container-padding-x) 0;
+
+  .usa-card--flag & {
+    padding-top: var(--container-padding-y);
+  }
 }
 
 .usa-card__heading {
