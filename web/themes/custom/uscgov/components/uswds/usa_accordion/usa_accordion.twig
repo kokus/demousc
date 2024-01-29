@@ -12,5 +12,5 @@
 {% endif %}
 {# Accordion #}
 <div{{ attributes.addClass('usa-accordion').setAttribute('id', accordion_id) }}>
-  {{ accordion_items }}
+  {% block accordion_items %}{% endblock %}
 </div>

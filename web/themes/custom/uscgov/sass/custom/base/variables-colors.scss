@@ -7,6 +7,10 @@
   --surface-primary: var(--color-primitive-theme-primary-primary);
   --text-on-surface-primary: var(--color-primitive-neutral-base-light);
 
+  // Primary dark
+  --surface-primary-dark: var(--color-primitive-theme-primary-dark); // #01417F
+  --text-on-surface-primary-dark: var(--color-primitive-neutral-base-light);
+
   // Primary darker
   --surface-primary-darker: var(--color-primitive-theme-primary-darker);
   --text-on-surface-primary-darker: var(--color-primitive-neutral-base-light);
@@ -36,7 +40,12 @@
   --text-on-surface-base-medium: var(--color-primitive-neutral-gray-base-secondary-dark); // #525661
 
   /**
-   * Links, forms, nad buttons
+   * Accent
+   */
+  --accent: #722F1D;
+
+  /**
+   * Links, forms, and buttons
    */
 
   //  Links

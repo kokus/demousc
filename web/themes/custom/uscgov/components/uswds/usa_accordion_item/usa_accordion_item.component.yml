@@ -15,5 +15,5 @@ props:
       type: string
       description: If item is open by default.
 slots:
-  content:
+  accordion_item_content:
     title: Content

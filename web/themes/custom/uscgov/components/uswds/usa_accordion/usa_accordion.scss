@@ -6,7 +6,7 @@
   position: relative;
   &::before {
     content: "";
-    background-image: url("img/usa-icons/add.svg"),linear-gradient(transparent,transparent);
+    background-image: url('img/add.svg');
     background-repeat: no-repeat;
     background-size: 1.5rem;
     display: block;
@@ -20,12 +20,12 @@
 
 .expand-link {
   &::before {
-    background-image: url("img/usa-icons/add.svg"),linear-gradient(transparent,transparent);
+    background-image: url('img/add.svg');
   }
 }
 .collapse-link {
   &::before {
-    background-image: url("img/usa-icons/remove.svg"),linear-gradient(transparent,transparent);
+    background-image: url('img/remove.svg');
   }
 }
 .operations-group {
@@ -51,4 +51,46 @@
   .usa-accordion__button:after {
     content: "*";
   }
+}
+
+.usa-accordion__button[aria-expanded] {
+  background: none; // Override USWDS.
+  border-top: solid 2px var(--border-form);
+  font-size: inherit;
+
+  &:hover {
+    background: var(--surface-primary-lighter);
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    right: 25px;
+    top: calc(50% - 1.5px);
+    content: "";
+    width: 14px;
+    height: 0;
+    border-top: solid 3px var(--accent);
+  }
+
+  &:after {
+    rotate: 90deg;
+  }
+
+  &[aria-expanded="true"] {
+    background: var(--surface-primary-dark);
+    color: var(--text-on-surface-primary-dark);
+
+    &:before {
+      border-color: currentColor;
+    }
+
+    &:after {
+      opacity: 0;
+    }
+  }
+}
+
+.usa-accordion__content {
+  background: transparent;
 }
