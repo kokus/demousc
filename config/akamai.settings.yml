@@ -2,8 +2,8 @@ _core:
   default_config_hash: wbD9a1lSFlzefyZbT7berzkarufh5L0yc5p0e9pywE4
 version: v3
 disabled: false
-storage_method: file
 rest_api_url: 'https://xxxx-xxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxx.luna.akamaiapis.net/'
+storage_method: file
 client_token: ''
 client_secret: ''
 access_token: ''

@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.news_issue_view
 label: news_issue_view
+description: ''
 targetEntityType: node
 cache: true
