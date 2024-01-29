@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.promo_header
 label: promo_header
+description: ''
 targetEntityType: node
 cache: true

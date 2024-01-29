@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.federal_probation_journal_node
 label: federal_probation_journal_node
+description: ''
 targetEntityType: node
 cache: true
