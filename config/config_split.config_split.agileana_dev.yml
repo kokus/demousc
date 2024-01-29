@@ -10,9 +10,12 @@ stackable: false
 no_patching: false
 storage: folder
 folder: ../config_split/agileana_dev/
-module: {  }
+module:
+  restrict_ip: 0
+  stage_file_proxy: 0
 theme: {  }
 complete_list:
+  - restrict_ip.settings
   - robotstxt.settings
   - simple_sitemap.settings
   - system.logging

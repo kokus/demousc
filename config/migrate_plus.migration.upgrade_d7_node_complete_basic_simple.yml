@@ -208,7 +208,7 @@ process:
 destination:
   plugin: 'entity_complete:node'
   translations: true
-  default_bundle: basic_simple
+  default_bundle: basic
 migration_dependencies:
   required:
     - upgrade_d7_user
@@ -234,8 +234,6 @@ migration_dependencies:
     - upgrade_d7_file_entity_document_http
     - upgrade_d7_file_entity_image_http
     - upgrade_d7_metatag_field_node
-    - upgrade_d7_metatag_field_instance_node_basic_simple
-    - upgrade_d7_metatag_field_instance_widget_settings_node_basic_simple
     - upgrade_d7_file_entity_document_public
     - upgrade_d7_file_entity_document_http
     - upgrade_d7_file_entity_image_public

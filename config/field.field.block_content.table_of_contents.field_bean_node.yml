@@ -6,7 +6,6 @@ dependencies:
     - block_content.type.table_of_contents
     - field.storage.block_content.field_bean_node
     - node.type.basic
-    - node.type.basic_simple
     - node.type.camera
     - node.type.data_table
     - node.type.educational_activity
@@ -35,7 +34,6 @@ settings:
   handler_settings:
     target_bundles:
       basic: basic
-      basic_simple: basic_simple
       camera: camera
       data_table: data_table
       educational_activity: educational_activity

@@ -6,8 +6,8 @@
  * @see http://robo.li/
  */
 
-use Robo\Tasks;
 use Robo\Symfony\ConsoleIO;
+use Robo\Tasks;
 
 /**
  * Robo Tasks.
@@ -79,7 +79,7 @@ class RoboFile extends Tasks {
     return $collection;
   }
 
-    /**
+  /**
    * Site update.
    */
   public function appUpdate(ConsoleIO $io) {
@@ -89,7 +89,8 @@ class RoboFile extends Tasks {
       ->addTask($this->runDeploy())
       ->addTask($this->themeInit())
       ->addTask($this->themeBuild())
-      ->addTaskList($this->fixContainerPerms());;
+      ->addTaskList($this->fixContainerPerms());
+    ;
     return $collection;
   }
 
@@ -139,33 +140,38 @@ class RoboFile extends Tasks {
    *
    * @param string $dir
    *   The directory where the backups will be stored.
-   * @param integer $max_files
+   * @param int $max_files
    *   The max number go backups to maintain.
    */
   public function backupDatabase($dir = 'db_backups/', $max_files = 5) {
     $date = date('Y-m-d-H:i:s');
     $collection = $this->collectionBuilder();
-    $collection->taskExec("vendor/bin/drush sql-dump | gzip -f > $dir/$date.sql.gz")
-      ->addCode(
-        // Maintain a max number of backups.
-        function () use ($dir, $max_files) {
-          $dir = new DirectoryIterator($dir);
-          $files = [];
-          foreach ($dir as $fileInfo) {
-            if (!$fileInfo->isDot() && $fileInfo->isFile()) {
-              $files[$fileInfo->getMTime()] = $fileInfo->getPathname();
+    try {
+      $collection->taskExec("vendor/bin/drush sql-dump --extra-dump=--no-tablespaces | gzip -f > $dir/$date.sql.gz")
+        ->addCode(
+          // Maintain a max number of backups.
+          function () use ($dir, $max_files) {
+            $dir = new DirectoryIterator($dir);
+            $files = [];
+            foreach ($dir as $fileInfo) {
+              if (!$fileInfo->isDot() && $fileInfo->isFile()) {
+                $files[$fileInfo->getMTime()] = $fileInfo->getPathname();
+              }
+            }
+            krsort($files);
+            $i = 0;
+            foreach ($files as $file) {
+              if (++$i > $max_files) {
+                unlink($file);
+              }
             }
           }
-          krsort($files);
-          $i = 0;
-          foreach ($files as $file) {
-            if (++$i > $max_files) {
-              unlink($file);
-            }
-          }
-        }
-      );
+        );
 
+    }
+    catch (Exception $e) {
+      echo 'Caught exception during database backup: ', $e->getMessage(), "\n";
+    }
     return $collection;
   }
 
@@ -179,7 +185,7 @@ class RoboFile extends Tasks {
       ->run();
   }
 
-    /**
+  /**
    * Runs Codesniffer.
    */
   public function phpcs() {

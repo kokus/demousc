@@ -6,5 +6,6 @@ dependencies:
     - file
 id: file.news_issue_view
 label: news_issue_view
+description: ''
 targetEntityType: file
 cache: true

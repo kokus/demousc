@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.basic.field_landing_page_image
     - field.field.node.basic.field_lead_gallery
     - field.field.node.basic.field_lead_paragraph
+    - field.field.node.basic.field_link
     - field.field.node.basic.field_logo
     - field.field.node.basic.field_metatag
     - field.field.node.basic.field_sidebar
@@ -19,6 +20,7 @@ dependencies:
   module:
     - field_group
     - inline_entity_form
+    - link
     - media_library
     - metatag
     - paragraphs
@@ -97,6 +99,7 @@ third_party_settings:
     group_body_simple_:
       children:
         - body
+        - field_link
       label: 'Body (Simple)'
       region: content
       parent_name: group_node_form
@@ -223,6 +226,14 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 7
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
   field_logo:
     type: media_library_widget
     weight: 7
@@ -283,6 +294,12 @@ content:
       edit_description: false
       render_theme: null
       render_view_mode: default
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path

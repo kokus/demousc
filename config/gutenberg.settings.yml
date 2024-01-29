@@ -188,12 +188,6 @@ landing_view_allowed_drupal_blocks:
   'entity_view:user': 0
   'entity_view:webform': 0
   'entity_view:webform_submission': 0
-  drupalblock/all_content_block: 0
-  'block_content:c90ae4dd-7217-41d5-b171-948a06e18aea': 0
-  'block_content:4859515f-8b6b-432d-b697-024db6dc90f9': 0
-  'block_content:0464218a-70b2-4126-8ec2-c12bebc0a364': 0
-  'block_content:6948e5d8-4f44-4cd1-b3da-1cfc71b81dac': 0
-  'block_content:6010b307-9ecf-482d-9cc8-5e49a5742d77': 0
   drupalblock/all_core: 0
   page_title_block: 0
   drupalblock/all_devel: 0

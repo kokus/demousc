@@ -6,5 +6,6 @@ dependencies:
     - file
 id: file.banner
 label: banner
+description: ''
 targetEntityType: file
 cache: true
