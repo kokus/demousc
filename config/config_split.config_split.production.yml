@@ -1,6 +1,6 @@
 uuid: 882707b4-a751-40f4-be24-42c18494e512
 langcode: en
-status: true
+status: false
 dependencies: {  }
 id: production
 label: Production
@@ -13,12 +13,5 @@ folder: ../config_split/prod/
 module:
   restrict_ip: 0
 theme: {  }
-partial_list:
-  - core.extension
-  - user.role.admin
-  - user.role.administrator
-  - user.role.approver
-  - user.role.authenticated
-  - user.role.content_creator
-  - user.role.content_editor
-  - user.role.publisher
+complete_list: {  }
+partial_list: {  }

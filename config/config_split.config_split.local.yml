@@ -22,10 +22,3 @@ complete_list:
   - system.logging
 partial_list:
   - core.extension
-  - user.role.admin
-  - user.role.administrator
-  - user.role.approver
-  - user.role.authenticated
-  - user.role.content_creator
-  - user.role.content_editor
-  - user.role.publisher
