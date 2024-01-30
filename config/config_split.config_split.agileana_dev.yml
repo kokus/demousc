@@ -19,4 +19,12 @@ complete_list:
   - robotstxt.settings
   - simple_sitemap.settings
   - system.logging
-partial_list: {  }
+partial_list:
+  - core.extension
+  - user.role.admin
+  - user.role.administrator
+  - user.role.approver
+  - user.role.authenticated
+  - user.role.content_creator
+  - user.role.content_editor
+  - user.role.publisher
