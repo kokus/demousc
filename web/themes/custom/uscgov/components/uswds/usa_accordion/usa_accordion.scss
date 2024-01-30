@@ -2,32 +2,39 @@
 
 .expand-link,
 .collapse-link {
-  float: right;
   position: relative;
-  &::before {
-    content: "";
-    background-image: url('img/add.svg');
-    background-repeat: no-repeat;
-    background-size: 1.5rem;
-    display: block;
-    width: 20px;
-    height: 20px;
+  float: right;
+  padding-left: 20px;
+  color: var(--text-link);
+  text-decoration: none;
+
+  &::before,
+  &::after {
     position: absolute;
-    left: -23px;
-    top: -2px;
+    left: 0;
+    top: calc(50% - 1px);
+    display: block;
+    width: 12px;
+    height: 0;
+    content: "";
+    border-top: solid 2px currentColor;
+  }
+
+  &:after {
+    rotate: 90deg;
+  }
+
+  &:visited {
+    color: var(--text-link);
   }
 }
 
-.expand-link {
-  &::before {
-    background-image: url('img/add.svg');
-  }
-}
 .collapse-link {
-  &::before {
-    background-image: url('img/remove.svg');
+  &::after {
+    content: none;
   }
 }
+
 .operations-group {
   display: inline-block;
   width: 100%;
