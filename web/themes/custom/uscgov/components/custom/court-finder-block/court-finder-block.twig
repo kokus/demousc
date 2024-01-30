@@ -1,3 +1,4 @@
+{{ attach_library('usc_court_finder/google-maps-places') }}
 <div class="court-finder-block">
   <h2 class="court-finder-block__title">{{ 'Find a Federal Court'|t }}</h2>
   <p class="court-finder-block__description">{{ 'Find a federal court by location or court name.'|t }}</p>
@@ -6,6 +7,7 @@
       {% set location_id = 'court-location-radio' %}
       <input id="{{ location_id }}" name="find-type" class="visually-hidden" type="radio" checked>
       <label for="{{ location_id }}" class="court-finder-block__toggle-label">{{ 'Location'|t }}</label>
+      <select class="court-finder-block__dropdown"></select>
     </div>
      <div class="court-finder-block__toggle-wrapper">
       {% set court_name_id = 'court-name-radio' %}
