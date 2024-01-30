@@ -794,19 +794,11 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 switch ($_SERVER["HTTP_HOST"]){
   case "uscourts.lndo.site":
     $config['config_split.config_split.local']['status'] = TRUE;
-    $config['restrict_ip.settings']['enable'] = FALSE;
     break;
   case "uscourts-dev.agileana.com":
     $config['config_split.config_split.agileana_dev']['status'] = TRUE;
-    $config['restrict_ip.settings']['enable'] = TRUE;
-    $config['restrict_ip.settings']['ip_whitelist'] = [
-      '23.22.149.231',
-      '35.169.255.4',
-      '172.19.0.4',
-    ];
     break;
   case "www.uscourts.gov";
   $config['config_split.config_split.prod']['status'] = TRUE;
-  $config['restrict_ip.settings']['enable'] = FALSE;
   break;
 }
