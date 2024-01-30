@@ -135,6 +135,45 @@ class RoboFile extends Tasks {
     return $collection;
   }
 
+  /**
+   * Stores a db backup.
+   *
+   * @param string $dir
+   *   The directory where the backups will be stored.
+   * @param int $max_files
+   *   The max number go backups to maintain.
+   */
+  public function backupDatabase($dir = 'db_backups/', $max_files = 5) {
+    $date = date('Y-m-d-H:i:s');
+    $collection = $this->collectionBuilder();
+    try {
+      $collection->taskExec("vendor/bin/drush sql-dump --extra=--skip-ssl --extra-dump=--no-tablespaces | gzip -f > $dir/$date.sql.gz")
+        ->addCode(
+          // Maintain a max number of backups.
+          function () use ($dir, $max_files) {
+            $dir = new DirectoryIterator($dir);
+            $files = [];
+            foreach ($dir as $fileInfo) {
+              if (!$fileInfo->isDot() && $fileInfo->isFile()) {
+                $files[$fileInfo->getMTime()] = $fileInfo->getPathname();
+              }
+            }
+            krsort($files);
+            $i = 0;
+            foreach ($files as $file) {
+              if (++$i > $max_files) {
+                unlink($file);
+              }
+            }
+          }
+        );
+
+    }
+    catch (Exception $e) {
+      echo 'Caught exception during database backup: ', $e->getMessage(), "\n";
+    }
+    return $collection;
+  }
 
   /**
    * Fix Codesniffer errors.
