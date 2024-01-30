@@ -45,3 +45,7 @@ uswds-accordion:
   css:
     component:
       dist/uswds/css/uswds-accordion.css: {  }
+button:
+  css:
+    component:
+      dist/custom/css/base/buttons.css: {  }
