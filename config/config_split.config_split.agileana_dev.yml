@@ -11,6 +11,7 @@ no_patching: false
 storage: folder
 folder: ../config_split/agileana_dev/
 module:
+  restrict_ip: 0
   stage_file_proxy: 0
 theme: {  }
 complete_list:
