@@ -31,6 +31,7 @@ module:
   entity_reference_revisions: 0
   environment_indicator: 0
   environment_indicator_ui: 0
+  facets: 0
   faqfield: 0
   feeds: 0
   feeds_log: 0
@@ -45,6 +46,8 @@ module:
   file_mdm_font: 0
   filter: 0
   fpa: 0
+  geocoder: 0
+  geofield: 0
   glossify: 0
   glossify_taxonomy: 0
   google_tag: 0
@@ -92,6 +95,7 @@ module:
   migrate_drupal_ui: 0
   migrate_manifest: 0
   migrate_plus: 0
+  migrate_source_csv: 0
   migrate_tools: 0
   migrate_upgrade: 0
   mysql: 0
@@ -111,6 +115,11 @@ module:
   scheduler: 0
   sdc: 0
   search: 0
+  search_api: 0
+  search_api_db: 0
+  search_api_location: 0
+  search_api_location_geocoder: 0
+  search_api_location_views: 0
   seckit: 0
   serialization: 0
   shortcut: 0
@@ -125,6 +134,7 @@ module:
   token: 0
   toolbar: 0
   transliterate_filenames: 0
+  usc_court_finder: 0
   usc_migrate_adjustments: 0
   usc_migrate_boolean: 0
   usc_migrate_gutenberg: 0
