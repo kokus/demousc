@@ -800,5 +800,5 @@ switch ($_SERVER["HTTP_HOST"]){
     break;
   case "www.uscourts.gov";
   $config['config_split.config_split.prod']['status'] = TRUE;
-  break;
+    break;
 }
