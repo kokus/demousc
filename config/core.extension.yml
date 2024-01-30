@@ -110,7 +110,6 @@ module:
   redis: 0
   remote_stream_wrapper: 0
   responsive_image: 0
-  restrict_ip: 0
   robotstxt: 0
   scheduler: 0
   sdc: 0
