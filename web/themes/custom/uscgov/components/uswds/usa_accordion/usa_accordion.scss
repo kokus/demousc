@@ -60,7 +60,14 @@
   }
 }
 
+.editor-styles-wrapper .usa-accordion__heading,
+.usa-accordion__heading:not(:first-child),
+.usa-prose .usa-accordion__heading:not(:first-child) {
+  margin-block: 0;
+}
+
 .usa-accordion__button[aria-expanded] {
+  position: relative;
   background: none; // Override USWDS.
   border-top: solid 2px var(--border-form);
   font-size: inherit;
