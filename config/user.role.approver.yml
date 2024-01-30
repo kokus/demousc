@@ -25,7 +25,6 @@ dependencies:
     - media
     - node
     - pathauto
-    - restrict_ip
     - system
     - taxonomy
     - toolbar
@@ -44,7 +43,6 @@ permissions:
   - 'access user profiles'
   - 'administer media'
   - 'administer taxonomy'
-  - 'bypass ip restriction'
   - 'create basic content'
   - 'create data_table content'
   - 'create educational_activity content'

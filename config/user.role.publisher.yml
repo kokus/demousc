@@ -17,7 +17,6 @@ dependencies:
     - path
     - pathauto
     - redirect
-    - restrict_ip
     - scheduler
     - system
     - taxonomy
@@ -48,7 +47,6 @@ permissions:
   - 'administer redirects'
   - 'administer taxonomy'
   - 'administer users'
-  - 'bypass ip restriction'
   - 'bypass node access'
   - 'create landing_featured_content content'
   - 'create landing_view content'
