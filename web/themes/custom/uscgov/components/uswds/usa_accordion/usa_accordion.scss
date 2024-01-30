@@ -108,3 +108,7 @@
 .usa-accordion__content {
   background: transparent;
 }
+
+.editor-styles-wrapper .wp-block[aria-label="Block: Accordion Item"] {
+  margin-block: 0;
+}
