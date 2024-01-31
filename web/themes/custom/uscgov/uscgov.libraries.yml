@@ -47,6 +47,12 @@ uswds-accordion:
       components/uswds/usa_accordion/usa_accordion.css: {  }
   js:
     components/uswds/usa_accordion/usa_accordion.js: {  }
+uswds-card:
+  css:
+    component:
+      components/uswds/usa_card/usa_card.css: {  }
+  dependencies:
+    - uscgov/button
 button:
   css:
     component:

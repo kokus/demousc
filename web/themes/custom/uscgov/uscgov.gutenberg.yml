@@ -1,3 +1,5 @@
 libraries-edit:
   - uscgov/variables
   - uscgov/uswds-accordion
+  - uscgov/uswds-card
+  - uscgov/button

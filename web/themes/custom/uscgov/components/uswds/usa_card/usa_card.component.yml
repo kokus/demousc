@@ -102,4 +102,4 @@ slots:
     title: Body
 libraryOverrides:
   dependencies:
-    - uscgov/uswds-button
+    - uscgov/uswds-card
