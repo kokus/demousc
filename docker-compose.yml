@@ -6,34 +6,18 @@ services:
     container_name: "${PROJECT}-db"
     volumes:
       - db-data:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: "drupal"
-      MYSQL_DATABASE: "drupal"
-      MYSQL_USER: "drupal"
-      MYSQL_PASSWORD: "drupal"
+    ports:
+      - '9000:80'
     restart: unless-stopped
     env_file: .env
     networks:
       - internal
     labels:
       - traefik.enable=false
-
-  varnish:
-    image: varnish:stable
-    container_name: varnishcache
-    volumes:
-      - "./default.vcl:/etc/varnish/default.vcl"
-    ports:
-      - "80:80"
-    tmpfs:
-      - /var/lib/varnish:exec
-    environment:
-      - VARNISH_SIZE=2G  
-    command: "-p default_keep=300 -p http_max_hdr=512 -p http_resp_hdr_len=1024768 -p http_resp_size=3024768 -p thread_pool_min=200 -p thread_pool_max=500 -p http_req_size=64000"
-#    command: "-p default_keep=300"
-    depends_on:
-      - web
-
+    deploy:
+      resources:
+        limits:
+          memory: 512M
   php:
     build:
       context: .
@@ -83,7 +67,9 @@ services:
     image: redis:6
     networks:
       - internal
-
+    labels:
+      - traefik.enable=false
+    restart: unless-stopped
 networks:
   internal:
     driver: bridge
