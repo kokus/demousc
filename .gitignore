@@ -32,3 +32,4 @@ screenshots
 # Dev.
 .env
 docker-compose.override.yml
+web/libraries

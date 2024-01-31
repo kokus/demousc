@@ -7,7 +7,7 @@ global:
     layout:
       dist/custom/css/layout/layout.css: {  }
   dependencies:
-    - uscgov/uswds-variables
+    - uscgov/variables
 uswds:
   css:
     base:
@@ -19,7 +19,7 @@ uswds:
       minified: true
     dist/uswds/js/uswds.min.js:
       minified: true
-uswds-variables:
+variables:
   css:
     base:
       dist/custom/css/base/variables-figma.css: {  }
@@ -44,4 +44,10 @@ uswds-form:
 uswds-accordion:
   css:
     component:
-      dist/uswds/css/uswds-accordion.css: {  }
+      components/uswds/usa_accordion/usa_accordion.css: {  }
+  js:
+    components/uswds/usa_accordion/usa_accordion.js: {  }
+button:
+  css:
+    component:
+      dist/custom/css/base/buttons.css: {  }

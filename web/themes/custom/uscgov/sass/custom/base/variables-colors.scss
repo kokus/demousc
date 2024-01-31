@@ -1,4 +1,5 @@
-:root {
+.uscgov-root,
+.editor-styles-wrapper {
   /**
    * Surface and text colors
    */
@@ -6,6 +7,10 @@
   // Primary
   --surface-primary: var(--color-primitive-theme-primary-primary);
   --text-on-surface-primary: var(--color-primitive-neutral-base-light);
+
+  // Primary dark
+  --surface-primary-dark: var(--color-primitive-theme-primary-dark); // #01417F
+  --text-on-surface-primary-dark: var(--color-primitive-neutral-base-light);
 
   // Primary darker
   --surface-primary-darker: var(--color-primitive-theme-primary-darker);
@@ -36,7 +41,12 @@
   --text-on-surface-base-medium: var(--color-primitive-neutral-gray-base-secondary-dark); // #525661
 
   /**
-   * Links, forms, nad buttons
+   * Accent
+   */
+  --accent: #722F1D;
+
+  /**
+   * Links, forms, and buttons
    */
 
   //  Links
@@ -49,6 +59,9 @@
 
   --surface-button: var(--surface-primary);
   --text-on-surface-button: var(--text-on-surface-primary);
+
+  --surface-button-dark: var(--color-primitive-theme-primary-dark); // #01417F
+  --surface-button-darker: var(--color-primitive-theme-primary-darker); // #002D5A
 
   --surface-button-secondary: var(--color-primitive-theme-secondary-gold-light); // #EFD388
   --text-on-surface-button-secondary: var(--color-primitive-theme-primary-darkest);
