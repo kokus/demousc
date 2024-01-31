@@ -1,0 +1,42 @@
+:root {
+  /**
+   * Surface and text colors
+   */
+  --surface-primary: var(--color-primitive-theme-primary-primary);
+  --text-on-surface-primary: var(--color-primitive-neutral-base-light);
+  --surface-primary-darker: var(--color-primitive-theme-primary-darker);
+  --text-on-surface-primary-darker: var(--color-primitive-neutral-base-light);
+  --surface-primary-lighter: var(--color-primitive-theme-primary-lighter);
+  --text-on-surface-primary-lighter: var(--color-token-base-text-icon-base-dark);
+  --text-on-surface-base-lighter--light: var(--color-token-base-text-icon-base-secondary-dark);
+  --text-on-surface-base-lighter--primary: var(--color-primitive-theme-primary-dark);
+  --surface-body: var(--color-primitive-neutral-base-light);
+  --text-on-surface-body: var(--color-primitive-neutral-gray-base-secondary-dark);
+  --surface-base-light: var(--color-primitive-neutral-gray-surface-variant);
+  --text-on-surface-base-light: var(--color-primitive-neutral-gray-base-secondary-dark);
+  --text-on-surface-base-light-dark: var(--color-primitive-neutral-base-dark);
+  --surface-base-lightest: var(--color-token-base-background-background-variant);
+  --text-on-surface-base-lightest: var(--color-token-base-text-icon-base-secondary-dark);
+  --text-on-surface-base-lightest--dark: var(--color-primitive-neutral-base-dark);
+  --surface-base-medium: var(--color-primitive-neutral-gray-surface-variant-dark);
+  --text-on-surface-base-medium: var(--color-primitive-neutral-gray-base-secondary-dark);
+  /**
+   * Links, forms, nad buttons
+   */
+  --text-link: var(--color-primitive-theme-primary-primary);
+  --text-link-dark: var(--color-primitive-theme-primary-dark);
+  --text-link-darkest: var(--color-primitive-theme-primary-darkest);
+  --surface-form: var(--color-primitive-neutral-white);
+  --surface-button: var(--surface-primary);
+  --text-on-surface-button: var(--text-on-surface-primary);
+  --surface-button-secondary: var(--color-primitive-theme-secondary-gold-light);
+  --text-on-surface-button-secondary: var(--color-primitive-theme-primary-darkest);
+  /**
+   * Borders
+   */
+  --border-primary: var(--color-primitive-theme-primary-primary);
+  --border-primary-dark: var(--color-primitive-theme-primary-dark);
+  --border-primary-darker: var(--color-primitive-theme-primary-darker);
+  --border-muted-dark: var(--color-token-base-border-muted-dark);
+  --border-form: var(--border-muted-dark);
+}
