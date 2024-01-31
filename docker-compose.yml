@@ -62,6 +62,7 @@ services:
       - traefik.http.routers.${PROJECT}.rule=HostRegexp(`${PROJECT_DOMAIN}`, `www.${PROJECT_DOMAIN}` , `{subdomain:[a-zA-Z0-9-]+}${PROJECT_DOMAIN}`)
       - traefik.http.routers.${PROJECT}.tls=true
       - traefik.http.routers.${PROJECT}.tls.certresolver=le-cloudflare
+
   redis:
     image: redis:6
     networks:
@@ -69,6 +70,7 @@ services:
     labels:
       - traefik.enable=false
     restart: unless-stopped
+
 networks:
   internal:
     driver: bridge
