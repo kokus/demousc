@@ -47,3 +47,7 @@ uswds-accordion:
       components/uswds/usa_accordion/usa_accordion.css: {  }
   js:
     components/uswds/usa_accordion/usa_accordion.js: {  }
+button:
+  css:
+    component:
+      dist/custom/css/base/buttons.css: {  }
