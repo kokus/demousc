@@ -38,7 +38,6 @@ dependencies:
     - menu_link_content
     - menu_position
     - metatag
-    - module_filter
     - node
     - paragraphs
     - path
@@ -126,7 +125,6 @@ permissions:
   - 'administer menu_link_content fields'
   - 'administer menu_link_content form display'
   - 'administer meta tags'
-  - 'administer module_filter'
   - 'administer modules'
   - 'administer node display'
   - 'administer node fields'
