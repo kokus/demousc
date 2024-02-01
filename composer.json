@@ -51,7 +51,6 @@
         "drupal/fpa": "^4.0",
         "drupal/geocoder": "^4.18",
         "drupal/geofield": "^1.57",
-        "drupal/gin": "^3.0@RC",
         "drupal/glossify": "^3.0",
         "drupal/google_tag": "^2.0",
         "drupal/gutenberg_uswds": "^1.0@beta",
