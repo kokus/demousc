@@ -62,7 +62,6 @@ module:
   html_processors: 0
   htmlpurifier: 0
   image: 0
-  image_effects: 0
   image_link_formatter: 0
   inline_entity_form: 0
   job_scheduler: 0
