@@ -2,10 +2,10 @@ version: "3"
 
 services:
   db:
-    image: mysql:8.0.34
+    image: mariadb:10.5.8
     container_name: "${PROJECT}-db"
     volumes:
-      - db-data-mysql:/var/lib/mysql
+      - db-data:/var/lib/mysql
     restart: unless-stopped
     env_file: .env
     networks:
@@ -81,4 +81,4 @@ networks:
     external: true
 
 volumes:
-  db-data-mysql:
+  db-data:
