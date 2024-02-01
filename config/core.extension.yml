@@ -126,7 +126,6 @@ module:
   text: 0
   token: 0
   toolbar: 0
-  tour: 0
   transliterate_filenames: 0
   usc_migrate_adjustments: 0
   usc_migrate_boolean: 0
