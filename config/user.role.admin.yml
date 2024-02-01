@@ -47,7 +47,6 @@ dependencies:
     - scheduler
     - search
     - seckit
-    - sharethis
     - shortcut
     - system
     - taxonomy
@@ -144,7 +143,6 @@ permissions:
   - 'administer scheduler'
   - 'administer search'
   - 'administer seckit'
-  - 'administer sharethis'
   - 'administer shortcut_set labels'
   - 'administer shortcuts'
   - 'administer site configuration'
