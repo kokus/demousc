@@ -8,6 +8,7 @@ dependencies:
     - facets
     - search_api
     - search_api_location_views
+    - search_autocomplete
     - user
 _core:
   default_config_hash: 282iauAsZh-JifTUxLmBDZkBkmFxdkNfPVcKL0nzjdg
@@ -424,6 +425,58 @@ display:
             radius_options: "16090\r\n"
             radius_units: mi
           require: 1
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_usc_court_finder_locations
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_fulltext
+          operator: and
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: Court
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: search_api_fulltext
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              admin: '0'
+              content_editor: '0'
+              administrator: '0'
+              publisher: '0'
+              approver: '0'
+              content_creator: '0'
+            expose_fields: false
+            placeholder: ''
+            searched_fields_id: search_api_fulltext_searched_fields
+            value_maxlength: 128
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
         facets:
           id: facets
           table: search_api_index_usc_court_finder_locations
@@ -467,6 +520,10 @@ display:
             usc_district_id: usc_district_id
             usc_district_name: 0
           label_display: 0
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: default
       row:

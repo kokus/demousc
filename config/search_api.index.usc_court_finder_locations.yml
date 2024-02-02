@@ -8,6 +8,7 @@ dependencies:
   module:
     - usc_court_finder
     - search_api_location
+    - taxonomy
     - search_api
 _core:
   default_config_hash: XNU3CqH0UfHQAxZ3bXspPgeSV938j0ERoCJje5Bo2gg
@@ -28,7 +29,8 @@ field_settings:
     label: 'Building State'
     datasource_id: 'entity:usc_location'
     property_path: building_state
-    type: string
+    type: text
+    boost: 2.0
     dependencies:
       module:
         - usc_court_finder
@@ -64,11 +66,22 @@ field_settings:
     dependencies:
       config:
         - field.storage.usc_location.field_geofield
+  name:
+    label: 'District ID » Taxonomy term » Name'
+    datasource_id: 'entity:usc_location'
+    property_path: 'district_id:entity:name'
+    type: text
+    boost: 21.0
+    dependencies:
+      module:
+        - taxonomy
+        - usc_court_finder
   office_name:
     label: 'Office Name'
     datasource_id: 'entity:usc_location'
     property_path: office_name
-    type: string
+    type: text
+    boost: 8.0
     dependencies:
       module:
         - usc_court_finder
@@ -84,6 +97,17 @@ processor_settings:
       preprocess_index: -45
     fields:
       district_id: taxonomy_term-parent
+  ignorecase:
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+    all_fields: true
+    fields:
+      - address
+      - building_state
+      - court_type
+      - name
+      - office_name
   language_with_fallback: {  }
   rendered_item: {  }
 tracker_settings:
