@@ -22,7 +22,6 @@ module:
   config_split: 0
   content_moderation: 0
   contextual: 0
-  ctools: 0
   customerror: 0
   datetime: 0
   datetime_range: 0
@@ -62,7 +61,6 @@ module:
   html_processors: 0
   htmlpurifier: 0
   image: 0
-  image_effects: 0
   image_link_formatter: 0
   inline_entity_form: 0
   job_scheduler: 0
@@ -96,7 +94,6 @@ module:
   migrate_plus: 0
   migrate_tools: 0
   migrate_upgrade: 0
-  module_filter: 0
   mysql: 0
   node: 0
   options: 0
@@ -116,7 +113,6 @@ module:
   search: 0
   seckit: 0
   serialization: 0
-  sharethis: 0
   shortcut: 0
   simple_sitemap: 0
   simple_sitemap_engines: 0
@@ -128,7 +124,6 @@ module:
   text: 0
   token: 0
   toolbar: 0
-  tour: 0
   transliterate_filenames: 0
   usc_migrate_adjustments: 0
   usc_migrate_boolean: 0

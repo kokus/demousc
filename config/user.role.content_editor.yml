@@ -18,7 +18,6 @@ dependencies:
     - system
     - taxonomy
     - toolbar
-    - tour
     - webform
     - yoast_seo
 _core:
@@ -35,7 +34,6 @@ permissions:
   - 'access media overview'
   - 'access taxonomy overview'
   - 'access toolbar'
-  - 'access tour'
   - 'administer media'
   - 'administer media types'
   - 'administer taxonomy'
