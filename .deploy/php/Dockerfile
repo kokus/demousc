@@ -48,6 +48,7 @@ RUN { \
 		echo 'memory_limit = 512M'; \
 		echo 'post_max_size = 24M'; \
 		echo 'upload_max_filesize = 24M'; \
+		echo 'max_execution_time = 120'; \
 	} > /usr/local/etc/php/conf.d/docker-fpm.ini
 # see https://secure.php.net/manual/en/opcache.installation.php
 RUN { \

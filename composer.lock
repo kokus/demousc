@@ -3697,8 +3697,6 @@
             }
         },
         {
-<<<<<<< HEAD
-=======
             "name": "drupal/gin",
             "version": "3.0.0-rc9",
             "source": {
@@ -3820,7 +3818,6 @@
             ]
         },
         {
->>>>>>> 7222b24 (USCGOV-267: Added autocomplete suggestions for searching courts by name.)
             "name": "drupal/glossify",
             "version": "3.0.0",
             "source": {
