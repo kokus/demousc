@@ -1,5 +1,5 @@
 libraries-edit:
   - uscgov/variables
   - uscgov/uswds-accordion
-  - uscgov/uswds-card
   - uscgov/button
+  - sdc/uscgov--usa-card # Will needed to be updated after SDC module is merged into core theme system.

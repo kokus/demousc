@@ -20,6 +20,10 @@
   }
 }
 
+.usa-card__media--inset .usa-card__img img {
+  border-radius: 20px;
+}
+
 .usa-card__header {
   padding: calc(var(--container-padding-y) - var(--gap)) var(--container-padding-x) 0;
 
