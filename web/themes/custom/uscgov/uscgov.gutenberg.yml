@@ -1,3 +1,3 @@
 libraries-edit:
   - uscgov/variables
-  - uscgov/uswds-accordion
+  - sdc/uscgov--uswds-accordion
