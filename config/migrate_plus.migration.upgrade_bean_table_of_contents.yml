@@ -55,10 +55,8 @@ process:
       source: label
   type:
     -
-      plugin: migration_lookup
-      migration: upgrade_bean_type_table_of_contents
-      no_stub: true
-      source: type
+      plugin: default_value
+      default_value: table_of_contents
     -
       plugin: skip_on_empty
       method: row
@@ -137,9 +135,7 @@ destination:
   plugin: 'entity_complete:block_content'
   translations: true
 migration_dependencies:
-  required:
-    - upgrade_bean_type_table_of_contents
-    - upgrade_bean_title_field_instance_table_of_contents
+  required: {}
   optional:
     - upgrade_bean_title_field_formatter_table_of_contents
     - upgrade_bean_title_field_widget_table_of_contents
@@ -149,3 +145,4 @@ migration_dependencies:
     - upgrade_d7_user
     - upgrade_bean_table_of_contents
     - upgrade_bean_type_table_of_contents
+    - upgrade_bean_title_field_instance_table_of_contents
