@@ -5,6 +5,7 @@ dependencies:
   module:
     - config_pages
     - media
+    - sitewide_alert
     - system
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
