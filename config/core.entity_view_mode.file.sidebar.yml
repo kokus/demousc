@@ -6,5 +6,6 @@ dependencies:
     - file
 id: file.sidebar
 label: sidebar
+description: ''
 targetEntityType: file
 cache: true

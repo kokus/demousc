@@ -214,7 +214,7 @@ process:
 destination:
   plugin: 'entity_complete:node'
   translations: true
-  default_bundle: landing_featured_content
+  default_bundle: landing_view
 migration_dependencies:
   required:
     - upgrade_d7_user
