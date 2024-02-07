@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94e8e4952f6d427556a5e99f1b7db7ec",
+    "content-hash": "16e6d98d002354ea967c63141636e50a",
     "packages": [
         {
             "name": "akamai-open/edgegrid-auth",
@@ -3419,74 +3419,6 @@
             }
         },
         {
-            "name": "drupal/file_mdm_exif",
-            "version": "3.0.0",
-            "require": {
-                "drupal/core": "^10.1",
-                "drupal/file_mdm": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "drupal": {
-                    "version": "3.0.0",
-                    "datestamp": "1691421181",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "mondrake",
-                    "homepage": "https://www.drupal.org/user/1307444"
-                }
-            ],
-            "description": "Provides a file metadata plugin for EXIF image information.",
-            "homepage": "https://www.drupal.org/project/file_mdm",
-            "support": {
-                "source": "https://git.drupalcode.org/project/file_mdm"
-            }
-        },
-        {
-            "name": "drupal/file_mdm_font",
-            "version": "3.0.0",
-            "require": {
-                "drupal/core": "^10.1",
-                "drupal/file_mdm": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "drupal": {
-                    "version": "3.0.0",
-                    "datestamp": "1691421181",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "mondrake",
-                    "homepage": "https://www.drupal.org/user/1307444"
-                }
-            ],
-            "description": "Provides a file metadata plugin for TTF/OTF/WOFF font information.",
-            "homepage": "https://www.drupal.org/project/file_mdm",
-            "support": {
-                "source": "https://git.drupalcode.org/project/file_mdm"
-            }
-        },
-        {
             "name": "drupal/fpa",
             "version": "4.0.0",
             "source": {
@@ -4134,74 +4066,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/htmlpurifier",
                 "issues": "https://www.drupal.org/project/issues/htmlpurifier"
-            }
-        },
-        {
-            "name": "drupal/image_effects",
-            "version": "3.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/image_effects.git",
-                "reference": "8.x-3.6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/image_effects-8.x-3.6.zip",
-                "reference": "8.x-3.6",
-                "shasum": "a3a9a04f7632b5be09eb67c97b4015111cc3d47f"
-            },
-            "require": {
-                "drupal/core": "^10.1",
-                "drupal/file_mdm": "^3",
-                "drupal/file_mdm_exif": "*",
-                "drupal/file_mdm_font": "*"
-            },
-            "conflict": {
-                "drupal/imagemagick": "<3.6",
-                "drupal/jquery_colorpicker": "<2"
-            },
-            "require-dev": {
-                "drupal/color": "*",
-                "drupal/imagemagick": "^3.6",
-                "drupal/token": "*",
-                "drupal/vendor_stream_wrapper": "^2.0.2",
-                "drush/drush": ">=12",
-                "fileeye/linuxlibertine-fonts": "^5.3"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-3.6",
-                    "datestamp": "1705681111",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": ">=9"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "mondrake",
-                    "homepage": "https://www.drupal.org/user/1307444"
-                },
-                {
-                    "name": "slashrsm",
-                    "homepage": "https://www.drupal.org/user/744628"
-                }
-            ],
-            "description": "Provides effects and operations for the Image API.",
-            "homepage": "https://www.drupal.org/project/image_effects",
-            "support": {
-                "source": "https://git.drupalcode.org/project/image_effects"
             }
         },
         {
@@ -5371,6 +5235,58 @@
             }
         },
         {
+            "name": "drupal/migrate_directory",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/migrate_directory.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_directory-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "7411cc996d362b6e9eed07b15f02cf7358ff98fa"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1645785974",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "rodrigoaguilera",
+                    "homepage": "https://www.drupal.org/user/408170"
+                },
+                {
+                    "name": "socketwench",
+                    "homepage": "https://www.drupal.org/user/65793"
+                }
+            ],
+            "description": "Migrate Directory",
+            "homepage": "https://www.drupal.org/project/migrate_directory",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/migrate_directory",
+                "issues": "https://www.drupal.org/project/issues/migrate_directory"
+            }
+        },
+        {
             "name": "drupal/migrate_manifest",
             "version": "3.1.0",
             "source": {
@@ -5673,60 +5589,6 @@
                 "source": "https://git.drupalcode.org/project/migrate_upgrade",
                 "issues": "https://www.drupal.org/project/issues/migrate_upgrade",
                 "slack": "#migrate"
-            }
-        },
-        {
-            "name": "drupal/module_filter",
-            "version": "4.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/module_filter.git",
-                "reference": "4.1.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/module_filter-4.1.1.zip",
-                "reference": "4.1.1",
-                "shasum": "7a0e012d25d9af58efe589111333021d19dfe517"
-            },
-            "require": {
-                "drupal/core": "^9 || ^10",
-                "drupal/jquery_ui_autocomplete": "^2.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "4.1.1",
-                    "datestamp": "1705957432",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "andrey.troeglazov",
-                    "homepage": "https://www.drupal.org/user/3145389"
-                },
-                {
-                    "name": "greenSkin",
-                    "homepage": "https://www.drupal.org/user/173855"
-                },
-                {
-                    "name": "smustgrave",
-                    "homepage": "https://www.drupal.org/user/3252890"
-                }
-            ],
-            "description": "Filter the modules list.",
-            "homepage": "http://drupal.org/project/module_filter",
-            "support": {
-                "source": "https://git.drupalcode.org/project/module_filter",
-                "issues": "https://www.drupal.org/project/issues/module_filter"
             }
         },
         {
@@ -6692,110 +6554,6 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/seckit",
                 "issues": "http://drupal.org/project/issues/seckit"
-            }
-        },
-        {
-            "name": "drupal/sharethis",
-            "version": "3.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/sharethis.git",
-                "reference": "3.0.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/sharethis-3.0.2.zip",
-                "reference": "3.0.2",
-                "shasum": "5a3c45cd3dafd02bc6082f27ba2ac3cbd05c1ab1"
-            },
-            "require": {
-                "drupal/core": "^9.4 || ^10.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "3.0.2",
-                    "datestamp": "1677922086",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "abhishek-anand",
-                    "homepage": "https://www.drupal.org/user/468982"
-                },
-                {
-                    "name": "bhavikshah9",
-                    "homepage": "https://www.drupal.org/user/2784353"
-                },
-                {
-                    "name": "Clark Zhang",
-                    "homepage": "https://www.drupal.org/user/2911755"
-                },
-                {
-                    "name": "Gaofengzzz",
-                    "homepage": "https://www.drupal.org/user/1478184"
-                },
-                {
-                    "name": "himerus",
-                    "homepage": "https://www.drupal.org/user/159141"
-                },
-                {
-                    "name": "jvalencia",
-                    "homepage": "https://www.drupal.org/user/1259538"
-                },
-                {
-                    "name": "manu.mukerji",
-                    "homepage": "https://www.drupal.org/user/639872"
-                },
-                {
-                    "name": "naveenvalecha",
-                    "homepage": "https://www.drupal.org/user/2665733"
-                },
-                {
-                    "name": "neetu morwani",
-                    "homepage": "https://www.drupal.org/user/2632025"
-                },
-                {
-                    "name": "pankaj.shukla",
-                    "homepage": "https://www.drupal.org/user/2720739"
-                },
-                {
-                    "name": "purushotam.rai",
-                    "homepage": "https://www.drupal.org/user/3193859"
-                },
-                {
-                    "name": "RobLoach",
-                    "homepage": "https://www.drupal.org/user/61114"
-                },
-                {
-                    "name": "ronsharethis",
-                    "homepage": "https://www.drupal.org/user/1448422"
-                },
-                {
-                    "name": "sagarpgaikwad",
-                    "homepage": "https://www.drupal.org/user/3133879"
-                },
-                {
-                    "name": "VladimirAus",
-                    "homepage": "https://www.drupal.org/user/673120"
-                }
-            ],
-            "description": "Add the ShareThis widget to nodes on your site.",
-            "homepage": "https://www.drupal.org/project/sharethis",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "https://git.drupalcode.org/project/sharethis",
-                "issues": "https://www.drupal.org/project/issues/sharethis"
             }
         },
         {
