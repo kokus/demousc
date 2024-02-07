@@ -13,6 +13,7 @@ dependencies:
     - gutenberg
     - media
     - node
+    - sitewide_alert
     - system
     - toolbar
 _core:
@@ -35,3 +36,4 @@ permissions:
   - 'view media'
   - 'view own unpublished content'
   - 'view own unpublished media'
+  - 'view published sitewide alert entities'
