@@ -1,0 +1,36 @@
+uuid: 207db5c6-3cd7-4cab-bb44-3ad198d1b119
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.book.body
+    - node.type.book
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: pbRIoJUWtkil5pUsiYQBQr-lYl0lPH6iBq-1BhQP4eg
+id: node.book.teaser
+targetEntityType: node
+bundle: book
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  links:
+    weight: 101
+    region: content
+  sharethis:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  search_api_excerpt: true
