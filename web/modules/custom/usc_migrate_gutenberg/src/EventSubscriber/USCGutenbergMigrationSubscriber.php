@@ -43,6 +43,7 @@ class USCGutenbergMigrationSubscriber implements EventSubscriberInterface {
    */
   protected $migrationIds = [
     "upgrade_d7_node_complete_landing_view",
+    "upgrade_d7_node_complete_landing_featured_content",
   ];
 
   /**

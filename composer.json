@@ -86,6 +86,7 @@
         "drupal/robotstxt": "^1.5",
         "drupal/scheduler": "^2.0",
         "drupal/search_api_location": "^1.0@alpha",
+        "drupal/search_autocomplete": "^3.0",
         "drupal/seckit": "^2.0",
         "drupal/simple_sitemap": "^4.1",
         "drupal/taxonomy_manager": "^2.0",
