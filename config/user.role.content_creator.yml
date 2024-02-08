@@ -17,8 +17,10 @@ dependencies:
     - node.type.news
     - node.type.news_issue
     - node.type.report
+    - workflows.workflow.us_courts_workflow
   module:
     - config_pages
+    - content_moderation
     - gutenberg
     - media
     - node
@@ -72,6 +74,7 @@ permissions:
   - 'notify of path changes'
   - 'update media'
   - 'use gutenberg'
+  - 'use us_courts_workflow transition draft_needs_review'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view global_site_settings config page entity'

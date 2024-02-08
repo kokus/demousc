@@ -6,8 +6,10 @@ dependencies:
     - node.type.landing_view
     - node.type.page
     - taxonomy.vocabulary.tags
+    - workflows.workflow.us_courts_workflow
   module:
     - config_pages
+    - content_moderation
     - contextual
     - file
     - gutenberg
@@ -55,6 +57,8 @@ permissions:
   - 'update any media'
   - 'update media'
   - 'use gutenberg'
+  - 'use us_courts_workflow transition draft_needs_review'
+  - 'use us_courts_workflow transition needs_review_draft'
   - 'use yoast seo'
   - 'view all media revisions'
   - 'view all revisions'
