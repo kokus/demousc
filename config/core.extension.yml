@@ -92,6 +92,7 @@ module:
   migmag: 0
   migmag_process: 0
   migrate: 0
+  migrate_directory: 0
   migrate_drupal: 0
   migrate_drupal_ui: 0
   migrate_manifest: 0

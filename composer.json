@@ -60,6 +60,7 @@
         "drupal/image_link_formatter": "^2.1",
         "drupal/inline_entity_form": "^2.0@RC",
         "drupal/job_scheduler": "^4.0",
+        "drupal/jquery_ui_autocomplete": "^2.0",
         "drupal/libraries": "^4.0",
         "drupal/linkit": "^6.1",
         "drupal/maxlength": "^2.1",
@@ -69,6 +70,7 @@
         "drupal/menu_position": "^1.1",
         "drupal/metatag": "^2.0",
         "drupal/migrate_devel": "^2.3",
+        "drupal/migrate_directory": "^2.0",
         "drupal/migrate_manifest": "^3.1",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_source_csv": "^3.6",
@@ -169,25 +171,28 @@
             "drupal/core": "-p2"
         },
         "patches": {
-            "drupal/bean_migrate" : {
-                "3369198 - Automated Drupal 10 compatibility fixes" : "https://www.drupal.org/files/issues/2023-11-27/3369198-4.patch"
+            "drupal/bean_migrate": {
+                "3369198 - Automated Drupal 10 compatibility fixes": "https://www.drupal.org/files/issues/2023-11-27/3369198-4.patch"
             },
-            "drupal/core" : {
-                "Array filter issue" : "https://www.drupal.org/files/issues/2020-06-09/d7_field_instance-sort-3080034-6.patch",
-                "Migrate views issue" : "https://www.drupal.org/files/issues/2023-04-19/3068442-28.patch"
+            "drupal/core": {
+                "Array filter issue": "https://www.drupal.org/files/issues/2020-06-09/d7_field_instance-sort-3080034-6.patch",
+                "Migrate views issue": "https://www.drupal.org/files/issues/2023-04-19/3068442-28.patch"
             },
-            "drupal/faqfield" : {
-                "3012114 - Migrate process plugin?" : "https://www.drupal.org/files/issues/2020-11-19/add-migrate-support-3012114-4.patch"
+            "drupal/faqfield": {
+                "3012114 - Migrate process plugin?": "https://www.drupal.org/files/issues/2020-11-19/add-migrate-support-3012114-4.patch"
             },
-            "drupal/htmlpurifier" : {
-                "3167171 - Drupal 7 → 8/9 migration" : "https://www.drupal.org/files/issues/2020-08-25/3167171-2.patch"
+            "drupal/htmlpurifier": {
+                "3167171 - Drupal 7 → 8/9 migration": "https://www.drupal.org/files/issues/2020-08-25/3167171-2.patch"
             },
-            "drupal/search_api_location" : {
-                "3310137 - Exposed filter doesn't display Distance units for Select list input" : "https://www.drupal.org/files/issues/2022-09-16/3310137-exposed-filter-doesnt.patch"
+            "drupal/search_api_location": {
+                "3310137 - Exposed filter doesn't display Distance units for Select list input": "https://www.drupal.org/files/issues/2022-09-16/3310137-exposed-filter-doesnt.patch"
+            },
+            "drupal/migrate_directory": {
+                "D10 Supports": "https://www.drupal.org/files/issues/2022-06-16/migrate_directory.2.0.0.rector.patch"
             }
         },
         "drupal-lenient": {
-            "allowed-list": ["drupal/bean_migrate"]
+            "allowed-list": ["drupal/bean_migrate", "drupal/migrate_directory"]
         }
     },
     "require-dev": {

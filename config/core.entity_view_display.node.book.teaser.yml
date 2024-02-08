@@ -28,8 +28,9 @@ content:
     weight: 101
     region: content
   sharethis:
-    weight: 10
     settings: {  }
     third_party_settings: {  }
+    weight: 10
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

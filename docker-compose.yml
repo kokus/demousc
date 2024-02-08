@@ -24,6 +24,7 @@ services:
     container_name: "${PROJECT}-php"
     volumes:
       - ./:/var/www/html
+      - /var/sites/uscourts-d7/docroot/sites/default/files:/usc-d7files
     ports:
       - '9000:80'
     restart: unless-stopped
