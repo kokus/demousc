@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.landing_featured_content
     - node.type.landing_view
     - node.type.page
     - taxonomy.vocabulary.tags
@@ -38,7 +37,6 @@ permissions:
   - 'administer media types'
   - 'administer taxonomy'
   - 'administer url aliases'
-  - 'create landing_featured_content content'
   - 'create landing_view content'
   - 'create media'
   - 'create page content'
