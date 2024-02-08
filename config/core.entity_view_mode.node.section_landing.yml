@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.section_landing
 label: section_landing
+description: ''
 targetEntityType: node
 cache: true

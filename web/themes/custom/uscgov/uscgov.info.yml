@@ -14,6 +14,8 @@ regions:
 libraries:
   - uscgov/global
   - uscgov/uswds
+  - uscgov/uswds-form
+  - uscgov/button
 dependencies:
   - 'drupal:sdc'
 generator: 'uscgov:1.0.0'

@@ -7,11 +7,13 @@ dependencies:
     - filter.format.widget
     - filter.format.wysiwyg
   module:
+    - config_pages
     - environment_indicator
     - filter
     - gutenberg
     - media
     - node
+    - sitewide_alert
     - system
     - toolbar
 _core:
@@ -30,6 +32,8 @@ permissions:
   - 'use text format widget'
   - 'use text format wysiwyg'
   - 'view all revisions'
+  - 'view global_site_settings config page entity'
   - 'view media'
   - 'view own unpublished content'
   - 'view own unpublished media'
+  - 'view published sitewide alert entities'

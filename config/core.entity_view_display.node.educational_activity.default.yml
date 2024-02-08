@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.educational_activity.field_logo
     - field.field.node.educational_activity.field_metatag
     - field.field.node.educational_activity.field_sidebar
+    - field.field.node.educational_activity.field_table_of_contents
     - field.field.node.educational_activity.field_tags
     - field.field.node.educational_activity.field_yoast_seo
     - node.type.educational_activity
@@ -32,6 +33,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 4
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
     region: content
   field_activity_category:
     type: entity_reference_entity_view
@@ -103,6 +109,14 @@ content:
     third_party_settings: {  }
     weight: 10
     region: content
+  field_table_of_contents:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
   field_tags:
     type: entity_reference_entity_view
     label: hidden
@@ -131,3 +145,4 @@ content:
     region: content
 hidden:
   field_metatag: true
+  search_api_excerpt: true

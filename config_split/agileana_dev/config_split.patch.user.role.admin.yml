@@ -1,0 +1,8 @@
+adding:
+  dependencies:
+    module:
+      - restrict_ip
+  permissions:
+    - 'administer restricted ip addresses'
+    - 'bypass ip restriction'
+removing: {  }

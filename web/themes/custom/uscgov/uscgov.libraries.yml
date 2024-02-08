@@ -41,3 +41,11 @@ uswds-form:
   css:
     component:
       dist/uswds/css/uswds-form.css: {  }
+uswds-accordion:
+  css:
+    component:
+      dist/uswds/css/uswds-accordion.css: {  }
+button:
+  css:
+    component:
+      dist/custom/css/base/buttons.css: {  }

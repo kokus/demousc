@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.landing_featured_content_
 label: landing_featured_content_
+description: ''
 targetEntityType: node
 cache: true

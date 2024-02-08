@@ -6,5 +6,6 @@ dependencies:
     - file
 id: file.main_gallery
 label: main_gallery
+description: ''
 targetEntityType: file
 cache: true

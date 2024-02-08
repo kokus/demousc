@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_fc_rn_node_row
     - node.type.basic
-    - node.type.basic_simple
     - node.type.educational_activity
     - node.type.landing_featured_content
     - node.type.landing_view
@@ -28,7 +27,6 @@ settings:
   handler_settings:
     target_bundles:
       basic: basic
-      basic_simple: basic_simple
       educational_activity: educational_activity
       landing_featured_content: landing_featured_content
       landing_view: landing_view
