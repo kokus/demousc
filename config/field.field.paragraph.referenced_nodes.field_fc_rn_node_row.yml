@@ -6,7 +6,6 @@ dependencies:
     - field.storage.paragraph.field_fc_rn_node_row
     - node.type.basic
     - node.type.educational_activity
-    - node.type.landing_featured_content
     - node.type.landing_view
     - node.type.news
     - node.type.news_issue
@@ -28,7 +27,6 @@ settings:
     target_bundles:
       basic: basic
       educational_activity: educational_activity
-      landing_featured_content: landing_featured_content
       landing_view: landing_view
       news: news
       news_issue: news_issue

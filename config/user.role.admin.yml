@@ -9,7 +9,6 @@ dependencies:
     - filter.format.gutenberg
     - filter.format.restricted_html
     - filter.format.webform_default
-    - node.type.landing_featured_content
     - node.type.landing_view
   module:
     - action
@@ -163,7 +162,6 @@ permissions:
   - 'bypass honeypot protection'
   - 'bypass node access'
   - 'change own logout threshold'
-  - 'create landing_featured_content content'
   - 'create landing_view content'
   - 'create media'
   - 'create url aliases'

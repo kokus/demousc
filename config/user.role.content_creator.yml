@@ -13,7 +13,6 @@ dependencies:
     - node.type.form
     - node.type.front_promo_box
     - node.type.judge
-    - node.type.landing_featured_content
     - node.type.landing_view
     - node.type.news
     - node.type.news_issue
@@ -49,7 +48,6 @@ permissions:
   - 'create fee content'
   - 'create form content'
   - 'create judge content'
-  - 'create landing_featured_content content'
   - 'create landing_view content'
   - 'create media'
   - 'create news content'
@@ -67,7 +65,6 @@ permissions:
   - 'edit any form content'
   - 'edit any front_promo_box content'
   - 'edit any judge content'
-  - 'edit any landing_featured_content content'
   - 'edit any landing_view content'
   - 'edit any news content'
   - 'edit any news_issue content'

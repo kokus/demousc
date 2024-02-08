@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.landing_featured_content
     - node.type.landing_view
   module:
     - config_pages
@@ -48,7 +47,6 @@ permissions:
   - 'administer taxonomy'
   - 'administer users'
   - 'bypass node access'
-  - 'create landing_featured_content content'
   - 'create landing_view content'
   - 'create media'
   - 'create url aliases'
