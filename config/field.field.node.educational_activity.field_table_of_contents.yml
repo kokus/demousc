@@ -1,0 +1,29 @@
+uuid: 52ae4710-726e-4c45-b603-5bf367740de4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.table_of_contents
+    - field.storage.node.field_table_of_contents
+    - node.type.educational_activity
+id: node.educational_activity.field_table_of_contents
+field_name: field_table_of_contents
+entity_type: node
+bundle: educational_activity
+label: 'Table of Contents'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      table_of_contents: table_of_contents
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
