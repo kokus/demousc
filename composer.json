@@ -60,6 +60,7 @@
         "drupal/image_link_formatter": "^2.1",
         "drupal/inline_entity_form": "^2.0@RC",
         "drupal/job_scheduler": "^4.0",
+        "drupal/jquery_ui_autocomplete": "^2.0",
         "drupal/libraries": "^4.0",
         "drupal/linkit": "^6.1",
         "drupal/maxlength": "^2.1",
