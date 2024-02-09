@@ -1,6 +1,6 @@
 _core:
   default_config_hash: KqW5yyfbMyG5hTaA-2QCxLFmV9gVn4gBpAjsuB28Z6g
-enable: true
+enable: false
 mail_address: ''
 dblog: true
 allow_role_bypass: true
