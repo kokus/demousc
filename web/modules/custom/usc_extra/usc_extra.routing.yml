@@ -1,0 +1,24 @@
+usc_extra.liveness:
+  path: '/liveness'
+  defaults:
+    _controller: '\Drupal\usc_extra\Controller\ExtraPagesController::liveness'
+  requirements:
+    _access: 'TRUE'
+  options:
+    no_cache: 'TRUE'
+
+usc_extra.failtest:
+  path: '/failtest'
+  defaults:
+    _controller: '\Drupal\usc_extra\Controller\ExtraPagesController::failtest'
+    _title: 'U.S. Courts Failtest'
+  requirements:
+    _access: 'TRUE'
+
+usc_extra.settings:
+  path: '/admin/config/usc_failtest'
+  defaults:
+    _form: '\Drupal\usc_extra\Form\ModuleConfigurationForm'
+    _title: 'Failtest page settings'
+  requirements:
+    _permission: 'administer site configuration'

@@ -139,6 +139,7 @@ module:
   toolbar: 0
   transliterate_filenames: 0
   usc_court_finder: 0
+  usc_extra: 0
   usc_migrate_adjustments: 0
   usc_migrate_boolean: 0
   usc_migrate_gutenberg: 0
