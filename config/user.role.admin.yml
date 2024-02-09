@@ -45,7 +45,6 @@ dependencies:
     - pathauto
     - redirect
     - scheduler
-    - search
     - seckit
     - shortcut
     - system
@@ -141,7 +140,6 @@ permissions:
   - 'administer permissions'
   - 'administer redirects'
   - 'administer scheduler'
-  - 'administer search'
   - 'administer seckit'
   - 'administer shortcut_set labels'
   - 'administer shortcuts'
@@ -197,12 +195,10 @@ permissions:
   - 'notify of path changes'
   - 'purge akamai cache'
   - 'schedule publishing of nodes'
-  - 'search content'
   - 'switch shortcut sets'
   - 'synchronize configuration'
   - 'update any media'
   - 'update media'
-  - 'use advanced search'
   - 'use gutenberg'
   - 'use text format basic_html'
   - 'use text format ds_code'
