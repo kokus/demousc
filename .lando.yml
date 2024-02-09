@@ -7,7 +7,7 @@ config:
   composer:
     consolidation/robo: ^4
   php: 8.2
-  database: mysql:8.0.34
+  database: mariadb
   via: apache:2.4.53
 services:
   appserver:
@@ -33,8 +33,8 @@ services:
     type: mailhog
     hogfrom:
       - appserver
-  migration:
-    type: mysql
+  d7db:
+    type: mariadb
     ports:
       - 33007:3306
   redis:

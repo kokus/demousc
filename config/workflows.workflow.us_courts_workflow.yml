@@ -17,7 +17,6 @@ dependencies:
     - node.type.front_promo_box
     - node.type.judge
     - node.type.judge_comments
-    - node.type.landing_featured_content
     - node.type.landing_view
     - node.type.news
     - node.type.news_issue
@@ -133,10 +132,9 @@ type_settings:
       - front_promo_box
       - judge
       - judge_comments
-      - landing_featured_content
       - landing_view
       - news
       - news_issue
       - page
       - report
-  default_moderation_state: draft
+  default_moderation_state: published

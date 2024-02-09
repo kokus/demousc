@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Provides USC Court Finder hooks.
+ */
+
+use Drupal\Core\Asset\AttachedAssetsInterface;
+use Drupal\Core\Site\Settings;
+
+/**
+ * Implements hook_js_alter().
+ */
+function usc_court_finder_js_alter(&$javascript, AttachedAssetsInterface $assets) {
+  // Add Google API key required by usc_court_finder/google-maps-places library.
+  $library_url = 'https://maps.googleapis.com/maps/api/js?key=API_KEY&loading=async&libraries=places';
+  $api_key = Settings::get('usc_court_finder.google_maps_places.api_key');
+  if (!empty($api_key) && isset($javascript[$library_url])) {
+    $javascript[$library_url]['data'] = "https://maps.googleapis.com/maps/api/js?key=$api_key&loading=async&libraries=places";
+  }
+}

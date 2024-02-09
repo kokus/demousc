@@ -41,12 +41,6 @@ uswds-form:
   css:
     component:
       dist/uswds/css/uswds-form.css: {  }
-uswds-accordion:
-  css:
-    component:
-      components/uswds/usa_accordion/usa_accordion.css: {  }
-  js:
-    components/uswds/usa_accordion/usa_accordion.js: {  }
 button:
   css:
     component:
