@@ -20,8 +20,12 @@
   }
 }
 
-.usa-card__media--inset .usa-card__img img {
-  border-radius: 20px;
+.usa-card__media--inset .usa-card__img {
+  background-color: transparent;
+
+  img {
+    border-radius: 20px;
+  }
 }
 
 .usa-card__header {
