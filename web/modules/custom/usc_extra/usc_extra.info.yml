@@ -4,5 +4,5 @@ type: module
 core_version_requirement: ">=10"
 package: 'US Courts'
 configure: usc_extra.settings
-dependencies: {}
+dependencies:
   - file:file
