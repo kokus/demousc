@@ -11,7 +11,7 @@ dependencies:
 id: glossary1
 label: Glossary
 module: views
-description: ''
+description: 'Glossary of legal terms'
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid
@@ -338,12 +338,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      header:
-        entity_block:
-          id: entity_block
-          table: views
-          field: entity_block
-          plugin_id: entity
+      header: {  }
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -360,8 +355,9 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      display_comment: 'Glossary of Legal Terms'
       display_extenders: {  }
-      path: glossary1
+      path: glossary
     cache_metadata:
       max-age: -1
       contexts:

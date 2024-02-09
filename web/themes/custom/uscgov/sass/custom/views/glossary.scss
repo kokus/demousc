@@ -1,10 +1,16 @@
 @use "../global/mixins" as *;
 
-.glossary {
-}
+/**
+ * @file
+ * Glossary of Legal Terms styling.
+ */
 
 .glossary__nav {
-
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  justify-content: center;
+  gap: 5px;
 }
 
 .glossary__nav-item {

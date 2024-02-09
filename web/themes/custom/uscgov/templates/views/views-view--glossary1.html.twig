@@ -29,9 +29,8 @@
   {% endif %}
 
   {% if rows %}
-
+    <h2 id="browse-by-letter">{{ 'Browse by letter'|t }}</h2>
     <nav class="glossary__nav" aria-labelledby="browse-by-letter">
-      <h2 id="browse-by-letter">{{ 'Browse by letter'|t }}</h2>
       {% for row in rows %}
         {% set glossary_title = row['#title']|striptags|trim|lower %}
         {% if glossary_title %}
