@@ -64,4 +64,9 @@
   --border-primary-darker: var(--color-primitive-theme-primary-darker); // #002D5A
   --border-muted-dark: var(--color-token-base-border-muted-dark);
   --border-form: var(--border-muted-dark); // color('base') #8C91A0
+
+  /**
+   * Accent
+   */
+  --accent: #A34329;
 }
