@@ -22,7 +22,7 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: 'Landing (View)'
+name: 'Landing Page'
 type: landing_view
 description: 'This content type is used for creating landing pages that embed a view.'
 help: ''
