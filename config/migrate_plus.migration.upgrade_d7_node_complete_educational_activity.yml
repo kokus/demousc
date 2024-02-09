@@ -151,10 +151,31 @@ process:
       source: field_tags
       process:
         target_id: tid
+
   field_sidebar:
     -
-      plugin: get
+      plugin: usc_blocks
       source: field_sidebar
+      migration:
+        - upgrade_bean_bean_usc_courtlocator
+        - upgrade_bean_bean_usc_govdelivery
+        - upgrade_bean_bean_usc_highcharts
+        - upgrade_bean_bean_usc_latestnews
+        - upgrade_bean_bean_usc_map
+        - upgrade_bean_bean_usc_notification
+        - upgrade_bean_bean_usc_youtube
+        - upgrade_bean_graphic_photo
+        - upgrade_bean_related_content
+        - upgrade_bean_related_files
+        - upgrade_bean_related_links
+
+  field_table_of_contents:
+    -
+      plugin: usc_blocks
+      source: field_sidebar
+      migration:
+        - upgrade_bean_table_of_contents
+
   field_fc_be_audio:
     -
       plugin: media_migration_delta_sort

@@ -14,7 +14,6 @@ dependencies:
     - node.type.fee
     - node.type.form
     - node.type.judge
-    - node.type.landing_featured_content
     - node.type.landing_view
     - node.type.news
     - node.type.news_issue
@@ -42,7 +41,6 @@ settings:
       fee: fee
       form: form
       judge: judge
-      landing_featured_content: landing_featured_content
       landing_view: landing_view
       news: news
       news_issue: news_issue

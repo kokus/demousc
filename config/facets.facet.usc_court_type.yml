@@ -11,14 +11,23 @@ _core:
   default_config_hash: 6ACeSJw_p3gXtvURqU0F_N9bRaOrfXYQPSKiOy7c7c4
 id: usc_court_type
 name: 'Court Type'
-url_alias: usc_court_type
 weight: 0
 min_count: 1
 missing: false
 missing_label: others
-show_only_one_result: true
-field_identifier: court_type
+url_alias: usc_court_type
 facet_source_id: 'search_api:views_page__usc_court_finder_locations__page_1'
+field_identifier: court_type
+query_operator: or
+hard_limit: 0
+exclude: false
+use_hierarchy: false
+keep_hierarchy_parents_active: false
+hierarchy:
+  type: taxonomy
+  config: {  }
+expand_hierarchy: false
+enable_parent_when_child_gets_disabled: true
 widget:
   type: checkbox
   config:
@@ -30,17 +39,13 @@ widget:
     soft_limit_settings:
       show_less_label: 'Show less'
       show_more_label: 'Show more'
-query_operator: or
-use_hierarchy: false
-keep_hierarchy_parents_active: false
-hierarchy:
-  type: taxonomy
-  config: {  }
-expand_hierarchy: false
-enable_parent_when_child_gets_disabled: true
-hard_limit: 0
-exclude: false
+empty_behavior:
+  behavior: text
+  text_format: plain_text
+  text: 'No court types'
 only_visible_when_facet_source_is_visible: true
+show_only_one_result: true
+show_title: true
 processor_configs:
   active_widget_order:
     processor_id: active_widget_order
@@ -71,8 +76,3 @@ processor_configs:
       pre_query: 50
       build: 15
     settings: {  }
-empty_behavior:
-  behavior: text
-  text_format: plain_text
-  text: 'No court types'
-show_title: true

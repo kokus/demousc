@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.educational_activity.field_logo
     - field.field.node.educational_activity.field_metatag
     - field.field.node.educational_activity.field_sidebar
+    - field.field.node.educational_activity.field_table_of_contents
     - field.field.node.educational_activity.field_tags
     - field.field.node.educational_activity.field_yoast_seo
     - node.type.educational_activity
@@ -32,6 +33,11 @@ content:
       trim_length: 200
     third_party_settings: {  }
     weight: 3
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
     region: content
   field_landing_page_image:
     type: entity_reference_entity_view
@@ -61,5 +67,7 @@ hidden:
   field_logo: true
   field_metatag: true
   field_sidebar: true
+  field_table_of_contents: true
   field_tags: true
   field_yoast_seo: true
+  search_api_excerpt: true

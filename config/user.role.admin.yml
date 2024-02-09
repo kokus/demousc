@@ -9,8 +9,8 @@ dependencies:
     - filter.format.gutenberg
     - filter.format.restricted_html
     - filter.format.webform_default
-    - node.type.landing_featured_content
     - node.type.landing_view
+    - workflows.workflow.us_courts_workflow
   module:
     - action
     - akamai
@@ -21,6 +21,7 @@ dependencies:
     - block_content
     - config
     - config_pages
+    - content_moderation
     - contextual
     - environment_indicator
     - extlink
@@ -54,6 +55,7 @@ dependencies:
     - usfedgov_google_analytics
     - views_ui
     - webform
+    - workflows
     - yoast_seo
 id: admin
 label: admin
@@ -160,10 +162,10 @@ permissions:
   - 'administer webform element access'
   - 'administer webform labels'
   - 'administer webform submission'
+  - 'administer workflows'
   - 'bypass honeypot protection'
   - 'bypass node access'
   - 'change own logout threshold'
-  - 'create landing_featured_content content'
   - 'create landing_view content'
   - 'create media'
   - 'create url aliases'
@@ -208,6 +210,17 @@ permissions:
   - 'use text format gutenberg'
   - 'use text format restricted_html'
   - 'use text format webform_default'
+  - 'use us_courts_workflow transition draft_needs_review'
+  - 'use us_courts_workflow transition draft_published'
+  - 'use us_courts_workflow transition draft_ready'
+  - 'use us_courts_workflow transition needs_review_draft'
+  - 'use us_courts_workflow transition needs_review_ready_publishing'
+  - 'use us_courts_workflow transition published_draft'
+  - 'use us_courts_workflow transition published_needs_review'
+  - 'use us_courts_workflow transition published_ready_publishing'
+  - 'use us_courts_workflow transition ready_publishing_draft'
+  - 'use us_courts_workflow transition ready_publishing_needs_review'
+  - 'use us_courts_workflow transition ready_publishing_published'
   - 'use yoast seo'
   - 'view all media revisions'
   - 'view all revisions'
