@@ -25,6 +25,3 @@ props:
 slots:
   accordion_items:
     title: Accordion Items
-libraryOverrides:
-  dependencies:
-    - uscgov/uswds-accordion

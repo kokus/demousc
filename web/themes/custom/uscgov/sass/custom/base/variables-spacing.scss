@@ -1,7 +1,8 @@
 @forward "../../uswds/settings";
 @use "uswds-core" as *;
 
-:root {
+.uscgov-root,
+.editor-styles-wrapper {
   // Typography
   --font-sans: #{family('body')};
 
