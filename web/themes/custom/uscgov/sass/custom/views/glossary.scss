@@ -1,0 +1,19 @@
+.glossary {
+}
+
+.glossary__nav {
+
+}
+
+.glossary__nav-item {
+  &:not(:last-child):after {
+    display: inline-block;
+    margin-inline: 0.5em;
+    content: "|";
+    text-align: center;
+  }
+}
+
+.glossary__content {
+
+}

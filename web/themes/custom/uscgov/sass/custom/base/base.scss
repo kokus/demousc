@@ -7,6 +7,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: revert;
+  }
+}
+
 // Extra specificity to override USWDS.
 body[class] {
   margin: 0;

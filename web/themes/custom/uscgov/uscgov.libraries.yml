@@ -49,3 +49,7 @@ button:
   css:
     component:
       dist/custom/css/base/buttons.css: {  }
+glossary:
+  css:
+    component:
+      dist/custom/css/views/glossary.css: {  }
