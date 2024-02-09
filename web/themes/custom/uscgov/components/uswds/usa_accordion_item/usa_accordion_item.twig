@@ -9,5 +9,7 @@
   </button>
 </h4>
 <div id="{{ accordion_item_id }}" class="usa-accordion__content usa-prose">
-  {{ content }}
+  {% block accordion_item_content %}
+    {{ content }}
+  {% endblock %}
 </div>
