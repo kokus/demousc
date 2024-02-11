@@ -37,6 +37,11 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_court_name:
     type: entity_reference_label
     label: inline
@@ -159,3 +164,4 @@ content:
     region: content
 hidden:
   field_metatag: true
+  search_api_excerpt: true

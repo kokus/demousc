@@ -22,6 +22,11 @@ targetEntityType: node
 bundle: front_promo_box
 mode: promo_header
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_bean_image:
     type: image_link_formatter
     label: hidden
@@ -62,3 +67,4 @@ hidden:
   field_more_link: true
   field_promo_box_location: true
   field_yoast_seo: true
+  search_api_excerpt: true

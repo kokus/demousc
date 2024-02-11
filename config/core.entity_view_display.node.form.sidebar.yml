@@ -36,6 +36,11 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -61,3 +66,4 @@ hidden:
   field_superseded: true
   field_tags: true
   field_yoast_seo: true
+  search_api_excerpt: true
