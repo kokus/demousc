@@ -791,7 +791,7 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
  * Enable config split using server host name
  */
 #
-switch ($_SERVER["HTTP_HOST"]){
+switch ($_SERVER["PROJECT_DOMAIN"]){
   case "uscourts.lndo.site":
     $config['config_split.config_split.local']['status'] = TRUE;
     break;
