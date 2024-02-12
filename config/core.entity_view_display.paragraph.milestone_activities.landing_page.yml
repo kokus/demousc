@@ -43,5 +43,7 @@ content:
     weight: 1
     region: content
 hidden:
+  field_fc_be_body: true
   field_fc_jma_court_name: true
   field_fc_jma_current_title: true
+  search_api_excerpt: true

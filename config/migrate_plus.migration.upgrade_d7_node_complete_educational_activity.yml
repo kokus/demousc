@@ -151,7 +151,6 @@ process:
       source: field_tags
       process:
         target_id: tid
-
   field_sidebar:
     -
       plugin: usc_blocks
@@ -168,14 +167,12 @@ process:
         - upgrade_bean_related_content
         - upgrade_bean_related_files
         - upgrade_bean_related_links
-
   field_table_of_contents:
     -
       plugin: usc_blocks
       source: field_sidebar
       migration:
         - upgrade_bean_table_of_contents
-
   field_fc_be_audio:
     -
       plugin: media_migration_delta_sort

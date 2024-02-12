@@ -14,3 +14,4 @@ content: {  }
 hidden:
   field_piksel_program_description: true
   field_piksel_program_title: true
+  search_api_excerpt: true
