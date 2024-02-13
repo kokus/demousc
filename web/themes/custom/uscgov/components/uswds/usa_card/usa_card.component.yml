@@ -58,8 +58,6 @@ props:
     image:
       title: Image
       type: object
-      required:
-        - type
       properties:
         type:
           title: Type
@@ -85,14 +83,7 @@ props:
       title: CTA
       type: object
       description: Title and CTA that generates a button link.
-      required:
-        - show
       properties:
-        show:
-          title: Show
-          type: boolean
-          description: If button is present or not.
-          default: false
         url:
           title: URL
           type: string
@@ -111,4 +102,4 @@ slots:
     title: Body
 libraryOverrides:
   dependencies:
-    - uscgov/uswds-button
+    - uscgov/button
