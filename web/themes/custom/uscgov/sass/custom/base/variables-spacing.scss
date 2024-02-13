@@ -1,7 +1,14 @@
+@forward "../../uswds/settings";
+@use "uswds-core" as *;
+
 .uscgov-root,
 .editor-styles-wrapper {
+  // Typography
+  --font-sans: #{family('body')};
+
   // Layout
   --site-max-width: 1360px;
+  --text-max-width: 650px;
 
   // // Spacing
   --spacing-xs-1: 2px;

@@ -66,7 +66,7 @@ RUN apk add git
 COPY --from=composer:2.0 /usr/bin/composer /usr/local/bin/
 
 # Installing Robo.
-RUN wget http://robo.li/robo.phar
+RUN wget https://github.com/consolidation/robo/releases/download/4.0.4/robo.phar
 RUN chmod +x robo.phar
 RUN mv robo.phar /usr/bin/robo
 
