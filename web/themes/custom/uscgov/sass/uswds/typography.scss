@@ -1,2 +1,9 @@
 @use "settings";
 @forward "uswds-typography";
+
+h2,
+h3,
+h4,
+h5 {
+  margin-block: var(--spacing-header-top) var(--spacing-header-bottom);
+}

@@ -57,3 +57,12 @@
 .grid--tight {
   gap: 0;
 }
+
+.spacing-component,
+[class*="wp-block"] {
+  margin-bottom: var(--spacing-component);
+
+  > * {
+    margin-bottom: 0;
+  }
+}
