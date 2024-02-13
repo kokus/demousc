@@ -6,7 +6,7 @@
   "scripts": {
     "init": "npx gulp init",
     "watch": "npx gulp watch",
-    "build": "npx gulp compile"
+    "build": "npx gulp init"
   },
   "author": "",
   "license": "ISC",
