@@ -29,6 +29,11 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_date_effective:
     type: datetime_default
     label: inline
@@ -98,4 +103,5 @@ content:
     third_party_settings: {  }
     weight: 7
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

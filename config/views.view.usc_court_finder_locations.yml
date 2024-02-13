@@ -8,7 +8,6 @@ dependencies:
     - facets
     - search_api
     - search_api_location_views
-    - search_autocomplete
     - user
 _core:
   default_config_hash: 282iauAsZh-JifTUxLmBDZkBkmFxdkNfPVcKL0nzjdg
@@ -435,7 +434,7 @@ display:
           plugin_id: search_api_fulltext
           operator: and
           value: ''
-          group: 1
+          group: 2
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
@@ -487,7 +486,7 @@ display:
           plugin_id: facets_filter
           operator: '='
           value: ''
-          group: 1
+          group: 3
           exposed: true
           expose:
             operator_id: ''
@@ -521,9 +520,10 @@ display:
             usc_district_name: 0
           label_display: 0
       filter_groups:
-        operator: AND
+        operator: OR
         groups:
           1: AND
+          2: AND
       style:
         type: default
       row:

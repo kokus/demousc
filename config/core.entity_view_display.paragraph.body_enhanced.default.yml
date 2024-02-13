@@ -72,3 +72,4 @@ hidden:
   field_fc_be_image: true
   field_fc_be_video: true
   field_gallery: true
+  search_api_excerpt: true

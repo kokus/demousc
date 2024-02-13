@@ -135,7 +135,7 @@ destination:
   plugin: 'entity_complete:block_content'
   translations: true
 migration_dependencies:
-  required: {}
+  required: {  }
   optional:
     - upgrade_bean_title_field_formatter_table_of_contents
     - upgrade_bean_title_field_widget_table_of_contents

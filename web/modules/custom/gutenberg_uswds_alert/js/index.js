@@ -41,9 +41,9 @@ var RichText = blockEditor.RichText,
   TextControl = blockEditor.TextControl,
   InnerBlocks = blockEditor.InnerBlocks;
 var __ = Drupal.t;
-var alerts = {
-  title: __('Alerts'),
-  description: __('Alerts with theme variants'),
+var alert = {
+  title: __('Alert'),
+  description: __('Alert with theme variants'),
   icon: 'list-view',
   attributes: {
     alertType: {
@@ -169,6 +169,6 @@ var currentCategories = select('core/blocks').getCategories().filter(function (i
   return item.slug !== category.slug;
 });
 dispatch('core/blocks').setCategories([category].concat(_toConsumableArray(currentCategories)));
-registerBlockType("".concat(category.slug, "/alerts"), _objectSpread({
+registerBlockType("".concat(category.slug, "/alert"), _objectSpread({
   category: category.slug
-}, alerts));
+}, alert));

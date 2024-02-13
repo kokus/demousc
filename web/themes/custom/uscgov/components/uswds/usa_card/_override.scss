@@ -1,5 +1,51 @@
 @use "uswds-core" as *;
 
+.usa-card {
+  border-color: var(--border-muted-dark);
+  filter: drop-shadow(0px 4px 8px rgba(64, 72, 97, 0.12));
+}
+
 .usa-card__container {
-  border-color: var(--card-border-color, #{color($theme-card-border-color)});
+  --gap: 24px;
+  --container-padding-y: 32px;
+  --container-padding-x: 32px;
+
+  gap: var(--gap);
+  margin: 0;
+  border-radius: 30px;
+  overflow: hidden; // Needed for border radius.
+
+  &:has(.usa-card__media--inset) {
+    --container-padding-x: 24px;
+  }
+}
+
+.usa-card__media--inset .usa-card__img {
+  background-color: transparent;
+
+  img {
+    border-radius: 20px;
+  }
+}
+
+.usa-card__header {
+  padding: calc(var(--container-padding-y) - var(--gap)) var(--container-padding-x) 0;
+
+  .usa-card--flag & {
+    padding-top: var(--container-padding-y);
+  }
+}
+
+.usa-card__heading {
+  @include u-font-family('sans');
+  margin: 0;
+  font-weight: bold;
+}
+
+.usa-card__body  {
+  padding: 0 var(--container-padding-x);
+}
+
+.usa-card__footer  {
+  padding: 0 var(--container-padding-x) var(--container-padding-y);
 }

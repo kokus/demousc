@@ -4,8 +4,6 @@
  */
 ((Drupal, once) => {
 
-  console.log('test');
-
   let placesAutocompleteInput;
   let placesDropdown;
   let debounceTimer;

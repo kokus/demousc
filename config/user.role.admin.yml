@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
-    - filter.format.ds_code
     - filter.format.full_html
     - filter.format.gutenberg
     - filter.format.restricted_html
@@ -205,7 +204,6 @@ permissions:
   - 'use advanced search'
   - 'use gutenberg'
   - 'use text format basic_html'
-  - 'use text format ds_code'
   - 'use text format full_html'
   - 'use text format gutenberg'
   - 'use text format restricted_html'

@@ -4,4 +4,4 @@ libraries-edit:
 # Libraries to be injected on node view
 libraries-view: {}
 dynamic-blocks:
-  uswds/alerts: {}
+  uswds/alert: {}

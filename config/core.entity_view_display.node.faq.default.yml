@@ -13,6 +13,11 @@ targetEntityType: node
 bundle: faq
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_yoast_seo:
     type: yoastseo_empty_formatter
     label: above
@@ -30,4 +35,5 @@ content:
     third_party_settings: {  }
     weight: 10
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

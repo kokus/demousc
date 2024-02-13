@@ -28,6 +28,11 @@ targetEntityType: node
 bundle: report
 mode: section_landing
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_landing_page_image:
     type: entity_reference_entity_view
     label: hidden
@@ -63,3 +68,4 @@ hidden:
   field_sidebar_title: true
   field_tags: true
   field_yoast_seo: true
+  search_api_excerpt: true

@@ -1,4 +1,6 @@
 libraries-edit:
-  - uscgov/variables
-  - uscgov/uswds-alert
+  - uscgov/variables  
+  - uscgov/button
+  - sdc/uscgov--usa_alert
+  - sdc/uscgov--usa-card
   - sdc/uscgov--uswds-accordion

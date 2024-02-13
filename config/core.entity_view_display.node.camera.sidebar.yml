@@ -36,6 +36,11 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_tags:
     type: entity_reference_label
     label: inline
@@ -68,3 +73,4 @@ hidden:
   field_sidebar: true
   field_subject_matter: true
   field_yoast_seo: true
+  search_api_excerpt: true

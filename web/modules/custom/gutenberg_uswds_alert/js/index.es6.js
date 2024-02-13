@@ -6,9 +6,9 @@ const { Toolbar, Placeholder, ToggleControl, PanelBody, TextareaControl } = comp
 const { RichText, InspectorControls, BlockIcon, TextControl, InnerBlocks } = blockEditor;
 const __ = Drupal.t;
 
-const alerts = {
-  title: __('Alerts'),
-  description: __('Alerts with theme variants'),
+const alert = {
+  title: __('Alert'),
+  description: __('Alert with theme variants'),
   icon: 'list-view',
   attributes: {
     alertType: {
@@ -125,4 +125,4 @@ const category = {
 const currentCategories = select('core/blocks').getCategories().filter(item => item.slug !== category.slug);
 dispatch('core/blocks').setCategories([ category, ...currentCategories ]);
 
-registerBlockType(`${category.slug}/alerts`, { category: category.slug, ...alerts });
+registerBlockType(`${category.slug}/alert`, { category: category.slug, ...alert });

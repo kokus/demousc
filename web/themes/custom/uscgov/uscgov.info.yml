@@ -17,5 +17,11 @@ libraries:
   - uscgov/uswds-form
   - uscgov/button
 dependencies:
+# SDC will be merged into the Drupal core theming system in Drupal 10.4. When
+# this happens, we'll need to remove this dependency.
+# ⚠️⚠️⚠️
+# IMPORTANT: Also edit the usagov.gutenberg.yml file to edit references to SDC
+# libraries that will appear within the Gutenberg WYSIWYG.
+# ⚠️⚠️⚠️
   - 'drupal:sdc'
 generator: 'uscgov:1.0.0'

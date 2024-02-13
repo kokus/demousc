@@ -25,26 +25,22 @@ variables:
       dist/custom/css/base/variables-figma.css: {  }
       dist/custom/css/base/variables-colors.css: {  }
       dist/custom/css/base/variables-spacing.css: {  }
-uswds-alert:
-  css:
-    component:
-      dist/uswds/css/uswds-alert.css: {  }
-uswds-button:
-  css:
-    component:
-      dist/uswds/css/uswds-button.css: {  }
-uswds-form:
-  css:
-    component:
-      dist/uswds/css/uswds-form.css: {  }
-uswds-icon:
-  css:
-    component:
-      dist/uswds/css/uswds-icon.css: {  }
 uswds-utilities:
   css:
     base:
       dist/uswds/css/utilities.css: {  }
+uswds-button:
+  css:
+    component:
+      dist/uswds/css/uswds-button.css: {  }
+uswds-icon:
+  css:
+    component:
+      dist/uswds/css/uswds-icon.css: {  }
+uswds-form:
+  css:
+    component:
+      dist/uswds/css/uswds-form.css: {  }
 button:
   css:
     component:
