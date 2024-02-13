@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Provides USC Extra hooks.
+ * Provides OPA_file hooks.
  */
 
 use Drupal\file\FileInterface;
@@ -10,7 +10,7 @@ use Drupal\file\FileInterface;
 /**
  * Implements hook_file_validate().
  */
-function usc_extra_file_validate(FileInterface $file) {
+function opa_file_file_validate(FileInterface $file) {
   $error_msg = t('There was a problem with this file\'s extension.');
 
   $errors = [];

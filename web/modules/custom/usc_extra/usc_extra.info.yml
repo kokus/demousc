@@ -1,8 +1,0 @@
-name: 'US Courts Extra modules'
-description: 'Porting OPA File, US Courts failtest, liveness and views to D10.'
-type: module
-core_version_requirement: ">=10"
-package: 'US Courts'
-configure: usc_extra.settings
-dependencies:
-  - file:file

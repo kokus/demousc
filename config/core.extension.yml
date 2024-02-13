@@ -103,6 +103,7 @@ module:
   migrate_upgrade: 0
   mysql: 0
   node: 0
+  opa_file: 0
   options: 0
   page_cache: 0
   path: 0
@@ -139,7 +140,8 @@ module:
   toolbar: 0
   transliterate_filenames: 0
   usc_court_finder: 0
-  usc_extra: 0
+  usc_failtest: 0
+  usc_liveness: 0
   usc_migrate_adjustments: 0
   usc_migrate_boolean: 0
   usc_migrate_gutenberg: 0
