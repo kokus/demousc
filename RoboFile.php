@@ -75,9 +75,7 @@ class RoboFile extends Tasks {
     $io->title("Local site update starting...");
     $collection = $this->collectionBuilder($io);
     $collection->taskComposerInstall()
-      ->addTask($this->runDeploy())
-      ->addTask($this->runConfigImport());
-    ;
+      ->addTask($this->runDeploy());
     return $collection;
   }
 
@@ -89,7 +87,7 @@ class RoboFile extends Tasks {
     $collection = $this->collectionBuilder($io);
     $collection->taskComposerInstall()
       ->addTask($this->runDeploy())
-      ->addTask($this->runConfigImport())
+      ->addTask($this->themeInit())
       ->addTask($this->themeBuild())
       ->addTaskList($this->fixContainerPerms());
     ;
@@ -150,7 +148,6 @@ class RoboFile extends Tasks {
     $collection = $this->collectionBuilder();
     try {
       $collection->taskExec("vendor/bin/drush sql-dump --extra=--skip-ssl --extra-dump=--no-tablespaces | gzip -f > $dir/$date.sql.gz")
-//      $collection->taskExec("vendor/bin/drush sql-dump --extra-dump=--no-tablespaces | gzip -f > $dir/$date.sql.gz")
         ->addCode(
           // Maintain a max number of backups.
           function () use ($dir, $max_files) {
@@ -424,19 +421,6 @@ class RoboFile extends Tasks {
     return $task;
   }
 
-
-  /**
-   * Deploy site.
-   *
-   * @return \Robo\Task\Base\Exec
-   *   An array of tasks.
-   */
-  protected function runConfigImport() {
-    $task = $this->drush()
-      ->args('cim');
-    return $task;
-  }
-  
   /**
    * Runs composer commands.
    *

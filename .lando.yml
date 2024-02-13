@@ -62,4 +62,4 @@ tooling:
   drall:
     service: appserver
 env_file:
-  - lando.env
+  - .lando.env
