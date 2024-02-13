@@ -181,6 +181,9 @@
             "drupal/faqfield": {
                 "3012114 - Migrate process plugin?": "https://www.drupal.org/files/issues/2020-11-19/add-migrate-support-3012114-4.patch"
             },
+            "drupal/facets": {
+                "3419501 - Deprecated function: Creation of dynamic property...": "https://www.drupal.org/files/issues/2024-02-06/3419501-1.patch"
+            },
             "drupal/htmlpurifier": {
                 "3167171 - Drupal 7 → 8/9 migration": "https://www.drupal.org/files/issues/2020-08-25/3167171-2.patch"
             },
