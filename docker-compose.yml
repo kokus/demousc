@@ -2,7 +2,7 @@ version: "3"
 
 services:
   db:
-    image: mariadb:10.5.8
+    image: mysql:8.0
     container_name: "${PROJECT}-db"
     volumes:
       - db-data:/var/lib/mysql
@@ -15,7 +15,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 512M
+          memory: 1024M
 
   php:
     build:

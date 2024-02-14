@@ -44,7 +44,6 @@ dependencies:
     - pathauto
     - redirect
     - scheduler
-    - search
     - seckit
     - shortcut
     - system
