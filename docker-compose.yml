@@ -2,7 +2,7 @@ version: "3"
 
 services:
   db:
-    image: mysql:8.0
+    image: mysql:8.0.34
     container_name: "${PROJECT}-db"
     volumes:
       - db-data:/var/lib/mysql
