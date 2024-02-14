@@ -1,5 +1,7 @@
 libraries-edit:
   - uscgov/variables
   - uscgov/button
-  - sdc/uscgov--usa-card # Will needed to be updated after SDC module is merged into core theme system.
+  # Will needed to be updated after SDC module is merged into core theme system.
+  - sdc/uscgov--usa_alert
+  - sdc/uscgov--usa-card
   - sdc/uscgov--uswds-accordion

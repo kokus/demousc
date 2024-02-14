@@ -18,3 +18,9 @@ props:
     status_headings:
       title: Status Headings
       type: array
+    icon:
+      title: Icon
+      type: boolean
+    slim:
+      title: Slim
+      type: boolean

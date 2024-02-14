@@ -1,9 +1,20 @@
 {% set alert_classes = {
   'status': 'info',
+  'info': 'info',
   'warning': 'warning',
-  'error': 'error'
+  'error': 'error',
+  'success': 'success',
+  'emergency': 'emergency'
 } %}
-<div class="usa-alert usa-alert--{{ alert_classes[type] }}">
+{%
+  set classes = [
+    'usa-alert usa-alert--' ~ alert_classes[type],
+    icon == true ? "" : "usa-alert--no-icon",
+    slim == true ? "usa-alert--slim" : "",
+  ]
+%}
+{% set alertAttributes = create_attribute() %}
+<div {{ alertAttributes.addClass(classes) }}>
   <div class="usa-alert__body">
     {% if status_headings[type] %}
       <h4 class="usa-alert__heading">{{ status_headings[type] }}</h4>
