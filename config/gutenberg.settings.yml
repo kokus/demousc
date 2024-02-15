@@ -182,26 +182,85 @@ landing_view_allowed_blocks:
 landing_view_allowed_drupal_blocks:
   drupalblock/all_akamai: 0
   akamai_cache_clear_block: 0
-  drupalblock/all_chaos_tools: 0
-  'entity_view:node': 0
-  'entity_view:taxonomy_term': 0
-  'entity_view:user': 0
-  'entity_view:webform': 0
-  'entity_view:webform_submission': 0
+  drupalblock/all_config_pages: 0
+  config_pages_block: 0
+  drupalblock/all_content_block: 0
+  'block_content:b79d1d50-18f0-4eab-9ced-68acf645ae45': 0
+  'block_content:f583708a-50a5-45e7-af9e-301b76736eba': 0
+  'block_content:ba764e6a-866d-4a54-b08f-f53ca7dcfbfc': 0
+  'block_content:1339dea7-4439-4501-aec7-f44be82fb49c': 0
+  'block_content:1bd8d569-b828-4aea-ae0c-5f97086624ee': 0
+  'block_content:dbcbe14f-907f-4b5c-82a7-0c29f7b08646': 0
+  'block_content:2549b03b-86b5-48c7-be42-d98651ac4dde': 0
+  'block_content:7b0ba319-baa2-40d3-87f0-c2dc6df5129e': 0
+  'block_content:b3c9319f-a722-4505-86aa-3a4b3f0b6fba': 0
+  'block_content:c9c537d4-f6bf-4b92-9ec8-ae92c740bea0': 0
+  'block_content:d25e3e11-504d-4736-91b9-a2d8495f5dc1': 0
+  'block_content:fc7b2c21-56d1-4f28-a281-df020f51b937': 0
+  'block_content:09a5ab6e-f649-4b06-8615-f97f82346edc': 0
+  'block_content:a4cf0291-5aba-41ab-a533-51839dba5f0e': 0
+  'block_content:9948994f-626d-472e-b54c-b5aa20d8de05': 0
+  'block_content:d697b5af-0bd4-4df4-928e-faddfc7feea6': 0
+  'block_content:0427ec85-1c58-4e30-9f71-86949975c336': 0
+  'block_content:2b75df8e-6e95-41bf-ace2-f9f70b5d7051': 0
+  'block_content:0d38d1e9-8132-40c4-ada7-9913f95921a4': 0
+  'block_content:d823492a-5cae-4a9e-afaf-5a3bec1baa71': 0
+  'block_content:e7f6d470-b913-4cf3-84fc-ad74f3cc318d': 0
+  'block_content:a8accf26-e4b1-4441-a53b-0d6a267ebd6b': 0
+  'block_content:d9be4f6c-cc40-420a-bbc0-19f43c87c823': 0
+  'block_content:995a8145-c6c2-4f81-9c27-98080af43c2f': 0
+  'block_content:9416a544-1111-4f60-b169-0215b1c16154': 0
+  'block_content:1959ca78-40e8-4a68-a322-77ed7c9f9b08': 0
+  'block_content:80b86408-b0ae-4657-bd7f-10a0269879fb': 0
+  'block_content:a84cb870-2da3-45ec-9a24-f92cf972b81a': 0
+  'block_content:21cd4953-88cc-4f2f-8856-2f7b1c3ce55d': 0
+  'block_content:d8129f01-a0e4-47d9-b6ff-131b8ae9e4c9': 0
+  'block_content:6371a00c-a0bf-42ce-9e70-d49849727ff8': 0
+  'block_content:fb3ef423-3719-42a8-a7b4-80d5800e556c': 0
+  'block_content:236153ff-b669-405d-a46b-3b6fd7e4a58c': 0
+  'block_content:0bd16a19-6c42-4d47-a9d4-d86390dbd47c': 0
+  'block_content:f4d045c5-d14f-4ab4-97ab-e8a1c4a5e948': 0
+  'block_content:f183c1d8-e0e4-43a8-94ab-9e0b282c6ce5': 0
+  'block_content:73c90136-1b36-4c3e-a770-6e64b4c2f895': 0
+  'block_content:be457542-8405-4472-9c75-454b3f990ae9': 0
+  'block_content:dcc82dff-da3a-4a2e-92ed-806fbb3c3ea4': 0
+  'block_content:9b82c446-9c10-44b7-9fa3-d8216c646102': 0
+  'block_content:86f1ae1e-fd2a-4f6c-924e-b8d9dc29d44e': 0
+  'block_content:a06d5010-20e7-4ee2-81ac-224ba7bc832a': 0
+  'block_content:23ebac53-2f0f-45e0-9182-e16f26e20ffc': 0
+  'block_content:f0b1573f-d1d5-4dc0-9567-b88aa1c4cf0b': 0
+  'block_content:f4275dff-891e-4497-bcd0-a918040b1fd8': 0
+  'block_content:39c30c85-b0b5-4404-bee2-771455e5f9fc': 0
+  'block_content:f361842e-6da3-45b3-9bf5-7b3ef2f8fd0e': 0
+  'block_content:b40ee3e1-bd93-4e97-afa4-03724d8a278e': 0
   drupalblock/all_core: 0
   page_title_block: 0
   drupalblock/all_devel: 0
   devel_switch_user: 0
+  drupalblock/all_facets: 0
+  'facet_block:usc_court_type': 0
+  'facet_block:usc_district_id': 0
   search_form_block: search_form_block
   drupalblock/all_forms: 0
   user_login_block: 0
   drupalblock/all_help: 0
   help_block: 0
+  'views_block:cameras_in_court_landing-block_1': 'views_block:cameras_in_court_landing-block_1'
   drupalblock/all_lists_views_: 0
-  'views_block:comments_recent-block_1': 0
+  'views_block:cameras_in_courts_thumbnails-block_1': 0
+  'views_block:front_promo_boxes-block_promo_bottom_left': 0
+  'views_block:front_promo_boxes-block_promo_bottom_middle': 0
+  'views_block:front_promo_boxes-block_promo_bottom_right': 0
+  'views_block:front_promo_boxes-block_promo_header_left': 0
+  'views_block:front_promo_boxes-block_promo_top_right': 0
+  'views_block:news_issues-block_1': 0
   'views_block:content_recent-block_1': 0
   'views_block:who_s_online-who_s_online_block': 0
+  'views_block:workbench_current_user-block_1': 0
+  'views_block:workbench_edited-block_1': 0
+  'views_block:workbench_recent_content-block_1': 0
   drupalblock/all_menus: 0
+  book_navigation: 0
   'system_menu_block:devel': 0
   'system_menu_block:footer-bottom': 0
   'system_menu_block:menu-footer': 0
@@ -211,8 +270,7 @@ landing_view_allowed_drupal_blocks:
   'system_menu_block:menu-social-media': 0
   'system_menu_block:account': 0
   'system_menu_block:menu-utility': 0
-  drupalblock/all_sharethis: 0
-  sharethis_block: 0
+  'system_menu_block:workbench': 0
   system_breadcrumb_block: system_breadcrumb_block
   drupalblock/all_system: 0
   system_messages_block: 0
@@ -224,8 +282,10 @@ landing_view_allowed_drupal_blocks:
   drupalblock/all_webform: 0
   webform_block: 0
   webform_submission_limit_block: 0
-  drupalblock/all_widgets: 0
-  sharethis_widget_block: 0
+  drupalblock/all_workbench: 0
+  workbench_block: 0
+  drupalblock/all_workbench_access: 0
+  workbench_access_block: 0
 criminogenic_enable_full: 0
 criminogenic_template: ''
 criminogenic_template_lock: none
