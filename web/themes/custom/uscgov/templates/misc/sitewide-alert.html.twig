@@ -1,0 +1,49 @@
+{#
+/**
+ * @file sitewide_alert.html.twig
+ * Default theme implementation to present Sitewide Alert data.
+ *
+ * This template is used when viewing Sitewide Alert messages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element. This should contain the `data-uuid` attribute needed for
+ *   the loading to work.
+ * - uuid: The UUID of the sitewide alert.
+ * - is_dismissible: True if this alert is dismissable, false otherwise.
+ * - style: The alert style.
+ * - style_class: A style class derived from the style.
+ * - sitewide_alert: The sitewide alert entity.
+ *
+ * @see template_preprocess_sitewide_alert()
+ *
+ * @ingroup themeable
+ */
+#}
+{# style #}
+
+
+
+{% set messages = [content.message|render] %}
+{% set slim = 'slim' in content.field_type|render %}
+
+
+<div {{ attributes }}>
+  {{ include('uscgov:usa_alert', {
+      status_headings: status_headings|default([]),
+      messages,
+      heading_text: content.field_title|render,
+      type: style,
+      icon: true,
+    }, with_context = false) }}
+
+  {# {% if content -%}
+    <span>{{- content -}}</span>
+  {%- endif %}
+  {% if is_dismissible -%}
+    <button class="close js-dismiss-button" aria-label="{{ 'close'|t }}">
+      <span aria-hidden="true">×</span>
+    </button>
+  {%- endif %} #}
+</div>

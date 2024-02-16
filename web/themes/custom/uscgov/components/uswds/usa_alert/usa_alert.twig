@@ -4,7 +4,7 @@
   'warning': 'warning',
   'error': 'error',
   'success': 'success',
-  'emergency': 'emergency'
+  'emergency': 'emergency',
 } %}
 {%
   set classes = [
@@ -14,10 +14,10 @@
   ]
 %}
 {% set alertAttributes = create_attribute() %}
-<div {{ alertAttributes.addClass(classes) }}>
+<div {{ alertAttributes.addClass(classes).addClass(additional_classes) }}>
   <div class="usa-alert__body">
-    {% if status_headings[type] %}
-      <h4 class="usa-alert__heading">{{ status_headings[type] }}</h4>
+    {% if status_headings[type] or heading_text %}
+      <h4 class="usa-alert__heading">{{ status_headings[type] ?: heading_text }}</h4>
     {% endif %}
     {% for message in messages %}
       <p class="usa-alert__text">
