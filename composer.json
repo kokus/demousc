@@ -97,6 +97,7 @@
         "drupal/usfedgov_google_analytics": "^2.0",
         "drupal/views_arg_entity_field": "^2.0",
         "drupal/views_bulk_operations": "^4.2",
+        "drupal/views_year_filter": "^2.1",
         "drupal/webform": "^6.2@RC",
         "drupal/workbench": "^1.4",
         "drupal/workbench_access": "^2.0",
