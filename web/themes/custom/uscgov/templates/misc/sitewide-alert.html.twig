@@ -25,17 +25,21 @@
 
 
 
-{% set messages = [content.message|render] %}
-{% set slim = 'slim' in content.field_type|render %}
+{% set messages = [content.message|add_suggestion('bare')|render] %}
+{% set slim = 'slim' in content.field_type|render|striptags|trim|lower %}
 
 
 <div {{ attributes }}>
+
   {{ include('uscgov:usa_alert', {
       status_headings: status_headings|default([]),
       messages,
-      heading_text: content.field_title|render,
-      type: style,
+      heading_text: content.field_title|add_suggestion('bare')|render,
       icon: true,
+      slim: slim,
+      additional_classes: [
+        'usa-alert--' ~ style,
+      ]
     }, with_context = false) }}
 
   {# {% if content -%}

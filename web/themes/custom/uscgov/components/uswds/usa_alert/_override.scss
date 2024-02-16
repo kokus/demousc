@@ -10,4 +10,8 @@
 
 .usa-alert {
   margin-bottom: var(--spacing-component);
+
+  [data-sitewide-alert] & {
+    margin-bottom: 0;
+  }
 }
