@@ -16,6 +16,11 @@ libraries:
   - uscgov/uswds
   - uscgov/uswds-form
   - uscgov/button
+libraries-override:
+  sitewide_alert/init:
+    css:
+      theme:
+        css/sitewide_alert.css: false
 dependencies:
 # SDC will be merged into the Drupal core theming system in Drupal 10.4. When
 # this happens, we'll need to remove this dependency.

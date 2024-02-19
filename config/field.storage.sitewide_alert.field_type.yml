@@ -1,0 +1,27 @@
+uuid: 10a619fc-6d32-4142-90d1-b6451e3f420d
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - sitewide_alert
+id: sitewide_alert.field_type
+field_name: field_type
+entity_type: sitewide_alert
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: tall
+      label: Tall
+    -
+      value: slim
+      label: Slim
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

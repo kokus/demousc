@@ -29,9 +29,8 @@
 {% set slim = 'slim' in content.field_type|render|striptags|trim|lower %}
 
 
-<div {{ attributes }}>
-
-  {{ include('uscgov:usa_alert', {
+<div {{ attributes.addClass('container') }}>
+  {% embed 'uscgov:usa_alert' with {
       status_headings: status_headings|default([]),
       messages,
       heading_text: content.field_title|add_suggestion('bare')|render,
@@ -40,14 +39,15 @@
       additional_classes: [
         'usa-alert--' ~ style,
       ]
-    }, with_context = false) }}
+    } only %}
 
-  {# {% if content -%}
-    <span>{{- content -}}</span>
-  {%- endif %}
-  {% if is_dismissible -%}
-    <button class="close js-dismiss-button" aria-label="{{ 'close'|t }}">
-      <span aria-hidden="true">×</span>
-    </button>
-  {%- endif %} #}
+    {% block dismiss_button %}
+      {% if is_dismissible %}
+        <button class="usa-alert__dismiss js-dismiss-button" type="button">
+          <span class="visually-hidden">{{ 'Dismiss'|t }}</span>
+        </button>
+      {% endif %}
+    {% endblock %}
+
+  {% endembed %}
 </div>

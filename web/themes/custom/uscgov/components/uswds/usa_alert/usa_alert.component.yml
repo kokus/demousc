@@ -30,3 +30,5 @@ props:
     additional_classes:
       title: Additional classes
       type: array
+slots:
+  dismiss_button: {}

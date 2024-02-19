@@ -9,9 +9,49 @@
 }
 
 .usa-alert {
+  position: relative; // Anchor dismiss button.
   margin-bottom: var(--spacing-component);
 
   [data-sitewide-alert] & {
     margin-bottom: 0;
+  }
+}
+
+.sitewide-alert + .sitewide-alert {
+  margin-top: 2px;
+}
+
+.usa-alert__dismiss {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 0;
+  appearance: none;
+  color: inherit;
+  cursor: pointer;
+
+  .usa-alert--emergency & {
+    color: white;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -1px;
+    width: 15px;
+    height: 0;
+    border-top: solid 2px currentColor;
+    rotate: 45deg;
+    content: "";
+  }
+
+  &:after {
+    rotate: -45deg;
   }
 }
