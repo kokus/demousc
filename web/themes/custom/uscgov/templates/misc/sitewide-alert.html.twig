@@ -33,6 +33,7 @@
   {% embed 'uscgov:usa_alert' with {
       status_headings: status_headings|default([]),
       messages,
+      is_dismissible,
       heading_text: content.field_title|add_suggestion('bare')|render,
       icon: true,
       slim: slim,
