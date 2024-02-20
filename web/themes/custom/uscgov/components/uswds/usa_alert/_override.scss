@@ -13,12 +13,8 @@
   margin-bottom: var(--spacing-component);
 
   [data-sitewide-alert] & {
-    margin-bottom: 0;
+    margin-bottom: 4px;
   }
-}
-
-.sitewide-alert {
-  margin-top: 4px;
 }
 
 .usa-alert__dismiss {
