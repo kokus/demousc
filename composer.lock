@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "03420106e25ca15957761c83d3f6d196",
+    "content-hash": "8bd20ee77ed425ce614cafe505c8a0f5",
     "packages": [
         {
             "name": "akamai-open/edgegrid-auth",
@@ -7031,6 +7031,54 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/usfedgov_google_analytics",
                 "issues": "https://www.drupal.org/project/issues/usfedgov_google_analytics?categories=All"
+            }
+        },
+        {
+            "name": "drupal/views_arg_entity_field",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_arg_entity_field.git",
+                "reference": "2.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_arg_entity_field-2.0.4.zip",
+                "reference": "2.0.4",
+                "shasum": "22c92d9670232c51cb8e94d9b23648806df67ad2"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.4",
+                    "datestamp": "1706098298",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "drclaw",
+                    "homepage": "https://www.drupal.org/user/823702"
+                },
+                {
+                    "name": "Nikolay Shapovalov",
+                    "homepage": "https://www.drupal.org/user/1877422"
+                }
+            ],
+            "description": "Views argument_default plugin to pull values of the 'Current' entity's fields",
+            "homepage": "https://www.drupal.org/project/views_arg_entity_field",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_arg_entity_field"
             }
         },
         {
