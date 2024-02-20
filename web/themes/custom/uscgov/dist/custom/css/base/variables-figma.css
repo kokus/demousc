@@ -1443,7 +1443,8 @@ through all possible variants
 */
 /* prettier-ignore */
 /* prettier-ignore */
-:root {
+.uscgov-root,
+.editor-styles-wrapper {
   --color-primitive-neutral-white: white;
   --color-primitive-neutral-base-light: #FEFEFE;
   --color-primitive-neutral-base-dark: #080A0D;

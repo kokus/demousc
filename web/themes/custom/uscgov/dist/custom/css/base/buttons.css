@@ -1,0 +1,89 @@
+/**
+ * Custom button styles.
+ */
+.button,
+.usa-button[class],
+input[type=submit] {
+  --surface-color: var(--surface-button);
+  --text-color: var(--text-on-surface-button);
+  --border-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--surface-color);
+  border: solid 1px var(--border-color);
+  color: var(--text-color);
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 115%;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.button:where(:not([disabled])):hover,
+.usa-button[class]:where(:not([disabled])):hover,
+input[type=submit]:where(:not([disabled])):hover {
+  --surface-color: var(--surface-button-dark);
+  text-decoration: underline;
+}
+.button:where(:not([disabled])):active,
+.usa-button[class]:where(:not([disabled])):active,
+input[type=submit]:where(:not([disabled])):active {
+  --surface-color: var(--surface-button-darker);
+  text-decoration: underline;
+}
+.button[disabled],
+.usa-button[class][disabled],
+input[type=submit][disabled] {
+  --surface-color: var(--surface-base-medium);
+  --text-color: var(--text-on-surface-base-medium);
+  cursor: not-allowed;
+}
+.button.button--outline,
+.usa-button[class].button--outline,
+input[type=submit].button--outline {
+  --surface-color: transparent;
+  --text-color: var(--text-link);
+  --border-color: currentColor;
+}
+.button.button--outline:where(:not([disabled])):hover, .button.button--outline:where(:not([disabled])):active,
+.usa-button[class].button--outline:where(:not([disabled])):hover,
+.usa-button[class].button--outline:where(:not([disabled])):active,
+input[type=submit].button--outline:where(:not([disabled])):hover,
+input[type=submit].button--outline:where(:not([disabled])):active {
+  --surface-color: var(--surface-primary-lighter);
+}
+.button.button--outline:where(:not([disabled])):active,
+.usa-button[class].button--outline:where(:not([disabled])):active,
+input[type=submit].button--outline:where(:not([disabled])):active {
+  border-width: 3px;
+}
+.button.button--outline[disabled],
+.usa-button[class].button--outline[disabled],
+input[type=submit].button--outline[disabled] {
+  --text-color: var(--color-primitive-neutral-gray-muted-dark);
+}
+.button.button--ghost,
+.usa-button[class].button--ghost,
+input[type=submit].button--ghost {
+  --surface-color: transparent;
+  --text-color: var(--text-link);
+  --border-color: transparent;
+  padding-inline: 0;
+}
+.button.button--ghost:where(:not([disabled])):hover,
+.usa-button[class].button--ghost:where(:not([disabled])):hover,
+input[type=submit].button--ghost:where(:not([disabled])):hover {
+  --text-color: var(--text-on-surface-base-lighter--primary);
+}
+.button.button--ghost:where(:not([disabled])):active,
+.usa-button[class].button--ghost:where(:not([disabled])):active,
+input[type=submit].button--ghost:where(:not([disabled])):active {
+  --text-color: var(--color-primitive-theme-primary-darker);
+}
+.button.button--ghost[disabled],
+.usa-button[class].button--ghost[disabled],
+input[type=submit].button--ghost[disabled] {
+  --text-color: var(--color-primitive-neutral-gray-muted-dark);
+  background: transparent;
+}

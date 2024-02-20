@@ -1,12 +1,4 @@
 /*
-----------------------------------------
-USWDS with settings overrides
-----------------------------------------
-Uncomment the following lines and add a list of changed settings
-in the form $setting: value,
-----------------------------------------
-*/
-/*
 * * * * * ==============================
 * * * * * ==============================
 * * * * * ==============================
@@ -1443,12 +1435,183 @@ through all possible variants
 */
 /* prettier-ignore */
 /* prettier-ignore */
+/* stylelint-disable */
+@font-face {
+  font-family: "Roboto Mono Web";
+  font-style: normal;
+  font-weight: 300;
+  font-display: fallback;
+  src: url(../fonts/roboto-mono/roboto-mono-v5-latin-300.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Roboto Mono Web";
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(../fonts/roboto-mono/roboto-mono-v5-latin-regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Roboto Mono Web";
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: url(../fonts/roboto-mono/roboto-mono-v5-latin-700.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Roboto Mono Web";
+  font-style: italic;
+  font-weight: 300;
+  font-display: fallback;
+  src: url(../fonts/roboto-mono/roboto-mono-v5-latin-300italic.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Roboto Mono Web";
+  font-style: italic;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(../fonts/roboto-mono/roboto-mono-v5-latin-italic.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Roboto Mono Web";
+  font-style: italic;
+  font-weight: 700;
+  font-display: fallback;
+  src: url(../fonts/roboto-mono/roboto-mono-v5-latin-700italic.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Source Sans Pro Web";
+  font-style: normal;
+  font-weight: 300;
+  font-display: fallback;
+  src: url(../fonts/source-sans-pro/sourcesanspro-light-webfont.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Source Sans Pro Web";
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(../fonts/source-sans-pro/sourcesanspro-regular-webfont.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Source Sans Pro Web";
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: url(../fonts/source-sans-pro/sourcesanspro-bold-webfont.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Source Sans Pro Web";
+  font-style: italic;
+  font-weight: 300;
+  font-display: fallback;
+  src: url(../fonts/source-sans-pro/sourcesanspro-lightitalic-webfont.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Source Sans Pro Web";
+  font-style: italic;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(../fonts/source-sans-pro/sourcesanspro-italic-webfont.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Source Sans Pro Web";
+  font-style: italic;
+  font-weight: 700;
+  font-display: fallback;
+  src: url(../fonts/source-sans-pro/sourcesanspro-bolditalic-webfont.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Merriweather Web";
+  font-style: normal;
+  font-weight: 300;
+  font-display: fallback;
+  src: url(../fonts/merriweather/Latin-Merriweather-Light.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Merriweather Web";
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(../fonts/merriweather/Latin-Merriweather-Regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Merriweather Web";
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: url(../fonts/merriweather/Latin-Merriweather-Bold.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Merriweather Web";
+  font-style: italic;
+  font-weight: 300;
+  font-display: fallback;
+  src: url(../fonts/merriweather/Latin-Merriweather-LightItalic.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Merriweather Web";
+  font-style: italic;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(../fonts/merriweather/Latin-Merriweather-Italic.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Merriweather Web";
+  font-style: italic;
+  font-weight: 700;
+  font-display: fallback;
+  src: url(../fonts/merriweather/Latin-Merriweather-BoldItalic.woff2) format("woff2");
+}
+/* stylelint-enable */
+.usa-icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 1em;
+  position: relative;
+  width: 1em;
+}
+
+.usa-icon--size-3 {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.usa-icon--size-4 {
+  height: 2rem;
+  width: 2rem;
+}
+
+.usa-icon--size-5 {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.usa-icon--size-6 {
+  height: 3rem;
+  width: 3rem;
+}
+
+.usa-icon--size-7 {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.usa-icon--size-8 {
+  height: 4rem;
+  width: 4rem;
+}
+
+.usa-icon--size-9 {
+  height: 4.5rem;
+  width: 4.5rem;
+}
+
 .usa-accordion {
   margin-bottom: 0;
   margin-top: 0;
   list-style-type: none;
   padding-left: 0;
-  color: #080A0D;
+  color: #1b1b1b;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -1497,7 +1660,7 @@ through all possible variants
 }
 
 .usa-accordion__content {
-  color: #080A0D;
+  color: #1b1b1b;
   background-color: white;
   margin-top: 0;
   overflow: auto;
@@ -1511,7 +1674,7 @@ through all possible variants
 }
 
 .usa-accordion__button {
-  color: #0057A3;
+  color: #005ea2;
   text-decoration: underline;
   background-color: transparent;
   border: 0;
@@ -1521,9 +1684,9 @@ through all possible variants
   margin: 0;
   padding: 0;
   text-align: left;
-  color: #080A0D;
+  color: #1b1b1b;
   background-color: #f0f0f0;
-  background-image: url("/themes/custom/uscgov/dist/uswds/img/usa-icons/remove.svg"), linear-gradient(transparent, transparent);
+  background-image: url("../img/usa-icons/remove.svg"), linear-gradient(transparent, transparent);
   background-repeat: no-repeat;
   background-position: right 1.25rem center;
   background-size: 1.5rem;
@@ -1539,10 +1702,10 @@ through all possible variants
   color: #54278f;
 }
 .usa-accordion__button:hover {
-  color: #002D5A;
+  color: #1a4480;
 }
 .usa-accordion__button:active {
-  color: #002045;
+  color: #162e51;
 }
 .usa-accordion__button:focus {
   outline: 0.25rem solid #2491ff;
@@ -1554,10 +1717,10 @@ through all possible variants
   text-decoration: underline;
 }
 .usa-accordion__button.usa-button--hover {
-  color: #002D5A;
+  color: #1a4480;
 }
 .usa-accordion__button.usa-button--active {
-  color: #002045;
+  color: #162e51;
 }
 .usa-accordion__button:disabled, .usa-accordion__button[aria-disabled=true], .usa-accordion__button:disabled:hover, .usa-accordion__button[aria-disabled=true]:hover, .usa-accordion__button[aria-disabled=true]:focus {
   color: #757575;
@@ -1568,9 +1731,9 @@ through all possible variants
   }
 }
 .usa-accordion__button:hover {
-  color: #080A0D;
-  background-color: #E4E4E4;
-  background-image: url("/themes/custom/uscgov/dist/uswds/img/usa-icons/remove.svg"), linear-gradient(transparent, transparent);
+  color: #1b1b1b;
+  background-color: #dfe1e2;
+  background-image: url("../img/usa-icons/remove.svg"), linear-gradient(transparent, transparent);
   background-repeat: no-repeat;
   text-decoration: none;
 }
@@ -1580,7 +1743,7 @@ through all possible variants
     position: relative;
   }
   .usa-accordion__button::before {
-    background-image: url("/themes/custom/uscgov/dist/uswds/img/usa-icons/remove.svg");
+    background-image: url("../img/usa-icons/remove.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 1.5rem 1.5rem;
@@ -1597,8 +1760,8 @@ through all possible variants
     .usa-accordion__button::before {
       background: none;
       background-color: ButtonText;
-      -webkit-mask-image: url("/themes/custom/uscgov/dist/uswds/img/usa-icons/remove.svg"), linear-gradient(transparent, transparent);
-      mask-image: url("/themes/custom/uscgov/dist/uswds/img/usa-icons/remove.svg"), linear-gradient(transparent, transparent);
+      -webkit-mask-image: url("../img/usa-icons/remove.svg"), linear-gradient(transparent, transparent);
+      mask-image: url("../img/usa-icons/remove.svg"), linear-gradient(transparent, transparent);
       -webkit-mask-position: center center;
       mask-position: center center;
       -webkit-mask-repeat: no-repeat;
@@ -1610,17 +1773,17 @@ through all possible variants
 }
 
 .usa-accordion__button[aria-expanded=false] {
-  background-image: url("/themes/custom/uscgov/dist/uswds/img/usa-icons/add.svg"), linear-gradient(transparent, transparent);
+  background-image: url("../img/usa-icons/add.svg"), linear-gradient(transparent, transparent);
   background-repeat: no-repeat;
   background-size: 1.5rem;
 }
 .usa-accordion__button[aria-expanded=false]:hover {
-  background-image: url("/themes/custom/uscgov/dist/uswds/img/usa-icons/add.svg"), linear-gradient(transparent, transparent);
+  background-image: url("../img/usa-icons/add.svg"), linear-gradient(transparent, transparent);
   background-repeat: no-repeat;
 }
 @media (forced-colors: active) {
   .usa-accordion__button[aria-expanded=false]::before {
-    background-image: url("/themes/custom/uscgov/dist/uswds/img/usa-icons/add.svg");
+    background-image: url("../img/usa-icons/add.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 1.5rem 1.5rem;
@@ -1636,8 +1799,8 @@ through all possible variants
     .usa-accordion__button[aria-expanded=false]::before {
       background: none;
       background-color: ButtonText;
-      -webkit-mask-image: url("/themes/custom/uscgov/dist/uswds/img/usa-icons/add.svg"), linear-gradient(transparent, transparent);
-      mask-image: url("/themes/custom/uscgov/dist/uswds/img/usa-icons/add.svg"), linear-gradient(transparent, transparent);
+      -webkit-mask-image: url("../img/usa-icons/add.svg"), linear-gradient(transparent, transparent);
+      mask-image: url("../img/usa-icons/add.svg"), linear-gradient(transparent, transparent);
       -webkit-mask-position: center center;
       mask-position: center center;
       -webkit-mask-repeat: no-repeat;
@@ -1650,29 +1813,35 @@ through all possible variants
 
 .expand-link,
 .collapse-link {
-  float: right;
   position: relative;
+  float: right;
+  padding-left: 20px;
+  color: var(--text-link);
+  text-decoration: none;
 }
-.expand-link::before,
-.collapse-link::before {
-  content: "";
-  background-image: url("img/usa-icons/add.svg"), linear-gradient(transparent, transparent);
-  background-repeat: no-repeat;
-  background-size: 1.5rem;
-  display: block;
-  width: 20px;
-  height: 20px;
+.expand-link::before, .expand-link::after,
+.collapse-link::before,
+.collapse-link::after {
   position: absolute;
-  left: -23px;
-  top: -2px;
+  left: 0;
+  top: calc(50% - 1px);
+  display: block;
+  width: 12px;
+  height: 0;
+  content: "";
+  border-top: solid 2px currentColor;
+}
+.expand-link:after,
+.collapse-link:after {
+  rotate: 90deg;
+}
+.expand-link:visited,
+.collapse-link:visited {
+  color: var(--text-link);
 }
 
-.expand-link::before {
-  background-image: url("img/usa-icons/add.svg"), linear-gradient(transparent, transparent);
-}
-
-.collapse-link::before {
-  background-image: url("img/usa-icons/remove.svg"), linear-gradient(transparent, transparent);
+.collapse-link::after {
+  content: none;
 }
 
 .operations-group {
@@ -1687,5 +1856,55 @@ through all possible variants
 }
 .operations-group.collapsed .expand-link {
   display: inline-block;
+}
+
+.usa-accordion:has(.usa-accordion__content :is([required], .required, [aria-required=true])) .usa-accordion__button:after {
+  content: "*";
+}
+
+.editor-styles-wrapper .usa-accordion__heading,
+.usa-accordion__heading:not(:first-child),
+.usa-prose .usa-accordion__heading:not(:first-child) {
+  margin-block: 0;
+}
+
+.usa-accordion__button[aria-expanded] {
+  position: relative;
+  background: none;
+  border-top: solid 2px var(--border-form);
+  font-size: inherit;
+}
+.usa-accordion__button[aria-expanded]:hover {
+  background: var(--surface-primary-lighter);
+}
+.usa-accordion__button[aria-expanded]:before, .usa-accordion__button[aria-expanded]:after {
+  position: absolute;
+  right: 25px;
+  top: calc(50% - 1.5px);
+  content: "";
+  width: 14px;
+  height: 0;
+  border-top: solid 3px var(--accent);
+}
+.usa-accordion__button[aria-expanded]:after {
+  rotate: 90deg;
+}
+.usa-accordion__button[aria-expanded][aria-expanded=true] {
+  background: var(--surface-primary-dark);
+  color: var(--text-on-surface-primary-dark);
+}
+.usa-accordion__button[aria-expanded][aria-expanded=true]:before {
+  border-color: currentColor;
+}
+.usa-accordion__button[aria-expanded][aria-expanded=true]:after {
+  opacity: 0;
+}
+
+.usa-accordion__content {
+  background: transparent;
+}
+
+.editor-styles-wrapper .wp-block[aria-label="Block: Accordion Item"] {
+  margin-block: 0;
 }
 /*# sourceMappingURL=usa_accordion.css.map */

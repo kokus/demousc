@@ -1,9 +1,12 @@
-:root {
+.uscgov-root,
+.editor-styles-wrapper {
   /**
    * Surface and text colors
    */
   --surface-primary: var(--color-primitive-theme-primary-primary);
   --text-on-surface-primary: var(--color-primitive-neutral-base-light);
+  --surface-primary-dark: var(--color-primitive-theme-primary-dark);
+  --text-on-surface-primary-dark: var(--color-primitive-neutral-base-light);
   --surface-primary-darker: var(--color-primitive-theme-primary-darker);
   --text-on-surface-primary-darker: var(--color-primitive-neutral-base-light);
   --surface-primary-lighter: var(--color-primitive-theme-primary-lighter);
@@ -21,7 +24,11 @@
   --surface-base-medium: var(--color-primitive-neutral-gray-surface-variant-dark);
   --text-on-surface-base-medium: var(--color-primitive-neutral-gray-base-secondary-dark);
   /**
-   * Links, forms, nad buttons
+   * Accent
+   */
+  --accent: #722F1D;
+  /**
+   * Links, forms, and buttons
    */
   --text-link: var(--color-primitive-theme-primary-primary);
   --text-link-dark: var(--color-primitive-theme-primary-dark);
@@ -29,6 +36,8 @@
   --surface-form: var(--color-primitive-neutral-white);
   --surface-button: var(--surface-primary);
   --text-on-surface-button: var(--text-on-surface-primary);
+  --surface-button-dark: var(--color-primitive-theme-primary-dark);
+  --surface-button-darker: var(--color-primitive-theme-primary-darker);
   --surface-button-secondary: var(--color-primitive-theme-secondary-gold-light);
   --text-on-surface-button-secondary: var(--color-primitive-theme-primary-darkest);
   /**
@@ -39,4 +48,8 @@
   --border-primary-darker: var(--color-primitive-theme-primary-darker);
   --border-muted-dark: var(--color-token-base-border-muted-dark);
   --border-form: var(--border-muted-dark);
+  /**
+   * Accent
+   */
+  --accent: #A34329;
 }
