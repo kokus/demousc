@@ -29,7 +29,7 @@
 {% set slim = 'slim' in content.field_type|render|striptags|trim|lower %}
 
 
-<div {{ attributes.addClass('container') }}>
+<div {{ attributes }}>
   {% embed 'uscgov:usa_alert' with {
       status_headings: status_headings|default([]),
       messages,
