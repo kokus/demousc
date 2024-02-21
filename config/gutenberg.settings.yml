@@ -240,12 +240,11 @@ landing_view_allowed_drupal_blocks:
   drupalblock/all_facets: 0
   'facet_block:usc_court_type': 0
   'facet_block:usc_district_id': 0
-  search_form_block: search_form_block
   drupalblock/all_forms: 0
   user_login_block: 0
   drupalblock/all_help: 0
   help_block: 0
-  'views_block:cameras_in_court_landing-block_1': 'views_block:cameras_in_court_landing-block_1'
+  'views_block:cameras_in_court_landing-block_cameras_in_court_landing': 'views_block:cameras_in_court_landing-block_cameras_in_court_landing'
   drupalblock/all_lists_views_: 0
   'views_block:cameras_in_courts_thumbnails-block_1': 0
   'views_block:front_promo_boxes-block_promo_bottom_left': 0

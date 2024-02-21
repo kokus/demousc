@@ -17,7 +17,7 @@ dependencies:
     - taxonomy
     - user
 id: cameras_in_court_landing
-label: 'Cameras in Court Landing (Content)'
+label: 'Cameras in Court Landing'
 module: views
 description: ''
 tag: ''
@@ -402,10 +402,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_default
+          type: datetime_custom
           settings:
             timezone_override: ''
-            format_type: medium
+            date_format: 'F j, Y'
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -791,6 +791,7 @@ display:
           admin_label: 'field_court_name: Taxonomy term'
           plugin_id: standard
           required: false
+      use_ajax: true
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -808,12 +809,14 @@ display:
         - 'config:field.storage.node.field_date_updated'
         - 'config:field.storage.node.field_procedural_posture'
         - 'config:field.storage.node.field_subject_matter'
-  block_1:
-    id: block_1
+  block_cameras_in_court_landing:
+    id: block_cameras_in_court_landing
     display_title: 'Block - Landing Page'
     display_plugin: block
     position: 3
     display_options:
+      defaults:
+        use_ajax: true
       display_description: ''
       display_extenders: {  }
     cache_metadata:
