@@ -1,6 +1,5 @@
 adding:
   module:
     devel: 0
-    restrict_ip: 0
     stage_file_proxy: 0
 removing: {  }
