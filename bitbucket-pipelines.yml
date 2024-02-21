@@ -27,7 +27,7 @@ pipelines:
                 - drupal-profiles
                 - drupal-themes
               services:
-                - mariadb
+                - mysql
               script:
                 - robo ci:build
                 - robo ci:unit-tests
@@ -41,7 +41,7 @@ pipelines:
                 - drupal-profiles
                 - drupal-themes
               services:
-                - mariadb
+                - mysql
               script:
                 - robo ci:build
                 - robo ci:install-drupal
@@ -66,8 +66,8 @@ pipelines:
                 COMMAND: '.deploy/deploy.sh'
 definitions:
   services:
-    mariadb:
-      image: mariadb:latest
+    mysql:
+      image: mysql:8.0.34
       variables:
         MYSQL_ROOT_PASSWORD: root
         MYSQL_DATABASE: drupal
