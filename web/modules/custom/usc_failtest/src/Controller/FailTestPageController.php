@@ -23,6 +23,11 @@ class FailTestPageController extends ControllerBase {
     // Return the message as part of a renderable array.
     return [
       '#markup' => $message . '<br />' . $server,
+      '#cache' => [
+        'tags' => [
+          'config:usc_failtest.settings'
+        ],
+      ],
     ];
   }
 
