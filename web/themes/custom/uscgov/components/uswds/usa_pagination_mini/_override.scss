@@ -10,3 +10,7 @@
 .usa-pagination .usa-current {
   background: var(--surface-primary-dark);
 }
+
+.usa-pagination__arrow {
+  display: inherit;
+}
