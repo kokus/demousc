@@ -147,6 +147,7 @@ module:
   usfedgov_google_analytics: 0
   views_arg_entity_field: 0
   views_bulk_operations: 0
+  views_filters_populate: 0
   views_ui: 0
   views_year_filter: 0
   webform: 0
