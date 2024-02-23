@@ -104,7 +104,8 @@
         "drush/drush": "^12.1",
         "geocoder-php/nominatim-provider": "^5.7",
         "mglaman/composer-drupal-lenient": "^1.0",
-        "symfony/http-client": "^6.3"
+        "symfony/http-client": "^6.3",
+        "wikimedia/composer-merge-plugin": "^2.1"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -120,7 +121,8 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "cweagans/composer-patches": true,
             "mglaman/composer-drupal-lenient": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "wikimedia/composer-merge-plugin": true
         },
         "sort-packages": true
     },
@@ -197,6 +199,11 @@
         },
         "drupal-lenient": {
             "allowed-list": ["drupal/bean_migrate", "drupal/migrate_directory"]
+        },
+        "merge-plugin": {
+            "include": [
+                "web/modules/contrib/webform/composer.libraries.json"
+            ]
         }
     },
     "require-dev": {

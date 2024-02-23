@@ -2,16 +2,19 @@
 - d7_user
 
 # files
-- d7_file
-- d7_file_private
-- d7_file_entity
+- upgrade_d7_file
+- upgrade_d7_file_entity_image_http
+- upgrade_d7_file_entity_image_https
+- upgrade_d7_file_entity_file_public
+- upgrade_d7_file_entity_video_youtube
+- upgrade_d7_file_entity_audio_public
+- upgrade_d7_file_entity_banner_image_public
+- upgrade_d7_file_entity_document_http
+- upgrade_d7_file_entity_document_public
+- upgrade_d7_file_entity_image_public
 
 # taxonomy 
 - d7_taxonomy_term
-
-# paragraphs 
-- d7_paragraphs
-- d7_paragraphs_revisions
 
 # nodes 
 - d7_node
