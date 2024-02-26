@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4dc353e147676911d0fc5f0775b274e0",
+    "content-hash": "e44313979ac7038bdb9aeb9fb626b1ed",
     "packages": [
         {
             "name": "akamai-open/edgegrid-auth",
