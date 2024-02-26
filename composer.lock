@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "03420106e25ca15957761c83d3f6d196",
+    "content-hash": "fefb4df8db7bd3f4189b04320db25d6b",
     "packages": [
         {
             "name": "akamai-open/edgegrid-auth",
@@ -6159,70 +6159,6 @@
             }
         },
         {
-            "name": "drupal/restrict_ip",
-            "version": "4.0.0-beta1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/restrict_ip.git",
-                "reference": "4.0.0-beta1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/restrict_ip-4.0.0-beta1.zip",
-                "reference": "4.0.0-beta1",
-                "shasum": "90055b4053a25b036f4dd484769d6094dac7aeae"
-            },
-            "require": {
-                "drupal/core": "^9.4 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "4.0.0-beta1",
-                    "datestamp": "1678981293",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "agentrickard",
-                    "homepage": "https://www.drupal.org/user/20975"
-                },
-                {
-                    "name": "Anybody",
-                    "homepage": "https://www.drupal.org/user/291091"
-                },
-                {
-                    "name": "gobinathm",
-                    "homepage": "https://www.drupal.org/user/21629"
-                },
-                {
-                    "name": "Grevil",
-                    "homepage": "https://www.drupal.org/user/3668491"
-                },
-                {
-                    "name": "Jaypan",
-                    "homepage": "https://www.drupal.org/user/324696"
-                },
-                {
-                    "name": "thomas.frobieter",
-                    "homepage": "https://www.drupal.org/user/409335"
-                }
-            ],
-            "description": "Restricts access to the site to a list of user defined IP addresses",
-            "homepage": "https://www.drupal.org/project/restrict_ip",
-            "support": {
-                "source": "https://git.drupalcode.org/project/restrict_ip"
-            }
-        },
-        {
             "name": "drupal/robotstxt",
             "version": "1.5.0",
             "source": {
@@ -6761,6 +6697,58 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/smart_sql_idmap",
                 "issues": "https://www.drupal.org/project/issues/smart_sql_idmap"
+            }
+        },
+        {
+            "name": "drupal/svg_formatter",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/svg_formatter.git",
+                "reference": "2.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/svg_formatter-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "f4f4d184ee08b50204bcacf610a69b98834e3b7e"
+            },
+            "require": {
+                "drupal/core": "^9.2.0 || ^10",
+                "enshrined/svg-sanitize": "~0.16"
+            },
+            "require-dev": {
+                "drupal/token": "1.x-dev"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.2",
+                    "datestamp": "1682943380",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Goran Nikolovski",
+                    "homepage": "https://gorannikolovski.com",
+                    "email": "goran@gorannikolovski.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "SVG Formatter provides support for using SVG images on your website.",
+            "homepage": "https://www.drupal.org/project/svg_formatter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/svg_formatter",
+                "issues": "https://www.drupal.org/project/issues/svg_formatter",
+                "email": "goran@gorannikolovski.com"
             }
         },
         {
@@ -7729,6 +7717,51 @@
                 }
             ],
             "time": "2023-10-06T06:47:41+00:00"
+        },
+        {
+            "name": "enshrined/svg-sanitize",
+            "version": "0.18.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darylldoyle/svg-sanitizer.git",
+                "reference": "6a2c069dab3843ca4d887ff09c972fc7033888d0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darylldoyle/svg-sanitizer/zipball/6a2c069dab3843ca4d887ff09c972fc7033888d0",
+                "reference": "6a2c069dab3843ca4d887ff09c972fc7033888d0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "php": "^5.6 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7 || ^6.5 || ^8.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "enshrined\\svgSanitize\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Daryll Doyle",
+                    "email": "daryll@enshrined.co.uk"
+                }
+            ],
+            "description": "An SVG sanitizer for PHP",
+            "support": {
+                "issues": "https://github.com/darylldoyle/svg-sanitizer/issues",
+                "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.18.0"
+            },
+            "time": "2024-02-22T17:51:05+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -20649,7 +20682,6 @@
         "drupal/inline_entity_form": 5,
         "drupal/media_migration": 15,
         "drupal/pathologic": 15,
-        "drupal/restrict_ip": 10,
         "drupal/search_api_location": 15,
         "drupal/webform": 5,
         "drupal/yoast_seo": 15,

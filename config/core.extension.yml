@@ -57,6 +57,7 @@ module:
   gutenberg_uswds_accordion: 0
   gutenberg_uswds_alert: 0
   gutenberg_uswds_card: 0
+  gutenberg_uswds_icon: 0
   gutenberg_uswds_modal: 0
   gutenberg_uswds_process_list: 0
   gutenberg_uswds_summary_box: 0
@@ -130,6 +131,7 @@ module:
   simple_sitemap_engines: 0
   sitewide_alert: 0
   smart_sql_idmap: 0
+  svg_formatter: 0
   syslog: 0
   system: 0
   taxonomy: 0
