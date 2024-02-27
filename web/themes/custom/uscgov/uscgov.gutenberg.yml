@@ -5,6 +5,7 @@ libraries-edit:
   - sdc/uscgov--usa_alert
   - sdc/uscgov--usa-card
   - sdc/uscgov--uswds-accordion
+  
 theme-support:
   colors:
     - slug: "black"

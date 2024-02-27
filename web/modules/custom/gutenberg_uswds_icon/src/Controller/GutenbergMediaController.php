@@ -3,6 +3,8 @@
 namespace Drupal\gutenberg_uswds_icon\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\gutenberg\DataProvider\EntityDataProviderManager;
 use Drupal\gutenberg\MediaSelectionProcessor\MediaSelectionProcessorManagerInterface;
 use Drupal\gutenberg\Service\MediaEntityNotFoundException;
 use Drupal\media\MediaInterface;
@@ -10,8 +12,6 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\gutenberg\DataProvider\EntityDataProviderManager;
 
 /**
  * Returns responses for our image routes.
