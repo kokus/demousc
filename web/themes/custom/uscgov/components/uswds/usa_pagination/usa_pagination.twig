@@ -11,19 +11,7 @@
           ><svg class="usa-icon" aria-hidden="true" role="img">
             <use xlink:href="{{ theme_path ~ '/dist/uswds/img/sprite.svg#navigate_before' }}"></use>
           </svg>
-          <span class="usa-pagination__link-text">{{ previous.text|default('‹ Previous'|t) }}</span></a
-        >
-      </li>
-    {% endif %}
-
-    {% if not first.visible %}
-      <li class="usa-pagination__item usa-pagination__page-no">
-        <a
-          href="{{ first.href }}"
-          title="{{ 'Go to first page'|t }}"
-          aria-label="{{ 'Page 1'|t }}"
-          {{ first.attributes.addClass('usa-pagination__button')|without('href', 'title') }}
-          >{{ first.text|default(1) }}</a
+          <span class="usa-pagination__link-text">{{ 'Previous'|t }}</span></a
         >
       </li>
     {% endif %}
@@ -72,17 +60,6 @@
       </li>
     {% endif %}
 
-    {% if not last.visible %}
-      <li class="usa-pagination__item usa-pagination__page-no">
-        <a
-          href="{{ last.href }}"
-          title="{{ 'Go to last page'|t }}"
-          aria-label="{{ 'Last page'|t }}"
-          {{ last.attributes.addClass('usa-pagination__button')|without('href', 'title') }}
-          >{{ last.text|default(last_page) }}</a
-        >
-      </li>
-    {% endif %}
 
     {% if next %}
       <li class="usa-pagination__item usa-pagination__arrow">
@@ -91,10 +68,12 @@
           title="{{ 'Go to next page'|t }}"
           aria-label="{{ 'Next page'|t }}"
           {{ next.attributes.addClass('usa-pagination__link usa-pagination__next-page')|without('href', 'title') }}
-          ><span class="usa-pagination__link-text">{{ items.next.text|default('Next'|t) }}</span
-          ><svg class="usa-icon" aria-hidden="true" role="img">
-            <use xlink:href="{{ theme_path ~ '/dist/uswds/img/sprite.svg#navigate_next' }}"></use></svg
-        ></a>
+        >
+          <span class="usa-pagination__link-text">{{ 'Next'|t }}</span>
+          <svg class="usa-icon" aria-hidden="true" role="img">
+            <use xlink:href="{{ theme_path ~ '/dist/uswds/img/sprite.svg#navigate_next' }}"></use>
+          </svg>
+        </a>
       </li>
     {% endif %}
   </ul>
