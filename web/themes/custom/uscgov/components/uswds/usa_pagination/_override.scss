@@ -10,3 +10,9 @@
 .usa-pagination .usa-current {
   background: var(--surface-primary-dark);
 }
+
+.usa-pagination__button:hover,
+.usa-pagination__button:focus,
+.usa-pagination__button:active {
+  border-color: var(--border-primary-dark);
+}
