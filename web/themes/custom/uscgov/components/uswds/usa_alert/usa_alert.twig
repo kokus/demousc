@@ -20,9 +20,9 @@
       <h4 class="usa-alert__heading">{{ status_headings[type] ?: heading_text }}</h4>
     {% endif %}
     {% for message in messages %}
-      <p class="usa-alert__text">
+      <div class="usa-alert__text">
         {{ message }}
-      </p>
+      </div>
     {% endfor %}
   </div>
   {% block dismiss_button %}{% endblock %}

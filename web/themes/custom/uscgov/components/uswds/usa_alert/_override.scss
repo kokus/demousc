@@ -1,6 +1,7 @@
 [class] .usa-alert__body {
   margin-left: 0;
   padding-left: 77px;
+  max-width: none;
 
   &:before {
     top: 50%;
@@ -50,4 +51,8 @@
   &:after {
     rotate: -45deg;
   }
+}
+
+.usa-alert__text p:last-child {
+  margin-bottom: 0;
 }
