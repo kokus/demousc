@@ -19,6 +19,7 @@ input[type="submit"] {
   font-family: inherit;
   line-height: 115%;
   border-radius: 30px;
+  text-decoration: none;
   cursor: pointer;
 
   &:where(:not([disabled])):hover {
@@ -38,7 +39,7 @@ input[type="submit"] {
     cursor: not-allowed;
   }
 
-  &.button--outline {
+  &:is(.button--outline, .usa-button--outline) {
     --surface-color: transparent;
     --text-color: var(--text-link);
     --border-color: currentColor;

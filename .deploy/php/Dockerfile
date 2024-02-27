@@ -1,19 +1,19 @@
 # from https://www.drupal.org/docs/system-requirements/php-requirements
-FROM php:8.2.12-fpm-alpine3.18
+FROM php:8.2.16-fpm-bullseye
 
 # install the PHP extensions we need
 RUN set -eux; \
 	\
-	apk add --no-cache --virtual .build-deps \
-		coreutils \
-		freetype-dev \
-		libjpeg-turbo-dev \
-		libpng-dev \
+	apt-get update; \
+	\
+	apt-get install -y wget \
+		zlib1g-dev \
 		libzip-dev \
+		libfreetype6-dev \
+		libpng-dev \
 		libwebp-dev \
-# postgresql-dev is needed for https://bugs.alpinelinux.org/issues/3642
-		postgresql-dev \
-	; \
+		libjpeg-dev \
+		libpq-dev ; \
 	\
 	docker-php-ext-configure gd \
 		--with-freetype \
@@ -26,22 +26,13 @@ RUN set -eux; \
 		opcache \
 		pdo_mysql \
 		pdo_pgsql \
-		zip \
-	; \
-	\
-	runDeps="$( \
-		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local \
-			| tr ',' '\n' \
-			| sort -u \
-			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' \
-	)"; \
-	apk add --no-network --virtual .drupal-phpexts-rundeps $runDeps; \
-	apk del --no-network .build-deps
+		zip
 
 # Install and enable the redis extension.
-RUN apk add --no-cache pcre-dev $PHPIZE_DEPS \
-&& pecl install redis \
-&& docker-php-ext-enable redis.so
+RUN wget https://github.com/FriendsOfPHP/pickle/releases/latest/download/pickle.phar -P /usr/bin \
+&& chmod +x /usr/bin/pickle.phar \
+&& pickle.phar install redis \
+&& docker-php-ext-enable redis
 
 # set recommended PHP.ini settings
 RUN { \
@@ -60,7 +51,7 @@ RUN { \
 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 
 # Installing git.
-RUN apk add git
+RUN apt-get install -y git
 
 # Adding Composer.
 COPY --from=composer:2.0 /usr/bin/composer /usr/local/bin/
@@ -71,7 +62,7 @@ RUN chmod +x robo.phar
 RUN mv robo.phar /usr/bin/robo
 
 # Installing NPM.
-RUN apk add --update npm
+RUN apt-get install -y npm
 RUN npm install gulp-cli gulp -g
 
 # Installing Drush Launcher.
@@ -80,10 +71,10 @@ RUN chmod +x drush.phar
 RUN mv drush.phar /usr/local/bin/drush
 
 # Installing Mysql Client needed for Drush.
-RUN apk add mysql-client
+RUN apt-get install -y default-mysql-client
 
 # Installing Patch for Composer.
-RUN apk add patch
+RUN apt-get install -y patch
 
 # https://www.drupal.org/node/3060/release
 ENV DRUPAL_VERSION 10.1.5

@@ -95,7 +95,9 @@
         "drupal/taxonomy_manager": "^2.0",
         "drupal/transliterate_filenames": "^2.0",
         "drupal/usfedgov_google_analytics": "^2.0",
+        "drupal/views_arg_entity_field": "^2.0",
         "drupal/views_bulk_operations": "^4.2",
+        "drupal/views_year_filter": "^2.1",
         "drupal/webform": "^6.2@RC",
         "drupal/workbench": "^1.4",
         "drupal/workbench_access": "^2.0",
@@ -104,7 +106,8 @@
         "drush/drush": "^12.1",
         "geocoder-php/nominatim-provider": "^5.7",
         "mglaman/composer-drupal-lenient": "^1.0",
-        "symfony/http-client": "^6.3"
+        "symfony/http-client": "^6.3",
+        "wikimedia/composer-merge-plugin": "^2.1"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -120,7 +123,8 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "cweagans/composer-patches": true,
             "mglaman/composer-drupal-lenient": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "wikimedia/composer-merge-plugin": true
         },
         "sort-packages": true
     },
@@ -187,6 +191,9 @@
             "drupal/htmlpurifier": {
                 "3167171 - Drupal 7 → 8/9 migration": "https://www.drupal.org/files/issues/2020-08-25/3167171-2.patch"
             },
+            "drupal/remote_stream_wrapper": {
+                "3399953 - PHP 8.2 compatibility": "https://www.drupal.org/files/issues/2023-11-07/3399953-2-php82.patch"
+            },
             "drupal/search_api_location": {
                 "3310137 - Exposed filter doesn't display Distance units for Select list input": "https://www.drupal.org/files/issues/2022-09-16/3310137-exposed-filter-doesnt.patch",
                 "3343143 - PHP notice with Drupal 9.5 - Search API location views": "https://www.drupal.org/files/issues/2023-02-20/php-notice-views-default-3343143-3.patch"
@@ -197,6 +204,11 @@
         },
         "drupal-lenient": {
             "allowed-list": ["drupal/bean_migrate", "drupal/migrate_directory"]
+        },
+        "merge-plugin": {
+            "include": [
+                "web/modules/contrib/webform/composer.libraries.json"
+            ]
         }
     },
     "require-dev": {

@@ -5,7 +5,7 @@ echo "Deploying to Dev"
 cd /var/sites/uscourts
 
 # DB Backup.
-#docker exec uscourts-php robo backup:database
+docker exec uscourts-php robo backup:database
 
 # Discart other changes.
 git checkout .
