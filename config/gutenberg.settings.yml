@@ -188,6 +188,7 @@ landing_view_allowed_drupal_blocks:
   'block_content:b79d1d50-18f0-4eab-9ced-68acf645ae45': 0
   'block_content:f583708a-50a5-45e7-af9e-301b76736eba': 0
   'block_content:ba764e6a-866d-4a54-b08f-f53ca7dcfbfc': 0
+  'block_content:94b62fab-f191-45e0-b0c6-49bd32b935aa': 0
   'block_content:1339dea7-4439-4501-aec7-f44be82fb49c': 0
   'block_content:1bd8d569-b828-4aea-ae0c-5f97086624ee': 0
   'block_content:dbcbe14f-907f-4b5c-82a7-0c29f7b08646': 0
@@ -247,6 +248,8 @@ landing_view_allowed_drupal_blocks:
   help_block: 0
   'views_block:cameras_in_court_landing-block_cameras_in_court_landing': 'views_block:cameras_in_court_landing-block_cameras_in_court_landing'
   'views_block:federal_rules_landing_agenda_books-block_federal_rules_landing_agenda_books': 'views_block:federal_rules_landing_agenda_books-block_federal_rules_landing_agenda_books'
+  'views_block:federal_rules_landing_rules_amendments-block_federal_rules_landing_rules_amendments': 'views_block:federal_rules_landing_rules_amendments-block_federal_rules_landing_rules_amendments'
+  'views_block:federal_rules_landing_rules_packages-block_federal_rules_landing_rules_packages': 'views_block:federal_rules_landing_rules_packages-block_federal_rules_landing_rules_packages'
   drupalblock/all_lists_views_: 0
   'views_block:cameras_in_courts_thumbnails-block_1': 0
   'views_block:front_promo_boxes-block_promo_bottom_left': 0
@@ -256,6 +259,7 @@ landing_view_allowed_drupal_blocks:
   'views_block:front_promo_boxes-block_promo_top_right': 0
   'views_block:news_issues-block_1': 0
   'views_block:content_recent-block_1': 0
+  'views_block:statistics_landing-block_1': 0
   'views_block:who_s_online-who_s_online_block': 0
   'views_block:workbench_current_user-block_1': 0
   'views_block:workbench_edited-block_1': 0
