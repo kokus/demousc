@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0c44ded7ee7ca4edcc85dfe642beb3a",
+    "content-hash": "e44313979ac7038bdb9aeb9fb626b1ed",
     "packages": [
         {
             "name": "akamai-open/edgegrid-auth",
@@ -128,6 +128,21 @@
             "time": "2023-09-25T12:45:18+00:00"
         },
         {
+            "name": "algolia/places",
+            "version": "1.19.0",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/places.js/-/places.js-1.19.0.tgz"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "algolia.places"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
             "name": "asm89/stack-cors",
             "version": "v2.2.0",
             "source": {
@@ -244,6 +259,21 @@
             "time": "2023-10-21T12:57:05+00:00"
         },
         {
+            "name": "choices/choices",
+            "version": "9.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/Choices-js/Choices/archive/refs/tags/v9.0.1.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "choices"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
             "name": "clue/stream-filter",
             "version": "v1.7.0",
             "source": {
@@ -308,6 +338,21 @@
                 }
             ],
             "time": "2023-12-20T15:40:13+00:00"
+        },
+        {
+            "name": "codemirror/codemirror",
+            "version": "5.65.12",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/components/codemirror/archive/refs/tags/5.65.12.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "codemirror"
+            },
+            "license": [
+                "MIT"
+            ]
         },
         {
             "name": "composer/installers",
@@ -2249,7 +2294,7 @@
             "extra": {
                 "drupal": {
                     "version": "2.0.0",
-                    "datestamp": "1699259254",
+                    "datestamp": "1707999066",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5713,6 +5758,10 @@
                     "homepage": "https://www.drupal.org/user/972"
                 },
                 {
+                    "name": "Kristen Pol",
+                    "homepage": "https://www.drupal.org/user/8389"
+                },
+                {
                     "name": "miglius",
                     "homepage": "https://www.drupal.org/user/18741"
                 },
@@ -6989,6 +7038,54 @@
             }
         },
         {
+            "name": "drupal/views_arg_entity_field",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_arg_entity_field.git",
+                "reference": "2.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_arg_entity_field-2.0.4.zip",
+                "reference": "2.0.4",
+                "shasum": "22c92d9670232c51cb8e94d9b23648806df67ad2"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.4",
+                    "datestamp": "1706098298",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "drclaw",
+                    "homepage": "https://www.drupal.org/user/823702"
+                },
+                {
+                    "name": "Nikolay Shapovalov",
+                    "homepage": "https://www.drupal.org/user/1877422"
+                }
+            ],
+            "description": "Views argument_default plugin to pull values of the 'Current' entity's fields",
+            "homepage": "https://www.drupal.org/project/views_arg_entity_field",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_arg_entity_field"
+            }
+        },
+        {
             "name": "drupal/views_bulk_operations",
             "version": "4.2.6",
             "source": {
@@ -7052,6 +7149,54 @@
                 "source": "https://git.drupalcode.org/project/views_bulk_operations/-/tree/8.x-3.x",
                 "issues": "https://www.drupal.org/project/issues/views_bulk_operations?version=8.x",
                 "docs": "https://www.drupal.org/docs/8/modules/views-bulk-operations-vbo"
+            }
+        },
+        {
+            "name": "drupal/views_year_filter",
+            "version": "2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_year_filter.git",
+                "reference": "2.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_year_filter-2.1.2.zip",
+                "reference": "2.1.2",
+                "shasum": "d1028b9df0c3db0112b715658016574ab9202723"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.2",
+                    "datestamp": "1700516275",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "abjih",
+                    "homepage": "https://www.drupal.org/user/3519087"
+                },
+                {
+                    "name": "berramou",
+                    "homepage": "https://www.drupal.org/user/3535998"
+                }
+            ],
+            "description": "Add Year filter to views.",
+            "homepage": "https://www.drupal.org/project/views_year_filter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_year_filter"
             }
         },
         {
@@ -8432,6 +8577,186 @@
                 "source": "https://github.com/itamair/geoPHP/tree/1.6"
             },
             "time": "2023-12-23T23:28:59+00:00"
+        },
+        {
+            "name": "jquery/chosen",
+            "version": "1.8.7",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.7/chosen_v1.8.7.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "jquery.chosen"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "jquery/geocomplete",
+            "version": "1.7.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/ubilabs/geocomplete/archive/refs/tags/1.7.0.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "jquery.geocomplete"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "jquery/hotkeys",
+            "version": "0.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/jeresig/jquery.hotkeys/archive/refs/tags/0.2.0.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "jquery.hotkeys"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "jquery/icheck",
+            "version": "1.0.2 ",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/dargullin/icheck/archive/refs/tags/1.0.2.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "jquery.icheck"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "jquery/image-picker",
+            "version": "0.3.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/rvera/image-picker/archive/refs/tags/0.3.1.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "jquery.image-picker"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "jquery/inputmask",
+            "version": "5.0.8",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/RobinHerbots/jquery.inputmask/archive/refs/tags/5.0.8.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "jquery.inputmask"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "jquery/intl-tel-input",
+            "version": "17.0.19",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/jackocnr/intl-tel-input/archive/refs/tags/v17.0.19.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "jquery.intl-tel-input"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "jquery/rateit",
+            "version": "1.1.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/gjunge/rateit.js/archive/refs/tags/1.1.5.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "jquery.rateit"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "jquery/select2",
+            "version": "4.0.13",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/select2/select2/archive/refs/tags/4.0.13.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "jquery.select2"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "jquery/textcounter",
+            "version": "0.9.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/ractoon/jQuery-Text-Counter/archive/refs/tags/0.9.1.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "jquery.textcounter"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "jquery/timepicker",
+            "version": "1.14.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/jonthornton/jquery-timepicker/archive/refs/tags/1.14.0.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "jquery.timepicker"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "jquery/toggles",
+            "version": "4.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/simontabor/jquery-toggles/archive/refs/tags/v4.0.0.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "jquery.toggles"
+            },
+            "license": [
+                "MIT"
+            ]
         },
         {
             "name": "laminas/laminas-escaper",
@@ -9961,6 +10286,36 @@
             "time": "2021-09-22T16:57:06+00:00"
         },
         {
+            "name": "popperjs/popperjs",
+            "version": "2.11.6",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/@popperjs/core/-/core-2.11.6.tgz"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "popperjs"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "progress-tracker/progress-tracker",
+            "version": "2.0.7",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/NigelOToole/progress-tracker/archive/refs/tags/2.0.7.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "progress-tracker"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
             "name": "psr/cache",
             "version": "3.0.0",
             "source": {
@@ -10565,6 +10920,36 @@
                 "source": "https://github.com/Seldaek/cli-prompt/tree/1.0.4"
             },
             "time": "2020-12-15T21:32:01+00:00"
+        },
+        {
+            "name": "signature_pad/signature_pad",
+            "version": "2.3.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/szimek/signature_pad/archive/refs/tags/v2.3.0.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "signature_pad"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "svg-pan-zoom/svg-pan-zoom",
+            "version": "3.6.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/ariutta/svg-pan-zoom/archive/refs/tags/3.6.1.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "svg-pan-zoom"
+            },
+            "license": [
+                "BSD-2-Clause"
+            ]
         },
         {
             "name": "symfony/console",
@@ -13400,6 +13785,36 @@
             "time": "2024-01-23T14:51:35+00:00"
         },
         {
+            "name": "tabby/tabby",
+            "version": "12.0.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/cferdinandi/tabby/archive/refs/tags/v12.0.3.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "tabby"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "tippyjs/tippyjs",
+            "version": "6.3.7",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/tippy.js/-/tippy.js-6.3.7.tgz"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "tippyjs"
+            },
+            "license": [
+                "MIT"
+            ]
+        },
+        {
             "name": "twig/twig",
             "version": "v3.8.0",
             "source": {
@@ -13514,6 +13929,62 @@
                 "source": "https://github.com/webflo/drupal-finder/tree/1.2.2"
             },
             "time": "2020-10-27T09:42:17+00:00"
+        },
+        {
+            "name": "wikimedia/composer-merge-plugin",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wikimedia/composer-merge-plugin.git",
+                "reference": "a03d426c8e9fb2c9c569d9deeb31a083292788bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wikimedia/composer-merge-plugin/zipball/a03d426c8e9fb2c9c569d9deeb31a083292788bc",
+                "reference": "a03d426c8e9fb2c9c569d9deeb31a083292788bc",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1||^2.0",
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.1||^2.0",
+                "ext-json": "*",
+                "mediawiki/mediawiki-phan-config": "0.11.1",
+                "php-parallel-lint/php-parallel-lint": "~1.3.1",
+                "phpspec/prophecy": "~1.15.0",
+                "phpunit/phpunit": "^8.5||^9.0",
+                "squizlabs/php_codesniffer": "~3.7.1"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                },
+                "class": "Wikimedia\\Composer\\Merge\\V2\\MergePlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wikimedia\\Composer\\Merge\\V2\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bryan Davis",
+                    "email": "bd808@wikimedia.org"
+                }
+            ],
+            "description": "Composer plugin to merge multiple composer.json files",
+            "support": {
+                "issues": "https://github.com/wikimedia/composer-merge-plugin/issues",
+                "source": "https://github.com/wikimedia/composer-merge-plugin/tree/v2.1.0"
+            },
+            "time": "2023-04-15T19:07:00+00:00"
         },
         {
             "name": "willdurand/geocoder",
@@ -17044,16 +17515,16 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.8.0",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "fad452781b3d774e3337b0c0b245dd8e5a4455fc"
+                "reference": "bc3dc91a5e9b14aa06d1d9e90647c5c5a2cc5353"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/fad452781b3d774e3337b0c0b245dd8e5a4455fc",
-                "reference": "fad452781b3d774e3337b0c0b245dd8e5a4455fc",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/bc3dc91a5e9b14aa06d1d9e90647c5c5a2cc5353",
+                "reference": "bc3dc91a5e9b14aa06d1d9e90647c5c5a2cc5353",
                 "shasum": ""
             },
             "require": {
@@ -17096,9 +17567,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.8.0"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.8.1"
             },
-            "time": "2024-01-11T11:49:22+00:00"
+            "time": "2024-01-18T19:15:27+00:00"
         },
         {
             "name": "phpspec/prophecy",

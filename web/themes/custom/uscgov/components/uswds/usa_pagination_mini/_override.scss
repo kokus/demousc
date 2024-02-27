@@ -11,6 +11,10 @@
   background: var(--surface-primary-dark);
 }
 
+.usa-pagination__arrow {
+  display: inherit;
+}
+
 .usa-pagination__button:hover,
 .usa-pagination__button:focus,
 .usa-pagination__button:active {

@@ -1,0 +1,35 @@
+uuid: 78f10362-4044-4283-83ee-3148a6aedc03
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.download
+    - field.field.media.document.field_date_updated
+    - field.field.media.document.field_file_description
+    - field.field.media.document.field_file_title
+    - field.field.media.document.field_media_document
+    - media.type.document
+  module:
+    - file
+id: media.document.download
+targetEntityType: media
+bundle: document
+mode: download
+content:
+  field_media_document:
+    type: file_default
+    label: visually_hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_date_updated: true
+  field_file_description: true
+  field_file_title: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
