@@ -485,6 +485,7 @@ display:
           plugin_id: bundle
           value:
             judge: judge
+          group: 1
         field_fc_jma_category_target_id:
           id: field_fc_jma_category_target_id
           table: paragraph__field_fc_jma_category
@@ -545,12 +546,12 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: datetime
-          operator: '='
+          operator: '>='
           value:
             min: ''
             max: ''
-            value: ''
-            type: date
+            value: '-1 year'
+            type: offset
           group: 1
           exposed: true
           expose:
@@ -588,7 +589,7 @@ display:
                 value:
                   min: ''
                   max: ''
-                  value: 'now -30 days'
+                  value: '-30 days'
                   type: offset
               2:
                 title: 'Last 6 months'
@@ -596,7 +597,7 @@ display:
                 value:
                   min: ''
                   max: ''
-                  value: 'now -6 months'
+                  value: '-6 months'
                   type: offset
               3:
                 title: 'Last year'
@@ -604,7 +605,7 @@ display:
                 value:
                   min: ''
                   max: ''
-                  value: 'now -1 year'
+                  value: '-1 year'
                   type: offset
         title:
           id: title
@@ -700,6 +701,10 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: default
         options:

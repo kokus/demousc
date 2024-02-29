@@ -1,0 +1,37 @@
+From f9b40487a4525d3dd47b102d35dcd7edde65f778 Mon Sep 17 00:00:00 2001
+From: very_random_man <43594-very_random_man@users.noreply.drupalcode.org>
+Date: Tue, 14 Nov 2023 16:39:12 +0000
+Subject: [PATCH] Grouped exposed filters were breaking when the filter
+ identifier was anything other than the default field value. This ensures that
+ the grouped filter identifier is used for grouped filters.
+
+---
+ .../views/src/Plugin/views/filter/NumericFilter.php   | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+
+diff --git a/core/modules/views/src/Plugin/views/filter/NumericFilter.php b/core/modules/views/src/Plugin/views/filter/NumericFilter.php
+index 30556125ab5f..282461bc4518 100644
+--- a/core/modules/views/src/Plugin/views/filter/NumericFilter.php
++++ b/core/modules/views/src/Plugin/views/filter/NumericFilter.php
+@@ -404,10 +404,17 @@ public function acceptExposedInput($input) {
+       return TRUE;
+     }
+
++    if ($this->isAGroup() && isset($this->options['group_info']['identifier'])) {
++      $identifier = $this->options['group_info']['identifier'];
++    }
++    elseif (isset($this->options['expose']['identifier'])) {
++      $identifier = $this->options['expose']['identifier'];
++    }
++
+     // rewrite the input value so that it's in the correct format so that
+     // the parent gets the right data.
+-    if (!empty($this->options['expose']['identifier'])) {
+-      $value = &$input[$this->options['expose']['identifier']];
++    if (isset($identifier)) {
++      $value = &$input[$identifier];
+       if (!is_array($value)) {
+         $value = [
+           'value' => $value,
+--
+GitLab
