@@ -18,9 +18,17 @@ props:
     status_headings:
       title: Status Headings
       type: array
+    heading_text:
+      title: Heading text
+      type: string
     icon:
       title: Icon
       type: boolean
     slim:
       title: Slim
       type: boolean
+    additional_classes:
+      title: Additional classes
+      type: array
+slots:
+  dismiss_button: {}
