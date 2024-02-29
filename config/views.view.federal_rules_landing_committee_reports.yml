@@ -1,26 +1,22 @@
-uuid: c78f877d-324d-45f8-9309-000dcdfe8252
+uuid: 0e884a85-87c2-4738-9f0f-f132559d9cd5
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_date_updated
+    - field.storage.node.field_term_entity_reference
     - node.type.federal_rules
     - taxonomy.vocabulary.committees_
     - taxonomy.vocabulary.file_types
   content:
-    - 'taxonomy_term:committees_:2fd2b659-05f2-4540-8a85-87bb06d49278'
-    - 'taxonomy_term:committees_:815b6ef0-fdd2-4936-94a2-a4af0fb513f0'
-    - 'taxonomy_term:committees_:d5f1fa13-52f4-49c0-a73e-57b573ab520e'
-    - 'taxonomy_term:committees_:defb4ad3-28ac-4448-bfe4-43b05c252e36'
-    - 'taxonomy_term:committees_:e7913df4-ef87-46b0-b093-507eac653487'
-    - 'taxonomy_term:file_types:1caa1e63-10b2-4e7c-9144-5bf19e0b7906'
+    - 'taxonomy_term:file_types:922ab531-a57e-4c07-9a1f-123cefca1a42'
   module:
     - datetime
     - node
     - taxonomy
     - user
-id: federal_rules_landing_superseded_rules
-label: 'Federal Rules Landing Superseded Rules'
+id: federal_rules_landing_committee_reports
+label: 'Federal Rules Landing Committee Reports'
 module: views
 description: ''
 tag: ''
@@ -33,7 +29,6 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Landing Page Federal Rules Superseded Rules'
       fields:
         title:
           id: title
@@ -45,7 +40,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-          label: 'Name of Superseded Rules Pamphlet'
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -164,6 +159,69 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_term_entity_reference:
+          id: field_term_entity_reference
+          table: node__field_term_entity_reference
+          field: field_term_entity_reference
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Committee
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       pager:
         type: full
         options:
@@ -216,7 +274,21 @@ display:
             value: 'Your search did not match any results. Please try again using fewer search criteria.'
             format: full_html
           tokenize: false
-      sorts: {  }
+      sorts:
+        field_date_updated_value:
+          id: field_date_updated_value
+          table: node__field_date_updated
+          field: field_date_updated_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: datetime
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
       arguments: {  }
       filters:
         status:
@@ -245,69 +317,18 @@ display:
           field: tid
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'Taxonomy: Committee'
           plugin_id: taxonomy_index_tid
           operator: or
-          value:
-            - 846
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: file_types
-          type: textfield
-          hierarchy: false
-          limit: true
-          error_message: true
-        tid_1:
-          id: tid_1
-          table: taxonomy_index
-          field: tid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: or
-          value:
-            40: 40
-            41: 41
-            42: 42
-            43: 43
-            44: 44
+          value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: tid_1_op
-            label: 'Select a rules category'
+            operator_id: tid_op
+            label: 'Select a rules committee'
             description: ''
             use_operator: false
-            operator: tid_1_op
+            operator: tid_op
             operator_limit_selection: false
             operator_list: {  }
             identifier: committee
@@ -323,7 +344,7 @@ display:
               publisher: '0'
               approver: '0'
               content_creator: '0'
-            reduce: true
+            reduce: false
           is_grouped: false
           group_info:
             label: ''
@@ -394,6 +415,52 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        tid_1:
+          id: tid_1
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            - 45
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: file_types
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
       style:
         type: table
         options:
@@ -403,6 +470,7 @@ display:
           columns:
             title: title
             field_date_updated: field_date_updated
+            field_term_entity_reference: field_term_entity_reference
           default: field_date_updated
           info:
             title:
@@ -415,6 +483,13 @@ display:
             field_date_updated:
               sortable: true
               default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_term_entity_reference:
+              sortable: true
+              default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
@@ -455,9 +530,10 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_date_updated'
-  block_federal_rules_landing_superseded_rules:
-    id: block_federal_rules_landing_superseded_rules
-    display_title: 'Block - Landing Page Federal Rules Superseded Rules'
+        - 'config:field.storage.node.field_term_entity_reference'
+  block_federal_rules_landing_committee_reports:
+    id: block_federal_rules_landing_committee_reports
+    display_title: 'Block - Federal Rules Landing Committee Reports'
     display_plugin: block
     position: 1
     display_options:
@@ -474,3 +550,4 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_date_updated'
+        - 'config:field.storage.node.field_term_entity_reference'
