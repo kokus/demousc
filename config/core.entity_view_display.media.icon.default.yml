@@ -6,16 +6,25 @@ dependencies:
     - field.field.media.icon.field_media_file_1
     - media.type.icon
   module:
-    - file
+    - svg_formatter
 id: media.icon.default
 targetEntityType: media
 bundle: icon
 mode: default
 content:
   field_media_file_1:
-    type: file_url_plain
+    type: svg_formatter
     label: hidden
-    settings: {  }
+    settings:
+      inline: false
+      sanitize: true
+      apply_dimensions: true
+      width: 100
+      height: 100
+      enable_alt: false
+      alt_string: ''
+      enable_title: false
+      title_string: ''
     third_party_settings: {  }
     weight: 0
     region: content
