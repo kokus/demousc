@@ -182,7 +182,8 @@
             },
             "drupal/core": {
                 "Array filter issue": "https://www.drupal.org/files/issues/2020-06-09/d7_field_instance-sort-3080034-6.patch",
-                "Migrate views issue": "https://www.drupal.org/files/issues/2023-04-19/3068442-28.patch"
+                "Migrate views issue": "https://www.drupal.org/files/issues/2023-04-19/3068442-28.patch",
+                "3336312 - TypeError: Cannot access offset of type string on string": "patches/5391.patch"
             },
             "drupal/faqfield": {
                 "3012114 - Migrate process plugin?": "https://www.drupal.org/files/issues/2020-11-19/add-migrate-support-3012114-4.patch"
