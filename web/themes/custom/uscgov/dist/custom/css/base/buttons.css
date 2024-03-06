@@ -18,6 +18,7 @@ input[type=submit] {
   font-family: inherit;
   line-height: 115%;
   border-radius: 30px;
+  text-decoration: none;
   cursor: pointer;
 }
 .button:where(:not([disabled])):hover,
@@ -39,28 +40,28 @@ input[type=submit][disabled] {
   --text-color: var(--text-on-surface-base-medium);
   cursor: not-allowed;
 }
-.button.button--outline,
-.usa-button[class].button--outline,
-input[type=submit].button--outline {
+.button:is(.button--outline, .usa-button--outline),
+.usa-button[class]:is(.button--outline, .usa-button--outline),
+input[type=submit]:is(.button--outline, .usa-button--outline) {
   --surface-color: transparent;
   --text-color: var(--text-link);
   --border-color: currentColor;
 }
-.button.button--outline:where(:not([disabled])):hover, .button.button--outline:where(:not([disabled])):active,
-.usa-button[class].button--outline:where(:not([disabled])):hover,
-.usa-button[class].button--outline:where(:not([disabled])):active,
-input[type=submit].button--outline:where(:not([disabled])):hover,
-input[type=submit].button--outline:where(:not([disabled])):active {
+.button:is(.button--outline, .usa-button--outline):where(:not([disabled])):hover, .button:is(.button--outline, .usa-button--outline):where(:not([disabled])):active,
+.usa-button[class]:is(.button--outline, .usa-button--outline):where(:not([disabled])):hover,
+.usa-button[class]:is(.button--outline, .usa-button--outline):where(:not([disabled])):active,
+input[type=submit]:is(.button--outline, .usa-button--outline):where(:not([disabled])):hover,
+input[type=submit]:is(.button--outline, .usa-button--outline):where(:not([disabled])):active {
   --surface-color: var(--surface-primary-lighter);
 }
-.button.button--outline:where(:not([disabled])):active,
-.usa-button[class].button--outline:where(:not([disabled])):active,
-input[type=submit].button--outline:where(:not([disabled])):active {
+.button:is(.button--outline, .usa-button--outline):where(:not([disabled])):active,
+.usa-button[class]:is(.button--outline, .usa-button--outline):where(:not([disabled])):active,
+input[type=submit]:is(.button--outline, .usa-button--outline):where(:not([disabled])):active {
   border-width: 3px;
 }
-.button.button--outline[disabled],
-.usa-button[class].button--outline[disabled],
-input[type=submit].button--outline[disabled] {
+.button:is(.button--outline, .usa-button--outline)[disabled],
+.usa-button[class]:is(.button--outline, .usa-button--outline)[disabled],
+input[type=submit]:is(.button--outline, .usa-button--outline)[disabled] {
   --text-color: var(--color-primitive-neutral-gray-muted-dark);
 }
 .button.button--ghost,

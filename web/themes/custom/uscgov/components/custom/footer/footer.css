@@ -1447,6 +1447,33 @@ through all possible variants
   margin-top: 24px;
 }
 
+.footer__back-to-top-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer__back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-block: var(--spacing-sm-3);
+  margin-left: auto;
+}
+.footer__back-to-top:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: currentColor;
+  -webkit-mask-image: url("images/arrow-up.svg");
+  mask-image: url("images/arrow-up.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
 .footer__top {
   border-top: solid 1px var(--border-muted-dark);
   padding: 13.5px 40px;

@@ -1443,149 +1443,6 @@ through all possible variants
 */
 /* prettier-ignore */
 /* prettier-ignore */
-/* stylelint-disable */
-@font-face {
-  font-family: "Roboto Mono Web";
-  font-style: normal;
-  font-weight: 300;
-  font-display: fallback;
-  src: url(/themes/custom/uscgov/fonts/roboto-mono/roboto-mono-v5-latin-300.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Roboto Mono Web";
-  font-style: normal;
-  font-weight: 400;
-  font-display: fallback;
-  src: url(/themes/custom/uscgov/fonts/roboto-mono/roboto-mono-v5-latin-regular.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Roboto Mono Web";
-  font-style: normal;
-  font-weight: 700;
-  font-display: fallback;
-  src: url(/themes/custom/uscgov/fonts/roboto-mono/roboto-mono-v5-latin-700.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Roboto Mono Web";
-  font-style: italic;
-  font-weight: 300;
-  font-display: fallback;
-  src: url(/themes/custom/uscgov/fonts/roboto-mono/roboto-mono-v5-latin-300italic.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Roboto Mono Web";
-  font-style: italic;
-  font-weight: 400;
-  font-display: fallback;
-  src: url(/themes/custom/uscgov/fonts/roboto-mono/roboto-mono-v5-latin-italic.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Roboto Mono Web";
-  font-style: italic;
-  font-weight: 700;
-  font-display: fallback;
-  src: url(/themes/custom/uscgov/fonts/roboto-mono/roboto-mono-v5-latin-700italic.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Source Sans Pro Web";
-  font-style: normal;
-  font-weight: 300;
-  font-display: fallback;
-  src: url(/themes/custom/uscgov/fonts/source-sans-pro/sourcesanspro-light-webfont.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Source Sans Pro Web";
-  font-style: normal;
-  font-weight: 400;
-  font-display: fallback;
-  src: url(/themes/custom/uscgov/fonts/source-sans-pro/sourcesanspro-regular-webfont.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Source Sans Pro Web";
-  font-style: normal;
-  font-weight: 700;
-  font-display: fallback;
-  src: url(/themes/custom/uscgov/fonts/source-sans-pro/sourcesanspro-bold-webfont.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Source Sans Pro Web";
-  font-style: italic;
-  font-weight: 300;
-  font-display: fallback;
-  src: url(/themes/custom/uscgov/fonts/source-sans-pro/sourcesanspro-lightitalic-webfont.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Source Sans Pro Web";
-  font-style: italic;
-  font-weight: 400;
-  font-display: fallback;
-  src: url(/themes/custom/uscgov/fonts/source-sans-pro/sourcesanspro-italic-webfont.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Source Sans Pro Web";
-  font-style: italic;
-  font-weight: 700;
-  font-display: fallback;
-  src: url(/themes/custom/uscgov/fonts/source-sans-pro/sourcesanspro-bolditalic-webfont.woff2) format("woff2");
-}
-@font-face {
-  font-family: "source-sans-pro";
-  font-style: normal;
-  font-weight: 400;
-  font-display: fallback;
-  src: url(/themes/custom/uscgov/fonts/source-serif-pro/sourceserifpro-regular-webfont.woff2) format("woff2");
-}
-@font-face {
-  font-family: "source-sans-pro";
-  font-style: normal;
-  font-weight: 700;
-  font-display: fallback;
-  src: url(/themes/custom/uscgov/fonts/source-serif-pro/sourceserifpro-bold-webfont.woff2) format("woff2");
-}
-/* stylelint-enable */
-.usa-icon {
-  display: inline-block;
-  fill: currentColor;
-  height: 1em;
-  position: relative;
-  width: 1em;
-}
-
-.usa-icon--size-3 {
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
-.usa-icon--size-4 {
-  height: 2rem;
-  width: 2rem;
-}
-
-.usa-icon--size-5 {
-  height: 2.5rem;
-  width: 2.5rem;
-}
-
-.usa-icon--size-6 {
-  height: 3rem;
-  width: 3rem;
-}
-
-.usa-icon--size-7 {
-  height: 3.5rem;
-  width: 3.5rem;
-}
-
-.usa-icon--size-8 {
-  height: 4rem;
-  width: 4rem;
-}
-
-.usa-icon--size-9 {
-  height: 4.5rem;
-  width: 4.5rem;
-}
-
 .usa-alert {
   background-color: #f0f0f0;
   border-left: 0.5rem solid #BEC2CC;
@@ -1963,5 +1820,60 @@ through all possible variants
 
 .usa-alert--validation .usa-checklist {
   margin-top: 1rem;
+}
+
+[class] .usa-alert__body {
+  margin-left: 0;
+  padding-left: 77px;
+  max-width: none;
+}
+[class] .usa-alert__body:before {
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.usa-alert {
+  position: relative;
+  margin-bottom: var(--spacing-component);
+}
+[data-sitewide-alert] .usa-alert {
+  margin-bottom: 4px;
+}
+
+.usa-alert__dismiss {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: inherit;
+  cursor: pointer;
+}
+.usa-alert--emergency .usa-alert__dismiss {
+  color: white;
+}
+.usa-alert__dismiss:before, .usa-alert__dismiss:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -1px;
+  width: 15px;
+  height: 0;
+  border-top: solid 2px currentColor;
+  rotate: 45deg;
+  content: "";
+}
+.usa-alert__dismiss:after {
+  rotate: -45deg;
+}
+
+.usa-alert__text p:last-child {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=usa_alert.css.map */
