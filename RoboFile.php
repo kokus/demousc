@@ -94,6 +94,20 @@ class RoboFile extends Tasks {
     return $collection;
   }
 
+   /**
+   * OPA Site refresh.
+   */
+  public function siteRefresh(ConsoleIO $io) {
+    $io->title("Site update starting...");
+    $collection = $this->collectionBuilder($io);
+    $collection->taskComposerInstall()
+      ->addTask($this->runDeploy())
+      ->addTask($this->themeInit())
+      ->addTask($this->themeBuild());
+    ;
+    return $collection;
+  }
+
   /**
    * Init theme.
    *
